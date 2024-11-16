@@ -47,8 +47,8 @@ class Rectangle extends Shape{
 
   @override
   void area(){
-    super.area();
     double ar = height * width;
+    super.area();
     print(ar.toStringAsFixed(2));
   }
 }
