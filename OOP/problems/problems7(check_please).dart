@@ -33,7 +33,7 @@ class SmartApllication extends Appliance{
 
   @override
   void turnOn(bool check){
-    super.turnOn(check);
+    // super.turnOn(check);
     check ? print('Wifi is on'): print('Wifi is off');
   }
 }
