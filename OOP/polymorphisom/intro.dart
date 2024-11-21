@@ -4,6 +4,9 @@
 ///
 ///
 /// Polymorphism:
+/// 2 Types of Polymorphism:
+///   1. Compile Time polymorphism = (overloading)
+///   2. Run time polymorphism = (overriding)
 ///
 /// Polymorphism in Dart (or any programming language) is
 /// a fundamental concept in object-oriented programming (OOP) that allows
