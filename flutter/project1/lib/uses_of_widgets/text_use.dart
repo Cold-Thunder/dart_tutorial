@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TextUse extends StatelessWidget{
-  // calling text style
+  // calling text style Class and creating an object
   TextStyle style =const TextStyle(
     fontSize: 22,
     color: Colors.black,
