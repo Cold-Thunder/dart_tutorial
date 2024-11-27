@@ -29,3 +29,14 @@
 ///             $ shadows
 ///             $ decoration
 ///
+///
+/// RichText Structure:
+///    RichText(
+///        text: TextSpan(
+///           text: 'Text',
+///           style: TextStyle(),
+///           children: <TextSpan>[
+///             TextSpan()
+///           ]
+///          )
+///        )
