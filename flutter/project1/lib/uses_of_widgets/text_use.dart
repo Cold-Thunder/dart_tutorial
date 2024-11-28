@@ -37,8 +37,27 @@ class TextUse extends StatelessWidget{
                   height: 50,
                   color: Colors.lightBlueAccent,
                   child: Text('Text Direction Text Direction Text Direction Text Direction Text Direction Text Direction Text Direction ', style: style,
-                  overflow: TextOverflow.visible
-                ))
+                  overflow: TextOverflow.fade
+                )),
+                Container(
+                  margin: const EdgeInsets.only(top: 50),
+                  child: RichText(
+                    text: TextSpan(
+                      text: 'Rich',
+                      style: style,
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'Text',
+                            style: TextStyle(
+                              fontSize: 28,
+                              color: Colors.orange
+                            )
+                          )
+                        ]
+                    ),
+
+                  )
+                )
               ]
           )
         )

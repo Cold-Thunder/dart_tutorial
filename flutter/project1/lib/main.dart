@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/uses_of_widgets/container_use.dart';
 import 'package:project1/uses_of_widgets/scaffold_use.dart';
+import 'package:project1/uses_of_widgets/textField_use.dart';
 import 'package:project1/uses_of_widgets/text_use.dart';
 import 'package:project1/uses_of_widgets/uses_row_column.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: TextUse(),
+      home: TextFieldWidget(),
     );
   }
 }
