@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:project1/custom_widgets/navigate_button.dart';
 import 'package:project1/uses_of_widgets/button_widgets_use.dart';
 import 'package:project1/uses_of_widgets/container_use.dart';
+import 'package:project1/uses_of_widgets/form_use.dart';
 import 'package:project1/uses_of_widgets/stack_widget_use.dart';
 import 'package:project1/uses_of_widgets/textField_use.dart';
 import 'package:project1/uses_of_widgets/text_use.dart';
@@ -42,6 +43,9 @@ class Wrapper extends StatelessWidget{
               ),
               Container(
                 child: NavigateButton(title: 'Stack', navigateTo: StackWidgetUse())
+              ),
+              Container(
+                child: NavigateButton(title: 'Form', navigateTo: FormWidgetUse())
               )
             ]
           )
