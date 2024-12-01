@@ -113,13 +113,9 @@ class _FormWidgetUseState extends State<FormWidgetUse>{
                           )
                       ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 20),
                   // email input taker
-                  Focus(
-                    onFocusChange: (hasFocus){
 
-                    },
-                    child:
                   TextFormField(
                       controller: _emailCont,
                       validator: (value){
@@ -172,7 +168,6 @@ class _FormWidgetUseState extends State<FormWidgetUse>{
                           )
                         )
                       )
-                    )
                   ),
                   Container(
                     padding: const EdgeInsets.all(10),
@@ -184,6 +179,7 @@ class _FormWidgetUseState extends State<FormWidgetUse>{
                             users.add(User(name: _nameCont.toString(), email: _emailCont.toString()));
                             _nameCont.clear();
                             _emailCont.clear();
+                            print(users.length);
                         }
                       },
                         style: ElevatedButton.styleFrom(

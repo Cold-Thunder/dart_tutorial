@@ -12,6 +12,7 @@ class NavigateButton extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
+      height: 55,
       child: ElevatedButton(
         onPressed: (){
           Navigator.push(context, MaterialPageRoute(builder: (context)=> navigateTo));

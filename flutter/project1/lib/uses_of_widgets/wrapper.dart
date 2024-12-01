@@ -27,24 +27,31 @@ class Wrapper extends StatelessWidget{
           child: Column(
             children: <Widget>[
               Container(
+                margin: const EdgeInsets.all(10),
                 child: NavigateButton(title: 'Container', navigateTo: ContainerUse())
               ),
               Container(
+                  margin: const EdgeInsets.all(10),
                 child: NavigateButton(title: 'Text', navigateTo: TextUse())
               ),
               Container(
+                  margin: const EdgeInsets.all(10),
                 child: NavigateButton(title: 'Row & Column', navigateTo: RowColumn(),)
               ),
               Container(
+                  margin: const EdgeInsets.all(10),
                 child: NavigateButton(title: 'Text Field', navigateTo: TextFieldWidget())
               ),
               Container(
+                  margin: const EdgeInsets.all(10),
                 child: NavigateButton(title: 'Buttons', navigateTo: ButtonWidgetsUse())
               ),
               Container(
+                  margin: const EdgeInsets.all(10),
                 child: NavigateButton(title: 'Stack', navigateTo: StackWidgetUse())
               ),
               Container(
+                  margin: const EdgeInsets.all(10),
                 child: NavigateButton(title: 'Form', navigateTo: FormWidgetUse())
               )
             ]
