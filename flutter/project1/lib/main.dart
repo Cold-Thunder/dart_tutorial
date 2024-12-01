@@ -6,6 +6,7 @@ import 'package:project1/uses_of_widgets/stack_widget_use.dart';
 import 'package:project1/uses_of_widgets/textField_use.dart';
 import 'package:project1/uses_of_widgets/text_use.dart';
 import 'package:project1/uses_of_widgets/uses_row_column.dart';
+import 'package:project1/uses_of_widgets/wrapper.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,10 +24,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        iconTheme: const IconThemeData(
+          color: Colors.white
+        )
       ),
-      home: StackWidgetUse(),
+      home: Wrapper(),
     );
   }
 }
-
-// amader app ta pixel perfect holo ki na seita check korbo ki vabe??

@@ -26,6 +26,7 @@ class StackWidgetUse extends StatelessWidget{
                 textAlign: TextAlign.center)
               ),
               Container(
+                padding:const EdgeInsets.all(10),
                 width: 300,
                 height: 400,
                 color: Colors.orange,
