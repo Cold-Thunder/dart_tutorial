@@ -55,12 +55,13 @@ class _FormWidgetUseState extends State<FormWidgetUse>{
               child: Column(
                 children: [
                   //name input taker
-                  SizedBox(
-                      height: 55,
-                      child: TextFormField(
+                  TextFormField(
                           controller: _nameCont,
+                          onChanged: (value){
+
+                          },
                           validator: (value){
-                            if(value!.isEmpty){
+                            if(value!.isEmpty || value.length < 5){
                               return "Name can't be empty";
                             }else {
                               return null;
@@ -111,7 +112,6 @@ class _FormWidgetUseState extends State<FormWidgetUse>{
                                   )
                               )
                           )
-                      ),
                   ),
                   const SizedBox(height: 20),
                   // email input taker
@@ -169,8 +169,11 @@ class _FormWidgetUseState extends State<FormWidgetUse>{
                         )
                       )
                   ),
+                  SizedBox(
+                    height: 30
+                  ),
                   Container(
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.only(left: 5, right: 5),
                     width: width,
                     height: 60,
                     child: ElevatedButton(

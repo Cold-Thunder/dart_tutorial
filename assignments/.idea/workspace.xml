@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5af83115-96fb-43f9-a998-c04b7ec08e0c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/assignments.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assignments.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flutter/project1/lib/topics/widgets/buttons_widgets.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter/.~lock.flutter_lineup_and_guide.odt#" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +30,9 @@
     "Dart Command Line App.main.dart.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "assignment8",
+    "git-widget-placeholder": "flutter",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ColdThunder/Videos/dart/dart_tutorial",
+    "last_opened_file_path": "/home/ColdThunder/Videos/dart/dart video script/dart for youtube tutorial",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>

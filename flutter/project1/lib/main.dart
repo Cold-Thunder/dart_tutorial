@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:project1/examples/appBar_and_text/appBar_and_text_exam.dart';
+import 'package:project1/examples/flutter_material_app/material_app_2nd_example.dart';
+import 'package:project1/examples/flutter_material_app/material_app_example.dart';
 import 'package:project1/uses_of_widgets/button_widgets_use.dart';
 import 'package:project1/uses_of_widgets/container_use.dart';
+import 'package:project1/uses_of_widgets/form_use.dart';
 import 'package:project1/uses_of_widgets/scaffold_use.dart';
 import 'package:project1/uses_of_widgets/stack_widget_use.dart';
 import 'package:project1/uses_of_widgets/textField_use.dart';
@@ -26,7 +29,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AppBarAndTextExam(),
+      routes: {
+        '/': (context)=> MaterialAppExample(),
+        '/material_2nd_example': (context)=> Material2ndExample()
+      },
+      initialRoute: '/'
     );
   }
 }
