@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:material_app_exmaples/examples/flutter_material_app/material_app_2nd_example.dart';
 import 'package:material_app_exmaples/examples/flutter_material_app/material_app_example.dart';
 import 'package:material_app_exmaples/examples/flutter_theme_examples/appBarTheme/flutter_appBar_theme.dart';
+import 'package:material_app_exmaples/examples/flutter_theme_examples/flutter_button_theme/button_theme_example.dart';
 import 'package:material_app_exmaples/practices/appBar_practice/practice1.dart';
 import 'package:material_app_exmaples/practices/appBar_practice/practice2.dart';
 
 void main() {
-  runApp(AppBarPractice2());
+  runApp(ButtonThemeExample());
 }
 
 class MyApp extends StatelessWidget {

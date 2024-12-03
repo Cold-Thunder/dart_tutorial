@@ -41,4 +41,4 @@
 ///                      themeMode: ThemeMode.system,
 ///                      )
 ///
-///  6. 
+///  6.
