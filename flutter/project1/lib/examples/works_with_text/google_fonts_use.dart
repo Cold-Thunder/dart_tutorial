@@ -17,9 +17,7 @@ class GoogleFontsUse extends StatelessWidget{
                 child: Text('Google Fonts Use', style: textPageHeading),
               ),
               //using google fonts in RichText
-              Container(
-                child: Text('')
-              )
+
             ]
           )
         )

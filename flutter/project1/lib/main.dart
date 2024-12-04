@@ -13,6 +13,7 @@ import 'package:project1/uses_of_widgets/text_use.dart';
 import 'package:project1/uses_of_widgets/uses_row_column.dart';
 import 'package:project1/uses_of_widgets/wrapper.dart';
 
+
 void main() {
   runApp(TextMain());
 }
