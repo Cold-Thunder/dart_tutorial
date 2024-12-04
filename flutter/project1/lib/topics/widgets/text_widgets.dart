@@ -40,3 +40,15 @@
 ///           ]
 ///          )
 ///        )
+///
+/// Text.rich Structure:
+///         syntex:
+///         Text.rich(
+///           TextSpan(
+///               text: text,
+///               style: TextStyle(),
+///               children: [
+///                 TextSpan()
+///               ]
+///           )
+///         )
