@@ -2,14 +2,14 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-TextStyle homePageGreeting = const TextStyle(
-  fontSize: 18,
+TextStyle appBarTitle = const TextStyle(
+  fontSize: 20,
   color: Colors.black,
   fontWeight: FontWeight.bold
 );
 
-TextStyle homePageGreeting2 = const TextStyle(
-  fontSize: 22,
+TextStyle pageHeading = const TextStyle(
+  fontSize: 30,
   color: Colors.black,
   fontWeight: FontWeight.bold
 );

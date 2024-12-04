@@ -7,8 +7,10 @@ class UiDesignMain extends StatelessWidget{
   Widget build(BuildContext context){
     return MaterialApp(
       title: 'UI Design One',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        appBarTheme: AppBarTheme(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
            backgroundColor: Colors.white,
            iconTheme: IconThemeData(
              color: Colors.black
