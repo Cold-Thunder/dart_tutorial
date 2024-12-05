@@ -15,7 +15,12 @@ class BestMatchCard extends StatelessWidget{
    _image = image, _title = title, _company =company, _location = location, _time = time;
   @override
   Widget build(BuildContext context){
-    return Container(
+    return InkWell(
+      onTap: (){
+        print('${_title} ${_company}');
+      },
+      child:
+      Container(
       child:Container(
       margin: const EdgeInsets.only(right: 10),
       padding: const EdgeInsets.all(10),
@@ -84,6 +89,6 @@ class BestMatchCard extends StatelessWidget{
           )
         ]
       )
-    ));
+    )));
   }
 }

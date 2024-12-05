@@ -4,6 +4,8 @@ class MyTexts{
 
   static String bestMatchHeading = 'Best Matches';
 
+  static String newHiring = 'New Hiring';
+
 }
 
 class BestMatchCardsTexts{
@@ -33,3 +35,35 @@ class BestMatchCardsTexts{
 
 }
 
+class NewHiringTexts{
+  static List<Map> newHiringJobPosts = [
+    {
+      'image' : 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png',
+      'title': "Software Engineer",
+      'location': 'San Francisco, United States',
+      'types': [
+        'Part Time',
+        'Remote'
+      ]
+    },
+    {
+      'image' : 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png',
+      'title': 'Product Manager',
+      'location': 'Sydney, Australia',
+      'types': [
+        'Full Time',
+        'Onsite',
+        '+2'
+      ]
+    },
+    {
+      'image' : 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png',
+      'title': 'Quality Assurance Analyst',
+      'location': 'Dubai, United Arab Emirates',
+      'types': [
+        'Full Time',
+        'Remote'
+      ]
+    }
+  ];
+}

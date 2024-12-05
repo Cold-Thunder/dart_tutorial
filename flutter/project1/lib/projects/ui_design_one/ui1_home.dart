@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:project1/projects/ui_design_one/custom_widgets/best_match_card.dart';
+import 'package:project1/projects/ui_design_one/custom_widgets/new_heiring_card.dart';
+import 'package:project1/projects/ui_design_one/custom_widgets/section_heading.dart';
 import 'package:project1/projects/ui_design_one/custom_widgets/text_input_field.dart';
 import 'package:project1/projects/ui_design_one/utiles/all_texts/my_texts.dart';
 import 'package:project1/projects/ui_design_one/utiles/text_styles/textStyles_for_pages.dart';
@@ -10,6 +12,8 @@ class UI1Home extends StatelessWidget {
   TextEditingController _searchCont = TextEditingController();
 
   List<Map> jobPosts = BestMatchCardsTexts.jobPosts;
+
+  List newHiringPosts = NewHiringTexts.newHiringJobPosts;
 
   @override
   Widget build(BuildContext context) {
@@ -66,30 +70,41 @@ class UI1Home extends StatelessWidget {
                   //best match section
                   Container(
                       child: Column(children: [
-                    Container(
-                      width: width,
-                        child: Text(MyTexts.bestMatchHeading,
-                            style: pageHeading.copyWith(fontSize: 26),
-                            textAlign: TextAlign.left)),
+                    SectionHeading(width: width, title: MyTexts.bestMatchHeading),
                     const SizedBox(
                       height: 20,
                     ),
                     Container(
-                      height: 275,
-                      alignment: Alignment.center,
-                      child:
-                    ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: jobPosts.length,
-                      itemBuilder: (context, index){
-                          return BestMatchCard(
-                              image: jobPosts[index]['image'],
-                              title: jobPosts[index]['title'],
-                              company: jobPosts[index]['company'],
-                              location: jobPosts[index]['location'],
-                              time: jobPosts[index]['time']);
-                        })
-                    )
+                        height: 275,
+                        alignment: Alignment.center,
+                        child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: jobPosts.length,
+                            itemBuilder: (context, index) {
+                              return BestMatchCard(
+                                  image: jobPosts[index]['image'],
+                                  title: jobPosts[index]['title'],
+                                  company: jobPosts[index]['company'],
+                                  location: jobPosts[index]['location'],
+                                  time: jobPosts[index]['time']);
+                            })),
+                        const SizedBox(height: 20,),
+                        SectionHeading(width: width, title: MyTexts.newHiring),
+                        const SizedBox(height: 20),
+                        // new hiring section
+                        Container(
+                          height: 400,
+                          child: ListView.builder(
+                            itemCount: newHiringPosts.length,
+                            itemBuilder: (context, index){
+                              return NewHiringCard(
+                                  image: newHiringPosts[index]['image'],
+                                  title: newHiringPosts[index]['title'],
+                                  subtitle: newHiringPosts[index]['location'],
+                                  jobTypes: newHiringPosts[index]['types']);
+                            },
+                          )
+                        )
                   ])),
                 ]))));
   }

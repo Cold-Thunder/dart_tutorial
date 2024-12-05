@@ -12,3 +12,8 @@ TextStyle pageHeading = const TextStyle(
   color: Colors.black,
   fontWeight: FontWeight.bold
 );
+
+TextStyle pageNormalText =TextStyle(
+  fontSize: 16,
+  color: Colors.grey[500],
+);
