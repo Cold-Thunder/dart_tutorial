@@ -19,7 +19,8 @@ class UiDesignMain extends StatelessWidget{
       ),
       routes: {
         '/': (context)=> UI1Home()
-      }
+      },
+      initialRoute: '/',
     );
   }
 }

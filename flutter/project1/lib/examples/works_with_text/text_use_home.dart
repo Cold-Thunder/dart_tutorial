@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:project1/examples/works_with_text/utils/text_styles.dart';
 
 class TextUseHome extends StatelessWidget{
@@ -82,14 +82,14 @@ class TextUseHome extends StatelessWidget{
                     )
                   )
                 ),
-                SizedBox(
-                  child: Text('I am google fonts', style: GoogleFonts.aBeeZee(
-                    textStyle: const TextStyle(
-                      fontSize: 30,
-                      color: Colors.blue
-                    )
-                  ))
-                )
+                // SizedBox(
+                //   child: Text('I am google fonts', style: GoogleFonts.aBeeZee(
+                //     textStyle: const TextStyle(
+                //       fontSize: 30,
+                //       color: Colors.blue
+                //     )
+                //   ))
+                // )
               ]
             )
           )
