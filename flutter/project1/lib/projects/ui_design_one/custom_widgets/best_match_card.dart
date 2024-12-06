@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project1/projects/ui_design_one/const_values/height_width_value.dart';
 import 'package:project1/projects/ui_design_one/utiles/all_texts/my_texts.dart';
 import 'package:project1/projects/ui_design_one/utiles/text_styles/textStyles_for_pages.dart';
 
 class BestMatchCard extends StatelessWidget{
-  double cardWidth = 170;
-  double cardHeight = 180;
+  double cardWidth = BestCardHeightandWidth.width;
+  double cardHeight = BestCardHeightandWidth.height;
   final String _image;
   final String _title;
   final String _company;

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project1/projects/ui_design_one/ui1_blog_page.dart';
 import 'package:project1/projects/ui_design_one/ui1_home.dart';
 
 class UiDesignMain extends StatelessWidget{
@@ -14,13 +15,15 @@ class UiDesignMain extends StatelessWidget{
            backgroundColor: Colors.white,
            iconTheme: IconThemeData(
              color: Colors.black
-           )
+           ),
+
         )
       ),
       routes: {
-        '/': (context)=> UI1Home()
+        '/': (context)=> UI1Home(),
+        '/blog': (context)=> BlogPage()
       },
-      initialRoute: '/',
+      initialRoute: '/blog',
     );
   }
 }

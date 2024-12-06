@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:project1/projects/ui_design_one/const_values/height_width_value.dart';
 import 'package:project1/projects/ui_design_one/custom_widgets/best_match_card.dart';
 import 'package:project1/projects/ui_design_one/custom_widgets/new_heiring_card.dart';
 import 'package:project1/projects/ui_design_one/custom_widgets/section_heading.dart';
@@ -75,7 +76,7 @@ class UI1Home extends StatelessWidget {
                       height: 20,
                     ),
                     Container(
-                        height: 280,
+                        height: BestCardHeightandWidth.height,
                         alignment: Alignment.center,
                         child: ListView.builder(
                             scrollDirection: Axis.horizontal,
