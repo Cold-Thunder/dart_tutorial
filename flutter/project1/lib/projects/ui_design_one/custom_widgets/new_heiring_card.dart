@@ -19,10 +19,12 @@ class NewHiringCard extends StatelessWidget{
     final width = MediaQuery.of(context).size.width;
     return Container(
       width: width,
+        margin:const EdgeInsets.only(bottom: 10),
       child: ListTile(
       leading: Container(
         height: 60,
         width: 60,
+        alignment: Alignment.center,
         decoration: BoxDecoration(
           color: Colors.grey[100],
           shape: BoxShape.circle
@@ -32,14 +34,26 @@ class NewHiringCard extends StatelessWidget{
           fit: BoxFit.cover
         ),
       ),
-      trailing: IconButton(
-        icon: const Icon(Icons.menu),
-        onPressed: (){
 
-        }
+      trailing: Container(
+        width: 10,
+        child: PopupMenuButton(
+            iconColor: Colors.grey,
+            itemBuilder: (BuildContext context){
+              return [
+                PopupMenuItem(
+                    value: 'Item Value',
+                    onTap: (){
+                      print('item');
+                    },
+                    child: Text('Item')
+                )
+              ];
+            }
+        )
       ),
       title: Text(_title,
-          style: pageHeading.copyWith(fontSize: 20)
+          style: pageHeading.copyWith(fontSize: 16)
       ),
       subtitle: Column(
         children: [

@@ -75,7 +75,7 @@ class UI1Home extends StatelessWidget {
                       height: 20,
                     ),
                     Container(
-                        height: 275,
+                        height: 280,
                         alignment: Alignment.center,
                         child: ListView.builder(
                             scrollDirection: Axis.horizontal,
