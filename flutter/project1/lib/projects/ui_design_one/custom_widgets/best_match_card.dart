@@ -1,24 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project1/projects/ui_design_one/const_values/height_width_value.dart';
+import 'package:project1/projects/ui_design_one/ui1_blog_page.dart';
 import 'package:project1/projects/ui_design_one/utiles/all_texts/my_texts.dart';
 import 'package:project1/projects/ui_design_one/utiles/text_styles/textStyles_for_pages.dart';
 
 class BestMatchCard extends StatelessWidget{
   double cardWidth = BestCardHeightandWidth.width;
   double cardHeight = BestCardHeightandWidth.height;
-  final String _image;
-  final String _title;
-  final String _company;
-  final String _location;
-  final String _time;
-  BestMatchCard({required String image, required String title, required String company, required String location, required String time}):
-   _image = image, _title = title, _company =company, _location = location, _time = time;
+  final Map _jobDetails;
+  BestMatchCard({required Map jobDetails}): _jobDetails = jobDetails;
+
   @override
   Widget build(BuildContext context){
     return InkWell(
       onTap: (){
-        print('${_title} ${_company}');
+        Navigator.push(context, MaterialPageRoute(
+          builder: (context)=>BlogPage(
+              jobDetails: _jobDetails,
+          )
+        ));
       },
       child:
       Container(
@@ -30,8 +31,8 @@ class BestMatchCard extends StatelessWidget{
       ),
       height: cardHeight,
       width: cardWidth,
-      child: Flex(
-        direction: Axis.vertical,
+      child: Column(
+        // direction: Axis.vertical,
         children: [
             Container(
               width: cardWidth,
@@ -50,7 +51,7 @@ class BestMatchCard extends StatelessWidget{
                     )
                   ),
                   // using image
-                  child: Image.network(BestMatchCardsTexts.jobPosts[0]['image'],
+                  child: Image.network(_jobDetails['image'],
                         fit: BoxFit.fitHeight
                       )
 
@@ -61,20 +62,20 @@ class BestMatchCard extends StatelessWidget{
           ),
           Container(
             width: cardWidth,
-            child: Text(_title, style: pageHeading.copyWith(
+            child: Text(_jobDetails['title'], style: pageHeading.copyWith(
               fontSize: 22
             )),
           ),
           Container(
             width: cardWidth,
-            child: Text(_company, style: pageHeading.copyWith(
+            child: Text(_jobDetails['company'], style: pageHeading.copyWith(
               fontSize: 20,
               fontWeight: FontWeight.w500
             ))
           ),
           Container(
             width: cardWidth,
-            child: Text(_location, style: pageHeading.copyWith(
+            child: Text(_jobDetails['location'], style: pageHeading.copyWith(
               fontSize: 16,
               color: Colors.grey[400],
             ),
@@ -88,7 +89,7 @@ class BestMatchCard extends StatelessWidget{
           Container(
             width: cardWidth,
             alignment: Alignment.bottomLeft,
-            child: Text(_time, style: pageHeading.copyWith(
+            child: Text(_jobDetails['time'], style: pageHeading.copyWith(
               fontSize: 18,
               color: Colors.grey[400]
             ))

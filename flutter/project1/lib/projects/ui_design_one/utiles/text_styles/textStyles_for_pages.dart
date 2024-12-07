@@ -17,3 +17,13 @@ TextStyle pageNormalText =TextStyle(
   fontSize: 14,
   color: Colors.grey[500],
 );
+
+TextStyle buttonTextStyle = const TextStyle(
+  fontSize: 18,
+  color: Colors.black
+);
+
+TextStyle jobDesTextStyle = TextStyle(
+  fontSize: 16,
+  color: Colors.grey[700]
+);

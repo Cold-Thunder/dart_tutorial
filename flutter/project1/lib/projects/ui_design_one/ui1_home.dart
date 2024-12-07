@@ -82,12 +82,7 @@ class UI1Home extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             itemCount: jobPosts.length,
                             itemBuilder: (context, index) {
-                              return BestMatchCard(
-                                  image: jobPosts[index]['image'],
-                                  title: jobPosts[index]['title'],
-                                  company: jobPosts[index]['company'],
-                                  location: jobPosts[index]['location'],
-                                  time: jobPosts[index]['time']);
+                              return BestMatchCard(jobDetails: jobPosts[index],);
                             })),
                         const SizedBox(height: 20,),
                         SectionHeading(width: width, title: MyTexts.newHiring),

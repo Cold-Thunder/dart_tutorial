@@ -21,9 +21,8 @@ class UiDesignMain extends StatelessWidget{
       ),
       routes: {
         '/': (context)=> UI1Home(),
-        '/blog': (context)=> BlogPage()
       },
-      initialRoute: '/blog',
+      initialRoute: '/',
     );
   }
 }
