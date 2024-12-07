@@ -16,7 +16,7 @@ import 'package:project1/uses_of_widgets/wrapper.dart';
 
 
 void main() {
-  runApp(UiDesignMain());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
