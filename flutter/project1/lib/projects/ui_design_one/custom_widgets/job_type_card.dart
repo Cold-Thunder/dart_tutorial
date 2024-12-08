@@ -18,7 +18,7 @@ class JobTypeCard extends StatelessWidget{
         color: Colors.grey[200],
         borderRadius: BorderRadius.circular(5)
       ),
-      child: Text('$_title', style: pageNormalText.copyWith(
+      child: Text(_title, style: pageNormalText.copyWith(
           color: Colors.black,
           fontSize: 14
       ))

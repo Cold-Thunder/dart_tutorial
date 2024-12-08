@@ -9,7 +9,7 @@ class BestMatchCard extends StatelessWidget{
   double cardWidth = BestCardHeightandWidth.width;
   double cardHeight = BestCardHeightandWidth.height;
   final Map _jobDetails;
-  BestMatchCard({required Map jobDetails}): _jobDetails = jobDetails;
+  BestMatchCard({super.key, required Map jobDetails}): _jobDetails = jobDetails;
 
   @override
   Widget build(BuildContext context){

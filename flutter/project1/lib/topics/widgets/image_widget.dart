@@ -30,8 +30,8 @@
 ///
 ///         Syntex:
 ///         FadeInImage.assetNetwork(
-///           placeHodler: 'assets/image.png',
-///           image: 'link address'
+///           placeHodler: AssetImage('assets/image.png'),
+///           image: NetworkImage('link address')
 ///         )
 ///
 ///

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project1/utiles/widgets/custom_card.dart';
 
 class MaterialAppExample extends StatelessWidget{
   @override
@@ -51,7 +52,9 @@ class MaterialAppExample extends StatelessWidget{
                     color: Colors.white
                   ))
                 )
-              )
+              ),
+
+              
             ]
           )
         )
