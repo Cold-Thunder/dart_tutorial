@@ -1,3 +1,5 @@
+
+
 /// Flutter's architecture is based on a layered approach with three main layers:
 ///     1 => the Framework (written in Dart for UI and widgets),
 ///     2 => the Engine (handles rendering, animations, and low-level platform communication), and
@@ -11,9 +13,9 @@
 ///  It takes Google's open-source graphics library, Skia,
 ///  to render low-level graphics.
 ///
-///  #############################################
-///  ********************************************
-///  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+///  ###############################################
+///  ***********************************************
+///  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 ///
 /// Flutter architecture is mainly conprises of four components.
 /// 1. Flutter Engine

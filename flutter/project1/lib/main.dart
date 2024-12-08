@@ -6,6 +6,7 @@ import 'package:project1/examples/image_widget_use/image_use_main.dart';
 import 'package:project1/examples/row_column_examples/row_and_column.dart';
 import 'package:project1/examples/works_with_text/text_main.dart';
 import 'package:project1/projects/ui_design_one/ui_desing_main.dart';
+import 'package:project1/projects/ui_design_two/ui_design_main_two.dart';
 import 'package:project1/uses_of_widgets/button_widgets_use.dart';
 import 'package:project1/uses_of_widgets/container_use.dart';
 import 'package:project1/uses_of_widgets/form_use.dart';
@@ -21,7 +22,7 @@ import 'package:project1/utiles/widgets/custom_card.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(UiDesignMainTwo());
 }
 
 class MyApp extends StatelessWidget {
