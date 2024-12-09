@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/examples/alert_dialoge_examples/alert_dialoge_examples_main.dart';
 import 'package:project1/examples/appBar_and_text/appBar_and_text_exam.dart';
 import 'package:project1/examples/flutter_material_app/material_app_2nd_example.dart';
 import 'package:project1/examples/flutter_material_app/material_app_example.dart';
@@ -7,6 +8,7 @@ import 'package:project1/examples/row_column_examples/row_and_column.dart';
 import 'package:project1/examples/works_with_text/text_main.dart';
 import 'package:project1/projects/ui_design_one/ui_desing_main.dart';
 import 'package:project1/projects/ui_design_two/ui_design_main_two.dart';
+import 'package:project1/uses_of_widgets/alert_dialog_widget.dart';
 import 'package:project1/uses_of_widgets/button_widgets_use.dart';
 import 'package:project1/uses_of_widgets/container_use.dart';
 import 'package:project1/uses_of_widgets/form_use.dart';
@@ -22,7 +24,7 @@ import 'package:project1/utiles/widgets/custom_card.dart';
 
 
 void main() {
-  runApp(UiDesignMainTwo());
+  runApp(AlertDialogExamplesMain());
 }
 
 class MyApp extends StatelessWidget {
@@ -43,7 +45,7 @@ class MyApp extends StatelessWidget {
       ),
 
       routes: {
-        '/': (context)=> RowColumnUses(),
+        '/': (context)=> AlertDialogWidget(),
         '/material_2nd_example': (context)=> Material2ndExample()
       },
       initialRoute: '/'
