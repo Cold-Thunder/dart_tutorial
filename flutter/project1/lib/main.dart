@@ -6,6 +6,7 @@ import 'package:project1/examples/flutter_material_app/material_app_example.dart
 import 'package:project1/examples/image_widget_use/image_use_main.dart';
 import 'package:project1/examples/row_column_examples/row_and_column.dart';
 import 'package:project1/examples/works_with_text/text_main.dart';
+import 'package:project1/projects/assignments/assignment1/ui_design1/ui_one_design_main.dart';
 import 'package:project1/projects/ui_design_one/ui_desing_main.dart';
 import 'package:project1/projects/ui_design_two/ui_design_main_two.dart';
 import 'package:project1/uses_of_widgets/alert_dialog_widget.dart';
@@ -24,7 +25,7 @@ import 'package:project1/utiles/widgets/custom_card.dart';
 
 
 void main() {
-  runApp(AlertDialogExamplesMain());
+  runApp(UIOneDesignMain());
 }
 
 class MyApp extends StatelessWidget {
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
       ),
 
       routes: {
-        '/': (context)=> AlertDialogWidget(),
+        '/': (context)=> Material2ndExample(),
         '/material_2nd_example': (context)=> Material2ndExample()
       },
       initialRoute: '/'
