@@ -30,7 +30,7 @@ class SearchButton extends StatelessWidget{
             borderRadius: BorderRadius.circular(30)
           )
         ),
-        child: Text(AssUi1Texts.search, style: searchText)
+        child: Text(AssUi1Texts.search.toUpperCase(), style: searchText)
     ));
   }
 }

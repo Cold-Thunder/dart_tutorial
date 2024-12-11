@@ -38,14 +38,15 @@ class HeadingSection extends StatelessWidget{
           const SizedBox(
             height: 20
           ),
+          // transport name title
           const Positioned(
             top: 50,
             left: 0,
             child: HeadingTitle()
           ),
+          // transport loction card
           Positioned(
             top: height -90,
-
             child: Container(
               width: width,
               alignment: Alignment.center,
