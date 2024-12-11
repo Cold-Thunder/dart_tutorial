@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:project1/projects/assignments/assignment1/ui_design2/utiles/styles/all_colors.dart';
 import 'package:project1/projects/assignments/assignment1/ui_design2/utiles/styles/text_styels.dart';
@@ -13,16 +14,18 @@ class BottomItemsSecCard extends StatelessWidget{
       height: 90,
       child: ListTile(
         onTap: (){
-          print('adad');
+          if(kDebugMode) {
+            print('adad');
+          }
         },
           leading: Container(
             height: 60,
             width: 60,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
                 fit: BoxFit.cover,
-                  image: AssetImage('assets/images/hemal.jpeg')
+                  image: AssetImage(_listTileDatas['image'])
               )
             )
           ),
@@ -32,7 +35,7 @@ class BottomItemsSecCard extends StatelessWidget{
           style: itemTitleSubStyle
         ),
         // trailing section
-        trailing: Container(
+        trailing: SizedBox(
           width: 47,
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,

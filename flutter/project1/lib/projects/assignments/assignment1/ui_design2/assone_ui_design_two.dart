@@ -1,12 +1,12 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:project1/projects/assignments/assignment1/ui_design2/utiles/styles/all_colors.dart';
-import 'package:project1/projects/assignments/assignment1/ui_design2/utiles/styles/text_styels.dart';
 import 'package:project1/projects/assignments/assignment1/ui_design2/utiles/texts/simple_texts.dart';
 import 'package:project1/projects/assignments/assignment1/ui_design2/widgets/bottom_items_sec_card.dart';
 import 'package:project1/projects/assignments/assignment1/ui_design2/widgets/top_items_card.dart';
 
 class AssOneUIDesignTwo extends StatelessWidget{
-  // AssOneUIDesignTwo({super.key});
+  AssOneUIDesignTwo({super.key});
 
   final List<Map<String, dynamic>> _topItemsList = SimpleTexts.topItems;
   final List<Map<String, dynamic>> _bottomItemsList = SimpleTexts.bottomItems;
@@ -24,7 +24,9 @@ class AssOneUIDesignTwo extends StatelessWidget{
           IconButton(
             icon: Icon(Icons.search, size: 28, color: myGrey),
             onPressed: (){
-              print('adad');
+              if (kDebugMode) {
+                print('adad');
+              }
             }
           )
         ]
@@ -35,13 +37,9 @@ class AssOneUIDesignTwo extends StatelessWidget{
           decoration: BoxDecoration(
             color: myWhite
           ),
-          child: Flex(
-            direction: Axis.vertical,
+          child: Column(
             children: [
               // top items section
-              Flexible(
-                flex: 1,
-                  child:
               Container(
                 margin:const EdgeInsets.only(bottom: 5),
                 alignment: Alignment.centerLeft,
@@ -54,12 +52,10 @@ class AssOneUIDesignTwo extends StatelessWidget{
                     return TopItemsCard(cardData: _topItemsList[index]);
                   },
                 )
-              )),
+              ),
               // bottom items section
-              Flexible(
-                flex: 4,
-                  child:
-              Container(
+              Expanded(
+              child: Container(
                 padding: const EdgeInsets.only(top: 5),
                 child: ListView.builder(
                   itemCount: _bottomItemsList.length,
