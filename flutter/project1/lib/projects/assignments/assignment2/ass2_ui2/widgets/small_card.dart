@@ -16,7 +16,7 @@ class SmallCard extends StatelessWidget{
     return InkWell(
       onTap: (){},
       child: Container(
-      margin:const EdgeInsets.symmetric(horizontal: 10),
+      margin:const EdgeInsets.symmetric(horizontal: 8),
           height: 142,
       width: 88,
       child: Column(
