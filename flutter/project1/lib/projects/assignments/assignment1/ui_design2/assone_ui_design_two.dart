@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:project1/projects/assignments/assignment1/ui_design2/utiles/modules/bottom_items_data_module.dart';
 import 'package:project1/projects/assignments/assignment1/ui_design2/utiles/styles/all_colors.dart';
 import 'package:project1/projects/assignments/assignment1/ui_design2/utiles/texts/simple_texts.dart';
 import 'package:project1/projects/assignments/assignment1/ui_design2/widgets/bottom_items_sec_card.dart';
@@ -9,7 +10,7 @@ class AssOneUIDesignTwo extends StatelessWidget{
   AssOneUIDesignTwo({super.key});
 
   final List<Map<String, dynamic>> _topItemsList = SimpleTexts.topItems;
-  final List<Map<String, dynamic>> _bottomItemsList = SimpleTexts.bottomItems;
+  final List<BottomItemDataModule> _bottomItemsList = SimpleTexts.bottomItems;
 
   @override
   Widget build(BuildContext context){
