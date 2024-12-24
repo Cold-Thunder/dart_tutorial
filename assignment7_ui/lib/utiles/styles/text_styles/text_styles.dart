@@ -38,4 +38,11 @@ class TextStyles{
         fontWeight: FontWeight.w400
     );
 
+    static TextStyle hintTextStyle = TextStyle(
+        fontSize: 14,
+        color: AllColors.hintTextGrey,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400
+    );
+
 }

@@ -25,7 +25,7 @@ class ElevatedButtonDesign extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: Text(OnBoardingTexts.next, style: TextStyles.elevatedButtonStyle),
+      child: Text(title, style: TextStyles.elevatedButtonStyle),
     );
   }
 }

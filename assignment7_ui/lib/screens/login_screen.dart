@@ -1,55 +1,172 @@
+import 'package:assignment7_ui/models/social_media_model.dart';
+import 'package:assignment7_ui/screens/home_v1.dart';
 import 'package:assignment7_ui/utiles/all_colors.dart';
+import 'package:assignment7_ui/utiles/images/all_images.dart';
 import 'package:assignment7_ui/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/utiles/texts/auth_type_texts.dart';
 import 'package:assignment7_ui/widgets/auth_type_heading.dart';
+import 'package:assignment7_ui/widgets/circle_shape.dart';
+import 'package:assignment7_ui/widgets/elevated_button_design.dart';
 import 'package:assignment7_ui/widgets/input_field_title.dart';
 import 'package:assignment7_ui/widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
 
-class LoginScren extends StatelessWidget {
+class LoginScren extends StatefulWidget {
+  @override
+  State<LoginScren> createState() => _LoginScrenState();
+}
+
+class _LoginScrenState extends State<LoginScren> {
   final TextEditingController _emailCont = TextEditingController();
+
   final TextEditingController _passCont = TextEditingController();
+
+  List<SocialMediaModel> socialMedia = [
+    SocialMediaModel(color: AllColors.fbBlue, icon: AllImages.fbIcon),
+    SocialMediaModel(color: AllColors.twitterBlue, icon: AllImages.twitterIcon),
+    SocialMediaModel(color: AllColors.appleBlack, icon: AllImages.appleIcon),
+  ];
+
+  bool _remember = false;
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         backgroundColor: AllColors.black,
-        body: SizedBox(
-          width: width,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // heading
-              AuthTypeHeading(title: AuthTypeTexts.login),
-              // des section
-              Text(
-                AuthTypeTexts.loginDes,
-                style: TextStyles.skipButtonStyle
-                    .copyWith(color: AllColors.appbarWhite),
-              ),
-              SizedBox(height: 40),
-              Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+        body: SingleChildScrollView(
+          child: SizedBox(
+            width: width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(height: height*0.208),
+                // heading
+                AuthTypeHeading(title: AuthTypeTexts.login),
+                // des section
+                Text(
+                  AuthTypeTexts.loginDes,
+                  style: TextStyles.skipButtonStyle
+                      .copyWith(color: AllColors.appbarWhite),
+                ),
+                SizedBox(height: 40),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   width: width,
                   decoration: BoxDecoration(
                     color: AllColors.appbarWhite,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15),
-                      topRight: Radius.circular(15)
-                    )
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    ),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       InputFieldTitle(title: AuthTypeTexts.email),
                       const SizedBox(height: 5),
-                      TextInputField(controller: _emailCont, hintText: AuthTypeTexts.emailAdd)
-                    ]
-                  )
+                      TextInputField(
+                          controller: _emailCont,
+                          hintText: AuthTypeTexts.emailAdd),
+                      const SizedBox(height: 10),
+                      InputFieldTitle(title: AuthTypeTexts.password),
+                      const SizedBox(height: 5),
+                      TextInputField(
+                          controller: _passCont,
+                          hintText: AuthTypeTexts.password,
+                          secure: true),
+                      // _remember section
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                height: 20,
+                                width: 20,
+                                child: Checkbox(
+                                  value: _remember,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _remember = !_remember;
+                                    });
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(5)),
+                                  side: BorderSide(
+                                      width: 2, color: AllColors.inputFieldWhite),
+                                  checkColor: AllColors.appbarWhite,
+                                  activeColor: AllColors.buttonOrange,
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              Text(AuthTypeTexts.remember,
+                                  style: TextStyles.hintTextStyle)
+                            ],
+                          ),
+                          // forget pass section
+                          InkWell(
+                            onTap: (){
+                            },
+                            child: Text(
+                              AuthTypeTexts.forget,
+                              style: TextStyles.hintTextStyle
+                                  .copyWith(color: AllColors.buttonOrange),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      // log in button
+                      SizedBox(
+                        width: width,
+                        child: ElevatedButtonDesign(
+                          title: AuthTypeTexts.login,
+                          screen: HomeV1(),
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      // sign up section
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(AuthTypeTexts.dontHave,
+                              style: TextStyles.onboardDesStyle),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              AuthTypeTexts.signUp,
+                              style: TextStyles.elevatedButtonStyle
+                                  .copyWith(color: AllColors.buttonOrange),
+                            ),
+                          ),
+                        ],
+                      ),
+                      // text or
+                      Container(
+                        alignment: Alignment.center,
+                        width: width,
+                        child: Text(AuthTypeTexts.or,
+                            style: TextStyles.onboardDesStyle),
+                      ),
+                      const SizedBox(height: 20),
+                      // social media section
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: 20,
+                        children: socialMedia.map((item)=> CircleShape(model: item)).toList()
+                      ),
+                      const SizedBox(height: 20)
+                    ],
+                  ),
                 ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
