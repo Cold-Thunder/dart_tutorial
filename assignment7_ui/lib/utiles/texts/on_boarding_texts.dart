@@ -5,5 +5,5 @@ class OnBoardingTexts{
   static String favDes = 'Get all your loved foods in one once place, you just place the orer we do the rest';
   static String orderFrom = 'Order from choosen chef';
   static String freeDelivery = 'Free delivery offers';
-  static String getStarted = 'Get Started';
+  static String getStarted = 'GET STARTED';
 }

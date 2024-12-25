@@ -7,7 +7,8 @@ class TextInputField extends StatefulWidget{
   final TextEditingController controller;
   final String hintText;
   final bool? secure;
-  const TextInputField({required this.controller, required this.hintText, this.secure, super.key});
+  final bool? text;
+  const TextInputField({required this.controller, required this.hintText, this.secure, this.text, super.key});
 
   @override
   State<TextInputField> createState() => _TextInputFieldState();
@@ -27,12 +28,16 @@ class _TextInputFieldState extends State<TextInputField> {
         ),
         cursorColor: AllColors.inputTextBlack,
         obscureText: widget.secure ?? false ? showPass : false,
+        //controlling text input type
+        keyboardType: widget.text ?? true ? TextInputType.text : TextInputType.number,
+        // decorating input field
         decoration: InputDecoration(
           hintText: widget.hintText,
           hintStyle: TextStyles.hintTextStyle,
           filled: true,
           fillColor: AllColors.inputFieldWhite,
           contentPadding: const EdgeInsets.symmetric(horizontal: 15),
+          // controlling suffix
           suffixIcon: widget.secure ?? false ? IconButton(
             onPressed: (){
               setState((){

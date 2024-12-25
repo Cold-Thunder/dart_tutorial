@@ -1,3 +1,5 @@
+
+import 'package:assignment7_ui/screens/home_v3.dart';
 import 'package:assignment7_ui/screens/splash_one.dart';
 import 'package:assignment7_ui/utiles/all_colors.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +16,7 @@ class AppMain extends StatelessWidget{
           backgroundColor: AllColors.appbarWhite
         )
       ),
-      home: SplashOne()
+      home: HomeV3()
     );
   }
 }

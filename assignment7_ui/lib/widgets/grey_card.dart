@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 class GreyCard extends StatelessWidget{
   final double height;
   final double width;
+  final double? borderRad;
   // final String image;
 
-  const GreyCard({required this.height, required this.width, super.key});
+  const GreyCard({required this.height, required this.width, this.borderRad, super.key});
 
   @override
   Widget build(BuildContext context){
@@ -16,7 +17,7 @@ class GreyCard extends StatelessWidget{
       width: width,
       decoration: BoxDecoration(
         color: AllColors.shapeGrey,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(borderRad ?? 12),
         // image: DecorationImage(
         //   image: AssetImage(-),
         //   fit: BoxFit.fill

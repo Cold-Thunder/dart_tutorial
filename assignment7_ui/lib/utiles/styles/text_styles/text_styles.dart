@@ -45,4 +45,38 @@ class TextStyles{
         fontWeight: FontWeight.w400
     );
 
+    static TextStyle pinTextStyle = TextStyle(
+        fontSize: 16,
+        color: AllColors.inputTextBlack,
+        fontFamily: 'Sen_Bold',
+        fontWeight: FontWeight.w700
+    );
+
+    static TextStyle homeAppBarTitle = TextStyle(
+        fontSize: 12,
+        color: AllColors.buttonOrange,
+        fontFamily: 'Sen_Bold',
+        fontWeight: FontWeight.w700
+    );
+
+    static TextStyle dropDownTextStyle = TextStyle(
+        fontSize: 14,
+        color: AllColors.dropDownBlack,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400
+    );
+
+    static TextStyle headingTextStyle = TextStyle(
+        fontSize: 20,
+        color: AllColors.headingBlack,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400
+    );
+
+    static TextStyle categoryHeadingStyle = TextStyle(
+        fontSize: 18,
+        color: AllColors.headingBlack,
+        fontFamily: 'Sen_Bold',
+        fontWeight: FontWeight.w700
+    );
 }
