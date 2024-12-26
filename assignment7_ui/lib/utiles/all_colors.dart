@@ -6,6 +6,8 @@ class AllColors{
   static Color black = Color(0xFF000000);
   static Color appbarWhite = Color(0xFFFFFFFF);
   static Color authTypeDesWhite = Color(0xFFFFF2E0);
+  static Color alertLightOrange = Color(0xFFFFEB34);
+  static Color alertDeepOrange = Color(0xFFE76F00);
   static Color buttonOrange = Color(0xFFFF7622);
   static Color iconBackOrange = Color(0xFFFF914E);
   static Color brightOrange = Color(0xFFFFE1CE);
@@ -23,4 +25,6 @@ class AllColors{
   static Color appleBlack = Color(0xFF1B1F2F);
   static Color dropDownBlack = Color(0xFF676767);
   static Color cartBlack = Color(0xFF181C2E);
+  static Color paySuccessHeadingBlack = Color(0xFF111A2C);
+  static Color paySuccessDesGrey = Color(0xFF525C67);
 }

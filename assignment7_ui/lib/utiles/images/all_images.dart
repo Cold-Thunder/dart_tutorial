@@ -20,4 +20,7 @@ class AllImages{
   static String vanIcon = 'assets/icons/van_icon.svg';
   static String clockIcon = 'assets/icons/clock_icon.svg';
 
+  static String dialougBack = 'assets/images/dialoug_back.png';
+  static String dialougElem = 'assets/images/dialoug_elements.png';
+
 }

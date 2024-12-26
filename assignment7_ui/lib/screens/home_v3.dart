@@ -1,26 +1,44 @@
+import 'dart:async';
+
 import 'package:assignment7_ui/models/home_v2_cat_model.dart';
 import 'package:assignment7_ui/utiles/texts/home_screen_texts.dart';
+import 'package:assignment7_ui/widgets/custom_dialoug.dart';
 import 'package:assignment7_ui/widgets/heading_section.dart';
 import 'package:assignment7_ui/widgets/home_screen_widgets/appbar_menubar.dart';
 import 'package:assignment7_ui/widgets/home_screen_widgets/cart_button.dart';
 import 'package:assignment7_ui/widgets/home_screen_widgets/delivery_to_section.dart';
 import 'package:assignment7_ui/widgets/home_screen_widgets/home_searchbar.dart';
 import 'package:assignment7_ui/widgets/home_screen_widgets/home_top_title.dart';
-import 'package:assignment7_ui/widgets/home_screen_widgets/homev2_cate_card.dart';
 import 'package:assignment7_ui/widgets/home_screen_widgets/homev3_cat_card.dart';
 import 'package:assignment7_ui/widgets/home_screen_widgets/open_rest_card.dart';
 import 'package:flutter/material.dart';
 
-class HomeV3 extends StatelessWidget{
-  final TextEditingController _controller = TextEditingController();
+class HomeV3 extends StatefulWidget{
+
   HomeV3({super.key});
+
+  @override
+  State<HomeV3> createState() => _HomeV3State();
+}
+
+class _HomeV3State extends State<HomeV3> {
+  final TextEditingController _controller = TextEditingController();
 
   List<HomeV2CatModel> cateTypes = [
     HomeV2CatModel(title: HomeScreenText.pizza, price: HomeScreenText.price),
     HomeV2CatModel(title: HomeScreenText.burger, price: HomeScreenText.price),
     HomeV2CatModel(title: HomeScreenText.pizza, price: HomeScreenText.price),
   ];
+
   List<int> openRestCounts = [1,2, 3];
+
+  @override
+  void initState(){
+    super.initState();
+    Timer(Duration(seconds: 2), (){
+      showDialog(context: context, builder: (context)=>CustomDialoug());
+    });
+  }
 
   @override
   Widget build(BuildContext context){

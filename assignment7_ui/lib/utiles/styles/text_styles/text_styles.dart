@@ -79,4 +79,19 @@ class TextStyles{
         fontFamily: 'Sen_Bold',
         fontWeight: FontWeight.w700
     );
+
+
+    static TextStyle dialougHeadingStyle = TextStyle(
+        fontSize: 41,
+        color: AllColors.appbarWhite,
+        fontFamily: 'Sen_Bold',
+        fontWeight: FontWeight.w800
+    );
+
+    static TextStyle paySuccessHeadStyle = TextStyle(
+        fontSize: 24,
+        color: AllColors.paySuccessHeadingBlack,
+        fontFamily: 'Sen_Bold',
+        fontWeight: FontWeight.w700
+    );
 }

@@ -1,4 +1,4 @@
-class HomeScreenText{
+class   HomeScreenText{
   static String delivery = 'DELIVERY TO';
   static String halal = 'Halal Lab Office';
   static String home = 'Home';
@@ -27,4 +27,9 @@ class HomeScreenText{
 
   static String starting = 'Starting';
   static String price = '\$70';
+
+  static String dialougHeading = 'Hurry Offers!';
+  static String dialougSub  = '#1243CD2';
+  static String cuponText = 'Use the cupon get 25% discount';
+  static String gotIt = 'Got It';
 }
