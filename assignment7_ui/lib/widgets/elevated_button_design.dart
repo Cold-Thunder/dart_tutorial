@@ -6,9 +6,10 @@ class ElevatedButtonDesign extends StatelessWidget {
   final String title;
   final Widget? screen;
   final bool? icon;
+  final void Function()? function;
 
   const ElevatedButtonDesign(
-      {required this.title, this.screen, this.icon, super.key});
+      {required this.title, this.screen, this.icon, this.function, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,10 @@ class ElevatedButtonDesign extends StatelessWidget {
         screen != null ? Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (context)=> screen!)
         ):
-        print('adadd');
+        null;
+        if(function !=  null){
+          function!();
+        }
       },
       style: ElevatedButton.styleFrom(
         fixedSize: Size.fromHeight(62),

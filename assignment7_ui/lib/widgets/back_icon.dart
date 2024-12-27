@@ -3,7 +3,8 @@ import 'package:assignment7_ui/utiles/images/all_images.dart';
 import 'package:flutter/material.dart';
 
 class BackIcon extends StatelessWidget{
-  const BackIcon({super.key});
+  final Color? color;
+  const BackIcon({this.color, super.key});
 
   @override
   Widget build(BuildContext context){
@@ -17,7 +18,7 @@ class BackIcon extends StatelessWidget{
         height: 45,
         width: 45,
         decoration: BoxDecoration(
-          color: AllColors.appbarWhite,
+          color: color ?? AllColors.appbarWhite,
           shape: BoxShape.circle
         ),
         child: Image.asset(AllImages.backImg, height: 10, width: 5)

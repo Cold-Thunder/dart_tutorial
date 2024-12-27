@@ -94,4 +94,18 @@ class TextStyles{
         fontFamily: 'Sen_Bold',
         fontWeight: FontWeight.w700
     );
+
+    static TextStyle appBarTitleStyle = TextStyle(
+        fontSize: 17,
+        color: AllColors.cartBlack,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400
+    );
+
+    static TextStyle profileNameStyle = TextStyle(
+        fontSize: 20,
+        color: AllColors.cartBlack,
+        fontFamily: 'Sen_Bold',
+        fontWeight: FontWeight.w700
+    );
 }

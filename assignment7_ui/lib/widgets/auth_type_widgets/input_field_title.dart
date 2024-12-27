@@ -3,13 +3,16 @@ import 'package:flutter/cupertino.dart';
 
 class InputFieldTitle extends StatelessWidget{
   final String title;
-  const InputFieldTitle({required this.title, super.key});
+  final double? fontSize;
+  const InputFieldTitle({required this.title, this.fontSize, super.key});
 
   @override
   Widget build(BuildContext context){
     return Text(
       title,
-      style: TextStyles.inputTitleStyle
+      style: TextStyles.inputTitleStyle.copyWith(
+        fontSize: fontSize ?? 13
+      )
     );
   }
 }
