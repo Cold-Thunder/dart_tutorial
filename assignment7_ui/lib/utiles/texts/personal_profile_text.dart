@@ -7,7 +7,7 @@ class PersonalProfileText{
   static String personalNumber = 'PERSONAL NUMBER';
   static String emailAdd = 'hello@halallab.com';
   static String perNum = '408-841-0926';
-  static String profileTitle = 'Profile';
+  static String menuTitle = 'Profile';
 
 
   static String personalProAppBar = 'Personal Info';

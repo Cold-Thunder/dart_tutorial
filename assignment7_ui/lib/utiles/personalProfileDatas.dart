@@ -1,4 +1,5 @@
 import 'package:assignment7_ui/models/personal_profile_item_model.dart';
+import 'package:assignment7_ui/screens/my_address_screen.dart';
 import 'package:assignment7_ui/screens/personal_profile_screen.dart';
 import 'package:assignment7_ui/utiles/images/all_images.dart';
 import 'package:assignment7_ui/utiles/texts/personal_profile_text.dart';
@@ -12,7 +13,7 @@ class PersonalProfileDatas{
 
   static List<PersonalProfileItemModel> profileTopInfos = [
     PersonalProfileItemModel(icon: AllImages.personIcon, title: PersonalProfileText.personalProAppBar, widget: PersonalProfileScreen()),
-    PersonalProfileItemModel(icon: AllImages.addressIcon, title: PersonalProfileText.address,),
+    PersonalProfileItemModel(icon: AllImages.addressIcon, title: PersonalProfileText.address, widget: MyAddressScreen()),
   ];
 
   static List<PersonalProfileItemModel> profileCartInfos = [

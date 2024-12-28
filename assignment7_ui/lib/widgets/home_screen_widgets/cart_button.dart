@@ -6,13 +6,16 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class CartButton extends StatelessWidget {
   final int? count;
+  final Widget orderScreen;
 
-  const CartButton({this.count, super.key});
+  const CartButton({this.count, required this.orderScreen, super.key});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>orderScreen));
+      },
       child: Container(
           margin: const EdgeInsets.only(right: 15),
           alignment: Alignment.center,

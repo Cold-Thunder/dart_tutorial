@@ -4,12 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AppbarMenubar extends StatelessWidget {
-  const AppbarMenubar({super.key});
+  final Widget? nextHome;
+  const AppbarMenubar({this.nextHome, super.key});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){},
+      onTap: (){
+        if(nextHome != null){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>nextHome!));
+        }
+      },
+        radius: 22,
       child: Container(
         alignment: Alignment.center,
         margin: const EdgeInsets.only(left: 15),

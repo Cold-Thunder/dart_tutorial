@@ -1,4 +1,9 @@
+import 'dart:async';
+
+import 'package:assignment7_ui/screens/home_v2.dart';
+import 'package:assignment7_ui/screens/orders_screen.dart';
 import 'package:assignment7_ui/utiles/texts/home_screen_texts.dart';
+import 'package:assignment7_ui/widgets/custom_dialoug.dart';
 import 'package:assignment7_ui/widgets/heading_section.dart';
 import 'package:assignment7_ui/widgets/home_screen_widgets/appbar_menubar.dart';
 import 'package:assignment7_ui/widgets/home_screen_widgets/cart_button.dart';
@@ -9,21 +14,37 @@ import 'package:assignment7_ui/widgets/home_screen_widgets/home_top_title.dart';
 import 'package:assignment7_ui/widgets/home_screen_widgets/open_rest_card.dart';
 import 'package:flutter/material.dart';
 
-class HomeV1 extends StatelessWidget{
+class HomeV1 extends StatefulWidget{
+
+  const HomeV1({super.key});
+
+  @override
+  State<HomeV1> createState() => _HomeV1State();
+}
+
+class _HomeV1State extends State<HomeV1> {
   final TextEditingController _controller = TextEditingController();
-  HomeV1({super.key});
 
   List<String> cateTypes = ['All', 'Hot Dog', 'Burger'];
+
   List<int> openRestCounts = [1,2];
+
+  @override
+  void initState(){
+    super.initState();
+    Timer(Duration(seconds: 2), (){
+      showDialog(context: context, builder: (context)=>CustomDialoug());
+    });
+  }
 
   @override
   Widget build(BuildContext context){
     return Scaffold(
        appBar: AppBar(
-         leading: AppbarMenubar(),
+         leading: AppbarMenubar(nextHome: HomeV2()),
          title: DeliveryToSection(),
          actions: [
-           CartButton(),
+           CartButton(orderScreen: OrdersScreen(),),
          ],
        ),
       body: SingleChildScrollView(

@@ -30,4 +30,12 @@ class AllColors{
   static Color paySuccessHeadingBlack = Color(0xFF111A2C);
   static Color paySuccessDesGrey = Color(0xFF525C67);
   static Color backIconGrey = Color(0xFFECF0F4);
+  static Color closeIconGrey = Color(0xFFCDCDCF);
+  static Color keyboxBorderGrey = Color(0xFFEDEDED);
+  static Color suggestCardBorderGrey = Color(0xFFEBEBEB);
+  static Color dividerBorderGrey = Color(0xFFCED7DF);
+  static Color inactiveTypeGrey = Color(0xFFA5A7B9);
+  static Color orderBottomBorderGrey = Color(0xFFEEF2F6);
+
+  static Color orderItemCountGrey = Color(0xFF6B6E82);
 }

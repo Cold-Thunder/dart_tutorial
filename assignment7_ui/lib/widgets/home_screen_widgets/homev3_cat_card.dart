@@ -2,7 +2,6 @@ import 'package:assignment7_ui/models/home_v2_cat_model.dart';
 import 'package:assignment7_ui/utiles/all_colors.dart';
 import 'package:assignment7_ui/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/widgets/grey_card.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeV3CatCard extends StatelessWidget{
@@ -12,6 +11,7 @@ class HomeV3CatCard extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return InkWell(
+      splashColor: AllColors.transparent,
       onTap: (){
 
       },

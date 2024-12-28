@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:assignment7_ui/models/home_v2_cat_model.dart';
+import 'package:assignment7_ui/screens/orders_screen.dart';
 import 'package:assignment7_ui/utiles/texts/home_screen_texts.dart';
 import 'package:assignment7_ui/widgets/custom_dialoug.dart';
 import 'package:assignment7_ui/widgets/heading_section.dart';
@@ -47,7 +48,7 @@ class _HomeV3State extends State<HomeV3> {
         leading: AppbarMenubar(),
         title: DeliveryToSection(),
         actions: [
-          CartButton(),
+          CartButton(orderScreen: OrdersScreen()),
         ],
       ),
       body: SingleChildScrollView(

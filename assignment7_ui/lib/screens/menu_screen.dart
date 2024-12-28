@@ -9,8 +9,8 @@ import 'package:assignment7_ui/widgets/personal_profile_widgets/box_widget.dart'
 import 'package:assignment7_ui/widgets/personal_profile_widgets/personal_profile_top_section.dart';
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatelessWidget {
-  ProfileScreen({super.key});
+class MenuScreen extends StatelessWidget {
+  MenuScreen({super.key});
 
   final List<PersonalProfileItemModel> personalInfos = PersonalProfileDatas.profileTopInfos;
   final List<PersonalProfileItemModel> cartInfos = PersonalProfileDatas.profileCartInfos;
@@ -23,7 +23,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading:BackIcon(color: AllColors.backIconGrey),
-        title: AppBarTitleWidget(title: PersonalProfileText.profileTitle),
+        title: AppBarTitleWidget(title: PersonalProfileText.menuTitle),
         actions: [
             AppBarMenuIconButton(color: AllColors.backIconGrey),
           SizedBox(width: 15)

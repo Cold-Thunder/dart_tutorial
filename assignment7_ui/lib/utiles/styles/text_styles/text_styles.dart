@@ -47,7 +47,7 @@ class TextStyles{
 
     static TextStyle pinTextStyle = TextStyle(
         fontSize: 16,
-        color: AllColors.inputTextBlack,
+        color: AllColors.headingBlack,
         fontFamily: 'Sen_Bold',
         fontWeight: FontWeight.w700
     );
@@ -107,5 +107,21 @@ class TextStyles{
         color: AllColors.cartBlack,
         fontFamily: 'Sen_Bold',
         fontWeight: FontWeight.w700
+    );
+
+    static TextStyle orderIdStyle = TextStyle(
+        fontSize: 14,
+        color: AllColors.orderItemCountGrey,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400,
+        decoration: TextDecoration.underline,
+        decorationColor: AllColors.orderItemCountGrey,
+    );
+
+    static TextStyle itemCountTextStyle = TextStyle(
+        fontSize: 12,
+        color: AllColors.orderItemCountGrey,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400
     );
 }

@@ -1,5 +1,4 @@
 import 'package:assignment7_ui/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/utiles/texts/personal_profile_text.dart';
 import 'package:flutter/cupertino.dart';
 
 class AppBarTitleWidget extends StatelessWidget {
@@ -9,7 +8,7 @@ class AppBarTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(PersonalProfileText.personalProAppBar,
+    return Text(title,
         style: TextStyles.appBarTitleStyle
     );
   }
