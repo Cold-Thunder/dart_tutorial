@@ -58,6 +58,7 @@ class Onboarding4 extends StatelessWidget {
                   child: ElevatedButtonDesign(
                     title: OnBoardingTexts.getStarted,
                     screen: LoginScren(),
+                    replace: true,
                   ),
                 ),
               ],

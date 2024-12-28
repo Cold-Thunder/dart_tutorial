@@ -58,6 +58,7 @@ class Onboarding3 extends StatelessWidget {
                   child: ElevatedButtonDesign(
                     title: OnBoardingTexts.next,
                     screen: Onboarding4(),
+                    replace: false,
                   ),
                 ),
                 SkipButton(screen: Onboarding4())

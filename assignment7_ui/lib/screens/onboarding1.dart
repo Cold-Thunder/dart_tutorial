@@ -2,7 +2,6 @@ import 'package:assignment7_ui/screens/onboarding2.dart';
 import 'package:assignment7_ui/utiles/all_colors.dart';
 import 'package:assignment7_ui/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/utiles/texts/on_boarding_texts.dart';
-import 'package:assignment7_ui/widgets/circle_card.dart';
 import 'package:assignment7_ui/widgets/elevated_button_design.dart';
 import 'package:assignment7_ui/widgets/grey_card.dart';
 import 'package:assignment7_ui/widgets/skip_button.dart';
@@ -59,6 +58,7 @@ class Onboarding1 extends StatelessWidget {
                   child: ElevatedButtonDesign(
                     title: OnBoardingTexts.next,
                     screen: Onboarding2(),
+                    replace: false,
                   ),
                 ),
                 SkipButton(screen: Onboarding2())
