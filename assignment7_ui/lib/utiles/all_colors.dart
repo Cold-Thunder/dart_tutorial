@@ -38,4 +38,7 @@ class AllColors{
   static Color orderBottomBorderGrey = Color(0xFFEEF2F6);
 
   static Color orderItemCountGrey = Color(0xFF6B6E82);
+
+  static Color completedGreen = Color(0xFF059C6A);
+  static Color canceledRed = Color(0xFFFF0000);
 }

@@ -12,26 +12,37 @@ class OrderCardPriceSection extends StatelessWidget{
   const OrderCardPriceSection({required this.price, required this.count, this.date, super.key});
   @override
   Widget build(BuildContext context){
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Text(
-          price,
-          style: TextStyles.profileNameStyle.copyWith(fontSize: 14)
-        ),
-        const SizedBox(width: 10),
-        VerticalDivider(
-          color: AllColors.orderBottomBorderGrey,
-          width: 1
-        ),
-        const SizedBox(width: 10),
-        date != null ? Text(date!, style: TextStyles.itemCountTextStyle) : SizedBox(),
-        date != null ? GreyCard(height: 4, width: 4, borderRad: 2,): SizedBox(width: 5),
-        Text(
-          '$count ${OrdersText.item}',
-          style: TextStyles.itemCountTextStyle
-        )
-      ],
+    return SizedBox(
+      height:17,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text(
+            price,
+            style: TextStyles.profileNameStyle.copyWith(fontSize: 14)
+          ),
+          const SizedBox(width: 10),
+          VerticalDivider(
+            color: AllColors.orderBottomBorderGrey,
+            thickness: 1,
+            width: 1
+          ),
+          const SizedBox(width: 5),
+
+          date != null ? Container(
+            margin: const EdgeInsets.only(right: 10),
+              child: Text(date!, style: TextStyles.itemCountTextStyle)
+          ) : SizedBox(),
+          date != null ? Container(
+            margin: const EdgeInsets.only(right: 10),
+              child: GreyCard(height: 4, width: 4, borderRad: 2,)
+          ): SizedBox(width: 5),
+          Text(
+            '$count ${OrdersText.item}',
+            style: TextStyles.itemCountTextStyle
+          )
+        ],
+      ),
     );
   }
 }

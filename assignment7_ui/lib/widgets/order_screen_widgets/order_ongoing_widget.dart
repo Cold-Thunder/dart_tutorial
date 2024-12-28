@@ -49,14 +49,18 @@ class OrderOngoingWidget extends StatelessWidget {
             children: [
               GreyCard(height: 60, width: 60),
               SizedBox(width: 15),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  OrderCardTopSection(title: model.title, id: model.id),
-                  const SizedBox(height: 10),
-                  // middle section
-                  OrderCardPriceSection(price: model.price, count: model.count),
-                ],
+              SizedBox(
+                height: 60,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    OrderCardTopSection(title: model.title, id: model.id),
+                    const SizedBox(height: 10),
+                    // middle section
+                    OrderCardPriceSection(price: model.price, count: model.count),
+                  ],
+                ),
               ),
             ],
           ),

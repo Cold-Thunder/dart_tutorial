@@ -5,6 +5,7 @@ import 'package:assignment7_ui/utiles/texts/orders_texts.dart';
 import 'package:assignment7_ui/widgets/app_bar_menu_icon_button.dart';
 import 'package:assignment7_ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/widgets/back_icon.dart';
+import 'package:assignment7_ui/widgets/order_screen_widgets/order_history_widget.dart';
 import 'package:assignment7_ui/widgets/order_screen_widgets/order_ongoing_widget.dart';
 import 'package:assignment7_ui/widgets/order_screen_widgets/orders_type_title.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
   bool historyActive = false;
 
   final List<OrderModel> ongoingOderDetails = OrdersText.orderDetails;
+  final List<OrderModel> orderHistoryDetails = OrdersText.orderDetails;
 
   void togglingTypes (){
     setState((){
@@ -77,9 +79,13 @@ class _OrdersScreenState extends State<OrdersScreen> {
                 child: SizedBox(
                   height: height*0.8,
                   child: ListView.builder(
-                    itemCount: ongoingOderDetails.length,
+                    itemCount: ongoingActive 
+                        ? ongoingOderDetails.length 
+                        : orderHistoryDetails.length,
                     itemBuilder: (context, index){
-                      return OrderOngoingWidget(model: ongoingOderDetails[index]);
+                      return ongoingActive 
+                          ? OrderOngoingWidget(model: ongoingOderDetails[index])
+                      :OrderHistoryWidget(model: orderHistoryDetails[index]);
                     },
                   )
                 ),

@@ -124,4 +124,18 @@ class TextStyles{
         fontFamily: 'Sen_Regular',
         fontWeight: FontWeight.w400
     );
+
+    static TextStyle completedTextStyle = TextStyle(
+        fontSize: 14,
+        color: AllColors.completedGreen,
+        fontFamily: 'Sen_Bold',
+        fontWeight: FontWeight.w700
+    );
+
+    static TextStyle canceledTextStyle = TextStyle(
+        fontSize: 14,
+        color: AllColors.canceledRed,
+        fontFamily: 'Sen_Bold',
+        fontWeight: FontWeight.w700
+    );
 }

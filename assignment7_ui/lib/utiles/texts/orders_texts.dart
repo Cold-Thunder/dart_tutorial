@@ -33,6 +33,9 @@ class OrdersText{
   static String rate = 'Rate';
   static String reOrder = 'Re-Order';
 
+  static String completed ='Completed';
+  static String canceled = 'Canceled';
+
   static List<OrderModel> orderDetails = [
     OrderModel(
         id: OrdersText.pizzaHutId,
@@ -61,7 +64,7 @@ class OrdersText{
         date: OrdersText.starBuckDate,
         count: OrdersText.starBucksCount,
         foodType: OrdersText.drink,
-        completed: true
+        completed: false
 
     ),
   ];
