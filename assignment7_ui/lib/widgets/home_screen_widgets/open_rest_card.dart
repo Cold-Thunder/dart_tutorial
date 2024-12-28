@@ -17,7 +17,7 @@ class OpenRestCard extends StatelessWidget {
       splashColor: AllColors.transparent,
       child: Container(
         margin: const EdgeInsets.only(bottom: 20),
-        height: 225,
+        height: 232,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

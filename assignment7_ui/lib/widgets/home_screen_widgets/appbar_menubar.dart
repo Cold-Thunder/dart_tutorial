@@ -10,6 +10,7 @@ class AppbarMenubar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      splashColor: AllColors.transparent,
       onTap: (){
         if(nextHome != null){
           Navigator.push(context, MaterialPageRoute(builder: (context)=>nextHome!));

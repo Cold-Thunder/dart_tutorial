@@ -14,6 +14,8 @@ class KeywordBox extends StatelessWidget {
       onTap: (){
         keyValueFunction(title);
       },
+      radius: 33,
+      splashColor: AllColors.transparent,
       child: Container(
         alignment: Alignment.center,
         margin: const EdgeInsets.only(right: 10),

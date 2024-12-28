@@ -14,10 +14,11 @@ class AppMain extends StatelessWidget{
       theme: ThemeData(
         scaffoldBackgroundColor: AllColors.appbarWhite,
         appBarTheme: AppBarTheme(
-          backgroundColor: AllColors.appbarWhite
+          backgroundColor: AllColors.appbarWhite,
+          elevation: 0
         )
       ),
-      home: OrdersScreen()
+      home: SplashOne()
     );
   }
 }

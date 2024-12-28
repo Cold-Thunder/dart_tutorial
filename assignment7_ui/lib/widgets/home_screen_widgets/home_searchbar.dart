@@ -43,14 +43,12 @@ class _HomeSearchbarState extends State<HomeSearchbar> {
               fillColor: AllColors.inputFieldWhite,
               contentPadding: const EdgeInsets.symmetric(horizontal: 15),
               prefixIcon: InkWell(
-                onTap: () {},
-                child: Container(
-                    padding: const EdgeInsets.all(16),
-                    height: 15,
-                    width: 15,
+                  onTap: (){},
+                  child: Padding(
+                    padding: const EdgeInsets.all(18.0),
                     child: SvgPicture.asset(AllImages.searchIcon,
-                        height: 15, width: 15)),
-              ),
+                        height: 13.33, width: 13.33),
+                  )),
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide:
