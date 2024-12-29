@@ -15,7 +15,9 @@ class AppMain extends StatelessWidget{
         scaffoldBackgroundColor: AllColors.appbarWhite,
         appBarTheme: AppBarTheme(
           backgroundColor: AllColors.appbarWhite,
-          elevation: 0
+          elevation: 0,
+          scrolledUnderElevation: 0
+
         )
       ),
       home: SplashOne()

@@ -50,6 +50,7 @@ class _HomeV2State extends State<HomeV2> {
         title: DeliveryToSection(),
         actions: [
           CartButton(orderScreen: OrdersScreen(),),
+          const SizedBox(width: 15,)
         ],
       ),
       body: SingleChildScrollView(

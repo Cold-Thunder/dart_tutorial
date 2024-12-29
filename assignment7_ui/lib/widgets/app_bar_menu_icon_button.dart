@@ -11,6 +11,7 @@ class AppBarMenuIconButton extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return InkWell(
+      borderRadius: BorderRadius.circular(22.5),
       onTap: (){
         Navigator.push(context, MaterialPageRoute(builder: (context)=>widget!));
       },

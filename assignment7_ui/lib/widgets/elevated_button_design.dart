@@ -5,26 +5,21 @@ import 'package:flutter/material.dart';
 class ElevatedButtonDesign extends StatelessWidget {
   final String title;
   final Widget? screen;
-  final bool? replace;
   final bool? icon;
   final void Function()? function;
 
   const ElevatedButtonDesign(
-      {required this.title, this.replace, this.screen, this.icon, this.function, super.key});
+      {required this.title, this.screen, this.icon, this.function, super.key});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        if(screen != null && (replace != null && replace == true)){
+       screen != null ?
           Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (context)=> screen!)
-          );
-        }else if(replace != null && replace == false){
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context)=> screen!)
-          );
-        }
+          ) : null;
+
           if(function !=  null){
             function!();
           }

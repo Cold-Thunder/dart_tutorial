@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:assignment7_ui/screens/onboarding1.dart';
+import 'package:assignment7_ui/screens/onboarding_screen.dart';
 import 'package:assignment7_ui/utiles/images/all_images.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class _SplashTwoState extends State<SplashTwo> {
     super.initState();
     Timer(Duration(seconds: 2), (){
       Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (context)=>Onboarding1())
+        MaterialPageRoute(builder: (context)=>OnboardingScreen())
       );
     });
   }

@@ -3,7 +3,7 @@ import 'package:assignment7_ui/utiles/texts/on_boarding_texts.dart';
 import 'package:flutter/material.dart';
 
 class SkipButton extends StatelessWidget {
-  final Widget screen;
+  final PageController screen;
 
   const SkipButton({required this.screen, super.key});
 
@@ -11,12 +11,9 @@ class SkipButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context)=> screen,
-          ),
-        );
+        screen.nextPage(duration: Duration(
+          seconds: 1
+        ), curve: Curves.ease);
       },
       child: Text(OnBoardingTexts.skip, style: TextStyles.skipButtonStyle),
     );

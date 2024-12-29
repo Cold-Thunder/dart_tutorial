@@ -17,7 +17,7 @@ class CartButton extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context)=>orderScreen));
       },
       child: Container(
-          margin: const EdgeInsets.only(right: 15),
+          // margin: const EdgeInsets.only(right: 15),
           alignment: Alignment.center,
           height: 45,
           width: 45,

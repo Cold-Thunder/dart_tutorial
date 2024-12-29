@@ -16,7 +16,7 @@ import 'package:flutter/material.dart';
 
 class HomeV3 extends StatefulWidget{
 
-  HomeV3({super.key});
+  const HomeV3({super.key});
 
   @override
   State<HomeV3> createState() => _HomeV3State();
@@ -49,6 +49,7 @@ class _HomeV3State extends State<HomeV3> {
         title: DeliveryToSection(),
         actions: [
           CartButton(orderScreen: OrdersScreen()),
+          const SizedBox(width: 15)
         ],
       ),
       body: SingleChildScrollView(

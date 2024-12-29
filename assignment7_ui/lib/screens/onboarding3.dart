@@ -24,46 +24,34 @@ class Onboarding3 extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: SizedBox(
-            width: width,
-            height: height,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                GreyCard(height: 292, width: 240),
-                const SizedBox(height: 70),
-                ///heading section
-                Text(OnBoardingTexts.orderFrom,
-                    style: TextStyles.onboardHeadStyle),
-                const SizedBox(height: 10),
-                // des section
-                Container(
-                  // width: width*0.8,
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  alignment: Alignment.center,
-                  child: Text(
-                    OnBoardingTexts.favDes,
-                    style: TextStyles.onboardDesStyle,
-                    textAlign: TextAlign.center,
-                  ),
+        body: SizedBox(
+          width: width,
+          height: height,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GreyCard(height: 292, width: 240),
+              const SizedBox(height: 70),
+              ///heading section
+              Text(OnBoardingTexts.orderFrom,
+                  style: TextStyles.onboardHeadStyle),
+              const SizedBox(height: 10),
+              // des section
+              Container(
+                // width: width*0.8,
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                alignment: Alignment.center,
+                child: Text(
+                  OnBoardingTexts.favDes,
+                  style: TextStyles.onboardDesStyle,
+                  textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 35),
-                // tracker
-                TrackerWidget(trackerColor: trackerColor),
-                const SizedBox(height: 70),
-                SizedBox(
-                  width: width * 0.9,
-                  child: ElevatedButtonDesign(
-                    title: OnBoardingTexts.next,
-                    screen: Onboarding4(),
-                    replace: false,
-                  ),
-                ),
-                SkipButton(screen: Onboarding4())
-              ],
-            ),
+              ),
+              const SizedBox(height: 35),
+              // tracker
+              TrackerWidget(trackerColor: trackerColor),
+            ],
           ),
         ),
       ),
