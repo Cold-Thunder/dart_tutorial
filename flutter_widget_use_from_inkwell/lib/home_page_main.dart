@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_use/screens/home_page.dart';
+import 'package:widgets_use/ui/screens/home_page.dart';
 
 class HomePageMain extends StatelessWidget {
   const HomePageMain({super.key});
