@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:widgets_use/widgets_use/form_text_field/flutter_second_form.dart';
 
 class FlutterFormTextField extends StatefulWidget {
-
   const FlutterFormTextField({super.key});
 
   @override
@@ -12,8 +12,9 @@ class _FlutterFormTextFieldState extends State<FlutterFormTextField> {
   final GlobalKey<FormState> _formKey = GlobalKey();
   final GlobalKey<FormFieldState> _emailKey = GlobalKey();
   final GlobalKey<FormFieldState> _nameKey = GlobalKey();
-  
-  final RegExp _emailReg = RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
+
+  final RegExp _emailReg =
+      RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
 
   final TextEditingController _nameCont = TextEditingController();
   final TextEditingController _emailCont = TextEditingController();
@@ -26,20 +27,20 @@ class _FlutterFormTextFieldState extends State<FlutterFormTextField> {
   bool _emailTouch = false;
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
 
-    _nameNode.addListener((){
-      if(_nameNode.hasFocus){
-        setState((){
+    _nameNode.addListener(() {
+      if (_nameNode.hasFocus) {
+        setState(() {
           _nameTouch = true;
         });
       }
     });
 
-    _emailNode.addListener((){
-      if(_emailNode.hasFocus){
-        setState((){
+    _emailNode.addListener(() {
+      if (_emailNode.hasFocus) {
+        setState(() {
           _emailTouch = true;
         });
       }
@@ -47,7 +48,7 @@ class _FlutterFormTextFieldState extends State<FlutterFormTextField> {
   }
 
   @override
-  void dispose(){
+  void dispose() {
     _nameNode.dispose();
 
     super.dispose();
@@ -68,10 +69,8 @@ class _FlutterFormTextFieldState extends State<FlutterFormTextField> {
             ),
             Form(
               key: _formKey,
-              child: Column(
-                spacing: 20,
-                  children: [
-                    // name section
+              child: Column(spacing: 20, children: [
+                // name section
                 SizedBox(
                   height: 70,
                   child: TextFormField(
@@ -80,53 +79,36 @@ class _FlutterFormTextFieldState extends State<FlutterFormTextField> {
                     focusNode: _nameNode,
                     autovalidateMode: AutovalidateMode.disabled,
                     validator: (value) {
-                      if(value!.isEmpty){
+                      if (value!.isEmpty) {
                         return "Name can't be empty";
-                      }else{
+                      } else {
                         return null;
                       }
                     },
-                    onChanged: (value){
+                    onChanged: (value) {
                       _nameKey.currentState?.validate();
-
                     },
                     decoration: InputDecoration(
-                      hintText: 'Name',
-                      hintStyle: TextStyle(
-                          fontSize: 18,
-                          color: Colors.blue
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(width: 1, color: Colors.blue),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                          width: 1,
-                          color: Colors.blue
-                        )
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                          width: 1,
-                          color: Colors.red
-                        )
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                          width: 1,
-                          color: Colors.red
-                        )
-                      )
-                    ),
+                        hintText: 'Name',
+                        hintStyle: TextStyle(fontSize: 18, color: Colors.blue),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(width: 1, color: Colors.blue),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.blue)),
+                        errorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.red)),
+                        focusedErrorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.red))),
                   ),
                 ),
-
-
-
 
                 // email section
                 SizedBox(
@@ -137,57 +119,44 @@ class _FlutterFormTextFieldState extends State<FlutterFormTextField> {
                     focusNode: _emailNode,
                     autovalidateMode: AutovalidateMode.disabled,
                     validator: (value) {
-                      if(value!.isEmpty || !_emailReg.hasMatch(value)){
+                      if (value!.isEmpty || !_emailReg.hasMatch(value)) {
                         return "Email is not valid";
-                      }else{
+                      } else {
                         return null;
                       }
                     },
-                    onChanged: (value){
-                      if(value.isNotEmpty && _emailReg.hasMatch(value)) {
+                    onChanged: (value) {
+                      if (value.isNotEmpty && _emailReg.hasMatch(value)) {
                         _emailKey.currentState?.validate();
                       }
                     },
                     decoration: InputDecoration(
                         hintText: 'Email',
-                        hintStyle: TextStyle(
-                            fontSize: 18,
-                            color: Colors.blue
-                        ),
+                        hintStyle: TextStyle(fontSize: 18, color: Colors.blue),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide(width: 1, color: Colors.blue),
                         ),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                                width: 1,
-                                color: Colors.blue
-                            )
-                        ),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.blue)),
                         errorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                                width: 1,
-                                color: Colors.red
-                            )
-                        ),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.red)),
                         focusedErrorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                                width: 1,
-                                color: Colors.red
-                            )
-                        )
-                    ),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.red))),
                   ),
                 ),
                 // submit button
                 ElevatedButton(
-                  onPressed: (){
-                    if(_formKey.currentState!.validate()){
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
                       debugPrint('validated');
-                    }else{
+                    } else {
                       debugPrint('Not validate');
                     }
                   },
@@ -195,6 +164,16 @@ class _FlutterFormTextFieldState extends State<FlutterFormTextField> {
                 )
               ]),
             ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FlutterSecondForm()
+                    ),
+                  );
+                },
+                child: Text('Next Form'))
           ],
         ),
       ),
