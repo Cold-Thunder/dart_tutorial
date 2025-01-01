@@ -1,0 +1,1 @@
+ /home/ColdThunder/Videos/dart/dart_tutorial/flutter_widget_use_from_inkwell/.dart_tool/flutter_build/740b59dd09c5f1f5fd25517f22845d4a/native_assets.yaml: 

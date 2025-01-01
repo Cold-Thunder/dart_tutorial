@@ -93,24 +93,7 @@
                     }
                 },
                 {
-                    "source": "/home/ColdThunder/.gradle/caches/transforms-3/2c51cff48c4133d7aa1fd8f39564f9fb/transformed/jetified-savedstate-1.2.1/res/values/values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "53",
-                        "endOffsets": "104"
-                    },
-                    "to": {
-                        "startLines": "142",
-                        "startColumns": "4",
-                        "startOffsets": "6991",
-                        "endColumns": "53",
-                        "endOffsets": "7040"
-                    }
-                },
-                {
-                    "source": "/home/ColdThunder/Videos/dart/flutter_widget_use_from_inkwell/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/ColdThunder/Videos/dart/dart_tutorial/flutter_widget_use_from_inkwell/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -126,6 +109,23 @@
                         "endLines": "158,161",
                         "endColumns": "12,12",
                         "endOffsets": "8070,8239"
+                    }
+                },
+                {
+                    "source": "/home/ColdThunder/.gradle/caches/transforms-3/2c51cff48c4133d7aa1fd8f39564f9fb/transformed/jetified-savedstate-1.2.1/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "53",
+                        "endOffsets": "104"
+                    },
+                    "to": {
+                        "startLines": "142",
+                        "startColumns": "4",
+                        "startOffsets": "6991",
+                        "endColumns": "53",
+                        "endOffsets": "7040"
                     }
                 },
                 {

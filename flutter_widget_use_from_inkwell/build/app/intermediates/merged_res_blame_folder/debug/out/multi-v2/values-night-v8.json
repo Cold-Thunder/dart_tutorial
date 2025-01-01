@@ -4,7 +4,7 @@
             "outputFile": "com.example.widgets_use.app-mergeDebugResources-24:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/ColdThunder/Videos/dart/flutter_widget_use_from_inkwell/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/ColdThunder/Videos/dart/dart_tutorial/flutter_widget_use_from_inkwell/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
