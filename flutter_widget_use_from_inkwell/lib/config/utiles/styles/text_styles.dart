@@ -12,6 +12,7 @@ class TextStyles{
 
   static TextStyle flagHeading = TextStyle(
     fontSize:25,
-    color: AllColors.black
+    color: AllColors.black,
+    fontWeight: FontWeight.bold
   );
 }

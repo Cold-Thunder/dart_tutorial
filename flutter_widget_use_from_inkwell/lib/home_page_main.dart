@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_use/ui/screens/home_page.dart';
 
-class HomePageMain extends StatelessWidget {
-  const HomePageMain({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

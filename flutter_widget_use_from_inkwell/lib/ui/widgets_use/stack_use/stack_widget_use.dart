@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widgets_use/config/utiles/styles/all_colors.dart';
 import 'package:widgets_use/config/utiles/styles/all_texts.dart';
 import 'package:widgets_use/config/utiles/styles/text_styles.dart';
+import 'package:widgets_use/ui/widgets_use/stack_use/stack_second_screen.dart';
 
 class StackWidgetUse extends StatelessWidget {
   const StackWidgetUse({super.key});
@@ -141,6 +142,16 @@ class StackWidgetUse extends StatelessWidget {
                     ),
                   )
                 ],
+              ),
+              ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(
+                        builder: (context)=>StackSecondScreen()
+                      )
+                    );
+                  },
+                  child: Text('Second Stack')
               )
             ]
           )

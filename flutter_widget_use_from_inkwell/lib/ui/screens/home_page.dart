@@ -5,6 +5,8 @@ import 'package:widgets_use/config/utiles/styles/text_styles.dart';
 import 'package:widgets_use/ui/widgets_use/card_widget_use.dart';
 import 'package:widgets_use/ui/widgets_use/checkbox_radiobutton_uses/radiobutton_used.dart';
 import 'package:widgets_use/ui/widgets_use/checkbox_radiobutton_uses/use_check_checkboxlisttile.dart';
+import 'package:widgets_use/ui/widgets_use/flutter_bottom_sheet/flutter_bottom_sheet_use.dart';
+import 'package:widgets_use/ui/widgets_use/flutter_date_picker/flutter_date_picker_use.dart';
 import 'package:widgets_use/ui/widgets_use/form_text_field/flutter_form_text_field.dart';
 import 'package:widgets_use/ui/widgets_use/gesture_detector_use.dart';
 import 'package:widgets_use/ui/widgets_use/inkwell_use.dart';
@@ -81,6 +83,8 @@ class HomePage extends StatelessWidget {
               ElevatedButtonUse(title: "List Wheel", screen: ListWheelScrollViewUse()),
               ElevatedButtonUse(title: "Form Text Field", screen: FlutterFormTextField()),
               ElevatedButtonUse(title: "Stack Widget Use", screen: StackWidgetUse()),
+              ElevatedButtonUse(title: "Date Picker Use", screen: FlutterDatePickerUse()),
+              ElevatedButtonUse(title: "Bottom Sheet Use", screen: FlutterBottomSheetUse()),
             ],
           ),
         ),
