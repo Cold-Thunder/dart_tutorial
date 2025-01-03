@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:widgets_use/ui/widgets_use/bottom_navigation_bar/flutter_bottom_navigation.dart';
 import 'package:widgets_use/ui/widgets_use/elevated_button_use.dart';
 import 'package:widgets_use/config/utiles/styles/text_styles.dart';
 import 'package:widgets_use/ui/widgets_use/card_widget_use.dart';
@@ -85,6 +86,7 @@ class HomePage extends StatelessWidget {
               ElevatedButtonUse(title: "Stack Widget Use", screen: StackWidgetUse()),
               ElevatedButtonUse(title: "Date Picker Use", screen: FlutterDatePickerUse()),
               ElevatedButtonUse(title: "Bottom Sheet Use", screen: FlutterBottomSheetUse()),
+              ElevatedButtonUse(title: "Bottom Navigation Bar", screen: FlutterBottomNavigation()),
             ],
           ),
         ),

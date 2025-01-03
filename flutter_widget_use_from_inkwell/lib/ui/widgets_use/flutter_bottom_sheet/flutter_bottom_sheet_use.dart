@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_use/config/utiles/styles/text_styles.dart';
+import 'package:widgets_use/ui/widgets_use/flutter_bottom_sheet/bottom_sheet_second.dart';
 
 class FlutterBottomSheetUse extends StatefulWidget {
   const FlutterBottomSheetUse({super.key});
@@ -26,6 +27,16 @@ class _FlutterBottomSheetUseState extends State<FlutterBottomSheetUse> {
               onPressed: () {
                 bottomSheet(context, width);
               },
+            ),
+            ElevatedButton(
+              onPressed: (){
+                  Navigator.push(context,
+                    MaterialPageRoute(
+                        builder: (context)=> BottomSheetSecond()
+                    )
+                  );
+              },
+              child: Text('2nd Example')
             )
           ],
         ),
