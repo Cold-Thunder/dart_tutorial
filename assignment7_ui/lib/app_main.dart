@@ -1,12 +1,12 @@
 
 
-import 'package:assignment7_ui/screens/orders_screen.dart';
-import 'package:assignment7_ui/screens/splash_one.dart';
-import 'package:assignment7_ui/utiles/all_colors.dart';
+import 'package:assignment7_ui/ui/screens/add_card_screen/add_card_screen.dart';
+import 'package:assignment7_ui/config/utiles/all_colors.dart';
+import 'package:assignment7_ui/ui/screens/payment_screen/payment_screen.dart';
 import 'package:flutter/material.dart';
 
-class AppMain extends StatelessWidget{
-  const AppMain({super.key});
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context){
     return MaterialApp(
@@ -20,7 +20,7 @@ class AppMain extends StatelessWidget{
 
         )
       ),
-      home: SplashOne()
+      home: PaymentScreen()
     );
   }
 }
