@@ -26,4 +26,7 @@ class AllTexts{
   static String dollar = '\$';
 
   static String details = 'Details';
+
+  static String receiverName = 'Robert Fox';
+  static String connecting = 'Connecting.......';
 }

@@ -17,6 +17,10 @@ class AllImages{
 
   static String masterCard = 'assets/images/master_card.png';
 
+  static String micOffIcon = 'assets/icons/mic_off_icon.svg';
+  static String callIcon = 'assets/icons/call_phone_icon.svg';
+  static String speakerIcon = 'assets/icons/speaker_icon.svg';
+
 
   // all icons
   static String starIcon = 'assets/icons/star_icon.svg';

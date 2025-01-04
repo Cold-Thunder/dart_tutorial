@@ -10,6 +10,9 @@ class AllColors{
   static Color alertLightOrange = Color(0xFFFFEB34);
   static Color alertDeepOrange = Color(0xFFE76F00);
   static Color buttonOrange = Color(0xFFFF7622);
+  static Color transparentOrange5 = Color(0x0DFF7622);
+  static Color transparentOrange10 = Color(0x1AFF7622);
+
   static Color iconBackOrange = Color(0xFFFF914E);
   static Color brightOrange = Color(0xFFFFE1CE);
   static Color selectedYellow = Color(0xFFFFD27C);
@@ -41,8 +44,13 @@ class AllColors{
 
   static Color completedGreen = Color(0xFF059C6A);
   static Color canceledRed = Color(0xFFFF0000);
+  static Color callRed= Color(0xFFFF3434);
 
   static Color smallVisaGrey = Color(0xFF464E57);
   static Color masterCardGrey = Color(0xFFF7F8F9);
   static Color masterDesGrey = Color(0xFF2D2D2D);
+
+  static Color callScreenBackGrey = Color(0xFF273F55);
+
+  static Color callerSubGrey = Color(0xFF979797);
 }
