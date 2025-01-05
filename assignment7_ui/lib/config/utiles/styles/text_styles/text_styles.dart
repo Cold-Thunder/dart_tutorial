@@ -145,4 +145,11 @@ class TextStyles{
         fontFamily: 'Sen_Regular',
         fontWeight: FontWeight.w400
     );
+
+    static TextStyle msgTimeTextStyle = TextStyle(
+        fontSize: 12,
+        color: AllColors.msgTimeGrey,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400
+    );
 }

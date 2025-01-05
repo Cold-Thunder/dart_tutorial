@@ -21,6 +21,8 @@ class AllImages{
   static String callIcon = 'assets/icons/call_phone_icon.svg';
   static String speakerIcon = 'assets/icons/speaker_icon.svg';
 
+  static String mapImg = 'assets/images/map.png';
+
 
   // all icons
   static String starIcon = 'assets/icons/star_icon.svg';
@@ -57,4 +59,11 @@ class AllImages{
   static String editIcon = 'assets/icons/edit_icon.svg';
   static String deleteIcon = 'assets/icons/delete_icon.svg';
 
+  static String backWhiteIcon = 'assets/icons/back_white.png';
+  static String greyLocationIcon = 'assets/icons/location_icon.svg';
+
+  static String doubleCheckIcon = 'assets/icons/double_check_icon.svg';
+
+  static String smileIcon = 'assets/icons/smile_icon.svg';
+  static String sendIcon = 'assets/icons/send_icon.svg';
 }

@@ -13,6 +13,7 @@ class AllColors{
   static Color transparentOrange5 = Color(0x0DFF7622);
   static Color transparentOrange10 = Color(0x1AFF7622);
 
+  static Color recieveOrange = Color(0xFFFE866D);
   static Color iconBackOrange = Color(0xFFFF914E);
   static Color brightOrange = Color(0xFFFFE1CE);
   static Color selectedYellow = Color(0xFFFFD27C);
@@ -53,4 +54,6 @@ class AllColors{
   static Color callScreenBackGrey = Color(0xFF273F55);
 
   static Color callerSubGrey = Color(0xFF979797);
+
+  static Color msgTimeGrey = Color(0xFFABABAB);
 }
