@@ -45,8 +45,9 @@ class _TextInputFieldState extends State<TextInputField> {
               filled: true,
               fillColor: AllColors.inputFieldWhite,
               contentPadding: const EdgeInsets.symmetric(horizontal: 15),
-              prefixIcon: widget.prefixIconSvg != null
-                  ? Container(
+              prefixIcon:Visibility(
+              visible:  widget.prefixIconSvg != null,
+                child: Container(
                       alignment: Alignment.center,
                       padding: const EdgeInsets.all(10),
                       child: SvgPicture.asset(
@@ -55,20 +56,20 @@ class _TextInputFieldState extends State<TextInputField> {
                         width: 20,
                       ),
                     )
-                  : null,
+              ),
               prefixIconConstraints:
                   BoxConstraints(maxHeight: 40, maxWidth: 40),
               // controlling suffix
-              suffixIcon: widget.secure ?? false
-                  ? IconButton(
+              suffixIcon: Visibility(
+                visible: widget.secure ?? false,
+                  child:IconButton(
                       onPressed: () {
                         setState(() {
                           showPass = !showPass;
                         });
                       },
                       icon: Icon(showPass ? Icons.remove_red_eye : Icons.lock,
-                          color: AllColors.hintTextGrey))
-                  : null,
+                          color: AllColors.hintTextGrey),),),
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide:
