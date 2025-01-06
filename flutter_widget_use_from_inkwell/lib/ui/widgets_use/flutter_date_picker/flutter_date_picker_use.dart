@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_use/config/utiles/styles/text_styles.dart';
+import 'package:widgets_use/ui/widgets_use/flutter_date_picker/date_picker_second_example.dart';
 
 class FlutterDatePickerUse extends StatefulWidget {
   const FlutterDatePickerUse({super.key});
@@ -18,32 +19,27 @@ class _FlutterDatePickerUseState extends State<FlutterDatePickerUse> {
   int? hour;
   int? minutes;
 
-
-  void datePicker()async{
+  void datePicker() async {
     DateTime? picker = await showDatePicker(
         context: context,
         firstDate: DateTime(2000),
         lastDate: DateTime(2050),
-      builder: (context, child){
-          if(child == null) return const SizedBox.shrink();
+        builder: (context, child) {
+          if (child == null) return const SizedBox.shrink();
 
           return Theme(
-          data: ThemeData().copyWith(
-              colorScheme: ColorScheme.dark(
-                  primary: Colors.white,
-                onPrimary: Colors.red,
-                surface: Colors.blue,
-                onSurface: Colors.white,
-                surfaceContainerHigh: Colors.purple
-              ),
-            dialogBackgroundColor: Colors.blueAccent
-          ),
-        child: child
-      );
-        }
-    );
+              data: ThemeData().copyWith(
+                  colorScheme: ColorScheme.dark(
+                      primary: Colors.white,
+                      onPrimary: Colors.red,
+                      surface: Colors.blue,
+                      onSurface: Colors.white,
+                      surfaceContainerHigh: Colors.purple),
+                  dialogBackgroundColor: Colors.blueAccent),
+              child: child);
+        });
 
-    if(picker != null){
+    if (picker != null) {
       setState(() {
         date = picker;
         year = picker.year;
@@ -51,30 +47,26 @@ class _FlutterDatePickerUseState extends State<FlutterDatePickerUse> {
         day = picker.day;
       });
     }
-
   }
 
-  void timePicker()async{
+  void timePicker() async {
     TimeOfDay? timePick = await showTimePicker(
         context: context,
         initialTime: TimeOfDay.now(),
-       builder: (context, child){
-          if(child == null) return const SizedBox.shrink();
+        builder: (context, child) {
+          if (child == null) return const SizedBox.shrink();
           return Theme(
               data: ThemeData(
-                colorScheme: ColorScheme.dark(
-                  primary: Colors.purple,
-                  onPrimary: Colors.white,
-                  secondary: Colors.deepOrange,
-                  onSecondary: Colors.white
-                ),
-                dialogBackgroundColor: Colors.blueAccent
-              ),
+                  colorScheme: ColorScheme.dark(
+                      primary: Colors.purple,
+                      onPrimary: Colors.white,
+                      secondary: Colors.deepOrange,
+                      onSecondary: Colors.white),
+                  dialogBackgroundColor: Colors.blueAccent),
               child: child);
-       }
-    );
+        });
 
-    setState((){
+    setState(() {
       time = timePick;
       hour = timePick?.hour;
       minutes = timePick?.minute;
@@ -86,9 +78,7 @@ class _FlutterDatePickerUseState extends State<FlutterDatePickerUse> {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Date Picker')
-      ),
+      appBar: AppBar(title: Text('Date Picker')),
       body: SizedBox(
         width: width,
         height: height,
@@ -96,22 +86,30 @@ class _FlutterDatePickerUseState extends State<FlutterDatePickerUse> {
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 20,
           children: [
-              Text(date != null
-                  ? "${year.toString()}/ ${month.toString().padLeft(2) }"
-                  "/ ${day.toString().padLeft(2)}"
-                  : 'Show Date', style: TextStyles.flagHeading,),
-            ElevatedButton(
-              onPressed: datePicker,
-              child: Text('Pick Date')
+            Text(
+              date != null
+                  ? "${year.toString()}/ ${month.toString().padLeft(2)}"
+                      "/ ${day.toString().padLeft(2)}"
+                  : 'Show Date',
+              style: TextStyles.flagHeading,
             ),
-            Text(time != null ?
-                  "${hour.toString().padLeft(2)}"
-                      ": ${minutes.toString().padLeft(2)}"
-                : 'Time', style: TextStyles.flagHeading),
+            ElevatedButton(onPressed: datePicker, child: Text('Pick Date')),
+            Text(
+                time != null
+                    ? "${hour.toString().padLeft(2)}"
+                        ": ${minutes.toString().padLeft(2)}"
+                    : 'Time',
+                style: TextStyles.flagHeading),
+            ElevatedButton(onPressed: timePicker, child: Text('Pick Time')),
             ElevatedButton(
-              onPressed: timePicker,
-              child: Text('Pick Time')
-            )
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DatePickerSecondExample()),
+                  );
+                },
+                child: Text('Second Example'))
           ],
         ),
       ),
