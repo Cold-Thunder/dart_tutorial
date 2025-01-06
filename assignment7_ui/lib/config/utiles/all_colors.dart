@@ -4,8 +4,10 @@ class AllColors{
   static Color transparent = Color(0x00000000);
   static Color shadowColor = Color(0x4DEFE6E1);
   static Color black = Color(0xFF000000);
+  static Color cartBackBlack = Color(0xFF121223);
   static Color boxBackGrey = Color(0xFFF6F8FA);
   static Color appbarWhite = Color(0xFFFFFFFF);
+  static Color white50 = Color(0x80FFFFFF);
   static Color authTypeDesWhite = Color(0xFFFFF2E0);
   static Color alertLightOrange = Color(0xFFFFEB34);
   static Color alertDeepOrange = Color(0xFFE76F00);
@@ -56,4 +58,7 @@ class AllColors{
   static Color callerSubGrey = Color(0xFF979797);
 
   static Color msgTimeGrey = Color(0xFFABABAB);
+  static Color cartCardBlack = Color(0xFF2A2A39);
+
+  static Color cartIncDesBlack = Color(0xFF41414F);
 }

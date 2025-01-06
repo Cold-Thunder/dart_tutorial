@@ -1,0 +1,145 @@
+import 'package:assignment7_ui/config/models/cart_item_model.dart';
+import 'package:assignment7_ui/config/utiles/all_colors.dart';
+import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/ui/widgets/grey_card.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+class ItemCard extends StatefulWidget {
+  final CartItemModel model;
+  final bool isEdit;
+  double totalPrice;
+  ItemCard(
+      {required this.isEdit,
+      required this.model,
+        required this.totalPrice,
+      super.key});
+
+  @override
+  State<ItemCard> createState() => _ItemCardState();
+}
+
+class _ItemCardState extends State<ItemCard> {
+  late int _count = widget.model.count;
+
+  increaseCount(){
+    setState(() {
+        widget.totalPrice += widget.model.price;
+        _count++;
+    });
+  }
+
+  decreaseCount(){
+    if(_count > 0){
+      setState((){
+        widget.totalPrice -= widget.model.price;
+        _count--;
+      });
+    }
+
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    return Container(
+      margin: const EdgeInsets.only(bottom: 35),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      height: 117,
+      width: width,
+      child: Row(
+        children: [
+          GreyCard(height: 117, width: 136, color: AllColors.cartCardBlack),
+          const SizedBox(width: 15),
+          Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // heading section
+                Row(
+                  children: [
+                    SizedBox(
+                      width: width * 0.39,
+                      child: Text(
+                        widget.model.title,
+                        style: TextStyles.cartItemHeadTextStyle,
+                        maxLines: 2,
+                      ),
+                    ),
+                    Visibility(
+                      visible: widget.isEdit,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Container(
+                          padding: const EdgeInsets.all(8),
+                          height: 27,
+                          width: 27,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: AllColors.canceledRed),
+                          child: SvgPicture.asset(AllImages.closeWhiteIcon,
+                              height: 9, width: 9),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Text("\$${_count * widget.model.price}",
+                    style: TextStyles.profileNameStyle
+                        .copyWith(color: AllColors.appbarWhite)),
+                SizedBox(
+                  width: width * 0.46,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        AllTexts.size,
+                        style: TextStyles.cartItemSizeTextStyle,
+                      ),
+                      Row(
+                        spacing: 10,
+                        children: [
+                          InkWell(
+                            onTap: decreaseCount,
+                            splashColor: AllColors.transparent,
+                            highlightColor: AllColors.transparent,
+                            child: Container(
+                              height: 22,
+                              width: 22,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: AllColors.cartIncDesBlack),
+                              child: Icon(Icons.remove,
+                                  size: 15, color: AllColors.appbarWhite),
+                            ),
+                          ),
+                          Text(_count.toString(),
+                              style: TextStyles.profileNameStyle
+                                  .copyWith(color: AllColors.appbarWhite)),
+                          InkWell(
+                            onTap: increaseCount,
+                            splashColor: AllColors.transparent,
+                            highlightColor: AllColors.transparent,
+                            child: Container(
+                              height: 22,
+                              width: 22,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: AllColors.cartIncDesBlack),
+                              child: Icon(Icons.add,
+                                  size: 15, color: AllColors.appbarWhite),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                )
+              ])
+        ],
+      ),
+    );
+  }
+}

@@ -66,4 +66,5 @@ class AllImages{
 
   static String smileIcon = 'assets/icons/smile_icon.svg';
   static String sendIcon = 'assets/icons/send_icon.svg';
+  static String closeWhiteIcon = 'assets/icons/close_white.svg';
 }

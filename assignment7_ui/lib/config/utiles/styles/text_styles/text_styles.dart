@@ -152,4 +152,29 @@ class TextStyles{
         fontFamily: 'Sen_Regular',
         fontWeight: FontWeight.w400
     );
+
+    static TextStyle cartEditTextStyle = TextStyle(
+        fontSize: 14,
+        color: AllColors.buttonOrange,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400,
+        decoration: TextDecoration.underline,
+        decorationColor: AllColors.buttonOrange,
+        decorationThickness: 2
+    );
+
+    static TextStyle cartItemHeadTextStyle = TextStyle(
+        fontSize: 18,
+        color: AllColors.appbarWhite,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400,
+        overflow: TextOverflow.ellipsis
+    );
+
+    static TextStyle cartItemSizeTextStyle = TextStyle(
+        fontSize: 18,
+        color: AllColors.white50,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400,
+    );
 }

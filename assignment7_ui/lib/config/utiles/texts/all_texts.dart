@@ -1,3 +1,4 @@
+import 'package:assignment7_ui/config/models/cart_item_model.dart';
 import 'package:assignment7_ui/config/models/delivery_man_message.dart';
 import 'package:assignment7_ui/ui/widgets/home_screen_widgets/delivery_to_section.dart';
 
@@ -58,6 +59,19 @@ class AllTexts{
 
   static String msgInputHint = 'Write somethings';
 
+  static String cart = 'Cart';
+  static String editItem ='EDIT ITEM';
+  static String done = 'DONE';
+  static String deliveryAdd = 'DELIVERY ADDRESS';
+  static String deliveryAddHint = 'your address';
+  static String edit = 'EDIT';
+  static String placeOrder = 'PLACE ORDER';
+  static String breakDown = 'Breakdown';
+
+  static String pizzaCalzone = 'Pizza Calzone European';
+  static String size = '14"';
+  static double price = 32;
+
   static List<String> labelBtnTexts = [
     AllTexts.home,
     AllTexts.work,
@@ -75,6 +89,19 @@ class AllTexts{
     DeliveryManMessageModel(message: AllTexts.msg3, time: '8.11pm', sender: false),
     DeliveryManMessageModel(message: AllTexts.msg4, time: '8.11pm', sender: true),
     DeliveryManMessageModel(message: AllTexts.msg5, time: '8.11pm', sender: false),
+  ];
+
+  static List<CartItemModel> cartItem = [
+    CartItemModel(
+        title: AllTexts.pizzaCalzone,
+        price: AllTexts.price,
+        size: AllTexts.size,
+        count: 2),
+    CartItemModel(
+        title: AllTexts.pizzaCalzone,
+        price: AllTexts.price,
+        size: AllTexts.size,
+        count: 1),
   ];
 
 }
