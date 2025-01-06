@@ -10,11 +10,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 class ItemCard extends StatefulWidget {
   final CartItemModel model;
   final bool isEdit;
-  double totalPrice;
-  ItemCard(
+  final double totalPrice;
+  final Function totalPriceFunc;
+
+  const ItemCard(
       {required this.isEdit,
       required this.model,
         required this.totalPrice,
+        required this.totalPriceFunc,
       super.key});
 
   @override
@@ -22,24 +25,37 @@ class ItemCard extends StatefulWidget {
 }
 
 class _ItemCardState extends State<ItemCard> {
-  late int _count = widget.model.count;
+  late int _count;
+
+  @override
+  void initState(){
+    super.initState();
+    _count = widget.model.count;
+  }
 
   increaseCount(){
     setState(() {
-        widget.totalPrice += widget.model.price;
         _count++;
+        double newTotal = widget.totalPrice + widget.model.price;
+        widget.totalPriceFunc(newTotal);
     });
+
   }
 
   decreaseCount(){
     if(_count > 0){
       setState((){
-        widget.totalPrice -= widget.model.price;
         _count--;
+        if(widget.totalPrice > 0){
+          double newTotal = widget.totalPrice - widget.model.price;
+          widget.totalPriceFunc(newTotal);
+        }
       });
-    }
 
+    }
   }
+
+
 
   @override
   Widget build(BuildContext context) {

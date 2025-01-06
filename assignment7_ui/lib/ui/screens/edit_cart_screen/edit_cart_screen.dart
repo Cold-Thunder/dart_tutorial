@@ -17,7 +17,7 @@ class EditCartScreen extends StatefulWidget {
 }
 
 class _EditCartScreenState extends State<EditCartScreen> {
-  double _totalPrice = 98;
+  double _totalPrice = 0;
   bool _isEdited = false;
 
   final List<CartItemModel> cartList = AllTexts.cartItem;
@@ -28,7 +28,21 @@ class _EditCartScreenState extends State<EditCartScreen> {
     });
   }
 
+  increaseTotal(double price){
+    setState(() {
+      _totalPrice = price;
+    });
+  }
 
+  @override
+  void initState(){
+    super.initState();
+    setState(() {
+      for(CartItemModel model in cartList){
+        _totalPrice += model.price*model.count;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +83,7 @@ class _EditCartScreenState extends State<EditCartScreen> {
                     shrinkWrap: true,
                     itemCount: cartList.length,
                     itemBuilder: (context, index){
-                      return ItemCard(isEdit: _isEdited, model: cartList[index], totalPrice: _totalPrice, );
+                      return ItemCard(isEdit: _isEdited, model: cartList[index], totalPrice: _totalPrice, totalPriceFunc: increaseTotal,);
                     },
                   )
                 )
