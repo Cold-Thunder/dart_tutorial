@@ -2,6 +2,7 @@ import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
+import 'package:assignment7_ui/ui/screens/resturant_view_one/resturant_view_one_screen.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -13,7 +14,14 @@ class OpenRestCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return InkWell(
-      onTap: (){},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => RestaurantViewOneScreen(),
+          ),
+        );
+      },
       splashColor: AllColors.transparent,
       child: Container(
         margin: const EdgeInsets.only(bottom: 20),
@@ -57,7 +65,8 @@ class OpenRestCard extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    SvgPicture.asset(AllImages.clockIcon, height: 20, width: 20),
+                    SvgPicture.asset(AllImages.clockIcon,
+                        height: 20, width: 20),
                     const SizedBox(width: 5),
                     Text(
                       HomeScreenText.time,

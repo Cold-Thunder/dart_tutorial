@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 class AllColors{
   static Color transparent = Color(0x00000000);
   static Color shadowColor = Color(0x4DEFE6E1);
+  static Color popItemShadowColor = Color(0x2696969A);
   static Color black = Color(0xFF000000);
   static Color cartBackBlack = Color(0xFF121223);
   static Color boxBackGrey = Color(0xFFF6F8FA);
   static Color appbarWhite = Color(0xFFFFFFFF);
+  static Color white20 = Color(0x33FFFFFF);
   static Color white50 = Color(0x80FFFFFF);
+
   static Color authTypeDesWhite = Color(0xFFFFF2E0);
   static Color alertLightOrange = Color(0xFFFFEB34);
   static Color alertDeepOrange = Color(0xFFE76F00);
@@ -20,6 +23,7 @@ class AllColors{
   static Color brightOrange = Color(0xFFFFE1CE);
   static Color selectedYellow = Color(0xFFFFD27C);
   static Color profileCircleOrange = Color(0xFFFFBF6D);
+  static Color ingredientOrange = Color(0xFFFFEBE4);
   static Color headingBlack = Color(0xFF32343E);
   static Color desBlack = Color(0xFF646982);
   static Color shapeGrey = Color(0xFF98A8B8);
@@ -61,4 +65,6 @@ class AllColors{
   static Color cartCardBlack = Color(0xFF2A2A39);
 
   static Color cartIncDesBlack = Color(0xFF41414F);
+
+  static Color restNameBorderGrey = Color(0xFFE9E9E9);
 }

@@ -13,7 +13,7 @@ import 'package:flutter/material.dart';
 
 class PaymentScreen extends StatefulWidget {
   final double? price;
-  const PaymentScreen({this.price, super.key});
+  const PaymentScreen ({this.price, super.key});
 
   @override
   State<PaymentScreen> createState() => _PaymentScreenState();

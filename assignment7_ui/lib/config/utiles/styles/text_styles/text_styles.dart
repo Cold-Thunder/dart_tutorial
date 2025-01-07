@@ -177,4 +177,5 @@ class TextStyles{
         fontFamily: 'Sen_Regular',
         fontWeight: FontWeight.w400,
     );
+
 }

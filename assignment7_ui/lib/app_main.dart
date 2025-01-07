@@ -6,6 +6,8 @@ import 'package:assignment7_ui/ui/screens/add_new_address_screen/add_new_address
 import 'package:assignment7_ui/ui/screens/delivery_man_call_screen/delivery_man_call_screen.dart';
 import 'package:assignment7_ui/ui/screens/delivery_man_message/delivery_man_message_screen.dart';
 import 'package:assignment7_ui/ui/screens/edit_cart_screen/edit_cart_screen.dart';
+import 'package:assignment7_ui/ui/screens/food_business_screen/food_business_screen.dart';
+import 'package:assignment7_ui/ui/screens/food_details_screen/food_details_screen1.dart';
 import 'package:assignment7_ui/ui/screens/payment_screen/payment_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget{
 
         )
       ),
-      home: EditCartScreen()
+      home:FoodBusinessScreen()
     );
   }
 }

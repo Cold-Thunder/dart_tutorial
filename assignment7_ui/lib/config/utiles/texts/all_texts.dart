@@ -1,5 +1,7 @@
 import 'package:assignment7_ui/config/models/cart_item_model.dart';
 import 'package:assignment7_ui/config/models/delivery_man_message.dart';
+import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
+import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/ui/widgets/home_screen_widgets/delivery_to_section.dart';
 
 class AllTexts{
@@ -69,8 +71,119 @@ class AllTexts{
   static String breakDown = 'Breakdown';
 
   static String pizzaCalzone = 'Pizza Calzone European';
+  static String pizzaCalDes = 'Prosciutto e funghi is a pizza variety that is topped with tomato sauce.';
   static String size = '14"';
   static double price = 32;
+
+  static String openResturants = 'Open Resturants';
+
+  static String burger = 'Burger';
+  static String pizza = 'Pizza';
+  static String sandwich = 'Sandwich';
+
+  static String popularBurgers = 'Popular Burgers';
+
+  static String popCardTitle1 = 'Burger Bistro';
+  static String popCardTitle2 = "Smokin' Burger";
+  static String popCardTitle3 = "Buffalo Burgers";
+  static String popCardTitle4 = "Bullseye Burgers";
+
+  static String popCardSub1 = "Rose garden";
+  static String popCardSub2 = "Cafenio Restaurant";
+  static String popCardSub3 = "Kaji Firm Kitchen";
+  static String popCardSub4 = "Kabab restaurant";
+
+  static double popCardPrice1 = 40;
+  static double popCardPrice2 = 60;
+  static double popCardPrice3 = 75;
+  static double popCardPrice4 = 94;
+
+  static String restName = 'Uttora Coffe House';
+  static String restRating = '4.7';
+  static String deliveryType = 'Free';
+  static int duration = 20;
+
+  static String sizeName = 'Size';
+  static String ingridents ='ingridents';
+
+  static String addToCart = 'ADD TO CART';
+
+  static String restaurantView = 'Resturant View';
+  static String spicyRestaurant = 'Spicy Restaurant';
+  static String restaurantDes = 'Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.';
+
+  static List<String> foods = [
+    AllTexts.burger,
+    AllTexts.pizza,
+    AllTexts.sandwich,
+    AllTexts.sandwich,
+  ];
+
+  static List<PopularItemCardModel> popularItems = [
+    PopularItemCardModel(
+        title: AllTexts.popCardTitle1,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle2,
+        subTitle: AllTexts.popCardSub2,
+        price: AllTexts.popCardPrice2
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle3,
+        subTitle: AllTexts.popCardSub3,
+        price: AllTexts.popCardPrice3
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle4,
+        subTitle: AllTexts.popCardSub4,
+        price: AllTexts.popCardPrice4
+    ),
+  ];
+
+  static List<PopularItemCardModel> burgers = [
+    PopularItemCardModel(
+        title: AllTexts.popCardTitle1,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle2,
+        subTitle: AllTexts.popCardSub2,
+        price: AllTexts.popCardPrice2
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle3,
+        subTitle: AllTexts.popCardSub3,
+        price: AllTexts.popCardPrice3
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle4,
+        subTitle: AllTexts.popCardSub4,
+        price: AllTexts.popCardPrice4
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle1,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle2,
+        subTitle: AllTexts.popCardSub2,
+        price: AllTexts.popCardPrice2
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle3,
+        subTitle: AllTexts.popCardSub3,
+        price: AllTexts.popCardPrice3
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle4,
+        subTitle: AllTexts.popCardSub4,
+        price: AllTexts.popCardPrice4
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle3,
+        subTitle: AllTexts.popCardSub3,
+        price: AllTexts.popCardPrice3
+    ),PopularItemCardModel(
+        title: AllTexts.popCardTitle4,
+        subTitle: AllTexts.popCardSub4,
+        price: AllTexts.popCardPrice4
+    ),
+  ];
+
+
 
   static List<String> labelBtnTexts = [
     AllTexts.home,
@@ -102,6 +215,14 @@ class AllTexts{
         price: AllTexts.price,
         size: AllTexts.size,
         count: 1),
+  ];
+
+  static List<String> ingredientsIcons = [
+    AllImages.saltPotIcon,
+    AllImages.chickenLegIcon,
+    AllImages.onionIcon,
+    AllImages.pumkinIcon,
+    AllImages.chiliIcon
   ];
 
 }

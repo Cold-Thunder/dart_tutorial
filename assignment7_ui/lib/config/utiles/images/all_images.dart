@@ -67,4 +67,17 @@ class AllImages{
   static String smileIcon = 'assets/icons/smile_icon.svg';
   static String sendIcon = 'assets/icons/send_icon.svg';
   static String closeWhiteIcon = 'assets/icons/close_white.svg';
+
+  static String searchWhiteIcon = 'assets/icons/search_white_icon.svg';
+  static String settingMenuIcon = 'assets/icons/setting_menu_icon.svg';
+  static String whiteAddIcon = 'assets/icons/white_add_icon.svg';
+
+  static String restLogo = 'assets/images/rest_logo.png';
+
+  static String chickenLegIcon = 'assets/icons/chicken_leg.svg';
+  static String chiliIcon = 'assets/icons/chili.svg';
+  static String onionIcon = 'assets/icons/onion.svg';
+  static String pumkinIcon = 'assets/icons/pumkin.svg';
+  static String saltPotIcon = 'assets/icons/salt_pot.svg';
+  static String removeIcon = 'assets/icons/remove.svg';
 }

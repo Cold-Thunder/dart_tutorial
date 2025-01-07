@@ -12,7 +12,7 @@ import 'package:assignment7_ui/ui/widgets/home_screen_widgets/delivery_to_sectio
 import 'package:assignment7_ui/ui/widgets/home_screen_widgets/home_searchbar.dart';
 import 'package:assignment7_ui/ui/widgets/home_screen_widgets/home_top_title.dart';
 import 'package:assignment7_ui/ui/widgets/home_screen_widgets/homev2_cate_card.dart';
-import 'package:assignment7_ui/ui/widgets/home_screen_widgets/open_rest_card.dart';
+import 'package:assignment7_ui/ui/widgets/open_rest_card.dart';
 import 'package:flutter/material.dart';
 
 class HomeV2 extends StatefulWidget{
