@@ -45,18 +45,17 @@ class _TextInputFieldState extends State<TextInputField> {
           filled: true,
           fillColor: AllColors.inputFieldWhite,
           contentPadding: const EdgeInsets.symmetric(horizontal: 15),
-          prefixIcon: Visibility(
-              visible: widget.prefixIconSvg != null,
-              child: widget.prefixIconSvg != null ? Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
-                child: SvgPicture.asset(
-                  widget.prefixIconSvg!,
-                  height: 20,
-                  width: 20,
-                ),
-              ) : SizedBox()
-          ),
+          isDense: true,
+          prefixIcon: widget.prefixIconSvg != null
+              ? Padding(
+            padding: const EdgeInsets.all(10), // Adjust padding for the SVG icon
+            child: SvgPicture.asset(
+              widget.prefixIconSvg!,
+              height: 20,
+              width: 20,
+            ),
+          )
+              : null,
           prefixIconConstraints: BoxConstraints(maxHeight: 40, maxWidth: 40),
           // controlling suffix
           suffixIcon: Visibility(
