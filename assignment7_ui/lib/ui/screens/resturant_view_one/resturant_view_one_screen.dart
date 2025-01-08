@@ -101,6 +101,7 @@ class _RestaurantViewOneScreenState extends State<RestaurantViewOneScreen> {
                 GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
+                      crossAxisSpacing: 15,
                       mainAxisSpacing: 15
                   ),
                   physics: NeverScrollableScrollPhysics(),
