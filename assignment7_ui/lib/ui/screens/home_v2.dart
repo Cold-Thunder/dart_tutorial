@@ -38,7 +38,7 @@ class _HomeV2State extends State<HomeV2> {
   void initState(){
     super.initState();
     Timer(Duration(seconds: 2), (){
-      showDialog(context: context, builder: (context)=>CustomDialoug());
+      showDialog(context: context, builder: (context)=>CustomDialog());
     });
   }
 

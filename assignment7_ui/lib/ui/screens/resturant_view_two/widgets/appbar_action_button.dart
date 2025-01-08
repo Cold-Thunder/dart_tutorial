@@ -1,6 +1,5 @@
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
-import 'package:assignment7_ui/ui/screens/resturant_view_one/widgets/filter_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -12,17 +11,7 @@ class AppbarActionButton extends StatelessWidget {
     return InkWell(
       splashColor: AllColors.transparent,
       highlightColor: AllColors.transparent,
-      onTap: (){
-        showGeneralDialog(
-          context: context,
-            barrierDismissible: true,
-            barrierLabel: MaterialLocalizations.of(context)
-                .modalBarrierDismissLabel,
-          pageBuilder: (BuildContext context, animation, secondaryAnimation){
-            return FilterDialog();
-          }
-        );
-      },
+      onTap: (){},
       child: Container(
         padding: const EdgeInsets.all(13),
         height: 45,

@@ -80,4 +80,7 @@ class AllImages{
   static String pumkinIcon = 'assets/icons/pumkin.svg';
   static String saltPotIcon = 'assets/icons/salt_pot.svg';
   static String removeIcon = 'assets/icons/remove.svg';
+
+  static String starOrange = 'assets/icons/star_orange.svg';
+  static String starGrey = 'assets/icons/star_grey.svg';
 }

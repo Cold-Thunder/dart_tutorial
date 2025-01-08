@@ -2,7 +2,6 @@ import 'package:assignment7_ui/config/models/cart_item_model.dart';
 import 'package:assignment7_ui/config/models/delivery_man_message.dart';
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
-import 'package:assignment7_ui/ui/widgets/home_screen_widgets/delivery_to_section.dart';
 
 class AllTexts{
   static String addCard = 'Add Card';
@@ -72,6 +71,8 @@ class AllTexts{
 
   static String pizzaCalzone = 'Pizza Calzone European';
   static String pizzaCalDes = 'Prosciutto e funghi is a pizza variety that is topped with tomato sauce.';
+  static String burgerBistro = 'Burger Bistro';
+  static String burgerBistroDes = 'Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.';
   static String size = '14"';
   static double price = 32;
 
@@ -99,6 +100,7 @@ class AllTexts{
   static double popCardPrice4 = 94;
 
   static String restName = 'Uttora Coffe House';
+  static String roseGarden = 'Rose Garden';
   static String restRating = '4.7';
   static String deliveryType = 'Free';
   static int duration = 20;
@@ -111,6 +113,26 @@ class AllTexts{
   static String restaurantView = 'Resturant View';
   static String spicyRestaurant = 'Spicy Restaurant';
   static String restaurantDes = 'Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.';
+
+  static String filterYour = 'Filter your search';
+
+  static String offer = 'OFFER';
+
+  static String delivery = 'Delivery';
+  static String pickUp = 'Pick Up';
+  static String onlinePayment = 'Online payment available';
+  static String deliveryTime = 'Deliver Time';
+  static String pricing = 'PRICING';
+  static String rating = 'RATING';
+  static String filter = 'FILTER';
+
+  static List<String> times = [
+    '10-15 min',
+    '20 min',
+    '30 min'
+  ];
+
+  static String dollarSign = '\$';
 
   static List<String> foods = [
     AllTexts.burger,

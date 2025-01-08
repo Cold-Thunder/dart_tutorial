@@ -5,8 +5,8 @@ import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart
 import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
 import 'package:flutter/material.dart';
 
-class CustomDialoug extends StatelessWidget {
-  const CustomDialoug({super.key});
+class CustomDialog extends StatelessWidget {
+  const CustomDialog({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class CustomDialoug extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(35),
           // image: DecorationImage(
-          //     image: AssetImage(AllImages.dialougBack),
+          //     image: AssetImage(AllImages.dialogBack),
           //   fit: BoxFit.fill
           // ),
           gradient: LinearGradient(
