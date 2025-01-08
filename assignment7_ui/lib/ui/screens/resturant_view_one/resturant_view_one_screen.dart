@@ -9,7 +9,7 @@ import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:assignment7_ui/ui/widgets/popular_items_widget.dart';
-import 'package:assignment7_ui/ui/widgets/search_screen_wdgets/heading_widget.dart';
+import 'package:assignment7_ui/ui/screens/search_screen/widgets/heading_widget.dart';
 import 'package:flutter/material.dart';
 
 class RestaurantViewOneScreen extends StatefulWidget {

@@ -9,7 +9,7 @@ import 'package:assignment7_ui/ui/screens/edit_cart_screen/edit_cart_screen.dart
 import 'package:assignment7_ui/ui/screens/food_business_screen/food_business_screen.dart';
 import 'package:assignment7_ui/ui/screens/food_details_screen/food_details_screen1.dart';
 import 'package:assignment7_ui/ui/screens/food_details_screen_two/food_details_screen_two.dart';
-import 'package:assignment7_ui/ui/screens/home_v1.dart';
+import 'package:assignment7_ui/ui/screens/home_screens/home_v1.dart';
 import 'package:assignment7_ui/ui/screens/payment_screen/payment_screen.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_one/resturant_view_one_screen.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_two/restaurant_view_two_screen.dart';

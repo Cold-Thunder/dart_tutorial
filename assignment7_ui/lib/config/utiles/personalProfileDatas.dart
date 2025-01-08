@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/models/personal_profile_item_model.dart';
-import 'package:assignment7_ui/ui/screens/my_address_screen.dart';
-import 'package:assignment7_ui/ui/screens/personal_profile_screen.dart';
+import 'package:assignment7_ui/ui/screens/my_address_screen/my_address_screen.dart';
+import 'package:assignment7_ui/ui/screens/personal_profile_screen/personal_profile_screen.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/texts/personal_profile_text.dart';
 
