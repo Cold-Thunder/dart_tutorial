@@ -5,6 +5,10 @@ import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 
 class AllTexts{
+  static String home1 = 'Home One';
+  static String home2 = 'Home Two';
+  static String home3 = 'Home Three';
+
   static String addCard = 'Add Card';
   static String cardHolder = 'CARD HOLDER NANE';
   static String cardHolderName = 'NANE';

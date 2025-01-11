@@ -3,18 +3,15 @@ import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class AppbarMenubar extends StatelessWidget {
-  final Widget? nextHome;
-  const AppbarMenubar({this.nextHome, super.key});
+class AppbarManubar extends StatelessWidget {
+  const AppbarManubar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       splashColor: AllColors.transparent,
       onTap: (){
-        if(nextHome != null){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>nextHome!));
-        }
+        Scaffold.of(context).openDrawer();
       },
         radius: 22,
       child: Container(

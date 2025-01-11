@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:assignment7_ui/config/models/home_v2_cat_model.dart';
+import 'package:assignment7_ui/ui/screens/drawer_screen/drawer_screen.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/orders_screen.dart';
 import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
 import 'package:assignment7_ui/ui/widgets/custom_dialoug.dart';
@@ -45,13 +46,14 @@ class _HomeV3State extends State<HomeV3> {
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        leading: AppbarMenubar(),
+        leading: AppbarManubar(),
         title: DeliveryToSection(),
         actions: [
           CartButton(orderScreen: OrdersScreen()),
           const SizedBox(width: 15)
         ],
       ),
+      drawer: DrawerScreen(),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.only(left: 15),
