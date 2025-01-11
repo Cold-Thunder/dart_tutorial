@@ -1,5 +1,5 @@
 import 'package:assignment7_ui/config/models/social_media_model.dart';
-import 'package:assignment7_ui/ui/screens/foget_pass_screens/forget_pass_screen.dart';
+import 'package:assignment7_ui/ui/screens/forget_pass_screen/forget_pass_screen.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v1.dart';
 import 'package:assignment7_ui/ui/screens/signup_screen/signup_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
@@ -14,14 +14,14 @@ import 'package:assignment7_ui/ui/widgets/auth_type_widgets/input_field_title.da
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
 
-class LoginScren extends StatefulWidget {
-  const LoginScren({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<LoginScren> createState() => _LoginScrenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginScrenState extends State<LoginScren> {
+class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailCont = TextEditingController();
 
   final TextEditingController _passCont = TextEditingController();

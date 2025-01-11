@@ -62,11 +62,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   width: width * 0.9,
                   child: ElevatedButtonDesign(
                     title: ind < 3 ? OnBoardingTexts.next : OnBoardingTexts.getStarted,
-                    screen: ind == 3 ? LoginScren() : null,
+                    screen: ind == 3 ? LoginScreen() : null,
                     function: ind < 3 ? screenControlling : null,
                   ),
                 ),
-                ind < 3 ? SkipButton(screen: LoginScren()) : SizedBox(height: 50),
+                ind < 3 ? SkipButton(screen: LoginScreen()) : SizedBox(height: 50),
 
               ],
             ),
