@@ -1,4 +1,4 @@
-import 'package:assignment7_ui/ui/screens/home_screens/home_v1.dart';
+
 import 'package:assignment7_ui/ui/screens/log_in_screen/login_screen.dart';
 import 'package:assignment7_ui/ui/screens/onboarding_screens/onboarding1.dart';
 import 'package:assignment7_ui/ui/screens/onboarding_screens/onboarding2.dart';
@@ -21,6 +21,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _controller = PageController();
 
   int ind= 0;
+
+  screenControlling(){
+    _controller.nextPage(duration: Duration(seconds: 1), curve: Curves.easeIn);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +63,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: ElevatedButtonDesign(
                     title: ind < 3 ? OnBoardingTexts.next : OnBoardingTexts.getStarted,
                     screen: ind == 3 ? LoginScren() : null,
+                    function: ind < 3 ? screenControlling : null,
                   ),
                 ),
-                ind < 3 ? SkipButton(screen: _controller) : SizedBox(height: 50),
+                ind < 3 ? SkipButton(screen: LoginScren()) : SizedBox(height: 50),
 
               ],
             ),
