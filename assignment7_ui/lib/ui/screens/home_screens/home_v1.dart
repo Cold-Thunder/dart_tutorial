@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:assignment7_ui/ui/screens/food_details_screen/food_details_screen1.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v2.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/orders_screen.dart';
 import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
@@ -64,7 +65,7 @@ class _HomeV1State extends State<HomeV1> {
               ),
               const SizedBox(height: 20),
               // heading section
-              HeadingSection(title: HomeScreenText.allCate),
+              HeadingSection(title: HomeScreenText.allCate, seeAll: FoodDetailsScreenOne()),
               const SizedBox(height: 20),
               // all categories
               SizedBox(
@@ -79,12 +80,13 @@ class _HomeV1State extends State<HomeV1> {
               ),
               const SizedBox(height: 20),
               // open restaurant heading
-              HeadingSection(title: HomeScreenText.openRest),
+              HeadingSection(title: HomeScreenText.openRest,),
               const SizedBox(height: 15),
               Container(
                 padding: const EdgeInsets.only(right: 15),
-                  height: 500,
                   child: ListView.builder(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
                     itemCount: openRestCounts.length,
                       itemBuilder: (context, index){
                     return OpenRestCard();

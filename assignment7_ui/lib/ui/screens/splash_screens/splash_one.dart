@@ -16,7 +16,7 @@ class _SplashOneState extends State<SplashOne> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 1), () {
+    Timer(Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context)=>SplashTwo()),

@@ -43,6 +43,7 @@ class AllImages{
   static String personIcon = 'assets/icons/person_icon.svg';
   static String emailIcon = 'assets/icons/email_icon.svg';
   static String phoneIcon = 'assets/icons/phone_icon.svg';
+  static String messageIcon = 'assets/icons/message.svg';
   static String favIcon = 'assets/icons/favourite_icon.svg';
   static String faqIcon = 'assets/icons/faq_icon.svg';
   static String notificationIcon = 'assets/icons/notification_icon.svg';
@@ -83,4 +84,6 @@ class AllImages{
 
   static String starOrange = 'assets/icons/star_orange.svg';
   static String starGrey = 'assets/icons/star_grey.svg';
+  static String checkIcon = 'assets/icons/check_icon.svg';
+  static String loadingIcon = 'assets/icons/loading_icon.svg';
 }

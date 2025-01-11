@@ -13,6 +13,9 @@ import 'package:assignment7_ui/ui/screens/home_screens/home_v1.dart';
 import 'package:assignment7_ui/ui/screens/payment_screen/payment_screen.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_one/resturant_view_one_screen.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_two/restaurant_view_two_screen.dart';
+import 'package:assignment7_ui/ui/screens/splash_screens/splash_one.dart';
+import 'package:assignment7_ui/ui/screens/splash_screens/splash_two.dart';
+import 'package:assignment7_ui/ui/screens/tracking_order_screen/track_order_screen.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget{
@@ -27,10 +30,9 @@ class MyApp extends StatelessWidget{
           backgroundColor: AllColors.appbarWhite,
           elevation: 0,
           scrolledUnderElevation: 0
-
         )
       ),
-      home:RestaurantViewOneScreen()
+      home: TrackOrderScreen()
     );
   }
 }

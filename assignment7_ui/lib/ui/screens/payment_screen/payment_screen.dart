@@ -5,6 +5,7 @@ import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart
 import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/add_card_screen/add_card_screen.dart';
 import 'package:assignment7_ui/ui/screens/payment_screen/widgets/cards_widgets.dart';
+import 'package:assignment7_ui/ui/screens/payment_success_screen/payment_success_screen.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
 import 'package:assignment7_ui/ui/widgets/elevated_button_design.dart';
@@ -81,7 +82,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             ),
             SizedBox(
               height: 62,
-                child: ElevatedButtonDesign(title: AllTexts.payAndConfirm),
+                child: ElevatedButtonDesign(title: AllTexts.payAndConfirm, screen: PaymentSuccessScreen(),),
             )
           ]
         )

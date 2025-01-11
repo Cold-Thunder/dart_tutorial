@@ -5,6 +5,7 @@ class AllColors{
   static Color shadowColor = Color(0x4DEFE6E1);
   static Color popItemShadowColor = Color(0x2696969A);
   static Color black = Color(0xFF000000);
+  static Color backIconBlack = Color(0xFF212029);
   static Color cartBackBlack = Color(0xFF121223);
   static Color boxBackGrey = Color(0xFFF6F8FA);
   static Color appbarWhite = Color(0xFFFFFFFF);
@@ -67,4 +68,8 @@ class AllColors{
   static Color cartIncDesBlack = Color(0xFF41414F);
 
   static Color restNameBorderGrey = Color(0xFFE9E9E9);
+
+  static Color handlerGrey = Color(0xFFD8E3ED);
+
+  static Color bottomSheetBottomBorderGrey = Color(0xFFE8E8E8);
 }

@@ -1,6 +1,7 @@
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
+import 'package:assignment7_ui/ui/screens/food_details_screen/food_details_screen1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -19,6 +20,10 @@ class HeadingSection extends StatelessWidget {
         children: [
           Text(title, style: TextStyles.headingTextStyle),
           InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(
+              builder: (context)=> seeAll!));
+            },
             child: Row(
               children: [
                 Text(

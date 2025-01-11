@@ -6,7 +6,6 @@ import 'package:assignment7_ui/ui/screens/delivery_man_call_screen/widgets/call_
 import 'package:assignment7_ui/ui/screens/delivery_man_call_screen/widgets/left_rigth_button.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class DeliveryManCallScreen extends StatelessWidget {
   const DeliveryManCallScreen({super.key});

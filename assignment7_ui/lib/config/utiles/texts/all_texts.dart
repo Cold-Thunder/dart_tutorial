@@ -1,5 +1,6 @@
 import 'package:assignment7_ui/config/models/cart_item_model.dart';
 import 'package:assignment7_ui/config/models/delivery_man_message.dart';
+import 'package:assignment7_ui/config/models/order_item.dart';
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 
@@ -125,6 +126,28 @@ class AllTexts{
   static String pricing = 'PRICING';
   static String rating = 'RATING';
   static String filter = 'FILTER';
+
+  static String trackOrder = 'Track Order';
+
+  static String uttoraCoffee = 'Uttora Coffee House';
+  static String orderTime = '06 Sept, 10:00pm';
+
+  static int time = 20;
+  static String estimateTime = 'Estimated delivery time';
+
+  static String userName = 'Robert F.';
+  static String courier = "Courier";
+
+  static String orderReceive = "Your order has been received";
+  static String preparingFood = 'The restaurant is preparing your food';
+  static String orderPickingUp = 'Your order has been picked up for delivery';
+  static String orderArriving = 'Order arriving soon!';
+
+  static List<OrderItem> orderList = [
+    OrderItem(count: 2, name: 'Burger'),
+    OrderItem(count: 4, name: 'Sandwich'),
+
+  ];
 
   static List<String> times = [
     '10-15 min',

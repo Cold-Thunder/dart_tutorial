@@ -1,4 +1,5 @@
 import 'package:assignment7_ui/ui/screens/home_screens/home_v1.dart';
+import 'package:assignment7_ui/ui/screens/log_in_screen/login_screen.dart';
 import 'package:assignment7_ui/ui/screens/onboarding_screens/onboarding1.dart';
 import 'package:assignment7_ui/ui/screens/onboarding_screens/onboarding2.dart';
 import 'package:assignment7_ui/ui/screens/onboarding_screens/onboarding3.dart';
@@ -57,7 +58,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   width: width * 0.9,
                   child: ElevatedButtonDesign(
                     title: ind < 3 ? OnBoardingTexts.next : OnBoardingTexts.getStarted,
-                    screen: ind == 3 ? HomeV1() : null,
+                    screen: ind == 3 ? LoginScren() : null,
                   ),
                 ),
                 ind < 3 ? SkipButton(screen: _controller) : SizedBox(height: 50),

@@ -178,4 +178,24 @@ class TextStyles{
         fontWeight: FontWeight.w400,
     );
 
+    static TextStyle orderCountTextStyle = TextStyle(
+        fontSize: 13,
+        color: AllColors.desBlack,
+        fontFamily: 'Sen_Bold',
+        fontWeight: FontWeight.w700
+    );
+
+    static TextStyle orderItemNameTextStyle = TextStyle(
+        fontSize: 13,
+        color: AllColors.desBlack,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400,
+    );
+    static TextStyle timeHeadingStyle = TextStyle(
+        fontSize: 30,
+        fontFamily: 'Sen_ExtraBold',
+        color: AllColors.headingBlack,
+        fontWeight: FontWeight.w800
+    );
+
 }

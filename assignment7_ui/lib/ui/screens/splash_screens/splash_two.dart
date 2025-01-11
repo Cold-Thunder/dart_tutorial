@@ -31,19 +31,25 @@ class _SplashTwoState extends State<SplashTwo> {
       body: SizedBox(
         height: height,
         width: width,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Stack(
+          alignment: Alignment.center,
           children: [
-            Container(
-              width: width,
-              alignment: Alignment.topLeft,
-              child: Image.asset(AllImages.splashTopFlow),
+            Positioned(
+              top: 0,
+              child: Container(
+                width: width,
+                alignment: Alignment.topLeft,
+                child: Image.asset(AllImages.splashTopFlow),
+              ),
             ),
             Image.asset(AllImages.logo, height: 59, width: 121.13),
-            Container(
-              alignment: Alignment.bottomRight,
-              width: width,
-              child: Image.asset(AllImages.splashBottomFlow),
+            Positioned(
+              bottom: 0,
+              child: Container(
+                alignment: Alignment.bottomRight,
+                width: width,
+                child: Image.asset(AllImages.splashBottomFlow),
+              ),
             )
           ],
         ),
