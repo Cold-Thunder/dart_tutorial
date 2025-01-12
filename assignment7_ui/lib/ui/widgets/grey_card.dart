@@ -7,9 +7,9 @@ class GreyCard extends StatelessWidget{
   final double width;
   final double? borderRad;
   final Color? color;
-  // final String image;
+  final String? image;
 
-  const GreyCard({required this.height, required this.width, this.borderRad, this.color, super.key});
+  const GreyCard({required this.height, required this.width, this.borderRad, this.color, this.image, super.key});
 
   @override
   Widget build(BuildContext context){
@@ -19,10 +19,10 @@ class GreyCard extends StatelessWidget{
       decoration: BoxDecoration(
         color: color ?? AllColors.shapeGrey,
         borderRadius: BorderRadius.circular(borderRad ?? 12),
-        // image: DecorationImage(
-        //   image: AssetImage(-),
-        //   fit: BoxFit.fill
-        // )
+        image: image != null ? DecorationImage(
+          image: AssetImage(image!),
+          fit: BoxFit.fill
+        ) : null
       )
     );
   }

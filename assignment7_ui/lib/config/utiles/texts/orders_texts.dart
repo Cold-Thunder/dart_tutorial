@@ -66,6 +66,24 @@ class OrdersText{
         foodType: OrdersText.drink,
         completed: false
 
+    ), OrderModel(
+        id: OrdersText.starBuckId,
+        title: OrdersText.starbucks,
+        price: OrdersText.price,
+        date: OrdersText.starBuckDate,
+        count: OrdersText.starBucksCount,
+        foodType: OrdersText.drink,
+        completed: false
+
+    ), OrderModel(
+        id: OrdersText.starBuckId,
+        title: OrdersText.starbucks,
+        price: OrdersText.price,
+        date: OrdersText.starBuckDate,
+        count: OrdersText.starBucksCount,
+        foodType: OrdersText.drink,
+        completed: false
+
     ),
   ];
 

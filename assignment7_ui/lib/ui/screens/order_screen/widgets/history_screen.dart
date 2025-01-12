@@ -11,31 +11,23 @@ class HistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    return SingleChildScrollView(
-      child: SizedBox(
-        width: width,
-        child: Column(
-          children: [
-            const SizedBox(height: 25),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0),
-              child: Expanded(
-                child: SingleChildScrollView(
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: orderHistoryDetails.length,
-                    itemBuilder: (context, index){
-                      return OrderHistoryWidget(model: orderHistoryDetails[index]);
-                    },
-                  ),
+    return
+        Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15, top: 25),
+          child: Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  // physics: NeverScrollableScrollPhysics(),
+                  itemCount: orderHistoryDetails.length,
+                  itemBuilder: (context, index){
+                    return OrderHistoryWidget(model: orderHistoryDetails[index]);
+                  },
                 ),
               ),
-            )
-          ],
-        ),
-      ),
+            ],
+          ),
     );
   }
 }

@@ -28,7 +28,7 @@ class BottomSheetBottomSection extends StatelessWidget {
       ),
       child: Row(
         children: [
-          GreyCard(height: 54, width: 54),
+          GreyCard(height: 54, width: 54, borderRad: 27,image: AllImages.personProfileImg,),
           const SizedBox(width: 10),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,

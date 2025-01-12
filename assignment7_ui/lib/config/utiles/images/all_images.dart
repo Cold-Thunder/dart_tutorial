@@ -23,6 +23,9 @@ class AllImages{
 
   static String mapImg = 'assets/images/map.png';
 
+  static String coffeeHouseImg = 'assets/images/coffee_house_img.png';
+  static String personProfileImg = 'assets/images/person_profile_img.png';
+
 
   // all icons
   static String starIcon = 'assets/icons/star_icon.svg';

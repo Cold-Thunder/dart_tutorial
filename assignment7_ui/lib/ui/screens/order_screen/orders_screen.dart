@@ -68,6 +68,7 @@ class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderSt
                 unselectedLabelStyle: TextStyles.elevatedButtonStyle.copyWith(
                   color: AllColors.inactiveTypeGrey
                 ),
+                splashFactory: NoSplash.splashFactory,
                 tabs: [
                   Tab(text: OrdersText.ongoing),
                   Tab(text: OrdersText.history)
