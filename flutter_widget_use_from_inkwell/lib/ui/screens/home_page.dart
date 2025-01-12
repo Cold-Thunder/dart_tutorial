@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:widgets_use/ui/widgets_use/all_dialog_widget_uses/all_dialog_widget_uses.dart';
 import 'package:widgets_use/ui/widgets_use/bottom_navigation_bar/flutter_bottom_navigation.dart';
 import 'package:widgets_use/ui/widgets_use/elevated_button_use.dart';
 import 'package:widgets_use/config/utiles/styles/text_styles.dart';
@@ -8,6 +9,7 @@ import 'package:widgets_use/ui/widgets_use/checkbox_radiobutton_uses/radiobutton
 import 'package:widgets_use/ui/widgets_use/checkbox_radiobutton_uses/use_check_checkboxlisttile.dart';
 import 'package:widgets_use/ui/widgets_use/flutter_bottom_sheet/flutter_bottom_sheet_use.dart';
 import 'package:widgets_use/ui/widgets_use/flutter_date_picker/flutter_date_picker_use.dart';
+import 'package:widgets_use/ui/widgets_use/flutter_page_view/flutter_page_view_use.dart';
 import 'package:widgets_use/ui/widgets_use/form_text_field/flutter_form_text_field.dart';
 import 'package:widgets_use/ui/widgets_use/gesture_detector_use.dart';
 import 'package:widgets_use/ui/widgets_use/inkwell_use.dart';
@@ -87,6 +89,8 @@ class HomePage extends StatelessWidget {
               ElevatedButtonUse(title: "Date Picker Use", screen: FlutterDatePickerUse()),
               ElevatedButtonUse(title: "Bottom Sheet Use", screen: FlutterBottomSheetUse()),
               ElevatedButtonUse(title: "Bottom Navigation Bar", screen: FlutterBottomNavigation()),
+              ElevatedButtonUse(title: "Dialog Widget", screen: AllDialogWidgetUses()),
+              ElevatedButtonUse(title: "PageView Widget Use", screen: FlutterPageViewUse()),
             ],
           ),
         ),
