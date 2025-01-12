@@ -15,4 +15,6 @@ class AllColors{
   static Color swedenYellow = const Color(0xFFFFE00D);
 
   static Color purple = const Color(0xFFA020F0);
+  static Color grey = const Color(0xFFA5A7B9);
+  static Color orange = const Color(0xFFFF7622);
 }

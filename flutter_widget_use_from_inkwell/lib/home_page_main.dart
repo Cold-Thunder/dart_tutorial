@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
         title: 'Widgets uses',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-
+            primarySwatch: Colors.red,
             appBarTheme: AppBarTheme(
                 backgroundColor: Colors.purple,
                 titleTextStyle: TextStyle(fontSize: 22, color: Colors.white),
