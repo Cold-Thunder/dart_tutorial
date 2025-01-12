@@ -39,7 +39,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
               color: AllColors.shapeGrey,
               image: DecorationImage(
                 image: AssetImage(AllImages.mapImg,),
-                fit: BoxFit.fill,
+                fit: BoxFit.fitHeight,
               )
             )
           ),
