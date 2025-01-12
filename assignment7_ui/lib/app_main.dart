@@ -1,8 +1,6 @@
 
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/ui/screens/order_screen/orders_screen.dart';
 import 'package:assignment7_ui/ui/screens/splash_screens/splash_one.dart';
-import 'package:assignment7_ui/ui/screens/tracking_order_screen/track_order_screen.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget{
@@ -19,7 +17,7 @@ class MyApp extends StatelessWidget{
           scrolledUnderElevation: 0
         )
       ),
-      home: TrackOrderScreen()
+      home: SplashOne()
     );
   }
 }

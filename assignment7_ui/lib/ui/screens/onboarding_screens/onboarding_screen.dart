@@ -35,7 +35,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         body: SingleChildScrollView(
           child: SizedBox(
             width: width,
-            height: height,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,

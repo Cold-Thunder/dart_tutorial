@@ -34,7 +34,7 @@ class DeliveryManCallScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GreyCard(height: 105, width: 105, borderRad: 57),
+              GreyCard(height: 105, width: 105, borderRad: 57, image: AllImages.personProfileImg,),
               const SizedBox(height: 10),
               Text(AllTexts.receiverName, style: TextStyles.profileNameStyle),
               const SizedBox(height: 5),

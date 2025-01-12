@@ -10,7 +10,6 @@ import 'package:assignment7_ui/ui/screens/food_details_screen_two/widgets/logo_s
 import 'package:assignment7_ui/ui/screens/food_details_screen_two/widgets/app_bar_section.dart';
 import 'package:assignment7_ui/ui/screens/food_details_screen_two/widgets/top_grey_card.dart';
 import 'package:assignment7_ui/ui/widgets/elevated_button_design.dart';
-import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/material.dart';
 
 class FoodDetailsScreenTwo extends StatefulWidget {
