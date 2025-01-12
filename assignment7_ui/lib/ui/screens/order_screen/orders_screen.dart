@@ -1,13 +1,12 @@
-import 'package:assignment7_ui/config/models/order_model.dart';
+import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/ui/screens/menu_screen/menu_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/texts/orders_texts.dart';
+import 'package:assignment7_ui/ui/screens/order_screen/widgets/history_screen.dart';
+import 'package:assignment7_ui/ui/screens/order_screen/widgets/ongoing_screen.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_menu_icon_button.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
-import 'package:assignment7_ui/ui/screens/order_screen/widgets/order_history_widget.dart';
-import 'package:assignment7_ui/ui/screens/order_screen/widgets/order_ongoing_widget.dart';
-import 'package:assignment7_ui/ui/screens/order_screen/widgets/orders_type_title.dart';
 import 'package:flutter/material.dart';
 
 class OrdersScreen extends StatefulWidget {
@@ -17,12 +16,11 @@ class OrdersScreen extends StatefulWidget {
   State<OrdersScreen> createState() => _OrdersScreenState();
 }
 
-class _OrdersScreenState extends State<OrdersScreen> {
+class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderStateMixin{
+  late TabController _controller;
   bool ongoingActive = true;
   bool historyActive = false;
 
-  final List<OrderModel> ongoingOderDetails = OrdersText.orderDetails;
-  final List<OrderModel> orderHistoryDetails = OrdersText.orderDetails;
 
   void togglingTypes (){
     setState((){
@@ -31,11 +29,21 @@ class _OrdersScreenState extends State<OrdersScreen> {
     });
   }
 
+  @override
+  void initState(){
+    super.initState();
+    _controller = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  void dispose(){
+    _controller.dispose();
+    super.dispose();
+  }
+
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         leading: BackIcon(color: AllColors.backIconGrey),
@@ -47,53 +55,34 @@ class _OrdersScreenState extends State<OrdersScreen> {
           ),
           SizedBox(width: 15)
         ],
-      ),
-      body: SingleChildScrollView(
-        child: SizedBox(
-          width: width,
-          child: Column(
-            children: [
-              const SizedBox(height: 20),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                decoration: BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(
-                            color: AllColors.dividerBorderGrey, width: 1))),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: OrdersTypeTitle(
-                          title: OrdersText.ongoing, active: ongoingActive, toggler: togglingTypes,),
-                    ),
-                    Expanded(
-                      child: OrdersTypeTitle(
-                          title: OrdersText.history, active: historyActive, toggler: togglingTypes,),
-                    ),
-                  ],
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(50),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: TabBar(
+              controller: _controller,
+                indicatorSize: TabBarIndicatorSize.tab,
+                indicatorColor: AllColors.buttonOrange,
+                indicatorWeight: 1,
+                labelStyle: TextStyles.elevatedButtonStyle.copyWith(color: AllColors.buttonOrange),
+                unselectedLabelStyle: TextStyles.elevatedButtonStyle.copyWith(
+                  color: AllColors.inactiveTypeGrey
                 ),
-              ),
-              const SizedBox(height: 25),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                child: SizedBox(
-                  height: height*0.8,
-                  child: ListView.builder(
-                    itemCount: ongoingActive 
-                        ? ongoingOderDetails.length 
-                        : orderHistoryDetails.length,
-                    itemBuilder: (context, index){
-                      return ongoingActive 
-                          ? OrderOngoingWidget(model: ongoingOderDetails[index])
-                      :OrderHistoryWidget(model: orderHistoryDetails[index]);
-                    },
-                  )
-                ),
-              )
-            ],
+                tabs: [
+                  Tab(text: OrdersText.ongoing),
+                  Tab(text: OrdersText.history)
+                ]
+            ),
           ),
-        ),
+        )
       ),
+      body: TabBarView(
+        controller: _controller,
+          children: [
+            OngoingScreen(),
+            HistoryScreen()
+          ]
+      )
     );
   }
 }
