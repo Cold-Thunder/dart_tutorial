@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
             appBarTheme: AppBarTheme(
                 backgroundColor: Colors.purple,
                 titleTextStyle: TextStyle(fontSize: 22, color: Colors.white),
-                iconTheme: IconThemeData(color: Colors.white)),
+                iconTheme: IconThemeData(color: Colors.white),
+            ),
             elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.purple,
