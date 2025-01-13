@@ -26,4 +26,28 @@ class TextStyles{
     color: AllColors.appBarWhite
   );
 
+  static TextStyle userMessageTextStyle = TextStyle(
+    fontSize: 17,
+    color: AllColors.messageGrey
+  );
+
+  static TextStyle msgCountTextStyle = TextStyle(
+    fontSize: 15,
+    color: AllColors.appBarWhite
+  );
+
+  static TextStyle messageHintTextStyle = TextStyle(
+    fontSize: 14,
+    color: AllColors.hintGrey
+  );
+
+  static TextStyle senderTextStyle = TextStyle(
+    fontSize: 16,
+    color: AllColors.headingBlack
+  );
+  static TextStyle senderTimeTextStyle = TextStyle(
+    fontSize: 12,
+    color: AllColors.messageGrey
+  );
+
 }

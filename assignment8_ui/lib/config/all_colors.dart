@@ -10,4 +10,7 @@ class AllColors{
 
   static Color hintGrey = Color(0xFFB2BECD);
   static Color borderOutlineGrey = Color(0xFFF2F4F7);
+  static Color messageGrey = Color(0xFFC2C9D5);
+
+  static Color senderBackGrey = Color(0xFFE9F1FC);
 }

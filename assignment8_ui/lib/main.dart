@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
           backgroundColor: AllColors.appBarWhite,
           iconTheme: IconThemeData(
             color: AllColors.appBarIconBlack
-          )
+          ),
+          scrolledUnderElevation: 0
         )
       ),
       home: LoginScreen(),
