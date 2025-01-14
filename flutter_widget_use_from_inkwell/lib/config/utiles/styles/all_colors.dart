@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AllColors{
+  static Color transparent = const Color(0x00000000);
   static Color black = const Color(0xFF000000);
   static Color white = const Color(0xFFFFFFFF);
   static Color bdGreen =const Color(0xFF006A4E);
