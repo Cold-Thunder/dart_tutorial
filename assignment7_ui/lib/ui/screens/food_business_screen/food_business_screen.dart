@@ -84,9 +84,9 @@ final List<PopularItemCardModel> popularItems = AllTexts.popularItems;
               HeadingWidget(title: AllTexts.popularBurgers),
               // const SizedBox(height: 20),
               GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      // crossAxisSpacing: 10,
+                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 153,
+                      crossAxisSpacing: 20,
                     mainAxisSpacing: 20
                   ),
                   shrinkWrap: true,

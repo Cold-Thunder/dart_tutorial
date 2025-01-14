@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:assignment7_ui/ui/screens/drawer_screen/drawer_screen.dart';
+import 'package:assignment7_ui/ui/screens/food_business_screen/food_business_screen.dart';
 import 'package:assignment7_ui/ui/screens/food_details_screen/food_details_screen1.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/orders_screen.dart';
 import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
@@ -66,7 +67,7 @@ class _HomeV1State extends State<HomeV1> {
               ),
               const SizedBox(height: 20),
               // heading section
-              HeadingSection(title: HomeScreenText.allCate, seeAll: FoodDetailsScreenOne()),
+              HeadingSection(title: HomeScreenText.allCate, seeAllScreen: FoodBusinessScreen()),
               const SizedBox(height: 20),
               // all categories
               SizedBox(

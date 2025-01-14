@@ -93,10 +93,10 @@ class _RestaurantViewTwoScreenState extends State<RestaurantViewTwoScreen> {
                         ),
                         const SizedBox(height: 20),
                         Padding(
-                          padding: const EdgeInsets.only(right: 15.0),
+                          padding: const EdgeInsets.only(right: 15.0,),
                           child: GridView.builder(
-                              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
+                              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                                  maxCrossAxisExtent: 153,
                                   crossAxisSpacing: 20,
                                   mainAxisSpacing: 15
                               ),

@@ -1,15 +1,14 @@
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
-import 'package:assignment7_ui/ui/screens/food_details_screen/food_details_screen1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HeadingSection extends StatelessWidget {
   final String title;
-  final Widget? seeAll;
+  final Widget? seeAllScreen;
 
-  const HeadingSection({required this.title, this.seeAll, super.key});
+  const HeadingSection({required this.title, this.seeAllScreen, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class HeadingSection extends StatelessWidget {
           InkWell(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(
-              builder: (context)=> seeAll!));
+              builder: (context)=> seeAllScreen!));
             },
             child: Row(
               children: [

@@ -98,10 +98,10 @@ class _RestaurantViewOneScreenState extends State<RestaurantViewOneScreen> {
                 ),
                 const SizedBox(height: 20),
                 GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 15,
-                      mainAxisSpacing: 15
+                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 153,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20
                   ),
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
