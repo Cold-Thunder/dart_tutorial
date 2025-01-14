@@ -4,13 +4,17 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+It contains 3 screens.
+ 1. Login Screen
+ 2. Chat Room Screen
+ 3. Message Screen
 
-A few resources to get you started if this is your first Flutter project:
+## Screens:
+   
+   <div style="overflow-x: auto; white-space: nowrap; gap: 10px;">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+   <img src="./output/login.png" alt="Login screen" height="400">
+   <img src="./output/chatroom.png" alt="Chatroom screen" height="400">
+   <img src="./output/messages.png" alt="Message screen" height="400">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   </div>
