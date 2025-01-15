@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_use/config/utiles/styles/all_colors.dart';
+import 'package:widgets_use/ui/widgets_use/flutter_sliveappbar_widget/sliver_example_three.dart';
 import 'package:widgets_use/ui/widgets_use/flutter_sliveappbar_widget/sliver_example_two.dart';
 
 class FlutterSliverappbarWidget extends StatefulWidget {
@@ -73,6 +74,16 @@ class _FlutterSliverappbarWidgetState extends State<FlutterSliverappbarWidget> {
                   );
                 },
                 child: Text('Sliver Example two')
+              ),
+              ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(context,
+                        MaterialPageRoute(
+                            builder: (context)=>SliverExampleThree()
+                        )
+                    );
+                  },
+                  child: Text('Sliver Example Three')
               ),
               Container(
                   height: 200,

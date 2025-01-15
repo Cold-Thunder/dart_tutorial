@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_use/ui/screens/home_page.dart';
+import 'package:widgets_use/ui/widgets_use/flutter_sliveappbar_widget/flutter_sliverappbar_widget.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     textStyle: TextStyle(fontSize: 22, color: Colors.white)))),
-        routes: {'/': (context) => HomePage()},
+        routes: {'/': (context) => FlutterSliverappbarWidget()},
         initialRoute: '/');
   }
 }
