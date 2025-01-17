@@ -31,7 +31,7 @@ class GridviewWidgetUses extends StatelessWidget {
                 GridView.builder(
                   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                       maxCrossAxisExtent:100,
-                      mainAxisExtent: 100,
+                      // mainAxisExtent: 100,
                       crossAxisSpacing: 20,
                     mainAxisSpacing: 20,
                   ),
