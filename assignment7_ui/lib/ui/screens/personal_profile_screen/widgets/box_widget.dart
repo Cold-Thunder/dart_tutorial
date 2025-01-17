@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/models/personal_profile_item_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/ui/screens/personal_profile_screen/widgets/personal_list_tile.dart';
+import 'package:assignment7_ui/ui/screens/personal_profile_screen/widgets/personal_list_tile_with_sub.dart';
 import 'package:assignment7_ui/ui/screens/personal_profile_screen/widgets/profile_list_tiles.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -20,7 +20,7 @@ class BoxWidget extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: allDatas.map((item)=> showSub ?? true ? PersonalListTile(model: item) : ProfileListTiles(model: item)
+        children: allDatas.map((item)=> showSub ?? true ? PersonalListTileWithSub(model: item) : ProfileListTiles(model: item)
         ).toList()
       )
     );

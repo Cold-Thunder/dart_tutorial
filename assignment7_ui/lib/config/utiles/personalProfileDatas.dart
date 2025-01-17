@@ -5,6 +5,7 @@ import 'package:assignment7_ui/ui/screens/home_screens/home_v1.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v2.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v3.dart';
 import 'package:assignment7_ui/ui/screens/my_address_screen/my_address_screen.dart';
+import 'package:assignment7_ui/ui/screens/payment_screen/payment_screen.dart';
 import 'package:assignment7_ui/ui/screens/personal_profile_screen/personal_profile_screen.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/texts/personal_profile_text.dart';
@@ -30,7 +31,7 @@ class PersonalProfileDatas{
     PersonalProfileItemModel(icon: AllImages.cartSmallIcon, title: PersonalProfileText.cart, widget: EditCartScreen()),
     PersonalProfileItemModel(icon: AllImages.favIcon, title: PersonalProfileText.favourite,),
     PersonalProfileItemModel(icon: AllImages.notificationIcon, title: PersonalProfileText.notifications,),
-    PersonalProfileItemModel(icon: AllImages.paymentIcon, title: PersonalProfileText.paymentMethod,),
+    PersonalProfileItemModel(icon: AllImages.paymentIcon, title: PersonalProfileText.paymentMethod, widget: PaymentScreen()),
   ];
 
   static List<PersonalProfileItemModel> faqSecInfos = [

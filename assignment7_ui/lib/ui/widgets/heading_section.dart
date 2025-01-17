@@ -19,9 +19,13 @@ class HeadingSection extends StatelessWidget {
         children: [
           Text(title, style: TextStyles.headingTextStyle),
           InkWell(
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(
-              builder: (context)=> seeAllScreen!));
+            onTap: () {
+              if(seeAllScreen != null){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => seeAllScreen!),
+                );
+              }
             },
             child: Row(
               children: [

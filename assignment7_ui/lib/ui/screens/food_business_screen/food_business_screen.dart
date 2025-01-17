@@ -83,17 +83,24 @@ final List<PopularItemCardModel> popularItems = AllTexts.popularItems;
             children: [
               HeadingWidget(title: AllTexts.popularBurgers),
               // const SizedBox(height: 20),
-              GridView.builder(
-                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                      maxCrossAxisExtent: 153,
-                      crossAxisSpacing: 20,
-                    mainAxisSpacing: 20
-                  ),
-                  shrinkWrap: true,
-                  itemCount: popularItems.length,
-                  itemBuilder: (context, index){
-                    return PopularItemsWidget(model: popularItems[index]);
-                  }
+              LayoutBuilder(
+                builder: (context, constraints ){
+                  int crossCount = constraints.maxWidth < 320 ? 1 : 2;
+                  int crossCountTwo = constraints.maxWidth < 650 ? crossCount : 4;
+                  return GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: crossCountTwo,
+                          mainAxisExtent: 174,
+                          crossAxisSpacing: 20,
+                          mainAxisSpacing: 20
+                      ),
+                      shrinkWrap: true,
+                      itemCount: popularItems.length,
+                      itemBuilder: (context, index){
+                        return PopularItemsWidget(model: popularItems[index]);
+                      }
+                  );
+                }
               ),
               HeadingWidget(title: AllTexts.openResturants),
               Padding(

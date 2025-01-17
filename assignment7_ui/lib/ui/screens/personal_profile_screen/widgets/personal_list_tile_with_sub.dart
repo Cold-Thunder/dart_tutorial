@@ -3,9 +3,9 @@ import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart
 import 'package:assignment7_ui/ui/screens/personal_profile_screen/widgets/icon_shape_widget.dart';
 import 'package:flutter/material.dart';
 
-class PersonalListTile extends StatelessWidget {
+class PersonalListTileWithSub extends StatelessWidget {
   final PersonalProfileItemModel model;
-  const PersonalListTile({required this.model, super.key});
+  const PersonalListTileWithSub({required this.model, super.key});
 
   @override
   Widget build(BuildContext context) {

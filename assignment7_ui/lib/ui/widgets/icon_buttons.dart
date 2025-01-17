@@ -14,6 +14,8 @@ class IconButtons extends StatelessWidget {
       onTap: (){
 
       },
+        splashColor: AllColors.transparent,
+        highlightColor: AllColors.transparent,
       child: Container(
         padding: const EdgeInsets.all(14),
         height: 46,

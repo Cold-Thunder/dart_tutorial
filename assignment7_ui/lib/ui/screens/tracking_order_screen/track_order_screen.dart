@@ -8,6 +8,7 @@ import 'package:assignment7_ui/ui/screens/tracking_order_screen/widgets/bottom_s
 import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class TrackOrderScreen extends StatefulWidget {
@@ -19,16 +20,16 @@ class TrackOrderScreen extends StatefulWidget {
 
 class _TrackOrderScreenState extends State<TrackOrderScreen> {
 
-
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
+    final screenPoint = 574/height;
     return Scaffold(
       appBar: AppBar(
         leading: BackIcon(color: AllColors.backIconBlack, iconPng: AllImages.backWhiteIcon,),
         title: AppBarTitleWidget(title: AllTexts.trackOrder),
-        backgroundColor: AllColors.shapeGrey,
+        backgroundColor: AllColors.trackerAppbarGrey,
       ),
       body: Stack(
         children: [
@@ -44,15 +45,14 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
             )
           ),
           DraggableScrollableSheet(
-            initialChildSize: 0.2,
-            minChildSize: 0.2,
-            maxChildSize: 0.8,
+            initialChildSize: 150/height,
+            minChildSize: 150/height,
+            maxChildSize: 643/height,
             builder: (context, scrollController){
               return SingleChildScrollView(
                 controller: scrollController,
                 child: Container(
                   height: 574,
-                  width: width,
                   decoration: BoxDecoration(
                     color: AllColors.appbarWhite,
                     borderRadius: BorderRadius.only(
@@ -65,6 +65,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Column(
+                          // mainAxisSize: MainAxisSize.min,
                           children: [
                             const SizedBox(height: 5),
                             GreyCard(height: 7, width: 70, borderRad: 80, color: AllColors.handlerGrey),

@@ -97,17 +97,28 @@ class _RestaurantViewOneScreenState extends State<RestaurantViewOneScreen> {
                     style: TextStyles.headingTextStyle
                 ),
                 const SizedBox(height: 20),
-                GridView.builder(
-                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                      maxCrossAxisExtent: 153,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 20
-                  ),
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: burgers.length,
-                  itemBuilder: (context, index){
-                    return PopularItemsWidget(model: burgers[index]);
+                // food items
+                LayoutBuilder(
+                  builder: (context, constraints){
+                    int crossCount = constraints.maxWidth < 320 ? 1 : 2;
+                    int crossCountTwo = constraints.maxWidth < 650 ? crossCount : 4;
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 15.0),
+                      child: GridView.builder(
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount:crossCountTwo,
+                              mainAxisExtent: 174,
+                              crossAxisSpacing: 20,
+                              mainAxisSpacing: 20
+                          ),
+                          physics: NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: burgers.length,
+                          itemBuilder: (context, index){
+                            return PopularItemsWidget(model: burgers[index]);
+                          }
+                      ),
+                    );
                   }
                 ),
                 const SizedBox(height: 20),

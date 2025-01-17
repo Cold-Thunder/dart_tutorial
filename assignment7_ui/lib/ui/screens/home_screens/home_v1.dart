@@ -84,6 +84,7 @@ class _HomeV1State extends State<HomeV1> {
               // open restaurant heading
               HeadingSection(title: HomeScreenText.openRest,),
               const SizedBox(height: 15),
+              // open restaurants
               Container(
                 padding: const EdgeInsets.only(right: 15),
                   child: ListView.builder(

@@ -48,6 +48,8 @@ class AllColors{
   static Color inactiveTypeGrey = Color(0xFFA5A7B9);
   static Color orderBottomBorderGrey = Color(0xFFEEF2F6);
 
+  static Color trackerAppbarGrey = Color(0xFFD0D9E1);
+
   static Color orderItemCountGrey = Color(0xFF6B6E82);
 
   static Color completedGreen = Color(0xFF059C6A);
