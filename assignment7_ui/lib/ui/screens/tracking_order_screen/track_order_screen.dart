@@ -8,7 +8,6 @@ import 'package:assignment7_ui/ui/screens/tracking_order_screen/widgets/bottom_s
 import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class TrackOrderScreen extends StatefulWidget {
@@ -24,7 +23,6 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
-    final screenPoint = 574/height;
     return Scaffold(
       appBar: AppBar(
         leading: BackIcon(color: AllColors.backIconBlack, iconPng: AllImages.backWhiteIcon,),
