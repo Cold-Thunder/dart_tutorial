@@ -21,18 +21,6 @@ class _ImageSliderUseState extends State<ImageSliderUse> {
   void initState() {
     super.initState();
 
-    _timer = Timer.periodic(Duration(seconds: 3), (timer) {
-      if(ind < 5){
-        _carouselController.jumpTo(ind);
-        setState(() {
-          ind++;
-        });
-      }else{
-        setState(() {
-          ind = 0;
-        });
-      }
-    });
   }
 
   @override
@@ -64,8 +52,8 @@ class _ImageSliderUseState extends State<ImageSliderUse> {
                   height: 200,
                   child: CarouselView.weighted(
                     controller: _carouselController,
-                    flexWeights: [1,7,1],
-                    itemSnapping: true,
+                    flexWeights: [200],
+                    itemSnapping: false,
                     children: [
                       Container(
                         height: 200,
