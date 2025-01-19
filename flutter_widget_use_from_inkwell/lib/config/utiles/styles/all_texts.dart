@@ -3,4 +3,6 @@ class AllTexts{
   static String ger = 'Germany';
   static String italy = 'Italy';
   static String sweden = 'Sweden';
+
+  static String mountain = 'mountain';
 }
