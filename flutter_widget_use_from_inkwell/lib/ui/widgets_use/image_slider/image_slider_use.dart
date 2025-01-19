@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:carousel_slider_plus/carousel_slider_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:widgets_use/config/utiles/all_images.dart';
 import 'package:widgets_use/config/utiles/styles/all_colors.dart';
 
@@ -15,12 +17,19 @@ class _ImageSliderUseState extends State<ImageSliderUse> {
   final PageController _pageViewController = PageController();
   final CarouselController _carouselController = CarouselController();
   late Timer _timer;
-  late double ind = 0;
+  late int activeInd = 0;
+
+  List<String> images = [
+    AllImages.mountain,
+    AllImages.mountain,
+    AllImages.mountain,
+    AllImages.mountain,
+    AllImages.mountain,
+  ];
 
   @override
   void initState() {
     super.initState();
-
   }
 
   @override
@@ -39,15 +48,10 @@ class _ImageSliderUseState extends State<ImageSliderUse> {
       body: SingleChildScrollView(
         child: SizedBox(
           child: Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(0.0),
             child: Column(
+              spacing: 20,
               children: [
-                Container(
-                    height: 200,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: AllColors.gerRed)),
                 SizedBox(
                   height: 200,
                   child: CarouselView.weighted(
@@ -106,7 +110,7 @@ class _ImageSliderUseState extends State<ImageSliderUse> {
                         ),
                       )
                     ],
-                  )
+                  ),
                 ),
 
                 // carousel slider with page view
@@ -130,6 +134,57 @@ class _ImageSliderUseState extends State<ImageSliderUse> {
                     },
                   ),
                 ),
+
+                // carousel slider page use
+
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    CarouselSlider.builder(
+
+                        options: CarouselOptions(
+                          height: 250,
+                          aspectRatio: 16 / 13,
+                          viewportFraction: 1,
+                          clipBehavior: Clip.none,
+                          autoPlay: true,
+                          enlargeCenterPage: true,
+                          enlargeFactor: 1,
+                          onPageChanged : (index, reason){
+                            setState(() {
+                              activeInd = index;
+                            });
+                          },
+                        ),
+                        itemCount: images.length,
+                        itemBuilder: (context, index, realInd) {
+                          return Container(
+                            height: 250,
+                            width: width,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(images[index]))),
+                          );
+                        }),
+                    Positioned(
+                      bottom: 20,
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: width,
+                        child: AnimatedSmoothIndicator(
+                            activeIndex: activeInd,
+                            count: images.length,
+                          effect: WormEffect(
+                            dotHeight: 10,
+                            dotWidth: 10,
+                            dotColor: AllColors.white,
+                            activeDotColor: AllColors.purple
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
