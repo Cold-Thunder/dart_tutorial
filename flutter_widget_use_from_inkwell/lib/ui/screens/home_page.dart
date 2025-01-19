@@ -15,6 +15,7 @@ import 'package:widgets_use/ui/widgets_use/flutter_tabbar_widget/flutter_tabbar_
 import 'package:widgets_use/ui/widgets_use/form_text_field/flutter_form_text_field.dart';
 import 'package:widgets_use/ui/widgets_use/gesture_detector_use.dart';
 import 'package:widgets_use/ui/widgets_use/gridview_widget_uses/gridview_widget_uses.dart';
+import 'package:widgets_use/ui/widgets_use/image_slider/image_slider_use.dart';
 import 'package:widgets_use/ui/widgets_use/inkwell_use.dart';
 import 'package:widgets_use/ui/widgets_use/layoutbuilder_widget_use/layoutbuilder_widget_uses.dart';
 import 'package:widgets_use/ui/widgets_use/list_wheel_scroll_view/list_wheel_scroll_view.dart';
@@ -99,6 +100,7 @@ class HomePage extends StatelessWidget {
               ElevatedButtonUse(title: "Tabbar Widget Use", screen: FlutterTabbarWidgetUse()),
               ElevatedButtonUse(title: "Sliver Appbar", screen:FlutterSliverappbarWidget()),
               ElevatedButtonUse(title: "LayoutBuilder Widget", screen:LayoutbuilderWidgetUses()),
+              ElevatedButtonUse(title: "Image Slider", screen:ImageSliderUse()),
             ],
           ),
         ),
