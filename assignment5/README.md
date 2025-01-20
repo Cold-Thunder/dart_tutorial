@@ -1,16 +1,15 @@
-# assignment5_ui
+# analog_clock
 
-A new Flutter project.
+This is Assignment5 UI design.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+I have created Resort Booking App with Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+Here is output:  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<div style="overflow-x: auto; white-space:nowrap; gap: 10px;">
+    <img src="./outputs/assignment5_1.jpeg" alt="Analog Clock" height="400">
+    <img src="./outputs/assignment5_2.jpeg" alt="stop watch" height="400">
+   
+</div>
