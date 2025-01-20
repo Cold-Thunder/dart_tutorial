@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:widgets_use/ui/widgets_use/all_dialog_widget_uses/all_dialog_widget_uses.dart';
 import 'package:widgets_use/ui/widgets_use/animation/animation.dart';
 import 'package:widgets_use/ui/widgets_use/bottom_navigation_bar/flutter_bottom_navigation.dart';
+import 'package:widgets_use/ui/widgets_use/clip_path_use/clip_path_use.dart';
 import 'package:widgets_use/ui/widgets_use/elevated_button_use.dart';
 import 'package:widgets_use/config/utiles/styles/text_styles.dart';
 import 'package:widgets_use/ui/widgets_use/card_widget_use.dart';
@@ -102,7 +103,8 @@ class HomePage extends StatelessWidget {
               ElevatedButtonUse(title: "Sliver Appbar", screen:FlutterSliverappbarWidget()),
               ElevatedButtonUse(title: "LayoutBuilder Widget", screen:LayoutbuilderWidgetUses()),
               ElevatedButtonUse(title: "Image Slider", screen:ImageSliderUse()),
-              ElevatedButtonUse(title: "Animation", screen: AnimationUses())
+              ElevatedButtonUse(title: "Animation", screen: AnimationUses()),
+              ElevatedButtonUse(title: "Clip Path Use", screen: ClipPathUse())
             ],
           ),
         ),
