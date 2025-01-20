@@ -27,6 +27,7 @@ import 'package:widgets_use/ui/widgets_use/stack_use/stack_widget_use.dart';
 import 'package:widgets_use/ui/widgets_use/tool_tip_use.dart';
 import 'package:widgets_use/ui/widgets_use/use_snackbar.dart';
 import 'package:widgets_use/ui/widgets_use/uses_of_flutter_switch/flutter_switch.dart';
+import 'package:widgets_use/ui/widgets_use/wrap_widget_uses/wrap_widget_uses.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -104,7 +105,8 @@ class HomePage extends StatelessWidget {
               ElevatedButtonUse(title: "LayoutBuilder Widget", screen:LayoutbuilderWidgetUses()),
               ElevatedButtonUse(title: "Image Slider", screen:ImageSliderUse()),
               ElevatedButtonUse(title: "Animation", screen: AnimationUses()),
-              ElevatedButtonUse(title: "Clip Path Use", screen: ClipPathUse())
+              ElevatedButtonUse(title: "Clip Path Use", screen: ClipPathUse()),
+              ElevatedButtonUse(title: "Wrap Widget Use", screen: WrapWidgetUses())
             ],
           ),
         ),

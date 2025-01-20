@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_use/config/utiles/styles/all_colors.dart';
+import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/arc_to_point_more_use.dart';
+import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/clip_cubicTo.dart';
 import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/custom_clip_path_one.dart';
+import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/radius_arc_to.dart';
 
 class ClipPathUse extends StatelessWidget {
   const ClipPathUse({super.key});
@@ -14,12 +17,38 @@ class ClipPathUse extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
+            spacing: 20,
             children: [
               ClipPath(
                 clipper: CustomClipPathOne(),
                 child: Container(
-                    height: 500, width: width, color: AllColors.swedenBlue),
+                    height: 350, width: width, color: AllColors.swedenBlue),
               ),
+              ClipPath(
+                clipper: CubicTo(),
+                child: Container(
+                  height: 200,
+                  width: width,
+                  color: AllColors.gerRed
+                )
+              ),
+
+              // clip path with arcToPoint
+              ClipPath(
+                clipper: RadiusArcToPoint(),
+                child: Container(
+                  height: 150,
+                  width: width,
+                  color: AllColors.purple
+                )
+              ),
+              ClipPath(
+                clipper:ArcToPointMoreUse(),
+              child: Container(
+                height: 200,
+                width: width,
+                color: AllColors.orange
+              ),),
             ],
           ),
         ),
