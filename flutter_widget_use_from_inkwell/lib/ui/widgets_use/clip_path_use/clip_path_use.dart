@@ -4,6 +4,8 @@ import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/arc_t
 import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/clip_cubicTo.dart';
 import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/custom_clip_path_one.dart';
 import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/radius_arc_to.dart';
+import 'package:widgets_use/ui/widgets_use/clip_path_use/more_clip_path.dart';
+import 'package:widgets_use/ui/widgets_use/elevated_button_use.dart';
 
 class ClipPathUse extends StatelessWidget {
   const ClipPathUse({super.key});
@@ -42,6 +44,7 @@ class ClipPathUse extends StatelessWidget {
                   color: AllColors.purple
                 )
               ),
+              ElevatedButtonUse(title: 'Show more Clip Path', screen: MoreClipPath()),
               ClipPath(
                 clipper:ArcToPointMoreUse(),
               child: Container(
