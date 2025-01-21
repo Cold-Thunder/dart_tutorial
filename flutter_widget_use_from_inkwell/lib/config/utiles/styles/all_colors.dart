@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AllColors{
   static Color transparent = const Color(0x00000000);
   static Color black = const Color(0xFF000000);
+  static Color shadowBlack = const Color(0x80000000);
   static Color white = const Color(0xFFFFFFFF);
   static Color bdGreen =const Color(0xFF006A4E);
   static Color bdRed = const Color(0xFFF42A41);
@@ -18,4 +19,6 @@ class AllColors{
   static Color purple = const Color(0xFFA020F0);
   static Color grey = const Color(0xFFA5A7B9);
   static Color orange = const Color(0xFFFF7622);
+
+  static Color greyBlue = const Color(0xFF9EFFF2);
 }

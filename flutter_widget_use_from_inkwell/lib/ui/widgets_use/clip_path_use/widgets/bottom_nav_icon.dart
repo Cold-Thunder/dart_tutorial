@@ -17,7 +17,8 @@ class BottomNavIcon extends StatelessWidget {
           func(details, bottomNevModel.index);
         },
         child: SizedBox(
-          width: width/5,
+          height: 60,
+          width: width*0.9/5,
           child: Visibility(
             visible: bottomNevModel.index != clickInd,
             child: Icon(
