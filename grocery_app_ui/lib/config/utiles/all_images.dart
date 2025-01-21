@@ -1,3 +1,30 @@
 class AllImages{
+  // images
+    static String person = 'assets/images/person_img.png';
+    static String adBannerImg = 'assets/images/banner_img.png';
+    static String splashFruits = 'assets/images/splash_fruits.png';
+
+    static String atta = 'assets/images/atta.png';
+    static String dairy = 'assets/images/dairy.png';
+    static String drinks = 'assets/images/drinks.png';
+    static String fish = 'assets/images/fish.png';
+    static String masala = 'assets/images/masala.png';
+    static String coffeeTea = 'assets/images/tea_coffee.png';
+    static String vegetables = 'assets/images/vegetables.png';
+    static String noodles = 'assets/images/noodles.png';
+
+    // icons
+    static String logoSvg = 'assets/icons/logo.svg';
+    static String cartSvg = 'assets/icons/cart_icon.svg';
+    static String filterSvg = 'assets/icons/filter_icon.svg';
+    static String forwardLargeSvg = 'assets/icons/forward_large.svg';
+    static String forwardRightSvg = 'assets/icons/forward_right.svg';
+    static String heartSvg = 'assets/icons/heart.svg';
+    static String homeGreenSvg = 'assets/icons/home_green.svg';
+    static String homeIconSvg = 'assets/icons/home_icon.svg';
+    static String locationSvg = 'assets/icons/location.svg';
+    static String profileSvg = 'assets/icons/profile.svg';
+    static String searchIconSvg = 'assets/icons/search_icon.svg';
+    static String arrowDownSvg = 'assets/icons/arrow_down.svg';
 
 }
