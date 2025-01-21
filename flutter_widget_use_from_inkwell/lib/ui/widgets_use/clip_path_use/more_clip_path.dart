@@ -51,7 +51,7 @@ class _MoreClipPathState extends State<MoreClipPath> {
                 clipBehavior: Clip.none,
                 children: [
                   ClipPath(
-                    clipper: AppBarDesignClippath(tapLocation: tapDownLocation),
+                    clipper: AppBarDesignClipPath(tapLocation: tapDownLocation),
                     child: Container(
                       width: width,
                       height: 60,

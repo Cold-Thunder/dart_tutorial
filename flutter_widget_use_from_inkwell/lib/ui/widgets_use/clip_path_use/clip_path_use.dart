@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_use/config/utiles/styles/all_colors.dart';
+import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_bottom_navbar_clippath.dart';
 import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/arc_to_point_more_use.dart';
 import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/clip_cubicTo.dart';
 import 'package:widgets_use/ui/widgets_use/clip_path_use/custom_clip_paths/custom_clip_path_one.dart';
@@ -34,6 +35,8 @@ class ClipPathUse extends StatelessWidget {
                   color: AllColors.gerRed
                 )
               ),
+              ElevatedButtonUse(title: 'Show more Clip Path', screen: MoreClipPath()),
+              ElevatedButtonUse(title: 'Custom Bottom Navbar', screen: CustomBottomNavbarClippath()),
 
               // clip path with arcToPoint
               ClipPath(
@@ -44,7 +47,6 @@ class ClipPathUse extends StatelessWidget {
                   color: AllColors.purple
                 )
               ),
-              ElevatedButtonUse(title: 'Show more Clip Path', screen: MoreClipPath()),
               ClipPath(
                 clipper:ArcToPointMoreUse(),
               child: Container(

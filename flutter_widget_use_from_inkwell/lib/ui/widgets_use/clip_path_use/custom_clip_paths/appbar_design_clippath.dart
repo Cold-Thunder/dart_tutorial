@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 
-class AppBarDesignClippath extends CustomClipper<Path>{
+class AppBarDesignClipPath extends CustomClipper<Path>{
   final Offset tapLocation;
 
-  AppBarDesignClippath({required this.tapLocation});
+  AppBarDesignClipPath({required this.tapLocation});
 
   @override
   Path getClip(Size size){
@@ -33,7 +33,7 @@ class AppBarDesignClippath extends CustomClipper<Path>{
   }
 
   @override
-  bool shouldReclip(covariant CustomClipper<Path> oldPath){
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper){
     return true;
   }
 }
