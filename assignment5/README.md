@@ -1,4 +1,4 @@
-# analog_clock
+# Assignment5_UI
 
 This is Assignment5 UI design.
 
