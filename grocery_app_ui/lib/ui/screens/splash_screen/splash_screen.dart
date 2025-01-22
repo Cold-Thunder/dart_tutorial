@@ -20,7 +20,12 @@ class _SplashScreenState extends State<SplashScreen> {
     _timer = Timer(Duration(seconds: 3), (){
       Navigator.pushReplacementNamed(context, RoutesHelper.onboarding);
     });
+  }
 
+  @override
+  void dispose(){
+    _timer.cancel();
+    super.dispose();
   }
 
   @override
@@ -36,11 +41,16 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Positioned(
               bottom: -5,
-              child: Container(
-                alignment: Alignment.bottomRight,
-                height: 350,
-                width: width,
-                child: Image.asset(AllImages.splashFruits, height: 350, width: width)
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    alignment: Alignment.bottomRight,
+                    height: 350,
+                    width: width,
+                    child: Image.asset(AllImages.splashFruits, height: 350, width: width)
+                  ),
+                ],
               ),
             ),
             SizedBox(

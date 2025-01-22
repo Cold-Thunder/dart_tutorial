@@ -26,5 +26,10 @@ class AllImages{
     static String profileSvg = 'assets/icons/profile.svg';
     static String searchIconSvg = 'assets/icons/search_icon.svg';
     static String arrowDownSvg = 'assets/icons/arrow_down.svg';
+    static String googleSvg = 'assets/icons/google_logo.svg';
+    static String appleSvg = 'assets/icons/apple_logo.svg';
+
+    static String eyeIconSvg = 'assets/icons/eye_icon.svg';
+    static String eyeOffIconSvg = 'assets/icons/eye_off_icon.svg';
 
 }

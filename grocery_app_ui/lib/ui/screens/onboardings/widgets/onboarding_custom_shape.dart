@@ -4,8 +4,8 @@ import 'package:grocery_app_ui/config/utiles/all_colors.dart';
 import 'package:grocery_app_ui/config/utiles/all_images.dart';
 import 'package:grocery_app_ui/config/utiles/all_texts.dart';
 import 'package:grocery_app_ui/config/utiles/routes_helper.dart';
-import 'package:grocery_app_ui/config/utiles/styles/text_styles.dart';
-import 'package:grocery_app_ui/ui/screens/onboardings/clipper_method/clipper_method.dart';
+import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
+import 'package:grocery_app_ui/config/utiles/methods/onboard_clipper_method.dart';
 import 'package:grocery_app_ui/ui/screens/onboardings/widgets/small_dot.dart';
 
 class OnboardingCustomShape extends StatelessWidget {
@@ -22,8 +22,8 @@ class OnboardingCustomShape extends StatelessWidget {
     return ClipPath(
       clipper: ClipperMethod(),
       child: Container(
-        padding: const EdgeInsets.only(left:20, right: 20, top: 35, bottom: 15),
-        height: 280,
+        padding: const EdgeInsets.only(left:20, right: 20, top: 45, bottom: 15),
+        height: 301,
         width: width*0.9,
         color: AllColors.white,
         child: Column(
@@ -58,7 +58,7 @@ class OnboardingCustomShape extends StatelessWidget {
               )
             ),
 
-            const SizedBox(height: 0),
+            const SizedBox(height: 10),
             // next button
             InkWell(
               onTap: (){

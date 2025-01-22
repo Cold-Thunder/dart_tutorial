@@ -20,4 +20,22 @@ class AllTextStyles{
       color: AllColors.fontBlack,
       fontFamily:'Poppins_Regular',
     );
+
+    static TextStyle elevatedButtonTextStyle = TextStyle(
+      fontSize: 14,
+      color: AllColors.white,
+      fontFamily: 'Poppins_Regular'
+    );
+
+    static TextStyle loginSubStyle = TextStyle(
+      fontSize: 14,
+      color: AllColors.subtitleGrey,
+      fontFamily: 'Poppins_Regular',
+    );
+
+    static TextStyle socialLogBtnStyle = TextStyle(
+      fontSize: 16,
+      color: AllColors.fontBlack,
+      fontFamily: 'Poppins_Regular'
+    );
 }

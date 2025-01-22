@@ -8,4 +8,7 @@ class AllColors{
     static Color mainGreen = Color(0xFF5AC268);
     static Color fontBlack = Color(0xFF101811);
     static Color dotGrey = Color (0x1A9DA49E);
+
+    static Color subtitleGrey = Color(0xFFB5BBB6);
+    static Color inputOutlineGrey = Color(0xFFEBEDEC);
 }
