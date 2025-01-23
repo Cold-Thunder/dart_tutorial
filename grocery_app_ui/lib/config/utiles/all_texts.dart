@@ -19,4 +19,13 @@ class AllTexts{
     static String dontHave = "Didn't have an account?";
     static String register = 'Register';
 
+    static String createOne = 'Create New Account';
+    static String signupDes = 'Set up you username and password. You can change it later.';
+    static String email = 'Email';
+    static String name = 'Name';
+    static String enterPass = 'Enter Password';
+    static String reenterPass = "Re-enter Password";
+    static String haveAccount = 'Already have an account?';
+
+
 }

@@ -4,17 +4,17 @@ import 'package:grocery_app_ui/config/utiles/all_colors.dart';
 import 'package:grocery_app_ui/config/utiles/all_images.dart';
 import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
 
-class LoginForm extends StatefulWidget {
+class LoginFormInput extends StatefulWidget {
   final String hintText;
   final TextEditingController controller;
   final bool? secure;
-  const LoginForm({required this.hintText, required this.controller, this.secure, super.key});
+  const LoginFormInput({required this.hintText, required this.controller, this.secure, super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<LoginFormInput> createState() => _LoginFormInputState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _LoginFormInputState extends State<LoginFormInput> {
   bool showPass = true;
 
   @override
@@ -26,10 +26,12 @@ class _LoginFormState extends State<LoginForm> {
         textAlignVertical: TextAlignVertical.center,
         obscureText: widget.secure ?? false ? showPass : false,
         obscuringCharacter: '*',
+          style: AllTextStyles.socialLogBtnStyle,
+          cursorColor: AllColors.mainGreen,
         decoration: InputDecoration(
           hintText: widget.hintText,
           hintStyle: AllTextStyles.socialLogBtnStyle,
-          contentPadding: const EdgeInsets.symmetric(horizontal: 15),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
           suffixIcon: widget.secure ?? false ? InkWell(
             splashColor: AllColors.transparent,
             highlightColor: AllColors.transparent,

@@ -1,9 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app_ui/config/utiles/all_colors.dart';
 import 'package:grocery_app_ui/config/utiles/all_images.dart';
 import 'package:grocery_app_ui/config/utiles/all_texts.dart';
+import 'package:grocery_app_ui/config/utiles/routes_helper.dart';
 import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
-import 'package:grocery_app_ui/ui/screens/login_page/widgets/login_form.dart';
+import 'package:grocery_app_ui/ui/screens/login_page/widgets/login_form_input.dart';
 import 'package:grocery_app_ui/ui/screens/login_page/widgets/social_media_log_button.dart';
 import 'package:grocery_app_ui/ui/widgets/elevated_button_design.dart';
 import 'package:grocery_app_ui/ui/widgets/logo_widget.dart';
@@ -28,7 +30,7 @@ class LoginPage extends StatelessWidget {
               spacing: 10,
               children: [
                 // logo widget
-                LogoWidget(),
+                LogoWidget(height: 60, width: 60),
                 // heading section
                 Text(
                   AllTexts.welcomeBack,
@@ -48,8 +50,8 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 0),
                 Text(AllTexts.continueWithSocial, style: AllTextStyles.loginSubStyle.copyWith(fontSize: 14)),
                 const SizedBox(height: 0),
-                LoginForm(hintText: AllTexts.phoneNumber, controller: _phoneController,),
-                LoginForm(hintText: AllTexts.password, controller: _passController,secure: true),
+                LoginFormInput(hintText: AllTexts.phoneNumber, controller: _phoneController,),
+                LoginFormInput(hintText: AllTexts.password, controller: _passController,secure: true),
                 SizedBox(
                   width: width,
                   child: InkWell(
@@ -69,6 +71,7 @@ class LoginPage extends StatelessWidget {
                 ElevatedButtonDesign(title: AllTexts.login),
                 const SizedBox(height:30),
                 RichText(
+
                   textAlign: TextAlign.end,
                   text: TextSpan(
                     text: AllTexts.dontHave,
@@ -78,7 +81,11 @@ class LoginPage extends StatelessWidget {
                     children: [
                       TextSpan(
                         text: ' ${AllTexts.register}',
-                        style: AllTextStyles.skipTextStyle
+                        style: AllTextStyles.skipTextStyle,
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = (){
+                          Navigator.pushReplacementNamed(context, RoutesHelper.signupPage);
+                          }
                       )
                     ]
                   )

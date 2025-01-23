@@ -4,17 +4,18 @@ import 'package:grocery_app_ui/config/utiles/all_colors.dart';
 import 'package:grocery_app_ui/config/utiles/all_images.dart';
 import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
 
-class LoginForm extends StatefulWidget {
+class SignupFormInput extends StatefulWidget {
   final String hintText;
   final TextEditingController controller;
   final bool? secure;
-  const LoginForm({required this.hintText, required this.controller, this.secure, super.key});
+  final bool? number;
+  const SignupFormInput({required this.hintText, required this.controller, this.secure, this.number, super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<SignupFormInput> createState() => _SignupFormInputState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _SignupFormInputState extends State<SignupFormInput> {
   bool showPass = true;
 
   @override
@@ -26,10 +27,14 @@ class _LoginFormState extends State<LoginForm> {
         textAlignVertical: TextAlignVertical.center,
         obscureText: widget.secure ?? false ? showPass : false,
         obscuringCharacter: '*',
+        style: AllTextStyles.socialLogBtnStyle,
+        cursorColor: AllColors.mainGreen,
+        keyboardType: widget.number == true ? TextInputType.phone : TextInputType.emailAddress,
         decoration: InputDecoration(
           hintText: widget.hintText,
           hintStyle: AllTextStyles.socialLogBtnStyle,
-          contentPadding: const EdgeInsets.symmetric(horizontal: 15),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          // isDense: true,
           suffixIcon: widget.secure ?? false ? InkWell(
             splashColor: AllColors.transparent,
             highlightColor: AllColors.transparent,
@@ -51,14 +56,14 @@ class _LoginFormState extends State<LoginForm> {
             borderRadius: BorderRadius.circular(12),
             borderSide: BorderSide(
               width: 1,
-              color: AllColors.inputOutlineGrey
+              color: AllColors.mainGreen
             )
           ),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide(
                   width: 1,
-                  color: AllColors.inputOutlineGrey
+                  color: AllColors.mainGreen
               )
           ),
         )
