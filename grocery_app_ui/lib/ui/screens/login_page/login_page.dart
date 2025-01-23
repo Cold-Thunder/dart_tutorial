@@ -86,10 +86,10 @@ class LoginPage extends StatelessWidget {
                           ..onTap = (){
                           Navigator.pushReplacementNamed(context, RoutesHelper.signupPage);
                           }
-                      )
-                    ]
-                  )
-                )
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )

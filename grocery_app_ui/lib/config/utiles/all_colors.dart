@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AllColors{
   static Color transparent = Color(0x00FFFFFF);
-  static Color transparent50 = Color(0x7DFFFFFF);
+  static Color transparent40 = Color(0x66EBEDEC);
   static Color white = Color(0xFFFFFFFF);
   static Color transGreen = Color(0x1A5AC268);
   static Color lightGreen = Color(0xFFEFF9F0);

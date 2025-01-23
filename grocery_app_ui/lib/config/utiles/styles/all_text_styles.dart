@@ -22,7 +22,7 @@ class AllTextStyles{
     );
 
     static TextStyle elevatedButtonTextStyle = TextStyle(
-      fontSize: 14,
+      fontSize: 16,
       color: AllColors.white,
       fontFamily: 'Poppins_Regular'
     );

@@ -27,5 +27,20 @@ class AllTexts{
     static String reenterPass = "Re-enter Password";
     static String haveAccount = 'Already have an account?';
 
+    static String cancel = 'Cancel';
+    static String next = 'Next';
+
+    static String verifyEmail ='Verify Your Email Address';
+    static String emailAddress = '(205) 555-0100';
+
+    static String verDes = 'We will send the authentication code to the email address you entered.\n Do you want continue?';
+
+    static String enterOtp ='Enter OTP';
+    static String codeSend = 'A Verification code has been sent to';
+
+    static String verify = 'Verify';
+    static String dontReceive = "Don't receive the code";
+    static String resend = 'Resend';
+    static String time = '30';
 
 }

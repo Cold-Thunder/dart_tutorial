@@ -9,7 +9,8 @@ class SignupFormInput extends StatefulWidget {
   final TextEditingController controller;
   final bool? secure;
   final bool? number;
-  const SignupFormInput({required this.hintText, required this.controller, this.secure, this.number, super.key});
+  final GlobalKey<FormFieldState> keyState;
+  const SignupFormInput({required this.hintText, required this.controller, required this.keyState, this.secure, this.number, super.key});
 
   @override
   State<SignupFormInput> createState() => _SignupFormInputState();
@@ -22,7 +23,8 @@ class _SignupFormInputState extends State<SignupFormInput> {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 56,
-      child: TextField(
+      child: TextFormField(
+        key: widget.keyState,
         controller: widget.controller,
         textAlignVertical: TextAlignVertical.center,
         obscureText: widget.secure ?? false ? showPass : false,

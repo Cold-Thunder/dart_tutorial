@@ -6,19 +6,21 @@ class ElevatedButtonDesign extends StatelessWidget {
   final String title;
   final Function? func;
   final String? screen;
+  final double? givenWidth;
+  final double? height;
 
-  const ElevatedButtonDesign({this.func, this.screen, required this.title, super.key});
+  const ElevatedButtonDesign({this.givenWidth, this.height, this.func, this.screen, required this.title, super.key});
 
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return SizedBox(
-      height: 56,
-      width: width,
+      height: height ?? 56,
+      width: givenWidth ?? width,
       child: ElevatedButton(
           onPressed: (){
             if(func != null){
-              func;
+              func!(context);
             }
             if(screen != null){
               Navigator.pushNamed(context, screen!);
