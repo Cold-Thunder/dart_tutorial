@@ -12,6 +12,7 @@ class AllImages{
     static String coffeeTea = 'assets/images/tea_coffee.png';
     static String vegetables = 'assets/images/vegetables.png';
     static String noodles = 'assets/images/noodles.png';
+    static String surfexel = 'assets/images/surfexel.png';
 
     // icons
     static String logoSvg = 'assets/icons/logo.svg';
@@ -20,6 +21,7 @@ class AllImages{
     static String forwardLargeSvg = 'assets/icons/forward_large.svg';
     static String forwardRightSvg = 'assets/icons/forward_right.svg';
     static String heartSvg = 'assets/icons/heart.svg';
+    static String redHeartSvg = 'assets/icons/red_heart.svg';
     static String homeGreenSvg = 'assets/icons/home_green.svg';
     static String homeIconSvg = 'assets/icons/home_icon.svg';
     static String locationSvg = 'assets/icons/location.svg';
@@ -32,4 +34,5 @@ class AllImages{
     static String eyeIconSvg = 'assets/icons/eye_icon.svg';
     static String eyeOffIconSvg = 'assets/icons/eye_off_icon.svg';
     static String greenCheckMark = 'assets/icons/green_check_mark.svg';
+
 }

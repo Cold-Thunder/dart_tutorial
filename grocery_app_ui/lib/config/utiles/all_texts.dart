@@ -47,4 +47,12 @@ class AllTexts{
     static String congratesDes = 'Your account created successfully.\n Listen you favourite music.';
     static String gotoHome = 'Go to Home';
 
+    static String surfexDes = 'Surf Excel Easy Wash Detergent Power';
+    static String surfSize = '500 ml';
+    static String presPrice = '12';
+    static String prePrice = '14';
+    static String add = 'Add';
+
+    static String vegAndFruits = 'Vegetables & Fruits';
+
 }

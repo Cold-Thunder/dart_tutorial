@@ -15,6 +15,10 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _passController = TextEditingController();
    LoginPage({super.key});
 
+   loginFunction(context){
+     Navigator.pushReplacementNamed(context, RoutesHelper.homeScreen);
+   }
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -68,7 +72,7 @@ class LoginPage extends StatelessWidget {
                   )
                 ),
                 const SizedBox(height: 10),
-                ElevatedButtonDesign(title: AllTexts.login),
+                ElevatedButtonDesign(title: AllTexts.login, func: loginFunction,),
                 const SizedBox(height:30),
                 RichText(
 

@@ -8,8 +8,9 @@ class ElevatedButtonDesign extends StatelessWidget {
   final String? screen;
   final double? givenWidth;
   final double? height;
+  final double? fontSize;
 
-  const ElevatedButtonDesign({this.givenWidth, this.height, this.func, this.screen, required this.title, super.key});
+  const ElevatedButtonDesign({this.fontSize, this.givenWidth, this.height, this.func, this.screen, required this.title, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +29,16 @@ class ElevatedButtonDesign extends StatelessWidget {
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: AllColors.mainGreen,
+            padding: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12)
             )
           ),
           child: Text(
             title,
-            style: AllTextStyles.elevatedButtonTextStyle
+            style: AllTextStyles.elevatedButtonTextStyle.copyWith(
+              fontSize: fontSize ?? 16
+            )
           )
       )
     );

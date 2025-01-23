@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AllColors{
   static Color transparent = Color(0x00FFFFFF);
   static Color transparent40 = Color(0x66EBEDEC);
+  static Color transparent65 = Color(0xA6EBEDEC);
   static Color white = Color(0xFFFFFFFF);
   static Color transGreen = Color(0x1A5AC268);
   static Color lightGreen = Color(0xFFEFF9F0);
@@ -13,4 +14,7 @@ class AllColors{
 
     static Color subtitleGrey = Color(0xFFB5BBB6);
     static Color inputOutlineGrey = Color(0xFFEBEDEC);
+    static Color productBackGrey = Color(0x0D9DA49E);
+
+    static Color amountGrey = Color(0xFF9DA49E);
 }

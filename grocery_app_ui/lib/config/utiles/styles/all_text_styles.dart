@@ -38,4 +38,20 @@ class AllTextStyles{
       color: AllColors.fontBlack,
       fontFamily: 'Poppins_Regular'
     );
+
+    static TextStyle productSize = TextStyle(
+      fontSize: 12,
+      color: AllColors.amountGrey,
+      fontFamily: 'Poppins_Regular'
+    );
+
+    static TextStyle prePriceStyle = TextStyle(
+      fontSize: 14,
+      color: AllColors.amountGrey,
+      fontFamily: 'Poppins_Regular',
+      decoration: TextDecoration.lineThrough,
+      decorationColor: AllColors.amountGrey,
+      decorationThickness: 2
+    );
+
 }
