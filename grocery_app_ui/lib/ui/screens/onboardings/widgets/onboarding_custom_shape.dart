@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grocery_app_ui/config/utiles/all_colors.dart';
 import 'package:grocery_app_ui/config/utiles/all_images.dart';
-import 'package:grocery_app_ui/config/utiles/all_texts.dart';
 import 'package:grocery_app_ui/config/utiles/routes_helper.dart';
 import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
 import 'package:grocery_app_ui/config/utiles/methods/onboard_clipper_method.dart';
@@ -22,9 +21,9 @@ class OnboardingCustomShape extends StatelessWidget {
     return ClipPath(
       clipper: ClipperMethod(),
       child: Container(
-        padding: const EdgeInsets.only(left:20, right: 20, top: 45, bottom: 15),
+        padding: const EdgeInsets.only(top: 45, bottom: 15),
         height: 301,
-        width: width*0.9,
+        width: width*0.89,
         color: AllColors.white,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -41,9 +40,9 @@ class OnboardingCustomShape extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.center,
-              width: width*0.6,
+              width: width*0.643,
               child: Text(
-                  AllTexts.onboardOneHead,
+                  title,
                   style: AllTextStyles.onboardHeadingStyle,
                 textAlign: TextAlign.center
               ),
@@ -52,7 +51,7 @@ class OnboardingCustomShape extends StatelessWidget {
               alignment: Alignment.center,
               width: width*0.7,
               child: Text(
-                AllTexts.onboardDes,
+                des,
                 style: AllTextStyles.onboardDesStyle,
                 textAlign: TextAlign.center
               )

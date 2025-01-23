@@ -1,16 +1,33 @@
-# grocery_app_ui
+# Gorcery App UI
 
-A new Flutter project.
+Grocery App UI design with Flutter.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+I have us ClipPath in the project for making Custom Shape of some widgets.
 
-A few resources to get you started if this is your first Flutter project:
+### Splash Screen
+   Here is output:  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<div style="overflow-x: auto; white-space:nowrap; gap: 10px;">
+    <img src="./outputs/splash.jpeg" alt="Splash Screen" height="400">
+</div>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Onboarding Screens
+   Here is output:  
+
+<div style="overflow-x: auto; white-space:nowrap; gap: 10px;">
+    <img src="./outputs/onboard1.jpeg" alt="Onboard1 Screen" height="400">
+     <img src="./outputs/onboard2.jpeg" alt="Onboard2 Screen" height="400">
+      <img src="./outputs/onboard3.jpeg" alt="Onboard3 Screen" height="400">
+</div>
+
+### Login Screens
+   Here is output:  
+
+<div style="overflow-x: auto; white-space:nowrap; gap: 10px;">
+    <img src="./outputs/login.jpeg" alt="Login Screen" height="400">
+
+</div>
+
+
