@@ -5,6 +5,7 @@ import 'package:grocery_app_ui/config/utiles/all_texts.dart';
 import 'package:grocery_app_ui/config/utiles/routes_helper.dart';
 import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
 import 'package:grocery_app_ui/ui/screens/signup_page/widgets/code_send_confirm_dialog.dart';
+import 'package:grocery_app_ui/ui/screens/signup_page/widgets/congrates_dialog.dart';
 import 'package:grocery_app_ui/ui/screens/signup_page/widgets/signup_form_input.dart';
 import 'package:grocery_app_ui/ui/screens/signup_page/widgets/verification_dialog.dart';
 import 'package:grocery_app_ui/ui/widgets/elevated_button_design.dart';
@@ -50,9 +51,27 @@ class _SignupScreenState extends State<SignupScreen> {
       barrierColor: AllColors.transparent40,
       barrierDismissible: true,
       builder: (context){
-        return VerificationDialog();
+        return VerificationDialog(nextDialogFunc: showCongratesFunc,);
       }
     );
+  }
+
+  showCongratesFunc(context){
+    Navigator.pop(context);
+    return showDialog(
+        context: context,
+        barrierLabel: 'Verify Code',
+        barrierColor: AllColors.transparent40,
+        barrierDismissible: true,
+        builder: (context){
+          return CongratesDialog(goToHomeFunc: goingHomeFunc,);
+        }
+    );
+  }
+
+  goingHomeFunc(context){
+    Navigator.pop(context);
+    Navigator.pushReplacementNamed(context, RoutesHelper.homeScreen);
   }
 
   @override

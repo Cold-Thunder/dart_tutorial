@@ -43,4 +43,8 @@ class AllTexts{
     static String resend = 'Resend';
     static String time = '30';
 
+    static String created = "Account Created Successfully";
+    static String congratesDes = 'Your account created successfully.\n Listen you favourite music.';
+    static String gotoHome = 'Go to Home';
+
 }

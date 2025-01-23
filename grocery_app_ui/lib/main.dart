@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app_ui/config/utiles/all_colors.dart';
+import 'package:grocery_app_ui/config/utiles/all_texts.dart';
 import 'package:grocery_app_ui/config/utiles/routes_helper.dart';
+import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +21,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
         appBarTheme: AppBarTheme(
-          scrolledUnderElevation: 0.0
+          backgroundColor: AllColors.white,
+          iconTheme: IconThemeData(
+            color: AllColors.fontBlack,
+          ),
+          titleTextStyle: AllTextStyles.onboardHeadingStyle.copyWith(
+            fontSize: 14
+          ),
+          scrolledUnderElevation: 0.0,
         )
       ),
       initialRoute: RoutesHelper.splashScreen,
