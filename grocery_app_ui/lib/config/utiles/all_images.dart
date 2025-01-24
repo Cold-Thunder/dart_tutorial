@@ -13,6 +13,8 @@ class AllImages{
     static String vegetables = 'assets/images/vegetables.png';
     static String noodles = 'assets/images/noodles.png';
     static String surfexel = 'assets/images/surfexel.png';
+    static String meat = 'assets/images/meat.png';
+    static String dal = 'assets/images/dal.png';
 
     // icons
     static String logoSvg = 'assets/icons/logo.svg';

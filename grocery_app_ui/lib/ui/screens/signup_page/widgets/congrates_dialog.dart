@@ -48,7 +48,7 @@ class CongratesDialog extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center
                 ),
-                ElevatedButtonDesign(title: AllTexts.gotoHome, height: 50, func: goToHomeFunc)
+                ElevatedButtonDesign(title: AllTexts.gotoHome, givenHeight: 50, func: goToHomeFunc)
               ],
             ),
           ),

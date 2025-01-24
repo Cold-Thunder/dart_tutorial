@@ -21,8 +21,8 @@ class OnboardingCustomShape extends StatelessWidget {
     return ClipPath(
       clipper: ClipperMethod(),
       child: Container(
-        padding: const EdgeInsets.only(top: 45, bottom: 15),
-        height: 301,
+        padding: const EdgeInsets.only(top: 45, bottom: 35),
+        // height: 301,
         width: width*0.89,
         color: AllColors.white,
         child: Column(
@@ -40,7 +40,7 @@ class OnboardingCustomShape extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.center,
-              width: width*0.643,
+              width: width*0.7,
               child: Text(
                   title,
                   style: AllTextStyles.onboardHeadingStyle,
@@ -49,15 +49,14 @@ class OnboardingCustomShape extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.center,
-              width: width*0.7,
+              width: width*0.8,
               child: Text(
                 des,
                 style: AllTextStyles.onboardDesStyle,
                 textAlign: TextAlign.center
               )
             ),
-
-            const SizedBox(height: 10),
+            const SizedBox(height: 5),
             // next button
             InkWell(
               onTap: (){

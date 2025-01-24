@@ -1,5 +1,12 @@
+import 'package:grocery_app_ui/config/models/category_card_model.dart';
+import 'package:grocery_app_ui/config/models/product_model.dart';
+import 'package:grocery_app_ui/config/utiles/all_images.dart';
+
 class AllTexts{
     static String skip = 'Skip';
+
+    static String home = 'Home';
+    static String office = 'Office';
 
     static String onboardOneHead = 'Buy Groceries Easily with Us';
     static String onboardTwoHead = 'We Deliver Grocery at Your Doorstep';
@@ -47,12 +54,54 @@ class AllTexts{
     static String congratesDes = 'Your account created successfully.\n Listen you favourite music.';
     static String gotoHome = 'Go to Home';
 
-    static String surfexDes = 'Surf Excel Easy Wash Detergent Power';
-    static String surfSize = '500 ml';
+
     static String presPrice = '12';
     static String prePrice = '14';
     static String add = 'Add';
 
     static String vegAndFruits = 'Vegetables & Fruits';
+    static String dairyAndBreak = 'Dairy & Breakfast';
+    static String coldDrink = 'Cold Drinks & Juices';
+    static String instantFood = 'Instant & Frozen Food';
+    static String teaCoffee = 'Tea & Coffee';
+    static String attaRice = 'Atta, Rice & Dal';
+    static String masala = 'Masala, Oil & Dry Fruits';
+    static String chicken = 'Chicken, Meat & Fish';
 
+    static String surfexDes = 'Surf Excel Easy Wash Detergent Power';
+    static String dal = 'Fortune Arhar Dal (Toor Dal)';
+
+    static String surfSize = '500 ml';
+    static String dalWeight = '1 Kg';
+
+
+
+    static String homeAddress = '6391 Elgin St. Celina, Delaware 10299';
+    static String officeAddress = '7 No. R.k. Mission Road, Mymensingh';
+
+    static String seeAll = 'See All';
+
+    static String categoryHeading = 'Shop By Category';
+    static String bestDeal = 'Best Deal';
+
+    static String adTitle ='World Food Festival, Bring the world to your Kitchen!';
+    static String shopNow = 'Shop Now';
+    
+    
+    static List<CategoryCardModel> categoryCards = [
+        CategoryCardModel(title: AllTexts.vegAndFruits, image: AllImages.vegetables, index: 0,),
+        CategoryCardModel(title: AllTexts.dairyAndBreak, image: AllImages.dairy, index: 1,),
+        CategoryCardModel(title: AllTexts.coldDrink, image: AllImages.drinks, index: 2,),
+        CategoryCardModel(title: AllTexts.instantFood, image: AllImages.noodles, index: 3,),
+        CategoryCardModel(title: AllTexts.teaCoffee, image: AllImages.coffeeTea, index: 4,),
+        CategoryCardModel(title: AllTexts.attaRice, image: AllImages.atta, index: 5,),
+        CategoryCardModel(title: AllTexts.masala, image: AllImages.masala, index: 6,),
+        CategoryCardModel(title: AllTexts.chicken, image: AllImages.meat, index: 7,),
+    ];
+
+    static List<ProductModel> productsCards = [
+        ProductModel(image: AllImages.surfexel ,title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+        ProductModel(image: AllImages.dal, title: AllTexts.dal, presPrice: presPrice, prePrice: prePrice, size: AllTexts.dalWeight),
+        ProductModel(image: AllImages.surfexel, title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+    ];
 }

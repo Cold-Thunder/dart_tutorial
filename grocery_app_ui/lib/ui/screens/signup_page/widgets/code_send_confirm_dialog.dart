@@ -55,7 +55,7 @@ class CodeSendConfirmDialog extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                             OutlineCancelButton(),
-                          ElevatedButtonDesign(title: AllTexts.next, func: nextDialogFunc, givenWidth: width*0.374, height: 50)
+                          ElevatedButtonDesign(title: AllTexts.next, func: nextDialogFunc, givenWidth: width*0.374, givenHeight: 50)
                         ],
                       )
                   ],

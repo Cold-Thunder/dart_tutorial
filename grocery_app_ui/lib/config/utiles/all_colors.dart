@@ -17,4 +17,5 @@ class AllColors{
     static Color productBackGrey = Color(0x0D9DA49E);
 
     static Color amountGrey = Color(0xFF9DA49E);
+    static Color bannerBackGreen = Color(0xFFEFF9F0);
 }

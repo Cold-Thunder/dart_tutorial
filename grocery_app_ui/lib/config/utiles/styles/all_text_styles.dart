@@ -54,4 +54,10 @@ class AllTextStyles{
       decorationThickness: 2
     );
 
+    static TextStyle dropDownMenuStyle = TextStyle(
+      fontSize: 12,
+      color: AllColors.amountGrey,
+      fontFamily: "Poppins_Regular"
+    );
+
 }
