@@ -36,5 +36,8 @@ class AllImages{
     static String eyeIconSvg = 'assets/icons/eye_icon.svg';
     static String eyeOffIconSvg = 'assets/icons/eye_off_icon.svg';
     static String greenCheckMark = 'assets/icons/green_check_mark.svg';
+    static String heartGreen = 'assets/icons/heart_green.svg';
+    static String cartGreen = 'assets/icons/cart_icon_green.svg';
+    static String profileGreen = 'assets/icons/profile_green.svg';
 
 }

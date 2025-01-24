@@ -36,8 +36,16 @@ I have us ClipPath in the project for making Custom Shape of some widgets.
    Here is output:  
 
 <div style="overflow-x: auto; white-space:nowrap; gap: 10px;">
-    <img src="./outputs/sending_otp.jpeg" alt="Login Screen" height="400">
-    <img src="./outputs/otp_verify.jpeg" alt="Login Screen" height="400">
-    <img src="./outputs/created.jpeg" alt="Login Screen" height="400">
+    <img src="./outputs/sending_otp.jpeg" alt="send Screen" height="400">
+    <img src="./outputs/otp_verify.jpeg" alt="verify Code Screen" height="400">
+    <img src="./outputs/created.jpeg" alt="Success Screen" height="400">
 
+</div>
+
+### Home Screen
+   Here is output:  
+
+<div style="overflow-x: auto; white-space:nowrap; gap: 10px;">
+    <img src="./outputs/home_screen.jpeg" alt="Home screen" height="400">
+    
 </div>

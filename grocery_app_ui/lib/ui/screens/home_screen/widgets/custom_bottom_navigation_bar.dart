@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grocery_app_ui/config/models/bottom_nev_item_model.dart';
 import 'package:grocery_app_ui/config/utiles/all_colors.dart';
 import 'package:grocery_app_ui/config/utiles/all_images.dart';
@@ -12,9 +11,9 @@ class CustomBottomNavigationBar extends StatelessWidget {
 
   final List<BottomNevItemModel> bottomNevItems = [
       BottomNevItemModel(icon: AllImages.homeIconSvg, selectedIcon: AllImages.homeGreenSvg, index: 0),
-      BottomNevItemModel(icon: AllImages.heartSvg, selectedIcon: AllImages.homeGreenSvg, index: 1),
-      BottomNevItemModel(icon: AllImages.cartSvg, selectedIcon: AllImages.homeGreenSvg, index: 2),
-      BottomNevItemModel(icon: AllImages.profileSvg, selectedIcon: AllImages.homeGreenSvg, index: 3),
+      BottomNevItemModel(icon: AllImages.heartSvg, selectedIcon: AllImages.heartGreen, index: 1),
+      BottomNevItemModel(icon: AllImages.cartSvg, selectedIcon: AllImages.cartGreen, index: 2),
+      BottomNevItemModel(icon: AllImages.profileSvg, selectedIcon: AllImages.profileGreen, index: 3),
   ];
 
 

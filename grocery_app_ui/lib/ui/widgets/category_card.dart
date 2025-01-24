@@ -20,6 +20,8 @@ class _CategoryCardState extends State<CategoryCard> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      splashColor: AllColors.transparent,
+      highlightColor: AllColors.transparent,
       onTap: (){
         widget.func();
       },

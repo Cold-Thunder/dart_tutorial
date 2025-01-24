@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grocery_app_ui/config/models/bottom_nev_item_model.dart';
+import 'package:grocery_app_ui/ui/screens/home_screen/widgets/navbar_item_indicator.dart';
 
 class BottomNavigationItem extends StatelessWidget {
  final BottomNevItemModel model;
@@ -24,7 +25,17 @@ class BottomNavigationItem extends StatelessWidget {
             child: Stack(
               alignment: Alignment.center,
               children: [
-                SvgPicture.asset(model.index == clickedInd ? model.selectedIcon : model.icon, height: 24, width: 24)
+                Visibility(
+                  visible: clickedInd == model.index,
+                  child: Positioned(
+                    top: 0,
+                      child: NavbarItemIndicator(),
+                  ),
+                ),
+                SizedBox(
+                    height: height,
+                    child: SvgPicture.asset(model.index == clickedInd ? model.selectedIcon : model.icon, height: 24, width: 24),
+                )
               ],
             )
         )

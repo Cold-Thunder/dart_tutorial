@@ -5,6 +5,7 @@ import 'package:grocery_app_ui/config/models/product_model.dart';
 import 'package:grocery_app_ui/config/utiles/all_colors.dart';
 import 'package:grocery_app_ui/config/utiles/all_images.dart';
 import 'package:grocery_app_ui/config/utiles/all_texts.dart';
+import 'package:grocery_app_ui/config/utiles/methods/navbar_item_indicator_clipper.dart';
 import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
 import 'package:grocery_app_ui/ui/screens/home_screen/widgets/banner_ad.dart';
 import 'package:grocery_app_ui/ui/screens/home_screen/widgets/custom_bottom_navigation_bar.dart';
@@ -123,7 +124,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     return ProductCard(model: productLists[index]);
                   }
                 )
-              )
+              ),
+
             ],
           ),
         ),
