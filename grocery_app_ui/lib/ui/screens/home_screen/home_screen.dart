@@ -7,6 +7,7 @@ import 'package:grocery_app_ui/config/utiles/all_images.dart';
 import 'package:grocery_app_ui/config/utiles/all_texts.dart';
 import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
 import 'package:grocery_app_ui/ui/screens/home_screen/widgets/banner_ad.dart';
+import 'package:grocery_app_ui/ui/screens/home_screen/widgets/custom_bottom_navigation_bar.dart';
 import 'package:grocery_app_ui/ui/screens/home_screen/widgets/heading_section.dart';
 import 'package:grocery_app_ui/ui/screens/home_screen/widgets/home_dropdown_button.dart';
 import 'package:grocery_app_ui/ui/screens/home_screen/widgets/search_section.dart';
@@ -25,8 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   late String address = AllTexts.homeAddress;
 
+  int clickedInd = 0;
   List<CategoryCardModel> categoryCards = AllTexts.categoryCards;
   List<ProductModel> productLists = AllTexts.productsCards;
+
 
   addressChanger(String value) {
     setState(() {
@@ -34,8 +37,10 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  navigatingFunction(){
-
+  navigatingFunction(int index){
+    setState(() {
+      clickedInd = index;
+    });
   }
 
   @override
@@ -72,6 +77,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 )),
             SizedBox(width: 15)
           ]),
+      bottomNavigationBar: CustomBottomNavigationBar(
+          clickedInd: clickedInd,
+        itemFunc: navigatingFunction,
+      ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -86,6 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // category heading
               HeadingSection(title: AllTexts.categoryHeading),
               const SizedBox(height: 10),
+              // category cards section
               SizedBox(
                 width: width,
                 child: Wrap(
