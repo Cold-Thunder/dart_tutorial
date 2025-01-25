@@ -49,3 +49,13 @@ I have us ClipPath in the project for making Custom Shape of some widgets.
     <img src="./outputs/home_screen.jpeg" alt="Home screen" height="400">
     
 </div>
+
+
+### Best Deal Screen
+   Here is output:  
+
+<div style="overflow-x: auto; white-space:nowrap; gap: 10px;">
+    <img src="./outputs/best_deal.jpeg" alt="Best Deal screen" height="400">
+    <img src="./outputs/best_deal_two.jpeg" alt="Best Deal screen two" height="400">
+    
+</div>
