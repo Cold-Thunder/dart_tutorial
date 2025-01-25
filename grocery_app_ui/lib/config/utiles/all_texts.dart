@@ -86,6 +86,9 @@ class AllTexts{
 
     static String adTitle ='World Food Festival, Bring the world to your Kitchen!';
     static String shopNow = 'Shop Now';
+
+    static String viewCart = 'View Cart';
+
     
     
     static List<CategoryCardModel> categoryCards = [

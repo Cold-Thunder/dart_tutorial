@@ -4,13 +4,14 @@ import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
 
 class ElevatedButtonDesign extends StatelessWidget {
   final String title;
+  final Function? contextFunc;
   final Function? func;
   final String? screen;
   final double? givenWidth;
   final double? givenHeight;
   final double? fontSize;
 
-  const ElevatedButtonDesign({this.fontSize, this.givenWidth, this.givenHeight, this.func, this.screen, required this.title, super.key});
+  const ElevatedButtonDesign({this.contextFunc, this.fontSize, this.givenWidth, this.givenHeight, this.func, this.screen, required this.title, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +23,9 @@ class ElevatedButtonDesign extends StatelessWidget {
           onPressed: (){
             if(func != null){
               func!();
+            }
+            if(contextFunc != null){
+              contextFunc!(context);
             }
             if(screen != null){
               Navigator.pushNamed(context, screen!);

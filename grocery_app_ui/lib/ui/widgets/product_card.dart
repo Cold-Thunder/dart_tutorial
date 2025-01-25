@@ -11,8 +11,9 @@ class ProductCard extends StatefulWidget {
   final double? width;
   final ProductModel model;
   final Function addFunc;
+  final Function? removeFunc;
 
-  const ProductCard({this.width, required this.model, required this.addFunc, super.key});
+  const ProductCard({this.width, required this.model, required this.addFunc, this.removeFunc, super.key});
 
   @override
   State<ProductCard> createState() => _ProductCardState();
@@ -21,10 +22,32 @@ class ProductCard extends StatefulWidget {
 class _ProductCardState extends State<ProductCard> {
   bool favourit = false;
   double width = 160;
+  int count = 0;
 
   addButtonFunc(){
-    widget.addFunc(widget.model);
+    if(count < 100){
+      widget.addFunc(widget.model);
+      setState((){
+        count += 1;
+      });
+    }
+
     // print(widget.model);
+  }
+
+  removeItems(){
+    if(count >= 0 && widget.removeFunc != null){
+      widget.removeFunc!(widget.model);
+      setState((){
+        count -= 1;
+      });
+    }
+  }
+
+  @override
+  void initState(){
+    super.initState();
+
   }
 
   @override
@@ -115,20 +138,32 @@ class _ProductCardState extends State<ProductCard> {
               ),
               // pre present and add button section
               Row(
-                spacing: 7,
                 children: [
                   Text(
                     '\$${widget.model.presPrice}',
                     style: AllTextStyles.onboardDesStyle
                   ),
+                  const SizedBox(width: 7),
                   Text(
                     '\$${widget.model.prePrice}',
                     style: AllTextStyles.prePriceStyle
                   ),
                   Spacer(),
+                  count == 0 ?
                   ElevatedButtonDesign(
                     title: AllTexts.add, givenHeight: 34, givenWidth: 65, fontSize: 12,
                     func: addButtonFunc,
+                  ):
+                  Row(
+                    children: [
+                      ElevatedButtonDesign(title: '-', givenHeight: 32, givenWidth: 32, func: removeItems,),
+                      Container(
+                        alignment:Alignment.center,
+                        width: 18,
+                          child: Text(count.toString(), style: AllTextStyles.onboardDesStyle)
+                      ),
+                      ElevatedButtonDesign(title: '+', givenHeight: 32, givenWidth: 32, func: addButtonFunc)
+                    ],
                   )
                 ],
               )

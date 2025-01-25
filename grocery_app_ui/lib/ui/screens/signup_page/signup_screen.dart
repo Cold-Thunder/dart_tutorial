@@ -132,7 +132,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           secure: true),
                       const SizedBox(height: 5),
                       ElevatedButtonDesign(
-                          title: AllTexts.register, func: showConfirmDialog),
+                          title: AllTexts.register, contextFunc: showConfirmDialog),
                     ],
                   ),
                 ),

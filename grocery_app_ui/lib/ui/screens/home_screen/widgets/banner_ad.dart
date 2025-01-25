@@ -46,7 +46,7 @@ class BannerAd extends StatelessWidget {
                     fontSize: width < 350 ? 14 :18
                   )
                 ),
-                ElevatedButtonDesign(title: AllTexts.shopNow, givenWidth: width*0.28, givenHeight: width < 380 ? 25 : 40,)
+                ElevatedButtonDesign(title: AllTexts.shopNow, givenWidth: width*0.28, givenHeight: width < 360 ? 25 : 40,)
               ]
             ),
           )

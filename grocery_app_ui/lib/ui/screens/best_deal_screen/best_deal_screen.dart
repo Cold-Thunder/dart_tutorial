@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app_ui/config/models/product_model.dart';
 import 'package:grocery_app_ui/config/utiles/all_colors.dart';
 import 'package:grocery_app_ui/config/utiles/all_texts.dart';
+import 'package:grocery_app_ui/ui/screens/best_deal_screen/widgets/bottom_count_bar.dart';
 import 'package:grocery_app_ui/ui/widgets/back_arrow_button.dart';
 import 'package:grocery_app_ui/ui/widgets/product_card.dart';
 import 'package:grocery_app_ui/ui/widgets/search_icon_button.dart';
@@ -19,13 +20,29 @@ class _BestDealScreenState extends State<BestDealScreen> {
   final List<ProductModel> bestDealProducts = AllTexts.bestDealsCards;
 
   List<ProductModel> addedItems = [];
+  double totalPrice = 0;
 
   // adding items in added item list
   addButtonFunc(ProductModel model){
     setState((){
       addedItems.add(model);
+      totalPrice += double.tryParse(model.presPrice) ?? 0;
     });
   }
+
+  // removing items from the list
+  removeItemFromList(ProductModel model){
+    setState((){
+      for(int i = 0; i < addedItems.length; i++){
+        if(addedItems[i].id == model.id){
+          addedItems.removeAt(i);
+          totalPrice -= double.tryParse(model.presPrice) ?? 0;
+          break;
+        }
+      }
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -44,9 +61,7 @@ class _BestDealScreenState extends State<BestDealScreen> {
         ),
       bottomNavigationBar: Visibility(
         visible: addedItems.isNotEmpty,
-        child: Container(
-          height: 60,
-        ),
+        child: BottomCountBar(items: addedItems, totalPrice: totalPrice,),
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -56,12 +71,12 @@ class _BestDealScreenState extends State<BestDealScreen> {
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: width < 350 ? 1 : width < 540 ? 2 : width <720 ? 3 : 4,
                       mainAxisExtent: 240,
-                      crossAxisSpacing: 10,
+                      crossAxisSpacing: 5,
                       mainAxisSpacing: 10
                   ),
                   itemCount: bestDealProducts.length,
                   itemBuilder: (context, index){
-                    return ProductCard(model: bestDealProducts[index], addFunc: addButtonFunc,);
+                    return ProductCard(model: bestDealProducts[index], addFunc: addButtonFunc, removeFunc: removeItemFromList,);
                   }
               ),
       ),

@@ -47,5 +47,6 @@ class AllImages{
     static String heartGreen = 'assets/icons/heart_green.svg';
     static String cartGreen = 'assets/icons/cart_icon_green.svg';
     static String profileGreen = 'assets/icons/profile_green.svg';
+    static String rightArrow = 'assets/icons/right_arrow.svg';
 
 }
