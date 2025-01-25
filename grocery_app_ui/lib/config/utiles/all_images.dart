@@ -15,6 +15,11 @@ class AllImages{
     static String surfexel = 'assets/images/surfexel.png';
     static String meat = 'assets/images/meat.png';
     static String dal = 'assets/images/dal.png';
+    static String chiliPack = 'assets/images/chili_pack.png';
+    static String ricePack = 'assets/images/rice_pack.png';
+    static String oilPack = 'assets/images/oil_pack.png';
+    static String coffeePot = 'assets/images/coffee_bottle.png';
+    static String teaPack = 'assets/images/tea_pack.png';
 
     // icons
     static String logoSvg = 'assets/icons/logo.svg';
@@ -29,7 +34,10 @@ class AllImages{
     static String locationSvg = 'assets/icons/location.svg';
     static String profileSvg = 'assets/icons/profile.svg';
     static String searchIconSvg = 'assets/icons/search_icon.svg';
+
     static String arrowDownSvg = 'assets/icons/arrow_down.svg';
+    static String backArrow = 'assets/icons/back_arrow.svg';
+
     static String googleSvg = 'assets/icons/google_logo.svg';
     static String appleSvg = 'assets/icons/apple_logo.svg';
 

@@ -11,13 +11,13 @@ class BannerAd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final height = width*0.472;
+    final height = width < 768 ? width*0.472 : 768*0.472;
     return Container(
       height: height,
-      width: width,
+      width: width < 768 ? width : 768,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: AllColors.bannerBackGreen
+        color: AllColors.bannerBackGreen,
       ),
       child: Stack(
         children: [
@@ -35,6 +35,7 @@ class BannerAd extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(left: 16, top: 16, bottom: 16),
             width: width*0.5,
+            height: height,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -42,10 +43,10 @@ class BannerAd extends StatelessWidget {
                 Text(
                   AllTexts.adTitle,
                   style: AllTextStyles.onboardHeadingStyle.copyWith(
-                    fontSize: 18
+                    fontSize: width < 350 ? 14 :18
                   )
                 ),
-                ElevatedButtonDesign(title: AllTexts.shopNow, givenWidth: width*0.28, givenHeight: 40,)
+                ElevatedButtonDesign(title: AllTexts.shopNow, givenWidth: width*0.28, givenHeight: width < 380 ? 25 : 40,)
               ]
             ),
           )

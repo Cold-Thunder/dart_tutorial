@@ -100,8 +100,23 @@ class AllTexts{
     ];
 
     static List<ProductModel> productsCards = [
-        ProductModel(image: AllImages.surfexel ,title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
-        ProductModel(image: AllImages.dal, title: AllTexts.dal, presPrice: presPrice, prePrice: prePrice, size: AllTexts.dalWeight),
-        ProductModel(image: AllImages.surfexel, title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+        ProductModel(id: 0, image: AllImages.surfexel ,title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+        ProductModel(id: 1, image: AllImages.dal, title: AllTexts.dal, presPrice: presPrice, prePrice: prePrice, size: AllTexts.dalWeight),
+        ProductModel(id: 2, image: AllImages.surfexel, title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+    ];
+
+    static List<ProductModel> bestDealsCards = [
+        ProductModel(id: 0, image: AllImages.surfexel ,title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+        ProductModel(id: 1, image: AllImages.dal, title: AllTexts.dal, presPrice: presPrice, prePrice: prePrice, size: AllTexts.dalWeight),
+        ProductModel(id: 2, image: AllImages.coffeePot, title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+        ProductModel(id: 3, image: AllImages.surfexel ,title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+        ProductModel(id: 4, image: AllImages.chiliPack, title: AllTexts.dal, presPrice: presPrice, prePrice: prePrice, size: AllTexts.dalWeight),
+        ProductModel(id: 5, image: AllImages.drinks, title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+        ProductModel(id: 6, image: AllImages.surfexel ,title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+        ProductModel(id: 7, image: AllImages.noodles, title: AllTexts.dal, presPrice: presPrice, prePrice: prePrice, size: AllTexts.dalWeight),
+        ProductModel(id: 8, image: AllImages.chiliPack, title: AllTexts.dal, presPrice: presPrice, prePrice: prePrice, size: AllTexts.dalWeight),
+        ProductModel(id: 9, image: AllImages.drinks, title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+        ProductModel(id: 10, image: AllImages.surfexel ,title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
+        ProductModel(id: 11, image: AllImages.noodles, title: AllTexts.dal, presPrice: presPrice, prePrice: prePrice, size: AllTexts.dalWeight),
     ];
 }

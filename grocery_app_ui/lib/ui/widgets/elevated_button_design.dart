@@ -21,7 +21,7 @@ class ElevatedButtonDesign extends StatelessWidget {
       child: ElevatedButton(
           onPressed: (){
             if(func != null){
-              func!(context);
+              func!();
             }
             if(screen != null){
               Navigator.pushNamed(context, screen!);

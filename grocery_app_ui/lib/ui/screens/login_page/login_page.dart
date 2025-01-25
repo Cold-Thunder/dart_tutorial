@@ -15,9 +15,6 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _passController = TextEditingController();
    LoginPage({super.key});
 
-   loginFunction(context){
-     Navigator.pushReplacementNamed(context, RoutesHelper.homeScreen);
-   }
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +69,7 @@ class LoginPage extends StatelessWidget {
                   )
                 ),
                 const SizedBox(height: 10),
-                ElevatedButtonDesign(title: AllTexts.login, func: loginFunction,),
+                ElevatedButtonDesign(title: AllTexts.login, screen: RoutesHelper.homeScreen,),
                 const SizedBox(height:30),
                 RichText(
 

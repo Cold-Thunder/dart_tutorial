@@ -5,7 +5,7 @@ import 'package:grocery_app_ui/config/models/product_model.dart';
 import 'package:grocery_app_ui/config/utiles/all_colors.dart';
 import 'package:grocery_app_ui/config/utiles/all_images.dart';
 import 'package:grocery_app_ui/config/utiles/all_texts.dart';
-import 'package:grocery_app_ui/config/utiles/methods/navbar_item_indicator_clipper.dart';
+import 'package:grocery_app_ui/config/utiles/routes_helper.dart';
 import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
 import 'package:grocery_app_ui/ui/screens/home_screen/widgets/banner_ad.dart';
 import 'package:grocery_app_ui/ui/screens/home_screen/widgets/custom_bottom_navigation_bar.dart';
@@ -44,6 +44,10 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  productAddButtonFunc(ProductModel model){
+    // Navigator.pushNamed(context, RoutesHelper.bestDealScreen,);
+  }
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -52,18 +56,19 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
           // leading section
           leading: Container(
-              padding: const EdgeInsets.all(5),
+            alignment: Alignment.centerRight,
+              padding: const EdgeInsets.all(7),
               height: 24,
               width: 24,
               child: SvgPicture.asset(
                 AllImages.locationSvg,
                 height: 24,
                 width: 24,
-              )),
+              ),),
           // drop down title section
           title: HomeDropdownButton(address: address, func: addressChanger),
           titleTextStyle: AllTextStyles.socialLogBtnStyle,
-          titleSpacing: 5,
+          titleSpacing: 0,
           leadingWidth: 40,
           // cart icon section
           actions: [
@@ -112,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
               BannerAd(),
               const SizedBox(height: 20),
               // best deal section
-              HeadingSection(title: AllTexts.bestDeal),
+              HeadingSection(title: AllTexts.bestDeal, seeAllWidget: RoutesHelper.bestDealScreen,),
               SizedBox(
                 width: width,
                 height: 240,
@@ -121,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemCount: productLists.length,
                   shrinkWrap: true,
                   itemBuilder: (context, index){
-                    return ProductCard(model: productLists[index]);
+                    return ProductCard(model: productLists[index], addFunc: productAddButtonFunc,);
                   }
                 )
               ),
