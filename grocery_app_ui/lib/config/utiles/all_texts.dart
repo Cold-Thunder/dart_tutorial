@@ -7,6 +7,19 @@ class AllTexts{
 
     static String home = 'Home';
     static String office = 'Office';
+    static String search = 'Search';
+    static String recentSearch = 'Recent Search';
+    static String trending = 'Trending Now';
+
+    static String sortBy = 'Sort By';
+    static String noItemFound= 'No Item Found';
+
+    static String relevance = 'Relevance';
+    static String popularity = 'Popularity';
+    static String lowToHigh = 'Price: Low to High';
+
+
+    static String showingResult = 'Showing Result for ';
 
     static String onboardOneHead = 'Buy Groceries Easily with Us';
     static String onboardTwoHead = 'We Deliver Grocery at Your Doorstep';
@@ -121,5 +134,7 @@ class AllTexts{
         ProductModel(id: 9, image: AllImages.drinks, title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
         ProductModel(id: 10, image: AllImages.surfexel ,title: AllTexts.surfexDes, presPrice: presPrice, prePrice: prePrice, size: AllTexts.surfSize),
         ProductModel(id: 11, image: AllImages.noodles, title: AllTexts.dal, presPrice: presPrice, prePrice: prePrice, size: AllTexts.dalWeight),
+        ProductModel(id: 12, image: AllImages.atta, title: AllTexts.attaRice, presPrice: presPrice, prePrice: prePrice, size: AllTexts.dalWeight),
+
     ];
 }

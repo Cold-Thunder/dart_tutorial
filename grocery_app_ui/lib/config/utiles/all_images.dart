@@ -21,6 +21,8 @@ class AllImages{
     static String coffeePot = 'assets/images/coffee_bottle.png';
     static String teaPack = 'assets/images/tea_pack.png';
 
+    static String filterIconPng = 'assets/images/filter_icon_png.png';
+
     // icons
     static String logoSvg = 'assets/icons/logo.svg';
     static String cartSvg = 'assets/icons/cart_icon.svg';
@@ -48,5 +50,7 @@ class AllImages{
     static String cartGreen = 'assets/icons/cart_icon_green.svg';
     static String profileGreen = 'assets/icons/profile_green.svg';
     static String rightArrow = 'assets/icons/right_arrow.svg';
+    static String tickGreen = 'assets/icons/tick.svg';
+    static String tickGrey = 'assets/icons/tick_grey.svg';
 
 }

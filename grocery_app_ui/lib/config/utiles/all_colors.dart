@@ -19,4 +19,11 @@ class AllColors{
 
     static Color amountGrey = Color(0xFF9DA49E);
     static Color bannerBackGreen = Color(0xFFEFF9F0);
+
+    static Color searchHintGrey = Color(0xFFB9BEB9);
+
+    static Color keywordBackGrey = Color(0xFFF5F6F5);
+    static Color closerGrey = Color(0xFFE8E9E8);
+
+    static Color checkInActiveGrey = Color(0xFFEDEEED);
 }

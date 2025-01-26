@@ -2,29 +2,48 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grocery_app_ui/config/utiles/all_colors.dart';
 import 'package:grocery_app_ui/config/utiles/all_images.dart';
+import 'package:grocery_app_ui/config/utiles/all_texts.dart';
+import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
 
-class SearchBar extends StatelessWidget {
+class SearchBarWidget extends StatelessWidget {
   final double? barWidth;
   final TextEditingController controller;
-  const SearchBar({this.barWidth, required this.controller, super.key});
+  final Function? onTapFunction;
+  final Function? searchIconFunc;
+  const SearchBarWidget({this.barWidth, required this.controller, this.onTapFunction, this.searchIconFunc, super.key});
 
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return SizedBox(
-      width: barWidth ?? width*0.733,
+      width: barWidth ?? width,
       height: 50,
       child: TextField(
         controller: controller,
-
+        onTap: (){
+          if(onTapFunction != null){
+            onTapFunction!(context);
+          }
+        },
+          style: AllTextStyles.searchHintText.copyWith(
+            color: AllColors.fontBlack
+          ),
+          cursorColor: AllColors.mainGreen,
         decoration: InputDecoration(
+          hintText: AllTexts.search,
+          hintStyle: AllTextStyles.searchHintText,
           filled: true,
           fillColor: AllColors.productBackGrey,
           constraints: BoxConstraints(
-            maxHeight: 50
+            maxHeight: 50,
+                maxWidth: barWidth ?? width
           ),
           prefixIcon: InkWell(
-            onTap: (){},
+            onTap: (){
+              if(searchIconFunc != null){
+                searchIconFunc!();
+              }
+            },
               splashColor: AllColors.transparent,
               highlightColor: AllColors.transparent,
             child: Padding(

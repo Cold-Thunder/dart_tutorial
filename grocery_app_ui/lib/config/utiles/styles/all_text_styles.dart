@@ -15,6 +15,13 @@ class AllTextStyles{
         fontWeight: FontWeight.bold
     );
 
+    static TextStyle searchScreenHeading = TextStyle(
+      fontSize: 16,
+      color: AllColors.fontBlack,
+      fontFamily: 'Poppins_Bold',
+      fontWeight: FontWeight.bold
+    );
+
     static TextStyle onboardDesStyle = TextStyle(
       fontSize: 14,
       color: AllColors.fontBlack,
@@ -59,5 +66,11 @@ class AllTextStyles{
       color: AllColors.amountGrey,
       fontFamily: "Poppins_Regular"
     );
+
+    static TextStyle searchHintText = TextStyle(
+        fontSize: 18,
+      color: AllColors.searchHintGrey,
+      fontFamily: 'Poppins_Regular'
+        );
 
 }
