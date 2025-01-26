@@ -61,7 +61,7 @@ I have us ClipPath in the project for making Custom Shape of some widgets.
 </div>
 
 ### Search Screen
-   Here is output: 5 examples
+   Here is output: 4 examples
 
 <div style="overflow-x: auto; white-space:nowrap; gap: 10px;">
     <img src="./outputs/search_screen.jpeg" alt="search screen" height="400">
