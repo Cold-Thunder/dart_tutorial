@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app_ui/config/utiles/all_colors.dart';
-import 'package:grocery_app_ui/config/utiles/all_texts.dart';
-import 'package:grocery_app_ui/config/utiles/routes_helper.dart';
-import 'package:grocery_app_ui/config/utiles/styles/all_text_styles.dart';
+
+import 'core/utiles/all_colors.dart';
+import 'core/utiles/routes_helper.dart';
+import 'core/utiles/styles/all_text_styles.dart';
 
 void main() {
   runApp(const MyApp());
