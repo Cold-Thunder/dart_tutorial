@@ -32,7 +32,7 @@ class DrawerScreen extends StatelessWidget {
                          BoxWidget(allDatas: personalInfos, showSub: false,),
                          BoxWidget(allDatas: cartInfos, showSub: false,),
                          BoxWidget(allDatas: faqSecInfos, showSub: false,),
-                         BoxWidget(allDatas: logInfo, showSub: false,),
+                         BoxWidget(allDatas: logInfo, showSub: false, replace: true,),
                        ]
                    )
                ),

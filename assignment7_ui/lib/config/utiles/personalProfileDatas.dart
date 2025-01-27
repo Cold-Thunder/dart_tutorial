@@ -4,6 +4,7 @@ import 'package:assignment7_ui/ui/screens/edit_cart_screen/edit_cart_screen.dart
 import 'package:assignment7_ui/ui/screens/home_screens/home_v1.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v2.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v3.dart';
+import 'package:assignment7_ui/ui/screens/log_in_screen/login_screen.dart';
 import 'package:assignment7_ui/ui/screens/my_address_screen/my_address_screen.dart';
 import 'package:assignment7_ui/ui/screens/payment_screen/payment_screen.dart';
 import 'package:assignment7_ui/ui/screens/personal_profile_screen/personal_profile_screen.dart';
@@ -41,6 +42,6 @@ class PersonalProfileDatas{
   ];
 
   static List<PersonalProfileItemModel> logInfo = [
-    PersonalProfileItemModel(icon: AllImages.logoutIcon, title: PersonalProfileText.logOut,),
+    PersonalProfileItemModel(icon: AllImages.logoutIcon, title: PersonalProfileText.logOut, widget: LoginScreen()),
   ];
 }

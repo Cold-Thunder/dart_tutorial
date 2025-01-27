@@ -29,12 +29,18 @@ class Onboarding2 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GreyCard(height: 292, width: 240),
-              const SizedBox(height: 70),
+              GreyCard(height: height*0.359, width: 240),
+              Visibility(
+                visible: height > 350,
+                child: SizedBox(height: height*0.086),
+              ),
               ///heading section
               Text(OnBoardingTexts.favourite,
                   style: TextStyles.onboardHeadStyle),
-              const SizedBox(height: 10),
+              Visibility(
+                  visible: height > 350,
+                  child: SizedBox(height: 10)
+              ),
               // des section
               Container(
                 // width: width*0.8,
@@ -46,7 +52,7 @@ class Onboarding2 extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-              const SizedBox(height: 35),
+              SizedBox(height: height > 350 ? height*0.043 : height*0.0215),
               // tracker
               TrackerWidget(trackerColor: trackerColor),
 

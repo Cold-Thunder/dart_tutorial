@@ -1,10 +1,7 @@
-import 'package:assignment7_ui/ui/screens/onboarding_screens/onboarding2.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/texts/on_boarding_texts.dart';
-import 'package:assignment7_ui/ui/widgets/elevated_button_design.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
-import 'package:assignment7_ui/ui/widgets/skip_button.dart';
 import 'package:assignment7_ui/ui/widgets/tracker_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -30,12 +27,18 @@ class Onboarding1 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GreyCard(height: 292, width: 240),
-              const SizedBox(height: 70),
+              GreyCard(height: height*0.359, width: 240),
+              Visibility(
+                  visible: height > 350,
+                  child: SizedBox(height: height*0.086),
+              ),
               ///heading section
               Text(OnBoardingTexts.favourite,
                   style: TextStyles.onboardHeadStyle),
-              const SizedBox(height: 10),
+              Visibility(
+                visible: height > 350,
+                  child: SizedBox(height: 10)
+              ),
               // des section
               Container(
                 // width: width*0.8,
@@ -47,7 +50,8 @@ class Onboarding1 extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-              const SizedBox(height: 35),
+
+              SizedBox(height: height > 350 ? height*0.043 : height*0.0215),
               // tracker
               TrackerWidget(trackerColor: trackerColor),
             ],

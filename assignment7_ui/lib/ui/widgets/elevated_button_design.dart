@@ -7,9 +7,11 @@ class ElevatedButtonDesign extends StatelessWidget {
   final Widget? screen;
   final bool? icon;
   final void Function()? function;
+  final double? height;
 
   const ElevatedButtonDesign(
-      {required this.title, this.screen, this.icon, this.function, super.key});
+      {this.height,
+        required this.title, this.screen, this.icon, this.function, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class ElevatedButtonDesign extends StatelessWidget {
           }
       },
       style: ElevatedButton.styleFrom(
-        fixedSize: Size.fromHeight(62),
+        fixedSize: Size.fromHeight(height ?? 62),
         backgroundColor: AllColors.buttonOrange,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),

@@ -6,15 +6,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfileListTiles extends StatelessWidget {
+  final bool? replace;
   final PersonalProfileItemModel model;
-  const ProfileListTiles({required this.model, super.key});
+  const ProfileListTiles({required this.model, this.replace, super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       onTap: (){
         if(model.widget != null){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>model.widget!));
+          if(replace != null && replace == true){
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>model.widget!));
+          }else if(replace == null || replace == false){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>model.widget!));
+          }
         }
       },
       leading: SizedBox(

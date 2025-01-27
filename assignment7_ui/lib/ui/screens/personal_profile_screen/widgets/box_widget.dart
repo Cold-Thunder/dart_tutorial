@@ -6,8 +6,9 @@ import 'package:flutter/cupertino.dart';
 
 class BoxWidget extends StatelessWidget {
   final List<PersonalProfileItemModel> allDatas;
+  final bool? replace;
   final bool? showSub;
-  const BoxWidget({required this.allDatas, this.showSub, super.key});
+  const BoxWidget({required this.allDatas, this.showSub, this.replace, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class BoxWidget extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: allDatas.map((item)=> showSub ?? true ? PersonalListTileWithSub(model: item) : ProfileListTiles(model: item)
+        children: allDatas.map((item)=> showSub ?? true ? PersonalListTileWithSub(model: item) : ProfileListTiles(model: item, replace: replace,)
         ).toList()
       )
     );
