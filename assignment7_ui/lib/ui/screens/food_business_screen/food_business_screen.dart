@@ -87,9 +87,10 @@ final List<PopularItemCardModel> popularItems = AllTexts.popularItems;
                 builder: (context, constraints ){
                   int crossCount = constraints.maxWidth < 320 ? 1 : 2;
                   int crossCountTwo = constraints.maxWidth < 650 ? crossCount : 4;
+                  int crossCountThree = constraints.maxWidth < 980 ? crossCountTwo : 6;
                   return GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: crossCountTwo,
+                          crossAxisCount: crossCountThree,
                           mainAxisExtent: 174,
                           crossAxisSpacing: 20,
                           mainAxisSpacing: 20

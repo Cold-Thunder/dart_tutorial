@@ -62,7 +62,7 @@ class PopularItemsWidget extends StatelessWidget {
                 model.subTitle,
                 style: TextStyles.onboardDesStyle.copyWith(fontSize: 13),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               // price section
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
