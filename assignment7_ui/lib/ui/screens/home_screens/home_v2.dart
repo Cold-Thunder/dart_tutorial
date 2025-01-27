@@ -74,7 +74,7 @@ class _HomeV2State extends State<HomeV2> {
               const SizedBox(height: 20),
               // all categories
               SizedBox(
-                  height: 192,
+                  height: 200,
                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: cateTypes.length,

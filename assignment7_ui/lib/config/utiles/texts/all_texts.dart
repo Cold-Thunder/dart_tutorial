@@ -264,6 +264,41 @@ class AllTexts{
         price: AllTexts.price,
         size: AllTexts.size,
         count: 1),
+    CartItemModel(
+        title: AllTexts.pizzaCalzone,
+        price: AllTexts.price,
+        size: AllTexts.size,
+        count: 1),
+    CartItemModel(
+        title: AllTexts.pizzaCalzone,
+        price: AllTexts.price,
+        size: AllTexts.size,
+        count: 1),
+    CartItemModel(
+        title: AllTexts.pizzaCalzone,
+        price: AllTexts.price,
+        size: AllTexts.size,
+        count: 1),
+    CartItemModel(
+        title: AllTexts.pizzaCalzone,
+        price: AllTexts.price,
+        size: AllTexts.size,
+        count: 1),
+    CartItemModel(
+        title: AllTexts.pizzaCalzone,
+        price: AllTexts.price,
+        size: AllTexts.size,
+        count: 1),
+    CartItemModel(
+        title: AllTexts.pizzaCalzone,
+        price: AllTexts.price,
+        size: AllTexts.size,
+        count: 1),
+    CartItemModel(
+        title: AllTexts.pizzaCalzone,
+        price: AllTexts.price,
+        size: AllTexts.size,
+        count: 1),
   ];
 
   static List<String> ingredientsIcons = [

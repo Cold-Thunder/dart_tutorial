@@ -67,7 +67,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
               const SizedBox(height: 10),
-              ind < 3 ? SkipButton(screen: LoginScreen()) : SizedBox(height: height > 350 ? 50 : height*0.03),
+              ind < 3 ? SkipButton(screen: LoginScreen()) : SizedBox(height: height > 380 ? 50 : height*0.03),
 
             ],
           ),

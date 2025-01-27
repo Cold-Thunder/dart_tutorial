@@ -18,59 +18,65 @@ class ForgetPassScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: AllColors.black,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          AuthsBackground(),
-          // background section
-          Container(
-            alignment: Alignment.centerLeft,
-            width: width,
-            child: BackIcon(),
-          ),
-          const SizedBox(
-            height: 30,
-          ),
-          // heading
-          AuthTypeHeading(title: AuthTypeTexts.forget),
-          // description
-          AuthTypeDes(texts: AuthTypeTexts.forgetDes),
-          const SizedBox(height: 40),
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              decoration: BoxDecoration(
-                color: AllColors.appbarWhite,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                ),
+      body: SingleChildScrollView(
+        child: SizedBox(
+          height: height > 470 ? height : 470,
+          child:  Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              AuthsBackground(),
+              // background section
+              Container(
+                alignment: Alignment.centerLeft,
+                width: width,
+                child: BackIcon(),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  InputFieldTitle(title: AuthTypeTexts.email),
-                  const SizedBox(height: 10),
-                  TextInputField(
-                      controller: _emailCont, hintText: AuthTypeTexts.email),
-                  const SizedBox(height: 20),
-                  SizedBox(
-                    height: 62,
-                    width: width,
-                    child: ElevatedButtonDesign(
-                      title: AuthTypeTexts.send,
-                      screen: VerificationScreen(
-                        email: _emailCont.text.toString(),
-                      ),
+              const SizedBox(
+                height: 30,
+              ),
+              // heading
+              AuthTypeHeading(title: AuthTypeTexts.forget),
+              // description
+              AuthTypeDes(texts: AuthTypeTexts.forgetDes),
+              const SizedBox(height: 40),
+              Expanded(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: AllColors.appbarWhite,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
                     ),
                   ),
-                ],
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      InputFieldTitle(title: AuthTypeTexts.email),
+                      const SizedBox(height: 10),
+                      TextInputField(
+                          controller: _emailCont, hintText: AuthTypeTexts.email),
+                      const SizedBox(height: 20),
+                      SizedBox(
+                        height: 62,
+                        width: width,
+                        child: ElevatedButtonDesign(
+                          title: AuthTypeTexts.send,
+                          screen: VerificationScreen(
+                            email: _emailCont.text.toString(),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-            ),
-          ),
-        ],
+            ],
+          )
+        ),
       ),
     );
   }

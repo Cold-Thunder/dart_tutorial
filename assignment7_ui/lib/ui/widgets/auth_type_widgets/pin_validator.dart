@@ -19,7 +19,8 @@ class PinValidator extends StatelessWidget{
     return SizedBox(
       height: 62,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
+        spacing: 28,
         children: [
           PinInputTaker(digit: digitOne),
           PinInputTaker(digit: digitTwo),

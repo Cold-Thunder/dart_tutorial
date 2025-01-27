@@ -11,14 +11,15 @@ class OrderCardTopSection extends StatelessWidget{
   Widget build(BuildContext context){
     final width = MediaQuery.of(context).size.width;
     return SizedBox(
-      width: width*0.7,
+      width: width-105,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             title,
             style: TextStyles.profileNameStyle.copyWith(fontSize: 14)
           ),
+          Spacer(),
           Text(
               id,
               style: TextStyles.orderIdStyle

@@ -15,7 +15,7 @@ class HomeV2CateCard extends StatelessWidget {
     return InkWell(
       borderRadius: BorderRadius.circular(14),
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 8),
+        margin: const EdgeInsets.only(top: 15, bottom: 20, left: 8, right: 8,),
         padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
         height: 172,
         width: 147,

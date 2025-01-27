@@ -31,17 +31,15 @@ class PopularItemsWidget extends StatelessWidget {
         height: 174,
         width: 153,
         decoration: BoxDecoration(
-          color: AllColors.appbarWhite,
-          borderRadius: BorderRadius.circular(25),
-          boxShadow: [
-            BoxShadow(
-              color: AllColors.popItemShadowColor,
-              offset: Offset(12,12),
-              blurRadius: 30,
-
-            )
-          ]
-        ),
+            color: AllColors.appbarWhite,
+            borderRadius: BorderRadius.circular(25),
+            boxShadow: [
+              BoxShadow(
+                color: AllColors.popItemShadowColor,
+                offset: Offset(12, 12),
+                blurRadius: 30,
+              )
+            ]),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           // top grey box
           GreyCard(
@@ -55,14 +53,16 @@ class PopularItemsWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // title
-              Text(model.title,
-                  style: TextStyles.categoryHeadingStyle
-                      .copyWith(fontSize: 15)),
+              Text(
+                model.title,
+                style: TextStyles.categoryHeadingStyle.copyWith(fontSize: 15),
+              ),
               // subtitle
               Text(
                 model.subTitle,
                 style: TextStyles.onboardDesStyle.copyWith(fontSize: 13),
               ),
+              const SizedBox(height: 20),
               // price section
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -75,7 +75,8 @@ class PopularItemsWidget extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => EditCartScreen()),
+                          builder: (context) => EditCartScreen(),
+                        ),
                       );
                     },
                     splashColor: AllColors.transparent,
@@ -90,12 +91,11 @@ class PopularItemsWidget extends StatelessWidget {
                       child: SvgPicture.asset(AllImages.whiteAddIcon,
                           height: 9.57, width: 10.81),
                     ),
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
-
         ]),
       ),
     );

@@ -26,6 +26,11 @@ class AllImages{
   static String coffeeHouseImg = 'assets/images/coffee_house_img.png';
   static String personProfileImg = 'assets/images/person_profile_img.png';
 
+  static String bannerAd = 'assets/images/banner_ad.jpeg';
+  static String mapImage = 'assets/images/map_image.jpeg';
+  static String locationPointer = 'assets/images/location_pointer.jpeg';
+  static String onboardingOne = 'assets/images/onboarding_one.jpeg';
+  static String onboardingTwo = 'assets/images/onboarding_two.jpeg';
 
   // all icons
   static String starIcon = 'assets/icons/star_icon.svg';

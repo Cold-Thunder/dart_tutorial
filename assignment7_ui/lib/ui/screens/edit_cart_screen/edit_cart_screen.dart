@@ -70,42 +70,56 @@ class _EditCartScreenState extends State<EditCartScreen> {
           const SizedBox(width: 15)
         ]
       ),
-      body: SizedBox(
-        width: width,
-        height: height,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const SizedBox(height: 20),
-            Expanded(
-                child: SingleChildScrollView(
-                  child: ListView.builder(
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            child: SizedBox(
+              width: width,
+              // height: height,
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const SizedBox(height: 20),
+                  ListView.builder(
                     shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
                     itemCount: cartList.length,
                     itemBuilder: (context, index){
                       return ItemCard(isEdit: _isEdited, model: cartList[index], totalPrice: _totalPrice, totalPriceFunc: increaseTotal,);
                     },
-                  )
-                )
+                  ),
+
+                ]
+              ),
             ),
-            Container(
-              padding: EdgeInsets.only(
-                bottom: MediaQuery.of(context).viewInsets.bottom
-              ),
-              height: 310,
-              width: width,
-              decoration: BoxDecoration(
-                color: AllColors.appbarWhite,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(24),
-                  topRight: Radius.circular(24)
-                )
-              ),
-              child: EditCartBottomSection(totalPrice: _totalPrice,)
-            )
-          ]
-        ),
-      )
+          ),
+          DraggableScrollableSheet(
+            initialChildSize: 40/height,
+            maxChildSize: 335/height,
+            minChildSize: 40/height,
+            builder: (context, controller){
+              return SingleChildScrollView(
+                controller: controller,
+                child: Container(
+                    padding: EdgeInsets.only(
+                        bottom: MediaQuery.of(context).viewInsets.bottom
+                    ),
+                    height: 310,
+                    width: width,
+                    decoration: BoxDecoration(
+                        color: AllColors.appbarWhite,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(24),
+                            topRight: Radius.circular(24)
+                        )
+                    ),
+                    child: EditCartBottomSection(totalPrice: _totalPrice,)
+                ),
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 }

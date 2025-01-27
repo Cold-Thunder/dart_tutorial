@@ -26,7 +26,7 @@ class SignupScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: SizedBox(
           width: width,
-          height: height,
+          height: height < 812 ? 812 : height,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -51,7 +51,10 @@ class SignupScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
                     color: AllColors.appbarWhite,
-                    borderRadius: BorderRadius.circular(20)
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                      topLeft: Radius.circular(20)
+                    ),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +91,7 @@ class SignupScreen extends StatelessWidget {
                           hintText: AuthTypeTexts.passHint,
                         secure: true
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 47),
                       SizedBox(
                         width: width,
                         child: ElevatedButtonDesign(title:AuthTypeTexts.signUp, screen: LocationAccessScreen(),)
