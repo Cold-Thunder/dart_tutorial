@@ -1,6 +1,6 @@
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/location_access_screen/location_access.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/texts/auth_type_texts.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auth_type_des.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auth_type_heading.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auths_background.dart';
@@ -41,9 +41,9 @@ class SignupScreen extends StatelessWidget {
                 height: 30,
               ),
               // heading
-              AuthTypeHeading(title: AuthTypeTexts.signUp),
+              AuthTypeHeading(title: AllTexts.signUp),
               // description
-              AuthTypeDes(texts: AuthTypeTexts.signUpDes),
+              AuthTypeDes(texts: AllTexts.signUpDes),
               const SizedBox(height: 40),
               // bottom form section
               Expanded(
@@ -62,39 +62,39 @@ class SignupScreen extends StatelessWidget {
                       const SizedBox(height: 10),
 
                       // name section
-                      InputFieldTitle(title: AuthTypeTexts.name),
+                      InputFieldTitle(title: AllTexts.name),
                       const SizedBox(height: 5),
                       TextInputField(
                           controller: _nameCont,
-                          hintText: AuthTypeTexts.nameHint),
+                          hintText: AllTexts.nameHint),
                       const SizedBox(height: 10),
                       // email section
-                      InputFieldTitle(title: AuthTypeTexts.email),
+                      InputFieldTitle(title: AllTexts.email),
                       const SizedBox(height: 5),
                       TextInputField(
                           controller: _emailCont,
-                          hintText: AuthTypeTexts.emailAdd),
+                          hintText: AllTexts.emailAdd),
                       // pass section
-                      InputFieldTitle(title: AuthTypeTexts.password),
+                      InputFieldTitle(title: AllTexts.password),
                       const SizedBox(height: 5),
                       TextInputField(
                           controller: _passCont,
-                          hintText: AuthTypeTexts.passHint,
+                          hintText: AllTexts.passHint,
                         secure: true
                       ),
                       const SizedBox(height: 10),
                       // pass retype section
-                      InputFieldTitle(title: AuthTypeTexts.retype),
+                      InputFieldTitle(title: AllTexts.retype),
                       const SizedBox(height: 5),
                       TextInputField(
                           controller: _retypeCont,
-                          hintText: AuthTypeTexts.passHint,
+                          hintText: AllTexts.passHint,
                         secure: true
                       ),
                       const SizedBox(height: 47),
                       SizedBox(
                         width: width,
-                        child: ElevatedButtonDesign(title:AuthTypeTexts.signUp, screen: LocationAccessScreen(),)
+                        child: ElevatedButtonDesign(title:AllTexts.signUp, screen: LocationAccessScreen(),)
                       )
                     ],
                   )

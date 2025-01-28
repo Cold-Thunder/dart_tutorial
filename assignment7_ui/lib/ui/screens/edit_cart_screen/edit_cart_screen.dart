@@ -73,29 +73,32 @@ class _EditCartScreenState extends State<EditCartScreen> {
       body: Stack(
         children: [
           SingleChildScrollView(
-            child: SizedBox(
-              width: width,
-              // height: height,
-              child: Column(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const SizedBox(height: 20),
-                  ListView.builder(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: cartList.length,
-                    itemBuilder: (context, index){
-                      return ItemCard(isEdit: _isEdited, model: cartList[index], totalPrice: _totalPrice, totalPriceFunc: increaseTotal,);
-                    },
-                  ),
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 50.0),
+              child: SizedBox(
+                width: width,
+                // height: height,
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const SizedBox(height: 20),
+                    ListView.builder(
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemCount: cartList.length,
+                      itemBuilder: (context, index){
+                        return ItemCard(isEdit: _isEdited, model: cartList[index], totalPrice: _totalPrice, totalPriceFunc: increaseTotal,);
+                      },
+                    ),
 
-                ]
+                  ]
+                ),
               ),
             ),
           ),
           DraggableScrollableSheet(
             initialChildSize: 50/height,
-            maxChildSize: 330/height,
+            maxChildSize: 350/height,
             minChildSize: 50/height,
             builder: (context, controller){
               return SingleChildScrollView(

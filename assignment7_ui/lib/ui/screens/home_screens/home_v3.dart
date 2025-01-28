@@ -8,7 +8,6 @@ import 'package:assignment7_ui/ui/screens/all_resturant_pages/presentation/all_r
 import 'package:assignment7_ui/ui/screens/drawer_screen/drawer_screen.dart';
 import 'package:assignment7_ui/ui/screens/food_business_screen/food_business_screen.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/orders_screen.dart';
-import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
 import 'package:assignment7_ui/ui/widgets/custom_dialoug.dart';
 import 'package:assignment7_ui/ui/widgets/heading_section.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/widgets/appbar_menubar.dart';
@@ -31,11 +30,7 @@ class _HomeV3State extends State<HomeV3> {
   final TextEditingController _controller = TextEditingController();
   final List<ResturantModel> openResturants = AllTexts.openRestaurantsList;
 
-  List<HomeV2CatModel> cateTypes = [
-    HomeV2CatModel(title: HomeScreenText.pizza, price: HomeScreenText.price),
-    HomeV2CatModel(title: HomeScreenText.burger, price: HomeScreenText.price),
-    HomeV2CatModel(title: HomeScreenText.pizza, price: HomeScreenText.price),
-  ];
+  List<HomeV2CatModel> cateTypes = AllTexts.categoriesForHomeScreen;
 
   @override
   void initState() {
@@ -74,7 +69,7 @@ class _HomeV3State extends State<HomeV3> {
               ),
               const SizedBox(height: 20),
               // all categories heading section
-              HeadingSection(title: HomeScreenText.allCate, seeAllScreen: FoodBusinessScreen(),),
+              HeadingSection(title: AllTexts.allCate, seeAllScreen: FoodBusinessScreen(),),
               const SizedBox(height: 20),
               // all categories
               SizedBox(
@@ -102,7 +97,7 @@ class _HomeV3State extends State<HomeV3> {
               const SizedBox(height: 10),
               // open restaurant heading
               HeadingSection(
-                title: HomeScreenText.openRest,
+                title: AllTexts.openRest,
                 seeAllScreen: AllResturants(),
               ),
               const SizedBox(height: 15),

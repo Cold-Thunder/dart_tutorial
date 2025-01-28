@@ -1,7 +1,7 @@
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/menu_screen/menu_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/texts/orders_texts.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/widgets/history_screen.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/widgets/ongoing_screen.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_menu_icon_button.dart';
@@ -47,7 +47,7 @@ class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderSt
     return Scaffold(
       appBar: AppBar(
         leading: BackIcon(color: AllColors.backIconGrey),
-        title: AppBarTitleWidget(title: OrdersText.appBarTitle),
+        title: AppBarTitleWidget(title: AllTexts.appBarTitle),
         actions: [
           AppBarMenuIconButton(
             color: AllColors.backIconGrey,
@@ -70,8 +70,8 @@ class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderSt
                 ),
                 splashFactory: NoSplash.splashFactory,
                 tabs: [
-                  Tab(text: OrdersText.ongoing),
-                  Tab(text: OrdersText.history)
+                  Tab(text: AllTexts.ongoing),
+                  Tab(text: AllTexts.history)
                 ]
             ),
           ),

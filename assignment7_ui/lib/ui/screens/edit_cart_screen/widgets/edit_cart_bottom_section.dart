@@ -1,17 +1,32 @@
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/ui/screens/my_address_screen/my_address_screen.dart';
 import 'package:assignment7_ui/ui/screens/payment_screen/payment_screen.dart';
 import 'package:assignment7_ui/ui/widgets/elevated_button_design.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class EditCartBottomSection extends StatelessWidget {
+class EditCartBottomSection extends StatefulWidget {
   final double totalPrice;
 
   const EditCartBottomSection({required this.totalPrice, super.key});
+
+  @override
+  State<EditCartBottomSection> createState() => _EditCartBottomSectionState();
+}
+
+class _EditCartBottomSectionState extends State<EditCartBottomSection> {
+
+  late String newAddress = AllTexts.addressHint;
+
+
+  changeAddress(String address){
+    setState(() {
+      newAddress = address;
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +46,16 @@ class EditCartBottomSection extends StatelessWidget {
             children: [
               Text(AllTexts.deliveryAdd, style: TextStyles.hintTextStyle),
               InkWell(
-                  onTap: () {},
-                  child:
-                      Text(AllTexts.edit, style: TextStyles.cartEditTextStyle))
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MyAddressScreen(addressChange: changeAddress),
+                    ),
+                  );
+                },
+                child: Text(AllTexts.edit, style: TextStyles.cartEditTextStyle),
+              ),
             ],
           ),
           const SizedBox(height: 10),
@@ -45,13 +67,13 @@ class EditCartBottomSection extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: AllColors.inputFieldWhite),
-            child: Text(AllTexts.addressHint, style: TextStyles.hintTextStyle),
+            child: Text(newAddress, style: TextStyles.hintTextStyle),
           ),
           Expanded(
             child: Row(spacing: 10, children: [
               Text("${AllTexts.total}:", style: TextStyles.hintTextStyle),
               Text(
-                "\$$totalPrice",
+                "\$${widget.totalPrice}",
                 style: TextStyles.appBarTitleStyle.copyWith(fontSize: 30),
               ),
             ]),

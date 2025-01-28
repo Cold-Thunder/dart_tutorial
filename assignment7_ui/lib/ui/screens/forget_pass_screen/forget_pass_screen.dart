@@ -1,6 +1,6 @@
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/verification_screens/verification_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/texts/auth_type_texts.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auth_type_des.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auth_type_heading.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auths_background.dart';
@@ -38,9 +38,9 @@ class ForgetPassScreen extends StatelessWidget {
                 height: 30,
               ),
               // heading
-              AuthTypeHeading(title: AuthTypeTexts.forget),
+              AuthTypeHeading(title: AllTexts.forget),
               // description
-              AuthTypeDes(texts: AuthTypeTexts.forgetDes),
+              AuthTypeDes(texts: AllTexts.forgetDes),
               const SizedBox(height: 40),
               Expanded(
                 child: Container(
@@ -55,16 +55,16 @@ class ForgetPassScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      InputFieldTitle(title: AuthTypeTexts.email),
+                      InputFieldTitle(title: AllTexts.email),
                       const SizedBox(height: 10),
                       TextInputField(
-                          controller: _emailCont, hintText: AuthTypeTexts.email),
+                          controller: _emailCont, hintText: AllTexts.email),
                       const SizedBox(height: 20),
                       SizedBox(
                         height: 62,
                         width: width,
                         child: ElevatedButtonDesign(
-                          title: AuthTypeTexts.send,
+                          title: AllTexts.send,
                           screen: VerificationScreen(
                             email: _emailCont.text.toString(),
                           ),

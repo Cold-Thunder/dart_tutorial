@@ -1,5 +1,5 @@
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/on_boarding_texts.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:flutter/material.dart';
 
 class SkipButton extends StatelessWidget {
@@ -13,7 +13,7 @@ class SkipButton extends StatelessWidget {
       onPressed: () {
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>screen));
       },
-      child: Text(OnBoardingTexts.skip, style: TextStyles.skipButtonStyle),
+      child: Text(AllTexts.skip, style: TextStyles.skipButtonStyle),
     );
   }
 }

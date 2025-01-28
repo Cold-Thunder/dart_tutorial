@@ -32,6 +32,14 @@ class AllImages{
   static String onboardingOne = 'assets/images/onboarding_one.jpeg';
   static String onboardingTwo = 'assets/images/onboarding_two.jpeg';
 
+
+  // restaurants
+static String restaurantOne = 'assets/images/restaurant.jpg';
+static String restaurantTwo = 'assets/images/restaurant2.jpg';
+static String restaurantThree = 'assets/images/restaurant3.jpg';
+static String restaurantFour = 'assets/images/restaurant4.jpg';
+static String restaurantFive = 'assets/images/restaurant5.jpg';
+
   // all icons
   static String starIcon = 'assets/icons/star_icon.svg';
   static String vanIcon = 'assets/icons/van_icon.svg';
@@ -94,4 +102,6 @@ class AllImages{
   static String starGrey = 'assets/icons/star_grey.svg';
   static String checkIcon = 'assets/icons/check_icon.svg';
   static String loadingIcon = 'assets/icons/loading_icon.svg';
+
+
 }

@@ -1,11 +1,11 @@
 import 'package:assignment7_ui/config/models/social_media_model.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/forget_pass_screen/forget_pass_screen.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v1.dart';
 import 'package:assignment7_ui/ui/screens/signup_screen/signup_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/auth_type_texts.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auth_type_des.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auth_type_heading.dart';
 import 'package:assignment7_ui/ui/widgets/circle_shape.dart';
@@ -54,9 +54,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: width,
                   child: Image.asset(AllImages.splashTopFlow)),
               // heading
-              AuthTypeHeading(title: AuthTypeTexts.login),
+              AuthTypeHeading(title: AllTexts.login),
               // des section
-              AuthTypeDes(texts: AuthTypeTexts.loginDes),
+              AuthTypeDes(texts: AllTexts.loginDes),
               SizedBox(height: 40),
               Expanded(
                 child: Container(
@@ -78,17 +78,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      InputFieldTitle(title: AuthTypeTexts.email),
+                      InputFieldTitle(title: AllTexts.email),
                       const SizedBox(height: 5),
                       TextInputField(
                           controller: _emailCont,
-                          hintText: AuthTypeTexts.emailAdd),
+                          hintText: AllTexts.emailAdd),
                       const SizedBox(height: 10),
-                      InputFieldTitle(title: AuthTypeTexts.password),
+                      InputFieldTitle(title: AllTexts.password),
                       const SizedBox(height: 5),
                       TextInputField(
                           controller: _passCont,
-                          hintText: AuthTypeTexts.password,
+                          hintText: AllTexts.password,
                           secure: true),
                       // _remember section
                       Row(
@@ -116,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Text(AuthTypeTexts.remember,
+                              Text(AllTexts.remember,
                                   style: TextStyles.hintTextStyle)
                             ],
                           ),
@@ -131,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               );
                             },
                             child: Text(
-                              AuthTypeTexts.forget,
+                              AllTexts.forget,
                               style: TextStyles.hintTextStyle
                                   .copyWith(color: AllColors.buttonOrange),
                             ),
@@ -143,7 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         width: width,
                         child: ElevatedButtonDesign(
-                          title: AuthTypeTexts.login,
+                          title: AllTexts.login,
                           screen: HomeV1(),
                         ),
                       ),
@@ -152,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(AuthTypeTexts.dontHave,
+                          Text(AllTexts.dontHave,
                               style: TextStyles.onboardDesStyle),
                           TextButton(
                             onPressed: () {
@@ -164,7 +164,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               );
                             },
                             child: Text(
-                              AuthTypeTexts.signUp,
+                              AllTexts.signUp,
                               style: TextStyles.elevatedButtonStyle
                                   .copyWith(color: AllColors.buttonOrange),
                             ),
@@ -176,7 +176,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Container(
                         alignment: Alignment.center,
                         width: width,
-                        child: Text(AuthTypeTexts.or,
+                        child: Text(AllTexts.or,
                             style: TextStyles.onboardDesStyle),
                       ),
                       const SizedBox(height: 20),

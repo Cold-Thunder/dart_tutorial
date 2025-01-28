@@ -1,7 +1,7 @@
 
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/orders_texts.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +38,7 @@ class OrderCardPriceSection extends StatelessWidget{
               child: GreyCard(height: 4, width: 4, borderRad: 2,)
           ): SizedBox(width: 5),
           Text(
-            '$count ${OrdersText.item}',
+            '$count ${AllTexts.item}',
             style: TextStyles.itemCountTextStyle
           )
         ],

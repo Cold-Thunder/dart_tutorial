@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -30,7 +30,7 @@ class HeadingSection extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  HomeScreenText.seeAll,
+                  AllTexts.seeAll,
                   style: TextStyles.headingTextStyle.copyWith(fontSize: 16),
                 ),
                 const SizedBox(width: 8),

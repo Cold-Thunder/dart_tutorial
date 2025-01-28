@@ -12,7 +12,8 @@ import 'package:assignment7_ui/ui/screens/search_screen/widgets/heading_widget.d
 import 'package:flutter/material.dart';
 
 class FoodBusinessScreen extends StatefulWidget {
-  const FoodBusinessScreen({super.key});
+  final String? foodType;
+  const FoodBusinessScreen({this.foodType, super.key});
 
   @override
   State<FoodBusinessScreen> createState() => _FoodBusinessScreenState();
@@ -20,9 +21,18 @@ class FoodBusinessScreen extends StatefulWidget {
 
 class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
   final List<PopularItemCardModel> popularItems = AllTexts.popularItems;
-  final List<ResturantModel> openResurants = AllTexts.openRestaurantsList;
-  final List<String> categoryItems = AllTexts.categoriesForHomeOne;
-  String dropdownItem = AllTexts.burger;
+  final List<ResturantModel> openRestaurants = AllTexts.openRestaurantsList;
+  final List<String> categoryItems = AllTexts.categories;
+  String dropdownItem = AllTexts.all;
+
+  @override
+  void initState(){
+    super.initState();
+
+    if(widget.foodType != null){
+      dropdownItem= widget.foodType!;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -101,10 +111,10 @@ class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
                   child: ListView.builder(
                     physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
-                    itemCount: openResurants.length,
+                    itemCount: openRestaurants.length,
                     itemBuilder: (context, index) {
                       return OpenRestCard(
-                        model: openResurants[index],
+                        model: openRestaurants[index],
                       );
                     },
                   ),

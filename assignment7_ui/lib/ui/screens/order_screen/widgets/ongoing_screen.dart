@@ -1,12 +1,12 @@
 import 'package:assignment7_ui/config/models/order_model.dart';
-import 'package:assignment7_ui/config/utiles/texts/orders_texts.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/widgets/order_ongoing_widget.dart';
 import 'package:flutter/material.dart';
 
 class OngoingScreen extends StatelessWidget {
   OngoingScreen({super.key});
 
-  final List<OrderModel> ongoingOderDetails = OrdersText.orderDetails;
+  final List<OrderModel> ongoingOderDetails = AllTexts.orderDetails;
 
   @override
   Widget build(BuildContext context) {

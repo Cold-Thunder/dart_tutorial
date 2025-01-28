@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/personal_profile_text.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -18,8 +18,8 @@ class PersonalProfileTopSection extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(PersonalProfileText.name, style: TextStyles.profileNameStyle),
-              Text(PersonalProfileText.bioText, style: TextStyles.hintTextStyle)
+              Text(AllTexts.name, style: TextStyles.profileNameStyle),
+              Text(AllTexts.bioText, style: TextStyles.hintTextStyle)
             ],
           )
         ],

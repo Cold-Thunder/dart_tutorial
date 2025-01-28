@@ -7,7 +7,6 @@ import 'package:assignment7_ui/ui/screens/all_resturant_pages/presentation/all_r
 import 'package:assignment7_ui/ui/screens/drawer_screen/drawer_screen.dart';
 import 'package:assignment7_ui/ui/screens/food_business_screen/food_business_screen.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/orders_screen.dart';
-import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
 import 'package:assignment7_ui/ui/widgets/custom_dialoug.dart';
 import 'package:assignment7_ui/ui/widgets/heading_section.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/widgets/appbar_menubar.dart';
@@ -29,9 +28,18 @@ class HomeV1 extends StatefulWidget {
 class _HomeV1State extends State<HomeV1> {
   final TextEditingController _controller = TextEditingController();
 
-  List<String> categories = AllTexts.categoriesForHomeOne;
+  List<String> categories = AllTexts.categories;
 
   List<ResturantModel> openRestCounts = AllTexts.openRestaurantsList;
+
+  int clickedInd = 0;
+
+  clickedFunc(int index){
+    setState(() {
+      clickedInd = index;
+    });
+  }
+
 
   @override
   void initState() {
@@ -73,7 +81,7 @@ class _HomeV1State extends State<HomeV1> {
               const SizedBox(height: 20),
               // heading section
               HeadingSection(
-                  title: HomeScreenText.allCate,
+                  title: AllTexts.allCate,
                   seeAllScreen: FoodBusinessScreen()),
               const SizedBox(height: 20),
               // all categories
@@ -83,8 +91,12 @@ class _HomeV1State extends State<HomeV1> {
                   scrollDirection: Axis.horizontal,
                   itemCount: categories.length,
                   itemBuilder: (context, index) {
+                    // item
                     return HomeOneCatCard(
+                      index: index,
                       title: categories[index],
+                      clickedInd: clickedInd,
+                      clickedFunc: clickedFunc,
                     );
                   },
                 ),
@@ -106,7 +118,7 @@ class _HomeV1State extends State<HomeV1> {
               const SizedBox(height: 10),
               // open restaurant heading
               HeadingSection(
-                title: HomeScreenText.openRest,
+                title: AllTexts.openRest,
                 seeAllScreen: AllResturants(),
               ),
               const SizedBox(height: 15),

@@ -1,7 +1,7 @@
 import 'package:assignment7_ui/config/models/order_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/orders_texts.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/widgets/elevated_button_design.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/widgets/order_card_price_section.dart';
@@ -44,22 +44,26 @@ class OrderOngoingWidget extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 15),
+          // main section
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // right grey shape
               GreyCard(height: 60, width: 60),
               SizedBox(width: 15),
-              SizedBox(
-                height: 60,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    OrderCardTopSection(title: model.title, id: model.id),
-                    const SizedBox(height: 10),
-                    // middle section
-                    OrderCardPriceSection(price: model.price, count: model.count),
-                  ],
+              Expanded(
+                child: SizedBox(
+                  height: 60,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      OrderCardTopSection(title: model.title, id: model.id),
+                      const SizedBox(height: 10),
+                      // middle section
+                      OrderCardPriceSection(price: model.price, count: model.count),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -73,9 +77,9 @@ class OrderOngoingWidget extends StatelessWidget {
               children: [
                 SizedBox(
                   width: 138,
-                  child: ElevatedButtonDesign(title: OrdersText.track)
+                  child: ElevatedButtonDesign(title: AllTexts.track)
                 ),
-                OutlineButtonDesign(title: OrdersText.cancel)
+                OutlineButtonDesign(title: AllTexts.cancel)
               ],
             ),
           )

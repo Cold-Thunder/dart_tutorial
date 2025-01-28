@@ -1,8 +1,7 @@
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/personal_profile_screen/personal_profile_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
-import 'package:assignment7_ui/config/utiles/texts/edit_profile_texts.dart';
-import 'package:assignment7_ui/config/utiles/texts/personal_profile_text.dart';
 import 'package:assignment7_ui/ui/screens/personal_profile_screen/widgets/personal_bio_input_field.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/input_field_title.dart';
@@ -33,7 +32,7 @@ class EditProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           leading: BackIcon(color: AllColors.backIconGrey),
-          title: AppBarTitleWidget(title: EditProfileTexts.editProfile)),
+          title: AppBarTitleWidget(title: AllTexts.editProfile)),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
@@ -81,26 +80,26 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                InputFieldTitle(title: EditProfileTexts.fullName, fontSize: 14),
+                InputFieldTitle(title: AllTexts.fullName, fontSize: 14),
                 const SizedBox(height: 10),
-                TextInputField(controller: _fullName, hintText: PersonalProfileText.name),
+                TextInputField(controller: _fullName, hintText: AllTexts.name),
 
                 const SizedBox(height: 5),
-                InputFieldTitle(title: EditProfileTexts.email, fontSize: 14),
+                InputFieldTitle(title: AllTexts.email, fontSize: 14),
                 const SizedBox(height: 10),
-                TextInputField(controller: _email, hintText: PersonalProfileText.emailAdd),
+                TextInputField(controller: _email, hintText: AllTexts.emailAdd),
 
                 const SizedBox(height: 5),
-                InputFieldTitle(title: EditProfileTexts.phoneNumber, fontSize: 14),
+                InputFieldTitle(title: AllTexts.phoneNumber, fontSize: 14),
                 const SizedBox(height: 10),
-                TextInputField(controller: _phone, hintText: PersonalProfileText.perNum),
+                TextInputField(controller: _phone, hintText: AllTexts.perNum),
 
                 const SizedBox(height: 5),
-                InputFieldTitle(title: EditProfileTexts.bio, fontSize: 14),
+                InputFieldTitle(title: AllTexts.bio, fontSize: 14),
                 const SizedBox(height: 10),
-                PersonalBioInputField(controller: _bio, hintText: PersonalProfileText.bioText),
+                PersonalBioInputField(controller: _bio, hintText: AllTexts.bioText),
                 const SizedBox(height: 30),
-                ElevatedButtonDesign(title: EditProfileTexts.save, screen: PersonalProfileScreen(), function: infos,)
+                ElevatedButtonDesign(title: AllTexts.save, screen: PersonalProfileScreen(), function: infos,)
 
               ],
             ),

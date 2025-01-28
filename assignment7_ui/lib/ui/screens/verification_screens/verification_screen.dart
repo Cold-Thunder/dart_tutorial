@@ -1,7 +1,6 @@
-import 'package:assignment7_ui/ui/screens/location_access_screen/location_access.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/auth_type_texts.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auth_type_des.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auth_type_heading.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auths_background.dart';
@@ -44,9 +43,9 @@ class VerificationScreen extends StatelessWidget {
                 height: 30,
               ),
               // heading
-              AuthTypeHeading(title: AuthTypeTexts.verification),
+              AuthTypeHeading(title: AllTexts.verification),
               // description
-              AuthTypeDes(texts: AuthTypeTexts.veriDes),
+              AuthTypeDes(texts: AllTexts.veriDes),
               Text(
                 email,
                 style: TextStyles.skipButtonStyle.copyWith(
@@ -71,7 +70,7 @@ class VerificationScreen extends StatelessWidget {
                       // title section done
                       Row(
                         children: [
-                          InputFieldTitle(title: AuthTypeTexts.code),
+                          InputFieldTitle(title: AllTexts.code),
                           // Spacer(),
                           // resend text
                           InkWell(
@@ -83,14 +82,14 @@ class VerificationScreen extends StatelessWidget {
                                           width: 1,
                                           color: AllColors.inputTextBlack))),
                               child: Text(
-                                AuthTypeTexts.resend,
+                                AllTexts.resend,
                                 style: TextStyles.elevatedButtonStyle
                                     .copyWith(color: AllColors.inputTextBlack),
                               ),
                             ),
                           ),
                           const SizedBox(width: 5),
-                          InputFieldTitle(title: AuthTypeTexts.in50Sec),
+                          InputFieldTitle(title: AllTexts.in50Sec),
                         ],
                       ),
                       const SizedBox(height: 10),
@@ -105,7 +104,7 @@ class VerificationScreen extends StatelessWidget {
                       // verify button
                       SizedBox(
                         width: width,
-                        child: ElevatedButtonDesign(title: AuthTypeTexts.verify,),
+                        child: ElevatedButtonDesign(title: AllTexts.verify,),
                       ),
                     ],
                   ),

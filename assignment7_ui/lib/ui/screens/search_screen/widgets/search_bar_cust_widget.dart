@@ -1,7 +1,7 @@
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/search_screen_texts.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -18,20 +18,20 @@ class _SearchBarCustWidgetState extends State<SearchBarCustWidget> {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController _cont = widget.controller;
+    TextEditingController cont = widget.controller;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: SizedBox(
         height: 62,
         child: TextField(
-            controller: _cont,
+            controller: cont,
             style: TextStyles.hintTextStyle
                 .copyWith(color: AllColors.inputTextBlack),
             cursorColor: AllColors.inputTextBlack,
             // decorating input field
             decoration: InputDecoration(
-                hintText: SearchScreenTexts.pizza,
+                hintText: AllTexts.pizza,
                 hintStyle: TextStyles.hintTextStyle,
                 filled: true,
                 fillColor: AllColors.inputFieldWhite,
@@ -43,9 +43,9 @@ class _SearchBarCustWidgetState extends State<SearchBarCustWidget> {
                   child: SvgPicture.asset(AllImages.searchIcon,
                       height: 13.33, width: 13.33),
                 )),
-                suffixIcon: _cont.text.toString() != '' ? InkWell(
+                suffixIcon: cont.text.toString() != '' ? InkWell(
                   onTap: (){
-                    _cont.clear();
+                    cont.clear();
                   },
                   child: Container(
                     margin: const EdgeInsets.all(15),

@@ -1,5 +1,5 @@
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeTopTitle extends StatelessWidget {
@@ -12,11 +12,11 @@ class HomeTopTitle extends StatelessWidget {
       width: width,
       child: RichText(
         text: TextSpan(
-          text: HomeScreenText.greeting,
+          text: AllTexts.greeting,
           style: TextStyles.onboardDesStyle,
           children: [
             TextSpan(
-              text: HomeScreenText.afternoon,
+              text: AllTexts.afternoon,
               style: TextStyles.pinTextStyle
             )
           ]

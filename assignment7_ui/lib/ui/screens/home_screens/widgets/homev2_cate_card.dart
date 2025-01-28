@@ -1,7 +1,8 @@
 import 'package:assignment7_ui/config/models/home_v2_cat_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/ui/screens/food_business_screen/food_business_screen.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,12 @@ class HomeV2CateCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(
+          builder: (context)=> FoodBusinessScreen(foodType: model.title,)
+        ),
+        );
+      },
       borderRadius: BorderRadius.circular(14),
       child: Container(
         margin: const EdgeInsets.only(top: 15, bottom: 20, left: 8, right: 8,),
@@ -42,18 +49,18 @@ class HomeV2CateCard extends StatelessWidget {
           children: [
             GreyCard(height: 104, width: 147),
             const SizedBox(height: 10),
-            Text(HomeScreenText.pizza, style: TextStyles.categoryHeadingStyle),
+            Text(model.title, style: TextStyles.categoryHeadingStyle),
             Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    HomeScreenText.starting,
+                    AllTexts.starting,
                     style: TextStyles.hintTextStyle
                         .copyWith(color: AllColors.desBlack),
                   ),
                   Text(
-                    HomeScreenText.price,
+                    AllTexts.categoryPrice,
                     style: TextStyles.hintTextStyle.copyWith(
                       color: AllColors.headingBlack
                     )

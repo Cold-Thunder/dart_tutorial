@@ -1,8 +1,8 @@
 import 'package:assignment7_ui/config/models/popular_fast_food_model.dart';
 import 'package:assignment7_ui/config/models/suggest_restaurant_model.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/orders_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/texts/search_screen_texts.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/widgets/cart_button.dart';
@@ -24,9 +24,9 @@ class SearchScreen extends StatefulWidget {
 class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController _controller = TextEditingController();
 
-  final List<String> keywordList = SearchScreenTexts.keywords;
-  final List<SuggestRestaurantModel> suggestRestaurants = SearchScreenTexts.suggestRestaurants;
-  final List<PopularFastFoodModel> popularFastFoods = SearchScreenTexts.popularFastFoods;
+  final List<String> keywordList = AllTexts.keywords;
+  final List<SuggestRestaurantModel> suggestRestaurants = AllTexts.suggestRestaurants;
+  final List<PopularFastFoodModel> popularFastFoods = AllTexts.popularFastFoods;
 
   void keyword(String keyValue){
       _controller.text = keyValue;
@@ -38,7 +38,7 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: BackIcon(color: AllColors.backIconGrey),
-        title: AppBarTitleWidget(title: SearchScreenTexts.search),
+        title: AppBarTitleWidget(title: AllTexts.search),
         actions: [
           CartButton(orderScreen: OrdersScreen(),)
         ]
@@ -52,7 +52,7 @@ class _SearchScreenState extends State<SearchScreen> {
               // search bar section
               SearchBarCustWidget(controller: _controller),
               // recent keyword heading
-              HeadingWidget(title: SearchScreenTexts.recentKeyword),
+              HeadingWidget(title: AllTexts.recentKeyword),
               const SizedBox(height: 10),
               // keyword section
               Container(
@@ -68,7 +68,7 @@ class _SearchScreenState extends State<SearchScreen> {
               ),
               const SizedBox(height: 20),
               // suggest restaurant heading
-              HeadingWidget(title: SearchScreenTexts.suggestedRestaurant),
+              HeadingWidget(title: AllTexts.suggestedRestaurant),
               const SizedBox(height: 10),
               // suggest restaurant section
               Container(
@@ -83,7 +83,7 @@ class _SearchScreenState extends State<SearchScreen> {
               ),
               const SizedBox(height: 20),
               // popular fast food heading
-              HeadingWidget(title: SearchScreenTexts.suggestedRestaurant),
+              HeadingWidget(title: AllTexts.suggestedRestaurant),
               const SizedBox(height: 20),
               // popular fast food section
               Container(

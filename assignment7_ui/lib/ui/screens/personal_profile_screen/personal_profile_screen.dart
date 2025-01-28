@@ -1,9 +1,9 @@
 import 'package:assignment7_ui/config/models/personal_profile_item_model.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/edit_profile_screen/edit_profile_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/personalProfileDatas.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/personal_profile_text.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
 import 'package:assignment7_ui/ui/screens/personal_profile_screen/widgets/box_widget.dart';
@@ -13,14 +13,14 @@ import 'package:flutter/material.dart';
 class PersonalProfileScreen extends StatelessWidget {
   PersonalProfileScreen({super.key});
 
-  List<PersonalProfileItemModel> personalInfos = PersonalProfileDatas.personalProfileInfos;
+  final List<PersonalProfileItemModel> personalInfos = PersonalProfileDatas.personalProfileInfos;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: BackIcon(color: AllColors.backIconGrey),
-        title: AppBarTitleWidget(title: PersonalProfileText.personalProAppBar),
+        title: AppBarTitleWidget(title: AllTexts.personalProAppBar),
         actions: [
           // edit button
           InkWell(
@@ -37,7 +37,7 @@ class PersonalProfileScreen extends StatelessWidget {
                 )
               ),
               child: Text(
-                PersonalProfileText.edit,
+                AllTexts.edit,
                 style: TextStyles.dropDownTextStyle.copyWith(
                   color: AllColors.buttonOrange
                 )

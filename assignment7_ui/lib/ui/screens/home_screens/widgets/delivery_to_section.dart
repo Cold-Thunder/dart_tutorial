@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:flutter/material.dart';
 
 class DeliveryToSection extends StatefulWidget {
@@ -11,7 +11,7 @@ class DeliveryToSection extends StatefulWidget {
 }
 
 class _DeliveryToSectionState extends State<DeliveryToSection> {
-  String location = HomeScreenText.halal;
+  String location = AllTexts.halal;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class _DeliveryToSectionState extends State<DeliveryToSection> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-      Text(HomeScreenText.delivery, style: TextStyles.homeAppBarTitle),
+      Text(AllTexts.delivery, style: TextStyles.homeAppBarTitle),
       // dropdown section
       SizedBox(
         height: 15,
@@ -35,16 +35,16 @@ class _DeliveryToSectionState extends State<DeliveryToSection> {
           },
           items: [
             DropdownMenuItem(
-              value: HomeScreenText.home,
+              value: AllTexts.home,
               child: Text(
-                HomeScreenText.home,
+                AllTexts.home,
                 style: TextStyles.dropDownTextStyle,
               ),
             ),
             DropdownMenuItem(
-              value: HomeScreenText.halal,
+              value: AllTexts.halal,
               child: Text(
-                HomeScreenText.halal,
+                AllTexts.halal,
                 style: TextStyles.dropDownTextStyle,
               ),
             ),
