@@ -8,7 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class MyAddressWidgetTile extends StatelessWidget {
   final MyAddressModel model;
 
-  const MyAddressWidgetTile({required this.model,super.key});
+  const MyAddressWidgetTile({required this.model, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +25,13 @@ class MyAddressWidgetTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-              alignment: Alignment.center,
-              height: 48,
-              width: 48,
-              decoration: BoxDecoration(
-                  color: AllColors.appbarWhite, shape: BoxShape.circle),
-              child: SvgPicture.asset(model.icon, height: 20, width: 18)),
+            alignment: Alignment.center,
+            height: 48,
+            width: 48,
+            decoration: BoxDecoration(
+                color: AllColors.appbarWhite, shape: BoxShape.circle),
+            child: SvgPicture.asset(model.icon, height: 20, width: 18),
+          ),
           const SizedBox(width: 10),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -38,7 +39,7 @@ class MyAddressWidgetTile extends StatelessWidget {
             children: [
               // title section
               SizedBox(
-                width: width * 0.67,
+                width: width - 118,
                 child: Row(
                   children: [
                     Text(model.title,
@@ -62,11 +63,9 @@ class MyAddressWidgetTile extends StatelessWidget {
               const SizedBox(height: 10),
               SizedBox(
                 width: width * 0.6,
-                child: Text(
-                  model.address,
-                  style: TextStyles.hintTextStyle.copyWith(fontSize: 14),
-                  overflow: TextOverflow.fade
-                ),
+                child: Text(model.address,
+                    style: TextStyles.hintTextStyle.copyWith(fontSize: 14),
+                    overflow: TextOverflow.fade),
               ),
             ],
           ),

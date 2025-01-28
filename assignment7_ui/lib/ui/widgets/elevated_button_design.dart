@@ -17,10 +17,11 @@ class ElevatedButtonDesign extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-       screen != null ?
+        if(screen != null){
           Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (context)=> screen!)
-          ) : null;
+          );
+        }
 
           if(function !=  null){
             function!();

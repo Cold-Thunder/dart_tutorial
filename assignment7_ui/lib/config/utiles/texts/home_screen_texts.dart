@@ -16,7 +16,6 @@ class   HomeScreenText{
 
   // open restaurants
   static String restName = 'Rose Garden Restaurant';
-  static String items = 'Burger - Chicken - Riche - Wings';
   static String rating = '4.7';
   static String deliveryCost = 'Free';
   static String time = '20 min';

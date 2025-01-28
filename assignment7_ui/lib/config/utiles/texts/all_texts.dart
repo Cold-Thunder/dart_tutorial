@@ -2,12 +2,15 @@ import 'package:assignment7_ui/config/models/cart_item_model.dart';
 import 'package:assignment7_ui/config/models/delivery_man_message.dart';
 import 'package:assignment7_ui/config/models/order_item.dart';
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
+import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 
 class AllTexts{
   static String home1 = 'Home One';
   static String home2 = 'Home Two';
   static String home3 = 'Home Three';
+
+  static String allResturants = 'All Resturants';
 
   static String addCard = 'Add Card';
   static String cardHolder = 'CARD HOLDER NANE';
@@ -83,9 +86,17 @@ class AllTexts{
 
   static String openResturants = 'Open Resturants';
 
+  static String all = 'All';
   static String burger = 'Burger';
   static String pizza = 'Pizza';
   static String sandwich = 'Sandwich';
+
+  static String pasta= "Pasta";
+  static String dessets =  "Desserts";
+  static String beverage =  'Beverages';
+  static String seafood = "Seafood";
+  static String indianCuisine =  "Indian Cuisine";
+
 
   static String popularBurgers = 'Popular Burgers';
 
@@ -118,6 +129,7 @@ class AllTexts{
   static String restaurantView = 'Resturant View';
   static String spicyRestaurant = 'Spicy Restaurant';
   static String restaurantDes = 'Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.';
+  static List<String> restItems = ['Burger', 'Chicken', 'Rice', 'Wings'];
 
   static String filterYour = 'Filter your search';
 
@@ -147,11 +159,29 @@ class AllTexts{
   static String orderPickingUp = 'Your order has been picked up for delivery';
   static String orderArriving = 'Order arriving soon!';
 
+  static String restaurant1= 'The Gourmet Haven';
+  static String restaurant2= 'Spicy Bites';
+  static String restaurant3= 'Ocean’s Catch';
+  static String restaurant4= 'Street Feast';
+  static String restaurant5= 'Sweet Cravings';
+  static String restaurant6= 'Urban Vegan';
+  static String restaurant7= 'Freshly Yours';
+  static String restaurant8= 'The Noodle House';
+  static String restaurant9 = 'Grill & Chill';
+  static String restaurant10= 'Tandoori Delight';
+  static String restaurant11= 'Heavenly Sips';
+  static String restaurant12= 'Flavors of Asia';
+  static String restaurant13= 'Simply Healthy';
+  static String restaurant14= 'The Dessert Stop';
+  static String restaurant15= "The Foodie's Corner";
+
+  
   static List<OrderItem> orderList = [
     OrderItem(count: 2, name: 'Burger'),
     OrderItem(count: 4, name: 'Sandwich'),
 
   ];
+
 
   static List<String> times = [
     '10-15 min',
@@ -165,7 +195,29 @@ class AllTexts{
     AllTexts.burger,
     AllTexts.pizza,
     AllTexts.sandwich,
+  ];
+
+  static List<String> categories = [
+    AllTexts.burger,
+    AllTexts.pizza,
     AllTexts.sandwich,
+    AllTexts.pasta,
+    AllTexts.dessets,
+    AllTexts.beverage,
+    AllTexts.seafood,
+    AllTexts.indianCuisine
+  ];
+
+  static List<String> categoriesForHomeOne = [
+    AllTexts.all,
+    AllTexts.burger,
+    AllTexts.pizza,
+    AllTexts.sandwich,
+    AllTexts.pasta,
+    AllTexts.dessets,
+    AllTexts.beverage,
+    AllTexts.seafood,
+    AllTexts.indianCuisine
   ];
 
   static List<PopularItemCardModel> popularItems = [
@@ -309,4 +361,27 @@ class AllTexts{
     AllImages.chiliIcon
   ];
 
+  static List<ResturantModel> openRestaurantsList = [
+    ResturantModel(name: AllTexts.restaurant1, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant2, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant3, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+  ];
+
+  static List<ResturantModel> allRestaurantsList = [
+    ResturantModel(name: AllTexts.restaurant1, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant2, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant3, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant4, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant5, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant6, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant7, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant8, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant9, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant10, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant11, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant12, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant13, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant14, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    ResturantModel(name: AllTexts.restaurant15, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+  ];
 }

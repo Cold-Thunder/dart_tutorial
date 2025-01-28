@@ -94,9 +94,9 @@ class _EditCartScreenState extends State<EditCartScreen> {
             ),
           ),
           DraggableScrollableSheet(
-            initialChildSize: 40/height,
-            maxChildSize: 335/height,
-            minChildSize: 40/height,
+            initialChildSize: 50/height,
+            maxChildSize: 330/height,
+            minChildSize: 50/height,
             builder: (context, controller){
               return SingleChildScrollView(
                 controller: controller,

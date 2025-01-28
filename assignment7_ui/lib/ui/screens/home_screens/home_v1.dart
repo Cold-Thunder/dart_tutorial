@@ -1,8 +1,11 @@
 import 'dart:async';
 
+import 'package:assignment7_ui/config/models/resturant_model.dart';
+import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/ui/screens/all_resturant_pages/presentation/all_resturants.dart';
 import 'package:assignment7_ui/ui/screens/drawer_screen/drawer_screen.dart';
 import 'package:assignment7_ui/ui/screens/food_business_screen/food_business_screen.dart';
-import 'package:assignment7_ui/ui/screens/food_details_screen/food_details_screen1.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/orders_screen.dart';
 import 'package:assignment7_ui/config/utiles/texts/home_screen_texts.dart';
 import 'package:assignment7_ui/ui/widgets/custom_dialoug.dart';
@@ -16,8 +19,7 @@ import 'package:assignment7_ui/ui/screens/home_screens/widgets/home_top_title.da
 import 'package:assignment7_ui/ui/widgets/open_rest_card.dart';
 import 'package:flutter/material.dart';
 
-class HomeV1 extends StatefulWidget{
-
+class HomeV1 extends StatefulWidget {
   const HomeV1({super.key});
 
   @override
@@ -27,75 +29,101 @@ class HomeV1 extends StatefulWidget{
 class _HomeV1State extends State<HomeV1> {
   final TextEditingController _controller = TextEditingController();
 
-  List<String> cateTypes = ['All', 'Hot Dog', 'Burger'];
+  List<String> categories = AllTexts.categoriesForHomeOne;
 
-  List<int> openRestCounts = [1,2];
+  List<ResturantModel> openRestCounts = AllTexts.openRestaurantsList;
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), (){
-      showDialog(context: context, builder: (context)=>CustomDialog());
+    Timer(Duration(seconds: 2), () {
+      showDialog(context: context, builder: (context) => CustomDialog());
     });
   }
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return Scaffold(
-       appBar: AppBar(
-         leading: AppbarManubar(),
-         title: DeliveryToSection(),
-         actions: [
-           CartButton(orderScreen: OrdersScreen(),),
-           const SizedBox(width: 15)
-         ],
-       ),
-      drawer:DrawerScreen(),
+      appBar: AppBar(
+        leading: AppbarManubar(),
+        title: DeliveryToSection(),
+        actions: [
+          CartButton(
+            orderScreen: OrdersScreen(),
+          ),
+          const SizedBox(width: 15)
+        ],
+      ),
+      drawer: DrawerScreen(),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.only(left: 15),
           child: Column(
             children: [
               // greeting section
-                const SizedBox(height: 15),
+              const SizedBox(height: 15),
               HomeTopTitle(),
               const SizedBox(height: 20),
               // search bar section
               Padding(
                 padding: const EdgeInsets.only(right: 15),
-                  child: HomeSearchbar(controller: _controller),
+                child: HomeSearchbar(controller: _controller),
               ),
               const SizedBox(height: 20),
               // heading section
-              HeadingSection(title: HomeScreenText.allCate, seeAllScreen: FoodBusinessScreen()),
+              HeadingSection(
+                  title: HomeScreenText.allCate,
+                  seeAllScreen: FoodBusinessScreen()),
               const SizedBox(height: 20),
               // all categories
               SizedBox(
                 height: 80,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: cateTypes.length,
-                  itemBuilder: (context, index){
-                    return HomeOneCatCard(title: cateTypes[index],);
-                  }
-                )
+                  itemCount: categories.length,
+                  itemBuilder: (context, index) {
+                    return HomeOneCatCard(
+                      title: categories[index],
+                    );
+                  },
+                ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
+              // banner ad section
+              Container(
+                margin: const EdgeInsets.only(right: 15),
+                height: width < 650 ? width*0.46 : 650*0.46,
+                width: width < 650 ? width : 650,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(AllImages.bannerAd),
+                    fit: BoxFit.fill
+                  ),
+                ),
+                // child: Image.asset(AllImages.bannerAd, height: width*0.46, width: width)
+              ),
+              const SizedBox(height: 10),
               // open restaurant heading
-              HeadingSection(title: HomeScreenText.openRest,),
+              HeadingSection(
+                title: HomeScreenText.openRest,
+                seeAllScreen: AllResturants(),
+              ),
               const SizedBox(height: 15),
               // open restaurants
-              Container(
+              Padding(
                 padding: const EdgeInsets.only(right: 15),
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: openRestCounts.length,
-                      itemBuilder: (context, index){
-                    return OpenRestCard();
-                  },),
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: openRestCounts.length,
+                  itemBuilder: (context, index) {
+                    return OpenRestCard(
+                      model: openRestCounts[index],
+                    );
+                  },
+                ),
               ),
-
             ],
           ),
         ),

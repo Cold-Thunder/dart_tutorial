@@ -1,8 +1,10 @@
 import 'dart:async';
 
+import 'package:assignment7_ui/ui/screens/log_in_screen/login_screen.dart';
 import 'package:assignment7_ui/ui/screens/onboarding_screens/onboarding_screen.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashTwo extends StatefulWidget {
   const SplashTwo({super.key});
@@ -13,14 +15,42 @@ class SplashTwo extends StatefulWidget {
 
 class _SplashTwoState extends State<SplashTwo> {
 
+  bool? isFirstTime = true;
+
+  storingIsFirstTime() async{
+    final storeData = await SharedPreferences.getInstance();
+    storeData.setBool('isFirst', false);
+  }
+
+  gettingIsFirst() async{
+    final storeData = await SharedPreferences.getInstance();
+    if(storeData.getBool('isFirst') != null){
+      setState((){
+        isFirstTime = storeData.getBool('isFirst');
+      });
+    }
+  }
+
   @override
   void initState(){
     super.initState();
+    storingIsFirstTime();
+    gettingIsFirst();
+
     Timer(Duration(seconds: 2), (){
-      Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (context)=>OnboardingScreen())
-      );
+      if(isFirstTime == true){
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context)=>OnboardingScreen())
+        );
+      }else{
+        Navigator.pushReplacement(context, MaterialPageRoute(
+          builder: (context)=>LoginScreen()
+        ));
+      }
+
     });
+
+
   }
 
   @override
