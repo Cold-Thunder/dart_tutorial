@@ -64,7 +64,7 @@ class _AddNewAddressScreenState extends State<AddNewAddressScreen> {
                     width: width,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(AllImages.mapImg),
+                        image: AssetImage(AllImages.locationImage),
                         fit: BoxFit.fill,
                       ),
                     ),

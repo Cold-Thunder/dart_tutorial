@@ -36,10 +36,13 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
             width: width,
             decoration: BoxDecoration(
               color: AllColors.shapeGrey,
-              image: DecorationImage(
-                image: AssetImage(AllImages.mapImg,),
-                fit: BoxFit.fitHeight,
-              )
+            )
+          ),
+          Positioned(
+            top: 10,
+            left: width*0.2,
+            child: SizedBox(
+              child: Image.asset(AllImages.tracker, height: height*0.5, width: width*0.5)
             )
           ),
           DraggableScrollableSheet(

@@ -22,6 +22,7 @@ class AllImages{
   static String speakerIcon = 'assets/icons/speaker_icon.svg';
 
   static String mapImg = 'assets/images/map.png';
+  static String tracker = 'assets/images/tracker.png';
 
   static String coffeeHouseImg = 'assets/images/coffee_house_img.png';
   static String personProfileImg = 'assets/images/person_profile_img.png';
@@ -31,6 +32,7 @@ class AllImages{
   static String locationPointer = 'assets/images/location_pointer.jpeg';
   static String onboardingOne = 'assets/images/onboarding_one.jpeg';
   static String onboardingTwo = 'assets/images/onboarding_two.jpeg';
+  static String locationImage = 'assets/images/location_image.png';
 
 
   // restaurants
