@@ -34,11 +34,11 @@ class AllImages{
 
 
   // restaurants
-static String restaurantOne = 'assets/images/restaurant.jpg';
-static String restaurantTwo = 'assets/images/restaurant2.jpg';
-static String restaurantThree = 'assets/images/restaurant3.jpg';
-static String restaurantFour = 'assets/images/restaurant4.jpg';
-static String restaurantFive = 'assets/images/restaurant5.jpg';
+static String restaurantOne = 'assets/images/restaurant.jpeg';
+static String restaurantTwo = 'assets/images/restaurant2.jpeg';
+static String restaurantThree = 'assets/images/restaurant3.jpeg';
+static String restaurantFour = 'assets/images/restaurant4.jpeg';
+static String restaurantFive = 'assets/images/restaurant5.jpeg';
 
   // all icons
   static String starIcon = 'assets/icons/star_icon.svg';
