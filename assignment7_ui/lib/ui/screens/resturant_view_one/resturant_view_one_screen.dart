@@ -22,20 +22,26 @@ class RestaurantViewOneScreen extends StatefulWidget {
 
 class _RestaurantViewOneScreenState extends State<RestaurantViewOneScreen> {
   List<String> foodItems = AllTexts.foods;
-  List<PopularItemCardModel> burgers = AllTexts.burgers;
+  List<PopularItemCardModel> allFoods = AllTexts.allFoodItems;
+  List<PopularItemCardModel> selectedFoods = [];
 
-  List<bool> selects = [true, false, false, false];
 
-  selectedFunction(int ind){
+  String typeKeyword = AllTexts.burger;
+  int clickedInd = 0;
+
+  selectedFunction(String keyword, int ind){
     setState((){
-      for(int i = 0; i < selects.length; i++){
-        if(i == ind){
-          selects[i] = true;
-        }else {
-          selects[i] = false;
-        }
-      }
+      clickedInd = ind;
+      typeKeyword = keyword;
+      selectedFoods = allFoods.where((item)=> item.tag!.contains(typeKeyword)).toList();
     });
+  }
+
+  @override
+  void initState(){
+    super.initState();
+    // calling the filtering function
+    selectedFunction(typeKeyword, clickedInd);
   }
 
   @override
@@ -87,16 +93,17 @@ class _RestaurantViewOneScreenState extends State<RestaurantViewOneScreen> {
                     itemBuilder: (context, index){
                       return FoodTypeButton(
                           index: index,
+                          clickedInd: clickedInd,
                           title: foodItems[index],
-                          selected: selects[index],
                         selectedFunc: selectedFunction,
                       );
                     },
                   ),
                 ),
                 const SizedBox(height: 20),
+                // selected foods title
                 Text(
-                    "${AllTexts.burger}(${burgers.length})",
+                    "$typeKeyword (${selectedFoods.length})",
                     style: TextStyles.headingTextStyle
                 ),
                 const SizedBox(height: 20),
@@ -117,9 +124,9 @@ class _RestaurantViewOneScreenState extends State<RestaurantViewOneScreen> {
                           ),
                           physics: NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
-                          itemCount: burgers.length,
+                          itemCount: selectedFoods.length,
                           itemBuilder: (context, index){
-                            return PopularItemsWidget(model: burgers[index]);
+                            return PopularItemsWidget(model: selectedFoods[index]);
                           }
                       ),
                     );

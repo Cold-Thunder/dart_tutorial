@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 class FoodTypeButton extends StatelessWidget {
   final int index;
   final String title;
-  final bool selected;
+  final int clickedInd;
   final Function selectedFunc;
 
   const FoodTypeButton(
       {required this.index,
       required this.title,
-      required this.selected,
+      required this.clickedInd,
       required this.selectedFunc,
       super.key});
 
@@ -21,7 +21,7 @@ class FoodTypeButton extends StatelessWidget {
         splashColor: AllColors.transparent,
         highlightColor: AllColors.transparent,
         onTap: () {
-          selectedFunc(index);
+          selectedFunc(title, index);
         },
         child: Container(
           alignment: Alignment.center,
@@ -30,18 +30,18 @@ class FoodTypeButton extends StatelessWidget {
             height: 48,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(33),
-                color: selected
+                color: index == clickedInd
                     ? AllColors.buttonOrange
                     : AllColors.inputFieldWhite,
                 border: Border.all(
-                    width: selected ? 0 : 2,
-                    color: selected
+                    width: index == clickedInd ? 0 : 2,
+                    color: index == clickedInd
                         ? AllColors.transparent
                         : AllColors.keyboxBorderGrey)),
             child: Text(title,
                 style: TextStyles.appBarTitleStyle.copyWith(
                     fontSize: 16,
-                    color: selected
+                    color: index == clickedInd
                         ? AllColors.appbarWhite
                         : AllColors.cartBackBlack))));
   }

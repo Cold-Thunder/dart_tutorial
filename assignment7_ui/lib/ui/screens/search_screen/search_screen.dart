@@ -1,4 +1,4 @@
-import 'package:assignment7_ui/config/models/popular_fast_food_model.dart';
+import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/orders_screen.dart';
@@ -26,7 +26,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   final List<String> keywordList = AllTexts.keywords;
   final List<RestaurantModel> suggestRestaurants = AllTexts.suggestRestaurants;
-  final List<PopularFastFoodModel> popularFastFoods = AllTexts.popularFastFoods;
+  final List<PopularItemCardModel> popularFastFoods = AllTexts.popularFastFoods;
 
   void keyword(String keyValue){
       _controller.text = keyValue;

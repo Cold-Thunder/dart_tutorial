@@ -20,7 +20,7 @@ class PopularItemsWidget extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => FoodDetailsScreenOne(),
+            builder: (context) => FoodDetailsScreenOne(model: model),
           ),
         );
       },
@@ -46,6 +46,7 @@ class PopularItemsWidget extends StatelessWidget {
             height: 75,
             width: 114,
             borderRad: 15,
+            image: model.image,
           ),
           const SizedBox(height: 5),
           Column(
@@ -56,10 +57,12 @@ class PopularItemsWidget extends StatelessWidget {
               Text(
                 model.title,
                 style: TextStyles.categoryHeadingStyle.copyWith(fontSize: 15),
+                maxLines: 1,
+                overflow:TextOverflow.ellipsis,
               ),
               // subtitle
               Text(
-                model.subTitle,
+                model.subTitle ?? '',
                 style: TextStyles.onboardDesStyle.copyWith(fontSize: 13),
               ),
               const SizedBox(height: 10),

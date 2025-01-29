@@ -49,11 +49,11 @@ static String restaurantFive = 'assets/images/restaurant5.jpeg';
   static String pizzaFour = 'assets/images/pizza_four.jpeg';
 
   // burgers
- static String burgerOne = 'assets/images/burgerOne.jpg';
- static String burgerTwo = 'assets/images/burgerOne.jpg';
- static String burgerThree = 'assets/images/burgerOne.jpg';
- static String burgerFour = 'assets/images/burgerOne.jpeg';
- static String burgerFive = 'assets/images/burgerOne.jpeg';
+ static String burgerOne = 'assets/images/burger_one.jpg';
+ static String burgerTwo = 'assets/images/burger_two.jpg';
+ static String burgerThree = 'assets/images/burger_three.jpg';
+ static String burgerFour = 'assets/images/burger_four.jpeg';
+ static String burgerFive = 'assets/images/burger_five.jpeg';
 
  // pastas
   static String pastaOne = 'assets/images/pasta_one.jpg';
@@ -61,6 +61,41 @@ static String restaurantFive = 'assets/images/restaurant5.jpeg';
   static String pastaThree = 'assets/images/pasta_three.jpg';
   static String pastaFour = 'assets/images/pasta_four.jpg';
   static String pastaFive = 'assets/images/pasta_five.jpg';
+
+  // sandwiches
+  static String sandwichOne = 'assets/images/sandwich_one.jpg';
+  static String sandwichTwo = 'assets/images/sandwich_two.jpg';
+  static String sandwichThree = 'assets/images/sandwich_three.jpg';
+  static String sandwichFour = 'assets/images/sandwich_four.jpg';
+  static String sandwichFive = 'assets/images/sandwich_five.jpg';
+
+  // desserts
+  static String dessertOne = 'assets/images/dessert_one.jpeg';
+  static String dessertTwo = 'assets/images/dessert_two.jpeg';
+  static String dessertThree = 'assets/images/dessert_three.jpeg';
+  static String dessertFour = 'assets/images/dessert_four.jpeg';
+  static String dessertFive = 'assets/images/dessert_five.jpeg';
+
+  // beverages
+  static String beverageOne = 'assets/images/beverage_one.jpg';
+  static String beverageTwo = 'assets/images/beverage_two.jpg';
+  static String beverageThree = 'assets/images/beverage_three.jpg';
+  static String beverageFour = 'assets/images/beverage_four.jpg';
+  static String beverageFive = 'assets/images/beverage_five.jpg';
+
+  // sea foods
+  static String seaFoodOne = 'assets/images/sea_food_one.jpg';
+  static String seaFoodTwo = 'assets/images/sea_food_two.jpg';
+  static String seaFoodThree = 'assets/images/sea_food_three.jpg';
+  static String seaFoodFour = 'assets/images/sea_food_four.jpg';
+  static String seaFoodFive = 'assets/images/sea_food_five.jpg';
+
+  // indian cuisines
+  static String indianOne = 'assets/images/indian_one.jpg';
+  static String indianTwo = 'assets/images/indian_two.jpg';
+  static String indianThree = 'assets/images/indian_three.jpg';
+  static String indianFour = 'assets/images/indian_four.jpg';
+  static String indianFive = 'assets/images/indian_five.jpg';
 
 
   // all icons

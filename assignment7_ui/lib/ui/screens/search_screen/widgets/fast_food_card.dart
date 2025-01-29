@@ -1,12 +1,13 @@
-import 'package:assignment7_ui/config/models/popular_fast_food_model.dart';
+import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/food_details_screen/food_details_screen1.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/material.dart';
 
 class FastFoodCard extends StatelessWidget {
-  final PopularFastFoodModel model;
+  final PopularItemCardModel model;
 
   const FastFoodCard({required this.model, super.key});
 
@@ -17,7 +18,7 @@ class FastFoodCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => FoodDetailsScreenOne(),
+            builder: (context) => FoodDetailsScreenOne(model: model,),
           ),
         );
       },
@@ -42,7 +43,7 @@ class FastFoodCard extends StatelessWidget {
             GreyCard(height: 84, width: 122),
             Text(model.title, style: TextStyles.pinTextStyle),
             Text(
-              model.des,
+              model.des ?? '',
               style: TextStyles.onboardDesStyle.copyWith(fontSize: 13),
             ),
           ],

@@ -1,15 +1,19 @@
 
 class PopularItemCardModel{
-  final String tag;
-  final String image;
+  final String? tag;
+  final String? image;
   final String title;
-  final String subTitle;
-  final double price;
+  final String? subTitle;
+  final double? price;
+  final String? des;
+
 
   PopularItemCardModel({
-    required this.tag,
-    required this.image,
+     this.tag,
+    this.image,
     required this.title,
-    required this.subTitle,
-    required this.price});
+    this.subTitle,
+    this.price,
+     this.des
+  });
 }

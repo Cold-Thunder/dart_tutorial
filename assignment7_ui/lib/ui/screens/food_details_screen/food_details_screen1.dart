@@ -1,3 +1,4 @@
+import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
@@ -14,7 +15,8 @@ import 'package:assignment7_ui/ui/widgets/elevated_button_design.dart';
 import 'package:flutter/material.dart';
 
 class FoodDetailsScreenOne extends StatefulWidget {
-  const FoodDetailsScreenOne({super.key});
+  final PopularItemCardModel model;
+  const FoodDetailsScreenOne({required this.model, super.key});
 
   @override
   State<FoodDetailsScreenOne> createState() => _FoodDetailsScreenOneState();
@@ -69,7 +71,7 @@ class _FoodDetailsScreenOneState extends State<FoodDetailsScreenOne> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TopSection(),
+                    TopSection(image: widget.model.image!),
                     const SizedBox(height: 20),
                     LogoSection(),
                     const SizedBox(height: 20),

@@ -19,19 +19,14 @@ class RestaurantViewTwoScreen extends StatefulWidget {
 
 class _RestaurantViewTwoScreenState extends State<RestaurantViewTwoScreen> {
   List<String> foodItems = AllTexts.foods;
-  List<PopularItemCardModel> burgers = AllTexts.burgers;
+  List<PopularItemCardModel> allFoods = AllTexts.allFoodItems;
 
-  List<bool> selects = [true, false, false, false];
+  int clickedInd = 0;
 
-  selectedFunction(int ind){
+
+  selectedFunction(String keyword, int ind){
     setState((){
-      for(int i = 0; i < selects.length; i++){
-        if(i == ind){
-          selects[i] = true;
-        }else {
-          selects[i] = false;
-        }
-      }
+      clickedInd = ind;
     });
   }
 
@@ -80,7 +75,7 @@ class _RestaurantViewTwoScreenState extends State<RestaurantViewTwoScreen> {
                               return FoodTypeButton(
                                 index: index,
                                 title: foodItems[index],
-                                selected: selects[index],
+                                clickedInd: clickedInd,
                                 selectedFunc: selectedFunction,
                               );
                             },
@@ -88,7 +83,7 @@ class _RestaurantViewTwoScreenState extends State<RestaurantViewTwoScreen> {
                         ),
                         const SizedBox(height: 20),
                         Text(
-                            "${AllTexts.burger}(${burgers.length})",
+                            "${AllTexts.burger}(${allFoods.length})",
                             style: TextStyles.headingTextStyle
                         ),
                         const SizedBox(height: 20),
@@ -109,9 +104,9 @@ class _RestaurantViewTwoScreenState extends State<RestaurantViewTwoScreen> {
                                     ),
                                     physics: NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemCount: burgers.length,
+                                    itemCount: allFoods.length,
                                     itemBuilder: (context, index){
-                                      return PopularItemsWidget(model: burgers[index]);
+                                      return PopularItemsWidget(model: allFoods[index]);
                                     }
                                 ),
                               );

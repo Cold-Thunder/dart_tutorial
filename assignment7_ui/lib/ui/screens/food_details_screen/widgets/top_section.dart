@@ -3,7 +3,8 @@ import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/material.dart';
 
 class TopSection extends StatefulWidget {
-  const TopSection({super.key});
+  final String image;
+  const TopSection({required this.image, super.key});
 
   @override
   State<TopSection> createState() => _TopSectionState();
@@ -17,7 +18,7 @@ class _TopSectionState extends State<TopSection> {
     final width = MediaQuery.of(context).size.width;
     return Stack(
         children:[
-          GreyCard(height: 184, width: width, borderRad: 32,),
+          GreyCard(height: 184, width: width, borderRad: 32, image: widget.image),
           Positioned(
             right: 20,
             bottom: 20,

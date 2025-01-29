@@ -3,7 +3,6 @@ import 'package:assignment7_ui/config/models/delivery_man_message.dart';
 import 'package:assignment7_ui/config/models/home_v2_cat_model.dart';
 import 'package:assignment7_ui/config/models/order_item.dart';
 import 'package:assignment7_ui/config/models/order_model.dart';
-import 'package:assignment7_ui/config/models/popular_fast_food_model.dart';
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
@@ -95,7 +94,7 @@ class AllTexts{
   static String sandwich = 'Sandwich';
 
   static String pasta= "Pasta";
-  static String dessets =  "Desserts";
+  static String desserts =  "Desserts";
   static String beverage =  'Beverages';
   static String seafood = "Seafood";
   static String indianCuisine =  "Indian Cuisine";
@@ -266,7 +265,7 @@ class AllTexts{
     AllTexts.pizza,
     AllTexts.sandwich,
     AllTexts.pasta,
-    AllTexts.dessets,
+    AllTexts.desserts,
     AllTexts.beverage,
     AllTexts.seafood,
     AllTexts.indianCuisine
@@ -278,7 +277,7 @@ class AllTexts{
     HomeV2CatModel(title: AllTexts.pizza, price: AllTexts.price.toString()),
     HomeV2CatModel(title: AllTexts.sandwich, price: AllTexts.price.toString()),
     HomeV2CatModel(title: AllTexts.pasta, price: AllTexts.price.toString()),
-    HomeV2CatModel(title: AllTexts.dessets, price: AllTexts.price.toString()),
+    HomeV2CatModel(title: AllTexts.desserts, price: AllTexts.price.toString()),
     HomeV2CatModel(title: AllTexts.beverage, price: AllTexts.price.toString()),
     HomeV2CatModel(title: AllTexts.seafood, price: AllTexts.price.toString()),
     HomeV2CatModel(title: AllTexts.indianCuisine, price: AllTexts.price.toString()),
@@ -286,66 +285,327 @@ class AllTexts{
 
   static List<PopularItemCardModel> popularItems = [
     PopularItemCardModel(
+       tag: AllTexts.burger,
+        image: AllImages.burgerOne,
         title: AllTexts.popCardTitle1,
         subTitle: AllTexts.popCardSub1,
         price: AllTexts.popCardPrice1
     ),PopularItemCardModel(
+      tag: AllTexts.burger,
+        image: AllImages.burgerTwo,
         title: AllTexts.popCardTitle2,
         subTitle: AllTexts.popCardSub2,
         price: AllTexts.popCardPrice2
     ),PopularItemCardModel(
+      tag: AllTexts.burger,
+        image: AllImages.burgerThree,
         title: AllTexts.popCardTitle3,
         subTitle: AllTexts.popCardSub3,
         price: AllTexts.popCardPrice3
     ),PopularItemCardModel(
+        tag: AllTexts.burger,
+        image: AllImages.burgerFive,
         title: AllTexts.popCardTitle4,
         subTitle: AllTexts.popCardSub4,
         price: AllTexts.popCardPrice4
     ),
   ];
 
-  static List<PopularItemCardModel> burgers = [
+  static List<PopularItemCardModel> allFoodItems = [
+
+    // pizzas
     PopularItemCardModel(
-        title: AllTexts.popCardTitle1,
+      tag: AllTexts.pizza,
+        image:AllImages.pizzaOne,
+        title: AllTexts.pizza1,
         subTitle: AllTexts.popCardSub1,
         price: AllTexts.popCardPrice1
-    ),PopularItemCardModel(
-        title: AllTexts.popCardTitle2,
-        subTitle: AllTexts.popCardSub2,
-        price: AllTexts.popCardPrice2
-    ),PopularItemCardModel(
-        title: AllTexts.popCardTitle3,
-        subTitle: AllTexts.popCardSub3,
-        price: AllTexts.popCardPrice3
-    ),PopularItemCardModel(
-        title: AllTexts.popCardTitle4,
-        subTitle: AllTexts.popCardSub4,
-        price: AllTexts.popCardPrice4
-    ),PopularItemCardModel(
-        title: AllTexts.popCardTitle1,
-        subTitle: AllTexts.popCardSub1,
-        price: AllTexts.popCardPrice1
-    ),PopularItemCardModel(
-        title: AllTexts.popCardTitle2,
-        subTitle: AllTexts.popCardSub2,
-        price: AllTexts.popCardPrice2
-    ),PopularItemCardModel(
-        title: AllTexts.popCardTitle3,
-        subTitle: AllTexts.popCardSub3,
-        price: AllTexts.popCardPrice3
-    ),PopularItemCardModel(
-        title: AllTexts.popCardTitle4,
-        subTitle: AllTexts.popCardSub4,
-        price: AllTexts.popCardPrice4
-    ),PopularItemCardModel(
-        title: AllTexts.popCardTitle3,
-        subTitle: AllTexts.popCardSub3,
-        price: AllTexts.popCardPrice3
-    ),PopularItemCardModel(
-        title: AllTexts.popCardTitle4,
-        subTitle: AllTexts.popCardSub4,
-        price: AllTexts.popCardPrice4
     ),
+    PopularItemCardModel(
+      tag: AllTexts.pizza,
+        image:AllImages.pizzaTwo,
+        title: AllTexts.pizza2,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+      tag: AllTexts.pizza,
+        image:AllImages.pizzaThree,
+        title: AllTexts.pizza3,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+      tag: AllTexts.pizza,
+        image:AllImages.pizzaFour,
+        title: AllTexts.pizza4,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+      tag: AllTexts.pizza,
+        image:AllImages.pizzaOne,
+        title: AllTexts.pizza5,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+
+    // burgers
+    PopularItemCardModel(
+        tag: AllTexts.burger,
+        image:AllImages.burgerOne,
+        title: AllTexts.pizza1,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.burger,
+        image:AllImages.burgerTwo,
+        title: AllTexts.burger5,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.burger,
+        image:AllImages.burgerThree,
+        title: AllTexts.burger3,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.burger,
+        image:AllImages.burgerFour,
+        title: AllTexts.burger4,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.burger,
+        image:AllImages.burgerFive,
+        title: AllTexts.burger5,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+
+
+    // pastas
+    PopularItemCardModel(
+        tag: AllTexts.pasta,
+        image:AllImages.pastaTwo,
+        title: AllTexts.pasta2,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.pasta,
+        image:AllImages.pastaThree,
+        title: AllTexts.pasta3,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.pasta,
+        image:AllImages.pastaFour,
+        title: AllTexts.pasta4,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.pasta,
+        image:AllImages.pastaFive,
+        title: AllTexts.pasta5,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+
+    // sandwich
+    PopularItemCardModel(
+        tag: AllTexts.sandwich,
+        image:AllImages.sandwichOne,
+        title: AllTexts.sandwich1,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.sandwich,
+        image:AllImages.sandwichTwo,
+        title: AllTexts.sandwich2,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.sandwich,
+        image:AllImages.sandwichThree,
+        title: AllTexts.sandwich3,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.sandwich,
+        image:AllImages.sandwichFour,
+        title: AllTexts.sandwich4,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.sandwich,
+        image:AllImages.sandwichFive,
+        title: AllTexts.sandwich5,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+
+    // desserts
+    PopularItemCardModel(
+        tag: AllTexts.desserts,
+        image:AllImages.dessertOne,
+        title: AllTexts.desserts1,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.desserts,
+        image:AllImages.dessertTwo,
+        title: AllTexts.desserts2,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.desserts,
+        image:AllImages.dessertThree,
+        title: AllTexts.desserts3,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.desserts,
+        image:AllImages.dessertFour,
+        title: AllTexts.desserts4,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.desserts,
+        image:AllImages.dessertFive,
+        title: AllTexts.desserts5,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+
+
+    // beverages
+    PopularItemCardModel(
+        tag: AllTexts.beverage,
+        image:AllImages.beverageOne,
+        title: AllTexts.beverages1,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.beverage,
+        image:AllImages.beverageTwo,
+        title: AllTexts.beverages2,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.beverage,
+        image:AllImages.beverageThree,
+        title: AllTexts.beverages3,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.beverage,
+        image:AllImages.beverageFour,
+        title: AllTexts.beverages4,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.beverage,
+        image:AllImages.beverageFive,
+        title: AllTexts.beverages5,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+
+    // sea foods
+    PopularItemCardModel(
+        tag: AllTexts.seafood,
+        image:AllImages.seaFoodOne,
+        title: AllTexts.seafoods1,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.seafood,
+        image:AllImages.seaFoodTwo,
+        title: AllTexts.seafoods2,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.seafood,
+        image:AllImages.seaFoodThree,
+        title: AllTexts.seafoods3,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.seafood,
+        image:AllImages.seaFoodFour,
+        title: AllTexts.seafoods4,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.seafood,
+        image:AllImages.seaFoodFive,
+        title: AllTexts.seafoods5,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+
+    // indian cuisine
+    PopularItemCardModel(
+        tag: AllTexts.indianCuisine,
+        image:AllImages.indianOne,
+        title: AllTexts.indianCuisine1,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.indianCuisine,
+        image:AllImages.indianTwo,
+        title: AllTexts.indianCuisine2,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.indianCuisine,
+        image:AllImages.indianThree,
+        title: AllTexts.indianCuisine3,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.indianCuisine,
+        image:AllImages.indianFour,
+        title: AllTexts.indianCuisine4,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+    PopularItemCardModel(
+        tag: AllTexts.indianCuisine,
+        image:AllImages.indianFive,
+        title: AllTexts.indianCuisine5,
+        subTitle: AllTexts.popCardSub1,
+        price: AllTexts.popCardPrice1
+    ),
+
+
+    // sandwiches
   ];
 
 
@@ -691,10 +951,10 @@ class AllTexts{
     RestaurantModel(image: AllImages.restaurantThree, name: AllTexts.coffeeClub, rating: AllTexts.coffeeRating),
   ];
 
-  static List<PopularFastFoodModel> popularFastFoods = [
-    PopularFastFoodModel(title: AllTexts.europeanPizza, des: AllTexts.europeanSub),
-    PopularFastFoodModel(title: AllTexts.buffaloPizza, des: AllTexts.buffaloSub),
-    PopularFastFoodModel(title: AllTexts.buffaloPizza, des: AllTexts.buffaloSub),
+  static List<PopularItemCardModel> popularFastFoods = [
+    PopularItemCardModel(title: AllTexts.europeanPizza, des: AllTexts.europeanSub),
+    PopularItemCardModel(title: AllTexts.buffaloPizza, des: AllTexts.buffaloSub),
+    PopularItemCardModel(title: AllTexts.buffaloPizza, des: AllTexts.buffaloSub),
   ];
 }
 
