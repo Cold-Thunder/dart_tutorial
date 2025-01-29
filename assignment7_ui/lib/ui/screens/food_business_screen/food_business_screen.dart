@@ -4,6 +4,7 @@ import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/ui/screens/search_screen/search_screen.dart';
 import 'package:assignment7_ui/ui/widgets/icon_buttons.dart';
 import 'package:assignment7_ui/ui/widgets/popular_items_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
@@ -21,9 +22,14 @@ class FoodBusinessScreen extends StatefulWidget {
 
 class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
   final List<PopularItemCardModel> popularItems = AllTexts.popularItems;
-  final List<ResturantModel> openRestaurants = AllTexts.openRestaurantsList;
+  final List<RestaurantModel> openRestaurants = AllTexts.openRestaurantsList;
   final List<String> categoryItems = AllTexts.categories;
   String dropdownItem = AllTexts.all;
+
+
+  searchIconFunc(){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchScreen()));
+  }
 
   @override
   void initState(){
@@ -72,6 +78,7 @@ class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
           actions: [
             IconButtons(
               iconSvg: AllImages.searchWhiteIcon,
+              iconFunc: searchIconFunc,
             ),
             const SizedBox(width: 10),
             IconButtons(

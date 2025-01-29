@@ -42,6 +42,27 @@ static String restaurantThree = 'assets/images/restaurant3.jpeg';
 static String restaurantFour = 'assets/images/restaurant4.jpeg';
 static String restaurantFive = 'assets/images/restaurant5.jpeg';
 
+// pizzas
+  static String pizzaOne = 'assets/images/pizza_one.jpg';
+  static String pizzaTwo = 'assets/images/pizza_tow.jpg';
+  static String pizzaThree = 'assets/images/pizza_three.jpg';
+  static String pizzaFour = 'assets/images/pizza_four.jpeg';
+
+  // burgers
+ static String burgerOne = 'assets/images/burgerOne.jpg';
+ static String burgerTwo = 'assets/images/burgerOne.jpg';
+ static String burgerThree = 'assets/images/burgerOne.jpg';
+ static String burgerFour = 'assets/images/burgerOne.jpeg';
+ static String burgerFive = 'assets/images/burgerOne.jpeg';
+
+ // pastas
+  static String pastaOne = 'assets/images/pasta_one.jpg';
+  static String pastaTwo = 'assets/images/pasta_two.jpg';
+  static String pastaThree = 'assets/images/pasta_three.jpg';
+  static String pastaFour = 'assets/images/pasta_four.jpg';
+  static String pastaFive = 'assets/images/pasta_five.jpg';
+
+
   // all icons
   static String starIcon = 'assets/icons/star_icon.svg';
   static String vanIcon = 'assets/icons/van_icon.svg';

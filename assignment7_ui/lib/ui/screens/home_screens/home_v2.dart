@@ -28,7 +28,7 @@ class HomeV2 extends StatefulWidget {
 
 class _HomeV2State extends State<HomeV2> {
   final TextEditingController _controller = TextEditingController();
-  final List<ResturantModel> openRestaurants = AllTexts.openRestaurantsList;
+  final List<RestaurantModel> openRestaurants = AllTexts.openRestaurantsList;
 
   final List<HomeV2CatModel> cateTypes = AllTexts.categoriesForHomeScreen;
 

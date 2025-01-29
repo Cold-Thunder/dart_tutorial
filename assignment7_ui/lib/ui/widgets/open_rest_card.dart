@@ -2,13 +2,14 @@ import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
+import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_one/resturant_view_one_screen.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class OpenRestCard extends StatelessWidget {
-  final ResturantModel model;
+  final RestaurantModel model;
   const OpenRestCard({required this.model, super.key});
 
   @override
@@ -19,7 +20,7 @@ class OpenRestCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => RestaurantViewOneScreen(),
+            builder: (context) => RestaurantViewOneScreen(model: model),
           ),
         );
       },
@@ -43,9 +44,9 @@ class OpenRestCard extends StatelessWidget {
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
-                itemCount: model.items.length,
+                itemCount: model.items?.length ?? 0,
                 itemBuilder: (context, index){
-                  return Text(index < model.items.length - 1 ? "${model.items[index]} - " : model.items[index], style: TextStyles.hintTextStyle);
+                  return Text(index < model.items!.length - 1 ? "${model.items![index]} - " : model.items![index], style: TextStyles.hintTextStyle);
                 }
               ),
             ),
@@ -69,7 +70,7 @@ class OpenRestCard extends StatelessWidget {
                     SvgPicture.asset(AllImages.vanIcon, height: 20, width: 20),
                     const SizedBox(width: 5),
                     Text(
-                      model.deliveryType,
+                      model.deliveryType ?? AllTexts.deliveryType,
                       style: TextStyles.hintTextStyle
                           .copyWith(color: AllColors.cartBlack),
                     ),

@@ -1,4 +1,5 @@
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
+import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
@@ -12,7 +13,8 @@ import 'package:assignment7_ui/ui/widgets/popular_items_widget.dart';
 import 'package:flutter/material.dart';
 
 class RestaurantViewOneScreen extends StatefulWidget {
-  const RestaurantViewOneScreen({super.key});
+  final RestaurantModel model;
+  const RestaurantViewOneScreen({required this.model, super.key});
 
   @override
   State<RestaurantViewOneScreen> createState() => _RestaurantViewOneScreenState();
@@ -56,14 +58,15 @@ class _RestaurantViewOneScreenState extends State<RestaurantViewOneScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 15.0),
-                  child: GreyCard(height: 150, width: width, borderRad: 32,),
+                  child: GreyCard(height: 150, width: width, borderRad: 32,image: widget.model.image),
                 ),
                 const SizedBox(height: 20),
+                // restaurant names
                 Text(
-                  AllTexts.spicyRestaurant,
+                  widget.model.name,
                   style: TextStyles.profileNameStyle
                 ),
-
+                // restaurant descriptions
                 SizedBox(
                   width: width*0.8,
                   child: Text(

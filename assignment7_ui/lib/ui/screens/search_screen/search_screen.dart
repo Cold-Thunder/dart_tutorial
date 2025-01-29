@@ -1,5 +1,5 @@
 import 'package:assignment7_ui/config/models/popular_fast_food_model.dart';
-import 'package:assignment7_ui/config/models/suggest_restaurant_model.dart';
+import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/orders_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
@@ -25,7 +25,7 @@ class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController _controller = TextEditingController();
 
   final List<String> keywordList = AllTexts.keywords;
-  final List<SuggestRestaurantModel> suggestRestaurants = AllTexts.suggestRestaurants;
+  final List<RestaurantModel> suggestRestaurants = AllTexts.suggestRestaurants;
   final List<PopularFastFoodModel> popularFastFoods = AllTexts.popularFastFoods;
 
   void keyword(String keyValue){
@@ -83,7 +83,7 @@ class _SearchScreenState extends State<SearchScreen> {
               ),
               const SizedBox(height: 20),
               // popular fast food heading
-              HeadingWidget(title: AllTexts.suggestedRestaurant),
+              HeadingWidget(title: AllTexts.populerFastFood),
               const SizedBox(height: 20),
               // popular fast food section
               Container(

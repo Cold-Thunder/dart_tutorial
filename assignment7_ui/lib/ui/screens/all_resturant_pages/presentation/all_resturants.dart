@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 class AllResturants extends StatelessWidget {
   AllResturants({super.key});
 
-  final List<ResturantModel> allRestaurants = AllTexts.allRestaurantsList;
+  final List<RestaurantModel> allRestaurants = AllTexts.allRestaurantsList;
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,6 @@ import 'package:assignment7_ui/config/models/order_model.dart';
 import 'package:assignment7_ui/config/models/popular_fast_food_model.dart';
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/models/resturant_model.dart';
-import 'package:assignment7_ui/config/models/suggest_restaurant_model.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 
 class AllTexts{
@@ -426,28 +425,28 @@ class AllTexts{
     AllImages.chiliIcon
   ];
 
-  static List<ResturantModel> openRestaurantsList = [
-    ResturantModel(name: AllTexts.restaurant1, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant2, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant3, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+  static List<RestaurantModel> openRestaurantsList = [
+    RestaurantModel(image: AllImages.restaurantOne, name: AllTexts.restaurant1, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantTwo, name: AllTexts.restaurant2, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantThree, name: AllTexts.restaurant3, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
   ];
 
-  static List<ResturantModel> allRestaurantsList = [
-    ResturantModel(name: AllTexts.restaurant1, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant2, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant3, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant4, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant5, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant6, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant7, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant8, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant9, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant10, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant11, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant12, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant13, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant14, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
-    ResturantModel(name: AllTexts.restaurant15, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+  static List<RestaurantModel> allRestaurantsList = [
+    RestaurantModel(image: AllImages.restaurantOne, name: AllTexts.restaurant1, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantTwo,name: AllTexts.restaurant2, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantThree,name: AllTexts.restaurant3, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantFour,name: AllTexts.restaurant4, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantFive,name: AllTexts.restaurant5, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantOne,name: AllTexts.restaurant6, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantTwo,name: AllTexts.restaurant7, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantThree,name: AllTexts.restaurant8, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantFour,name: AllTexts.restaurant9, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantFive,name: AllTexts.restaurant10, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantOne,name: AllTexts.restaurant11, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantTwo,name: AllTexts.restaurant12, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantThree,name: AllTexts.restaurant13, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantFour,name: AllTexts.restaurant14, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
+    RestaurantModel(image: AllImages.restaurantFive,name: AllTexts.restaurant15, items: AllTexts.restItems, rating: AllTexts.restRating, deliveryType: AllTexts.deliveryType, time: AllTexts.time),
   ];
 
 
@@ -686,10 +685,10 @@ class AllTexts{
 
   static List<String> keywords = [AllTexts.pizza,  AllTexts.sandwich, AllTexts.burger, AllTexts.sandwich];
 
-  static List<SuggestRestaurantModel> suggestRestaurants = [
-    SuggestRestaurantModel(name: AllTexts.pansiRestaurant, rating: AllTexts.pansiRating),
-    SuggestRestaurantModel(name: AllTexts.spicyBurger, rating: AllTexts.burgerRating),
-    SuggestRestaurantModel(name: AllTexts.coffeeClub, rating: AllTexts.coffeeRating),
+  static List<RestaurantModel> suggestRestaurants = [
+    RestaurantModel(image: AllImages.restaurantOne, name: AllTexts.pansiRestaurant, rating: AllTexts.pansiRating),
+    RestaurantModel(image: AllImages.restaurantTwo, name: AllTexts.spicyBurger, rating: AllTexts.burgerRating),
+    RestaurantModel(image: AllImages.restaurantThree, name: AllTexts.coffeeClub, rating: AllTexts.coffeeRating),
   ];
 
   static List<PopularFastFoodModel> popularFastFoods = [

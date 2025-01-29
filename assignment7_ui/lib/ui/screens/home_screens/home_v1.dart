@@ -30,7 +30,7 @@ class _HomeV1State extends State<HomeV1> {
 
   List<String> categories = AllTexts.categories;
 
-  List<ResturantModel> openRestCounts = AllTexts.openRestaurantsList;
+  List<RestaurantModel> openRestCounts = AllTexts.openRestaurantsList;
 
   int clickedInd = 0;
 

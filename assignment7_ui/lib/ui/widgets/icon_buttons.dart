@@ -12,7 +12,9 @@ class IconButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-
+        if(iconFunc != null){
+          iconFunc!();
+        }
       },
         splashColor: AllColors.transparent,
         highlightColor: AllColors.transparent,
