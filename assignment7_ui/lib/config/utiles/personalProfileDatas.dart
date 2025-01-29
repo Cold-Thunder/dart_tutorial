@@ -38,7 +38,7 @@ class PersonalProfileDatas{
   static List<PersonalProfileItemModel> faqSecInfos = [
     PersonalProfileItemModel(icon: AllImages.faqIcon, title: AllTexts.faqs,),
     PersonalProfileItemModel(icon: AllImages.userReviewIcon, title: AllTexts.userReview,),
-    PersonalProfileItemModel(icon: AllImages.settingIcon, title: AllTexts.settings,),
+    // PersonalProfileItemModel(icon: AllImages.settingIcon, title: AllTexts.settings,),
   ];
 
   static List<PersonalProfileItemModel> logInfo = [

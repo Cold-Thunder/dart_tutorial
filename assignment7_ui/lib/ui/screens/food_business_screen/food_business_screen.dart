@@ -100,11 +100,6 @@ class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
               iconFunc: searchIconFunc,
             ),
             const SizedBox(width: 15),
-            // IconButtons(
-            //   iconSvg: AllImages.settingMenuIcon,
-            //   color: AllColors.backIconGrey,
-            // ),
-            // const SizedBox(width: 10),
           ],
         ),
         body: SingleChildScrollView(
