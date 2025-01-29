@@ -71,7 +71,7 @@ class _FoodDetailsScreenOneState extends State<FoodDetailsScreenOne> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TopSection(image: widget.model.image!),
+                    TopSection(image: widget.model.image!, title: widget.model.title),
                     const SizedBox(height: 20),
                     LogoSection(),
                     const SizedBox(height: 20),

@@ -31,7 +31,10 @@ class OpenRestCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            GreyCard(height: 137, width: width, image: model.image,),
+            Hero(
+              tag: model.name,
+                child: GreyCard(height: 137, width: width, image: model.image,),
+            ),
             const SizedBox(height: 10),
             Text(
               model.name,

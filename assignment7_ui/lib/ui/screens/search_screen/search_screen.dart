@@ -176,7 +176,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 }),
               ),
               Visibility(
-                visible: searchedItems.isEmpty,
+                visible: searchedItems.isEmpty && showOthers == false,
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(

@@ -64,7 +64,10 @@ class _RestaurantViewOneScreenState extends State<RestaurantViewOneScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 15.0),
-                  child: GreyCard(height: 150, width: width, borderRad: 32,image: widget.model.image),
+                  child: Hero(
+                      tag: widget.model.name,
+                      child: GreyCard(height: 150, width: width, borderRad: 32,image: widget.model.image),
+                  ),
                 ),
                 const SizedBox(height: 20),
                 // restaurant names

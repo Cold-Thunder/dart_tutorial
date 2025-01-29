@@ -42,11 +42,14 @@ class PopularItemsWidget extends StatelessWidget {
             ]),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           // top grey box
-          GreyCard(
-            height: 75,
-            width: 114,
-            borderRad: 15,
-            image: model.image,
+          Hero(
+            tag: model.title,
+            child: GreyCard(
+              height: 75,
+              width: 114,
+              borderRad: 15,
+              image: model.image,
+            ),
           ),
           const SizedBox(height: 5),
           Column(
