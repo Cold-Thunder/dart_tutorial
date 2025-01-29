@@ -24,6 +24,13 @@ class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
   final List<PopularItemCardModel> popularItems = AllTexts.popularItems;
   final List<RestaurantModel> openRestaurants = AllTexts.openRestaurantsList;
   final List<String> categoryItems = AllTexts.categories;
+
+
+
+  // all foods will be stored here
+  final List<PopularItemCardModel> allFoods = AllTexts.allFoodItems;
+  // food type is selected from dropdown menu
+  List<PopularItemCardModel> selectedItems = [];
   String dropdownItem = AllTexts.all;
 
 
@@ -31,9 +38,23 @@ class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
     Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchScreen()));
   }
 
+  // filtering items method
+  selectedFoodType(String selectedItem){
+    setState(() {
+      dropdownItem = selectedItem;
+      selectedItems = dropdownItem != AllTexts.all
+          ? allFoods.where((item)=> item.tag!.contains(dropdownItem)).toList()
+      : allFoods;
+    });
+  }
+
   @override
   void initState(){
     super.initState();
+
+    if(widget.foodType != null){
+      selectedFoodType(widget.foodType!);
+    }
 
     if(widget.foodType != null){
       dropdownItem= widget.foodType!;
@@ -60,9 +81,7 @@ class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
                 underline: SizedBox(),
                 iconEnabledColor: AllColors.buttonOrange,
                 onChanged: (value) {
-                  setState(() {
-                    dropdownItem = value!;
-                  });
+                  selectedFoodType(value!);
                 },
                 // category items
                 items: categoryItems.map((item){
@@ -92,8 +111,9 @@ class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
           child: Padding(
               padding: const EdgeInsets.all(15),
               child: Column(spacing: 20, children: [
-                HeadingWidget(title: AllTexts.popularBurgers),
+                HeadingWidget(title: '${AllTexts.popular} $dropdownItem'),
                 // const SizedBox(height: 20),
+                // food items will be showen here
                 LayoutBuilder(builder: (context, constraints) {
                   int crossCount = constraints.maxWidth < 320 ? 1 : 2;
                   int crossCountTwo =
@@ -107,9 +127,10 @@ class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
                           crossAxisSpacing: 20,
                           mainAxisSpacing: 20),
                       shrinkWrap: true,
-                      itemCount: popularItems.length,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemCount: selectedItems.length,
                       itemBuilder: (context, index) {
-                        return PopularItemsWidget(model: popularItems[index]);
+                        return PopularItemsWidget(model: selectedItems[index]);
                       });
                 }),
                 HeadingWidget(title: AllTexts.openResturants),

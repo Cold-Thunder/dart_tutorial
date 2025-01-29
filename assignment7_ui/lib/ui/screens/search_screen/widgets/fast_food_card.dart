@@ -1,7 +1,6 @@
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/food_details_screen/food_details_screen1.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +39,7 @@ class FastFoodCard extends StatelessWidget {
         child: Column(
           spacing: 10,
           children: [
-            GreyCard(height: 84, width: 122),
+            GreyCard(height: 84, width: 122, image: model.image),
             Text(model.title, style: TextStyles.pinTextStyle),
             Text(
               model.des ?? '',

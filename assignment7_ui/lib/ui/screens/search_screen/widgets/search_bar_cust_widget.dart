@@ -7,8 +7,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class SearchBarCustWidget extends StatefulWidget {
   TextEditingController controller = TextEditingController();
+  final Function? searchIconFunc;
+  final Function clearIconFunc;
 
-  SearchBarCustWidget({required this.controller, super.key});
+  SearchBarCustWidget({required this.controller, this.searchIconFunc, required this.clearIconFunc, super.key});
 
   @override
   State<SearchBarCustWidget> createState() => _SearchBarCustWidgetState();
@@ -37,7 +39,11 @@ class _SearchBarCustWidgetState extends State<SearchBarCustWidget> {
                 fillColor: AllColors.inputFieldWhite,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 15),
                 prefixIcon: InkWell(
-                  onTap: (){},
+                  onTap: (){
+                    if(widget.searchIconFunc != null){
+                      widget.searchIconFunc!();
+                    }
+                  },
                     child: Padding(
                   padding: const EdgeInsets.all(18.0),
                   child: SvgPicture.asset(AllImages.searchIcon,
@@ -46,6 +52,7 @@ class _SearchBarCustWidgetState extends State<SearchBarCustWidget> {
                 suffixIcon: cont.text.toString() != '' ? InkWell(
                   onTap: (){
                     cont.clear();
+                    widget.clearIconFunc();
                   },
                   child: Container(
                     margin: const EdgeInsets.all(15),

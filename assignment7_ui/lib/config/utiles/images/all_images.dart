@@ -44,7 +44,7 @@ static String restaurantFive = 'assets/images/restaurant5.jpeg';
 
 // pizzas
   static String pizzaOne = 'assets/images/pizza_one.jpg';
-  static String pizzaTwo = 'assets/images/pizza_tow.jpg';
+  static String pizzaTwo = 'assets/images/pizza_two.jpg';
   static String pizzaThree = 'assets/images/pizza_three.jpg';
   static String pizzaFour = 'assets/images/pizza_four.jpeg';
 

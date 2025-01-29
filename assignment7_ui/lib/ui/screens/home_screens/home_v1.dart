@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:assignment7_ui/config/models/home_page_category_model.dart';
 import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/images/all_images.dart';
 import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
@@ -28,14 +29,16 @@ class HomeV1 extends StatefulWidget {
 class _HomeV1State extends State<HomeV1> {
   final TextEditingController _controller = TextEditingController();
 
-  List<String> categories = AllTexts.categories;
+  List<HomePageCategoryModel> categories = AllTexts.categoriesModels;
 
   List<RestaurantModel> openRestCounts = AllTexts.openRestaurantsList;
 
+  String selectedItem = AllTexts.all;
   int clickedInd = 0;
 
-  clickedFunc(int index){
+  clickedFunc(String item, int index){
     setState(() {
+      selectedItem = item;
       clickedInd = index;
     });
   }
@@ -82,7 +85,8 @@ class _HomeV1State extends State<HomeV1> {
               // heading section
               HeadingSection(
                   title: AllTexts.allCate,
-                  seeAllScreen: FoodBusinessScreen()),
+                  seeAllScreen: FoodBusinessScreen(foodType: selectedItem,),
+              ),
               const SizedBox(height: 20),
               // all categories
               SizedBox(
@@ -94,7 +98,7 @@ class _HomeV1State extends State<HomeV1> {
                     // item
                     return HomeOneCatCard(
                       index: index,
-                      title: categories[index],
+                      model: categories[index],
                       clickedInd: clickedInd,
                       clickedFunc: clickedFunc,
                     );

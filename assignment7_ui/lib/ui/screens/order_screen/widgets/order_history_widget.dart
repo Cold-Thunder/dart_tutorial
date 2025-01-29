@@ -57,7 +57,7 @@ class OrderHistoryWidget extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              GreyCard(height: 60, width: 60),
+              GreyCard(height: 60, width: 60, image: model.image),
               SizedBox(width: 15),
               Expanded(
                 child: SizedBox(

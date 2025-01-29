@@ -47,7 +47,7 @@ class HomeV2CateCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            GreyCard(height: 104, width: 147),
+            GreyCard(height: 104, width: 147, image: model.image),
             const SizedBox(height: 10),
             Text(model.title, style: TextStyles.categoryHeadingStyle),
             Expanded(

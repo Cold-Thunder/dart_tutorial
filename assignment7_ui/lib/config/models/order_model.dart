@@ -1,5 +1,6 @@
 class OrderModel{
   final String id;
+  final String image;
   final String title;
   final String price;
   final String date;
@@ -8,6 +9,7 @@ class OrderModel{
   final bool completed;
   OrderModel({
     required this.id,
+    required this.image,
     required this.title,
     required this.price,
     required this.date,

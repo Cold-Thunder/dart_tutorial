@@ -75,7 +75,7 @@ class _HomeV2State extends State<HomeV2> {
               // heading section
               HeadingSection(
                 title: AllTexts.allCate,
-                seeAllScreen: FoodBusinessScreen(),
+                seeAllScreen: FoodBusinessScreen(foodType: AllTexts.all,),
               ),
               const SizedBox(height: 20),
               // all categories

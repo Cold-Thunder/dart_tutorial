@@ -46,7 +46,7 @@ class HomeV3CatCard extends StatelessWidget {
                         blurRadius: 3),
                   ],
                 ),
-                child: GreyCard(height: 81, width: 96),
+                child: GreyCard(height: 81, width: 96, image: model.image),
               ),
               Spacer(),
               Text(

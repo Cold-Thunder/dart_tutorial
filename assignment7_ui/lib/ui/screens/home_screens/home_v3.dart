@@ -69,7 +69,7 @@ class _HomeV3State extends State<HomeV3> {
               ),
               const SizedBox(height: 20),
               // all categories heading section
-              HeadingSection(title: AllTexts.allCate, seeAllScreen: FoodBusinessScreen(),),
+              HeadingSection(title: AllTexts.allCate, seeAllScreen: FoodBusinessScreen(foodType: AllTexts.all,),),
               const SizedBox(height: 20),
               // all categories
               SizedBox(

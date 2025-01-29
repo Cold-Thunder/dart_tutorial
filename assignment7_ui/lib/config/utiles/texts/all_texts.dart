@@ -1,5 +1,6 @@
 import 'package:assignment7_ui/config/models/cart_item_model.dart';
 import 'package:assignment7_ui/config/models/delivery_man_message.dart';
+import 'package:assignment7_ui/config/models/home_page_category_model.dart';
 import 'package:assignment7_ui/config/models/home_v2_cat_model.dart';
 import 'package:assignment7_ui/config/models/order_item.dart';
 import 'package:assignment7_ui/config/models/order_model.dart';
@@ -11,6 +12,8 @@ class AllTexts{
   static String home1 = 'Home One';
   static String home2 = 'Home Two';
   static String home3 = 'Home Three';
+
+  static String notFound = 'Not Found';
 
   static String allResturants = 'All Resturants';
 
@@ -100,7 +103,7 @@ class AllTexts{
   static String indianCuisine =  "Indian Cuisine";
 
 
-  static String popularBurgers = 'Popular Burgers';
+  static String popular = 'Popular';
 
   static String popCardTitle1 = 'Burger Bistro';
   static String popCardTitle2 = "Smokin' Burger";
@@ -268,19 +271,32 @@ class AllTexts{
     AllTexts.desserts,
     AllTexts.beverage,
     AllTexts.seafood,
-    AllTexts.indianCuisine
+    AllTexts.indianCuisine,
+  ];
+
+  static List<HomePageCategoryModel> categoriesModels = [
+    HomePageCategoryModel(title: AllTexts.all, image: AllImages.pizzaOne),
+    HomePageCategoryModel(title:AllTexts.burger, image: AllImages.burgerOne),
+    HomePageCategoryModel(title: AllTexts.pizza, image: AllImages.pizzaOne),
+    HomePageCategoryModel(title: AllTexts.sandwich, image: AllImages.sandwichOne),
+    HomePageCategoryModel(title: AllTexts.pasta, image: AllImages.pastaOne),
+    HomePageCategoryModel(title: AllTexts.desserts, image: AllImages.dessertOne),
+    HomePageCategoryModel(title: AllTexts.beverage, image: AllImages.beverageOne),
+    HomePageCategoryModel(title:  AllTexts.seafood, image: AllImages.seaFoodOne),
+    HomePageCategoryModel(title: AllTexts.indianCuisine, image: AllImages.indianOne),
+
   ];
 
   static List<HomeV2CatModel> categoriesForHomeScreen = [
-    HomeV2CatModel(title: AllTexts.all, price: AllTexts.price.toString()),
-    HomeV2CatModel(title: AllTexts.burger, price: AllTexts.price.toString()),
-    HomeV2CatModel(title: AllTexts.pizza, price: AllTexts.price.toString()),
-    HomeV2CatModel(title: AllTexts.sandwich, price: AllTexts.price.toString()),
-    HomeV2CatModel(title: AllTexts.pasta, price: AllTexts.price.toString()),
-    HomeV2CatModel(title: AllTexts.desserts, price: AllTexts.price.toString()),
-    HomeV2CatModel(title: AllTexts.beverage, price: AllTexts.price.toString()),
-    HomeV2CatModel(title: AllTexts.seafood, price: AllTexts.price.toString()),
-    HomeV2CatModel(title: AllTexts.indianCuisine, price: AllTexts.price.toString()),
+    HomeV2CatModel(image: AllImages.pizzaOne, title: AllTexts.all, price: AllTexts.price.toString()),
+    HomeV2CatModel(image: AllImages.burgerOne, title: AllTexts.burger, price: AllTexts.price.toString()),
+    HomeV2CatModel(image: AllImages.pizzaOne, title: AllTexts.pizza, price: AllTexts.price.toString()),
+    HomeV2CatModel(image: AllImages.sandwichOne, title: AllTexts.sandwich, price: AllTexts.price.toString()),
+    HomeV2CatModel(image: AllImages.pastaOne, title: AllTexts.pasta, price: AllTexts.price.toString()),
+    HomeV2CatModel(image: AllImages.dessertOne, title: AllTexts.desserts, price: AllTexts.price.toString()),
+    HomeV2CatModel(image: AllImages.beverageOne, title: AllTexts.beverage, price: AllTexts.price.toString()),
+    HomeV2CatModel(image: AllImages.seaFoodOne, title: AllTexts.seafood, price: AllTexts.price.toString()),
+    HomeV2CatModel(image: AllImages.indianOne, title: AllTexts.indianCuisine, price: AllTexts.price.toString()),
   ];
 
   static List<PopularItemCardModel> popularItems = [
@@ -851,6 +867,7 @@ class AllTexts{
   static List<OrderModel> orderDetails = [
     OrderModel(
         id: AllTexts.pizzaHutId,
+        image: AllImages.pizzaOne,
         title: AllTexts.pizzaHut,
         price: AllTexts.orderPrice,
         date: AllTexts.pizzaHutDate,
@@ -860,6 +877,7 @@ class AllTexts{
     ),
     OrderModel(
         id: AllTexts.mcId,
+        image: AllImages.pizzaTwo,
         title: AllTexts.mcDonald,
         price: AllTexts.orderPrice,
         date: AllTexts.mcDonaldDate,
@@ -871,6 +889,7 @@ class AllTexts{
 
     OrderModel(
         id: AllTexts.starBuckId,
+        image: AllImages.pizzaThree,
         title: AllTexts.starbucks,
         price: AllTexts.orderPrice,
         date: AllTexts.starBuckDate,
@@ -880,6 +899,7 @@ class AllTexts{
 
     ), OrderModel(
         id: AllTexts.starBuckId,
+        image: AllImages.pizzaFour,
         title: AllTexts.starbucks,
         price: AllTexts.orderPrice,
         date: AllTexts.starBuckDate,
@@ -889,6 +909,7 @@ class AllTexts{
 
     ), OrderModel(
         id: AllTexts.starBuckId,
+        image: AllImages.pizzaOne,
         title: AllTexts.starbucks,
         price: AllTexts.orderPrice,
         date: AllTexts.starBuckDate,
@@ -952,9 +973,9 @@ class AllTexts{
   ];
 
   static List<PopularItemCardModel> popularFastFoods = [
-    PopularItemCardModel(title: AllTexts.europeanPizza, des: AllTexts.europeanSub),
-    PopularItemCardModel(title: AllTexts.buffaloPizza, des: AllTexts.buffaloSub),
-    PopularItemCardModel(title: AllTexts.buffaloPizza, des: AllTexts.buffaloSub),
+    PopularItemCardModel(image: AllImages.pizzaOne, title: AllTexts.europeanPizza, des: AllTexts.europeanSub),
+    PopularItemCardModel(image: AllImages.pizzaTwo, title: AllTexts.buffaloPizza, des: AllTexts.buffaloSub),
+    PopularItemCardModel(image: AllImages.pizzaThree, title: AllTexts.buffaloPizza, des: AllTexts.buffaloSub),
   ];
 }
 
