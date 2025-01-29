@@ -28,7 +28,7 @@ class _HomeOneCatCardState extends State<HomeOneCatCard> {
         borderRadius: BorderRadius.circular(39),
         onTap: (){
           // called clicked function
-          widget.clickedFunc(widget.index);
+          widget.clickedFunc(widget.model.title,widget.index);
           // navigating to food business screen
           Navigator.push(context, MaterialPageRoute(
             builder: (context)=>FoodBusinessScreen(foodType: widget.model.title,)

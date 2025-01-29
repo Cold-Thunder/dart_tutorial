@@ -99,12 +99,12 @@ class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
               iconSvg: AllImages.searchWhiteIcon,
               iconFunc: searchIconFunc,
             ),
-            const SizedBox(width: 10),
-            IconButtons(
-              iconSvg: AllImages.settingMenuIcon,
-              color: AllColors.backIconGrey,
-            ),
-            const SizedBox(width: 10),
+            const SizedBox(width: 15),
+            // IconButtons(
+            //   iconSvg: AllImages.settingMenuIcon,
+            //   color: AllColors.backIconGrey,
+            // ),
+            // const SizedBox(width: 10),
           ],
         ),
         body: SingleChildScrollView(
