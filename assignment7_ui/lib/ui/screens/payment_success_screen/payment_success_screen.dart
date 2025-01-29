@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/tracking_order_screen/track_order_screen.dart';
 import 'package:assignment7_ui/ui/widgets/elevated_button_design.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';

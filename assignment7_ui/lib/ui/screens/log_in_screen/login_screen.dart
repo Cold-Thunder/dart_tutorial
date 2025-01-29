@@ -1,10 +1,10 @@
 import 'package:assignment7_ui/config/models/social_media_model.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/forget_pass_screen/forget_pass_screen.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v1.dart';
 import 'package:assignment7_ui/ui/screens/signup_screen/signup_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auth_type_des.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/auth_type_heading.dart';

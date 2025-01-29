@@ -1,5 +1,5 @@
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';

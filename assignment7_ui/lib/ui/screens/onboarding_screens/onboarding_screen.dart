@@ -1,5 +1,5 @@
 
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/log_in_screen/login_screen.dart';
 import 'package:assignment7_ui/ui/screens/onboarding_screens/onboarding1.dart';
 import 'package:assignment7_ui/ui/screens/onboarding_screens/onboarding2.dart';

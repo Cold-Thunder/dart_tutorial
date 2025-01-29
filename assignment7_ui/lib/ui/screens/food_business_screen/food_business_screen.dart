@@ -1,9 +1,9 @@
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/search_screen/search_screen.dart';
 import 'package:assignment7_ui/ui/widgets/icon_buttons.dart';
 import 'package:assignment7_ui/ui/widgets/popular_items_widget.dart';
@@ -113,7 +113,7 @@ class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
               child: Column(spacing: 20, children: [
                 HeadingWidget(title: '${AllTexts.popular} $dropdownItem'),
                 // const SizedBox(height: 20),
-                // food items will be showen here
+                // food items will be shown here
                 LayoutBuilder(builder: (context, constraints) {
                   int crossCount = constraints.maxWidth < 320 ? 1 : 2;
                   int crossCountTwo =

@@ -1,5 +1,5 @@
 import 'package:assignment7_ui/config/models/delivery_man_message.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/delivery_man_message/widgets/message_reciever_widget.dart';
 import 'package:assignment7_ui/ui/screens/delivery_man_message/widgets/message_sender_widget.dart';
 import 'package:flutter/material.dart';

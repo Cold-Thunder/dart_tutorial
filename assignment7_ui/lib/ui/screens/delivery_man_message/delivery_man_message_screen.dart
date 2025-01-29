@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/delivery_man_message/widgets/message_input_field.dart';
 import 'package:assignment7_ui/ui/screens/delivery_man_message/widgets/message_sender_widget.dart';
 import 'package:assignment7_ui/ui/screens/delivery_man_message/widgets/messages_section.dart';

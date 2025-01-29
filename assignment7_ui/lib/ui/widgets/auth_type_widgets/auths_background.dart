@@ -1,4 +1,4 @@
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

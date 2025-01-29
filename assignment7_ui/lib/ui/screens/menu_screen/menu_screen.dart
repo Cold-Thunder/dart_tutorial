@@ -1,7 +1,7 @@
 import 'package:assignment7_ui/config/models/personal_profile_item_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/personalProfileDatas.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_menu_icon_button.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';

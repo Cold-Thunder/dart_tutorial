@@ -1,8 +1,8 @@
 import 'package:assignment7_ui/config/models/cart_item_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/edit_cart_screen/widgets/edit_cart_bottom_section.dart';
 import 'package:assignment7_ui/ui/screens/edit_cart_screen/widgets/item_card.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';

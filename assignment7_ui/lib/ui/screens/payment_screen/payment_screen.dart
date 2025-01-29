@@ -1,8 +1,8 @@
 import 'package:assignment7_ui/config/models/small_card_modal.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/add_card_screen/add_card_screen.dart';
 import 'package:assignment7_ui/ui/screens/payment_screen/widgets/cards_widgets.dart';
 import 'package:assignment7_ui/ui/screens/payment_success_screen/payment_success_screen.dart';

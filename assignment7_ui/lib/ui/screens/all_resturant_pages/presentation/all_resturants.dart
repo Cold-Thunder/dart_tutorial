@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/widgets/app_bar_title_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
 import 'package:assignment7_ui/ui/widgets/open_rest_card.dart';
@@ -17,7 +17,7 @@ class AllResturants extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: BackIcon(color: AllColors.backIconGrey),
-        title: AppBarTitleWidget(title: AllTexts.allResturants),
+        title: AppBarTitleWidget(title: AllTexts.allRestaurants),
       ),
       body: SingleChildScrollView(
         child: Container(

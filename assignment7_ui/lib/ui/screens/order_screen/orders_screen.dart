@@ -1,5 +1,5 @@
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/menu_screen/menu_screen.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/widgets/history_screen.dart';
@@ -47,7 +47,7 @@ class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderSt
     return Scaffold(
       appBar: AppBar(
         leading: BackIcon(color: AllColors.backIconGrey),
-        title: AppBarTitleWidget(title: AllTexts.appBarTitle),
+        title: AppBarTitleWidget(title: AllTexts.orderAppBarTitle),
         actions: [
           AppBarMenuIconButton(
             color: AllColors.backIconGrey,

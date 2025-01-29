@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:assignment7_ui/config/models/home_page_category_model.dart';
 import 'package:assignment7_ui/config/models/resturant_model.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/all_resturant_pages/presentation/all_resturants.dart';
 import 'package:assignment7_ui/ui/screens/drawer_screen/drawer_screen.dart';
 import 'package:assignment7_ui/ui/screens/food_business_screen/food_business_screen.dart';

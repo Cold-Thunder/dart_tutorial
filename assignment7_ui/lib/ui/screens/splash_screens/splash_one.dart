@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:assignment7_ui/ui/screens/splash_screens/splash_two.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:flutter/material.dart';
 
 class SplashOne extends StatefulWidget {

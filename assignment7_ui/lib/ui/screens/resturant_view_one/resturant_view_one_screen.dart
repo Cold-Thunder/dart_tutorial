@@ -2,7 +2,7 @@ import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_one/widgets/activities.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_one/widgets/appbar_action_button.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_one/widgets/food_type_button.dart';

@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/ui/screens/edit_cart_screen/edit_cart_screen.dart';
 import 'package:assignment7_ui/ui/screens/food_details_screen/food_details_screen1.dart';

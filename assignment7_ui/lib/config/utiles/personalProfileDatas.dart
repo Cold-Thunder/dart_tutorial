@@ -1,6 +1,7 @@
 import 'package:assignment7_ui/config/models/personal_profile_item_model.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/edit_cart_screen/edit_cart_screen.dart';
+import 'package:assignment7_ui/ui/screens/favourit_screen/favourit_screen.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v1.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v2.dart';
 import 'package:assignment7_ui/ui/screens/home_screens/home_v3.dart';
@@ -8,7 +9,7 @@ import 'package:assignment7_ui/ui/screens/log_in_screen/login_screen.dart';
 import 'package:assignment7_ui/ui/screens/my_address_screen/my_address_screen.dart';
 import 'package:assignment7_ui/ui/screens/payment_screen/payment_screen.dart';
 import 'package:assignment7_ui/ui/screens/personal_profile_screen/personal_profile_screen.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 
 class PersonalProfileDatas{
   static List<PersonalProfileItemModel> homeScreens = [
@@ -29,7 +30,7 @@ class PersonalProfileDatas{
 
   static List<PersonalProfileItemModel> profileCartInfos = [
     PersonalProfileItemModel(icon: AllImages.cartSmallIcon, title: AllTexts.cart, widget: EditCartScreen()),
-    PersonalProfileItemModel(icon: AllImages.favIcon, title: AllTexts.favourite,),
+    PersonalProfileItemModel(icon: AllImages.favIcon, title: AllTexts.favouriteCap, widget: FavouriteScreen()),
     PersonalProfileItemModel(icon: AllImages.notificationIcon, title: AllTexts.notifications,),
     PersonalProfileItemModel(icon: AllImages.paymentIcon, title: AllTexts.paymentMethod, widget: PaymentScreen()),
   ];

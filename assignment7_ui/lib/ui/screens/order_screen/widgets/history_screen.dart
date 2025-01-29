@@ -1,5 +1,5 @@
 import 'package:assignment7_ui/config/models/order_model.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/widgets/order_history_widget.dart';
 import 'package:flutter/material.dart';
 

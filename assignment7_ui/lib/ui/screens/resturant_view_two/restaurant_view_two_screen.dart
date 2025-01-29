@@ -1,7 +1,7 @@
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/food_details_screen_two/widgets/top_grey_card.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_two/widgets/activities.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_two/widgets/appbar_action_button.dart';

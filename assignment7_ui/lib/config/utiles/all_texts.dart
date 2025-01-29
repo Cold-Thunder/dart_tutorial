@@ -6,7 +6,7 @@ import 'package:assignment7_ui/config/models/order_item.dart';
 import 'package:assignment7_ui/config/models/order_model.dart';
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
 import 'package:assignment7_ui/config/models/resturant_model.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 
 class AllTexts{
   static String home1 = 'Home One';
@@ -15,7 +15,10 @@ class AllTexts{
 
   static String notFound = 'Not Found';
 
-  static String allResturants = 'All Resturants';
+  static String allRestaurants = 'All Restaurants';
+  static String favourites = 'Favourites';
+  static String restaurants = 'Restaurants';
+  static String foodItems = 'Items';
 
   static String addCard = 'Add Card';
   static String cardHolder = 'CARD HOLDER NANE';

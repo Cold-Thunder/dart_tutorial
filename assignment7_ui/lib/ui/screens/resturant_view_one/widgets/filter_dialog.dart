@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_one/widgets/close_button_widget.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_one/widgets/filter_dialog_title.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_one/widgets/filter_rating_card.dart';

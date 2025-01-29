@@ -1,5 +1,5 @@
 import 'package:assignment7_ui/config/models/personal_profile_item_model.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/ui/screens/personal_profile_screen/widgets/icon_shape_widget.dart';
 import 'package:flutter/material.dart';

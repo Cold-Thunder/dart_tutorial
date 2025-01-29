@@ -1,7 +1,7 @@
 import 'package:assignment7_ui/config/models/order_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
-import 'package:assignment7_ui/config/utiles/texts/all_texts.dart';
+import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/widgets/elevated_button_design.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
 import 'package:assignment7_ui/ui/screens/order_screen/widgets/order_card_price_section.dart';

@@ -1,6 +1,6 @@
 import 'package:assignment7_ui/config/models/resturant_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/images/all_images.dart';
+import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/ui/screens/resturant_view_one/resturant_view_one_screen.dart';
 import 'package:assignment7_ui/ui/widgets/grey_card.dart';
