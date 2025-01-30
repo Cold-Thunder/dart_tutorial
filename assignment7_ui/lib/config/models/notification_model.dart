@@ -1,10 +1,14 @@
 class NotificationModel {
-  final String icon;
+  final bool isNew;
   final String title;
   final String subTitle;
+  final String time;
+  final String date;
   NotificationModel({
-    required this.icon,
+    required this.isNew,
     required this.title,
-    required this.subTitle
+    required this.subTitle,
+    required this.time,
+    required this.date
 });
 }

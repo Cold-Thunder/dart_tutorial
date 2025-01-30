@@ -161,5 +161,9 @@ static String restaurantFive = 'assets/images/restaurant5.jpeg';
   static String checkIcon = 'assets/icons/check_icon.svg';
   static String loadingIcon = 'assets/icons/loading_icon.svg';
 
+  static String bellWhite = 'assets/icons/bell.svg';
+  static String bellOrange = 'assets/icons/bell_orange.svg';
+
+  static String downArrowIcon = 'assets/icons/down_arrow.svg';
 
 }

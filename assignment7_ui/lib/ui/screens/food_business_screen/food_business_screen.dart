@@ -4,145 +4,137 @@ import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/all_texts.dart';
+import 'package:assignment7_ui/ui/screens/food_business_screen/pages/foods_page.dart';
+import 'package:assignment7_ui/ui/screens/food_business_screen/pages/open_restaurants_page.dart';
 import 'package:assignment7_ui/ui/screens/search_screen/search_screen.dart';
 import 'package:assignment7_ui/ui/widgets/icon_buttons.dart';
-import 'package:assignment7_ui/ui/widgets/popular_items_widget.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
-import 'package:assignment7_ui/ui/widgets/open_rest_card.dart';
-import 'package:assignment7_ui/ui/screens/search_screen/widgets/heading_widget.dart';
 import 'package:flutter/material.dart';
 
 class FoodBusinessScreen extends StatefulWidget {
   final String? foodType;
+
   const FoodBusinessScreen({this.foodType, super.key});
 
   @override
   State<FoodBusinessScreen> createState() => _FoodBusinessScreenState();
 }
 
-class _FoodBusinessScreenState extends State<FoodBusinessScreen> {
+class _FoodBusinessScreenState extends State<FoodBusinessScreen> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+
   final List<PopularItemCardModel> popularItems = AllTexts.popularItems;
   final List<RestaurantModel> openRestaurants = AllTexts.openRestaurantsList;
   final List<String> categoryItems = AllTexts.categories;
 
-
-
   // all foods will be stored here
   final List<PopularItemCardModel> allFoods = AllTexts.allFoodItems;
+
   // food type is selected from dropdown menu
   List<PopularItemCardModel> selectedItems = [];
   String dropdownItem = AllTexts.all;
 
-
-  searchIconFunc(){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchScreen()));
+  searchIconFunc() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => SearchScreen()));
   }
 
   // filtering items method
-  selectedFoodType(String selectedItem){
+  selectedFoodType(String selectedItem) {
     setState(() {
       dropdownItem = selectedItem;
       selectedItems = dropdownItem != AllTexts.all
-          ? allFoods.where((item)=> item.tag!.contains(dropdownItem)).toList()
-      : allFoods;
+          ? allFoods.where((item) => item.tag!.contains(dropdownItem)).toList()
+          : allFoods;
     });
   }
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
 
-    if(widget.foodType != null){
+    if (widget.foodType != null) {
       selectedFoodType(widget.foodType!);
     }
 
-    if(widget.foodType != null){
-      dropdownItem= widget.foodType!;
+    if (widget.foodType != null) {
+      dropdownItem = widget.foodType!;
     }
+
+    _tabController = TabController(length: 2, vsync: this);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          leading: BackIcon(color: AllColors.backIconGrey),
-          // drop down title
-          title: Container(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 17),
-              height: 45,
-              decoration: BoxDecoration(
-                  color: AllColors.appbarWhite,
-                  borderRadius: BorderRadius.circular(33),
-                  border: Border.all(width: 1, color: AllColors.menuGrey)),
-              child: DropdownButton(
-                value: dropdownItem,
-                elevation: 3,
-                dropdownColor: AllColors.appbarWhite,
-                underline: SizedBox(),
-                iconEnabledColor: AllColors.buttonOrange,
-                onChanged: (value) {
-                  selectedFoodType(value!);
-                },
-                // category items
-                items: categoryItems.map((item){
-                  return  DropdownMenuItem(
-                    value: item,
-                    child: Text(
-                      item,
-                      style: TextStyles.profileNameStyle.copyWith(fontSize: 12),
-                    ),
-                  );
-                }).toList(),
-              ),),
-          actions: [
-            IconButtons(
-              iconSvg: AllImages.searchWhiteIcon,
-              iconFunc: searchIconFunc,
-            ),
-            const SizedBox(width: 15),
-          ],
+      appBar: AppBar(
+        leading: BackIcon(color: AllColors.backIconGrey),
+        // drop down title
+        title: Container(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 17),
+          height: 45,
+          decoration: BoxDecoration(
+              color: AllColors.appbarWhite,
+              borderRadius: BorderRadius.circular(33),
+              border: Border.all(width: 1, color: AllColors.menuGrey)),
+          child: DropdownButton(
+            value: dropdownItem,
+            elevation: 3,
+            dropdownColor: AllColors.appbarWhite,
+            underline: SizedBox(),
+            iconEnabledColor: AllColors.buttonOrange,
+            onChanged: (value) {
+              selectedFoodType(value!);
+            },
+            // category items
+            items: categoryItems.map((item) {
+              return DropdownMenuItem(
+                value: item,
+                child: Text(
+                  item,
+                  style: TextStyles.profileNameStyle.copyWith(fontSize: 12),
+                ),
+              );
+            }).toList(),
+          ),
         ),
-        body: SingleChildScrollView(
-          child: Padding(
-              padding: const EdgeInsets.all(15),
-              child: Column(spacing: 20, children: [
-                HeadingWidget(title: '${AllTexts.popular} $dropdownItem'),
-                // const SizedBox(height: 20),
-                // food items will be shown here
-                LayoutBuilder(builder: (context, constraints) {
-                  int crossCount = constraints.maxWidth < 320 ? 1 : 2;
-                  int crossCountTwo =
-                      constraints.maxWidth < 650 ? crossCount : 4;
-                  int crossCountThree =
-                      constraints.maxWidth < 980 ? crossCountTwo : 6;
-                  return GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: crossCountThree,
-                          mainAxisExtent: 174,
-                          crossAxisSpacing: 20,
-                          mainAxisSpacing: 20),
-                      shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
-                      itemCount: selectedItems.length,
-                      itemBuilder: (context, index) {
-                        return PopularItemsWidget(model: selectedItems[index]);
-                      });
-                }),
-                HeadingWidget(title: AllTexts.openResturants),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  child: ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: openRestaurants.length,
-                    itemBuilder: (context, index) {
-                      return OpenRestCard(
-                        model: openRestaurants[index],
-                      );
-                    },
-                  ),
-                )
-              ])),
-        ));
+        actions: [
+          IconButtons(
+            iconSvg: AllImages.searchWhiteIcon,
+            iconFunc: searchIconFunc,
+          ),
+          const SizedBox(width: 15),
+        ],
+
+        // tabbar section
+        // bottoms section
+        bottom: TabBar(
+          controller: _tabController,
+            indicatorSize: TabBarIndicatorSize.tab,
+            indicatorColor: AllColors.buttonOrange,
+            labelStyle: TextStyles.elevatedButtonStyle.copyWith(
+              color: AllColors.buttonOrange
+            ),
+            unselectedLabelStyle: TextStyles.elevatedButtonStyle.copyWith(
+              color: AllColors.inactiveTypeGrey
+            ),
+            tabs: [
+            Tab(
+              text: AllTexts.foodItems
+            ),
+              Tab(
+                text: AllTexts.openResturants,
+              )
+        ])
+      ),
+      body: TabBarView(
+        controller: _tabController,
+          children: [
+            FoodsPage(dropdownItem: dropdownItem, selectedItems: selectedItems),
+            OpenRestaurantsPage(openRestaurants: openRestaurants)
+          ]
+      ),
+    );
   }
 }

@@ -1,7 +1,9 @@
 import 'package:assignment7_ui/config/models/cart_item_model.dart';
 import 'package:assignment7_ui/config/models/delivery_man_message.dart';
+import 'package:assignment7_ui/config/models/faq_model.dart';
 import 'package:assignment7_ui/config/models/home_page_category_model.dart';
 import 'package:assignment7_ui/config/models/home_v2_cat_model.dart';
+import 'package:assignment7_ui/config/models/notification_model.dart';
 import 'package:assignment7_ui/config/models/order_item.dart';
 import 'package:assignment7_ui/config/models/order_model.dart';
 import 'package:assignment7_ui/config/models/popular_item_card_model.dart';
@@ -14,6 +16,8 @@ class AllTexts{
   static String home3 = 'Home Three';
 
   static String notFound = 'Not Found';
+
+  static String faqAndSupport = 'FAQs and Support';
 
   static String allRestaurants = 'All Restaurants';
   static String favourites = 'Favourites';
@@ -241,6 +245,9 @@ class AllTexts{
   static String indianCuisine4 = "Garlic Naan";
   static String indianCuisine5 = "Chole Bhature";
 
+  static String notifTime = '7.00pm';
+  static String date = '30/01/2025';
+
 
 
 
@@ -380,7 +387,7 @@ class AllTexts{
     PopularItemCardModel(
         tag: AllTexts.burger,
         image:AllImages.burgerTwo,
-        title: AllTexts.burger5,
+        title: AllTexts.burger2,
         subTitle: AllTexts.popCardSub1,
         price: AllTexts.popCardPrice1
     ),
@@ -967,6 +974,16 @@ class AllTexts{
   static String europeanSub = 'Uttora Coffe House';
   static String buffaloSub = 'Cafenio Coffee Club';
 
+
+  static String faqTitleOne = 'How do change my password?';
+  static String faqTitleTwo = 'How do i logout my account?';
+  static String faqTitleThree = 'How do i block a restaurant?';
+  static String faqTitleFour = 'How do I block a food?';
+  static String faqTitleFive = 'How do i share my account id?';
+
+  static String faqAnswer = "To change your password. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.";
+
+
   static List<String> keywords = [AllTexts.pizza,  AllTexts.sandwich, AllTexts.burger, AllTexts.sandwich];
 
   static List<RestaurantModel> suggestRestaurants = [
@@ -980,6 +997,25 @@ class AllTexts{
     PopularItemCardModel(image: AllImages.pizzaTwo, title: AllTexts.buffaloPizza, des: AllTexts.buffaloSub),
     PopularItemCardModel(image: AllImages.pizzaThree, title: AllTexts.buffaloPizza, des: AllTexts.buffaloSub),
   ];
+
+
+  static List<NotificationModel> notificationsList = [
+    NotificationModel(isNew: true, title: AllTexts.restaurants, subTitle: AllTexts.restaurantDes, time: AllTexts.notifTime, date: AllTexts.date),
+    NotificationModel(isNew: false, title: AllTexts.restaurants, subTitle: AllTexts.restaurantDes, time: AllTexts.notifTime, date: AllTexts.date),
+    NotificationModel(isNew: true, title: AllTexts.restaurants, subTitle: AllTexts.restaurantDes, time: AllTexts.notifTime, date: AllTexts.date),
+    NotificationModel(isNew: true, title: AllTexts.restaurants, subTitle: AllTexts.restaurantDes, time: AllTexts.notifTime, date: AllTexts.date),
+    NotificationModel(isNew: false, title: AllTexts.restaurants, subTitle: AllTexts.restaurantDes, time: AllTexts.notifTime, date: AllTexts.date),
+  ];
+
+
+  static List<FaqModel> faqsList = [
+    FaqModel(title: AllTexts.faqTitleOne, des: AllTexts.faqAnswer),
+    FaqModel(title: AllTexts.faqTitleTwo, des: AllTexts.faqAnswer),
+    FaqModel(title: AllTexts.faqTitleThree, des: AllTexts.faqAnswer),
+    FaqModel(title: AllTexts.faqTitleFour, des: AllTexts.faqAnswer),
+    FaqModel(title: AllTexts.faqTitleFive, des: AllTexts.faqAnswer),
+  ];
+
 }
 
 

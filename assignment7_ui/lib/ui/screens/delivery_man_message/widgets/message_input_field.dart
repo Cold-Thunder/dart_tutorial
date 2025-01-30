@@ -2,7 +2,6 @@ import 'package:assignment7_ui/config/utiles/all_colors.dart';
 import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/all_texts.dart';
-import 'package:assignment7_ui/ui/screens/delivery_man_call_screen/delivery_man_call_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -37,9 +36,7 @@ class MessageInputField extends StatelessWidget {
           ),
           suffixIcon: InkWell(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context)=>DeliveryManCallScreen()
-                ));
+
               },
               splashColor: AllColors.transparent,
               highlightColor: AllColors.transparent,

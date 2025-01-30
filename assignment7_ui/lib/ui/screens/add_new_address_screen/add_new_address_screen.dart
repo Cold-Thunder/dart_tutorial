@@ -4,7 +4,6 @@ import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/add_new_address_screen/widgets/label_buttons.dart';
 import 'package:assignment7_ui/ui/screens/add_new_address_screen/widgets/left_right_input.dart';
 import 'package:assignment7_ui/ui/screens/add_new_address_screen/widgets/title_section.dart';
-import 'package:assignment7_ui/ui/screens/delivery_man_message/delivery_man_message_screen.dart';
 import 'package:assignment7_ui/ui/widgets/auth_type_widgets/text_input_field.dart';
 import 'package:assignment7_ui/ui/widgets/back_icon.dart';
 import 'package:assignment7_ui/ui/widgets/elevated_button_design.dart';
@@ -47,7 +46,6 @@ class _AddNewAddressScreenState extends State<AddNewAddressScreen> {
         height: 65,
         child: ElevatedButtonDesign(
           title: AllTexts.saveLocation,
-          screen: DeliveryManMessageScreen(),
         ),
       ),
       body: SingleChildScrollView(

@@ -198,4 +198,16 @@ class TextStyles{
         fontWeight: FontWeight.w800
     );
 
+    static TextStyle expansionTitleStyle = TextStyle(
+        fontSize: 16,
+        fontFamily: 'Sen_ExtraBold',
+        fontWeight: FontWeight.w800
+    );
+
+    static TextStyle expansionSubtitleStyle = TextStyle(
+        fontSize: 14,
+        fontFamily: 'Sen_Regular',
+        fontWeight: FontWeight.w400,
+    );
+
 }
