@@ -33,6 +33,7 @@ class OpenRestCard extends StatelessWidget {
           children: [
             Hero(
               tag: model.name,
+                transitionOnUserGestures: true,
                 child: GreyCard(height: 137, width: width, image: model.image,),
             ),
             const SizedBox(height: 10),

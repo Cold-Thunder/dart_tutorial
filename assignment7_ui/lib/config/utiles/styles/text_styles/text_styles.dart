@@ -165,7 +165,7 @@ class TextStyles{
 
     static TextStyle cartItemHeadTextStyle = TextStyle(
         fontSize: 18,
-        color: AllColors.appbarWhite,
+        color: AllColors.headingBlack,
         fontFamily: 'Sen_Regular',
         fontWeight: FontWeight.w400,
         overflow: TextOverflow.ellipsis
@@ -173,7 +173,7 @@ class TextStyles{
 
     static TextStyle cartItemSizeTextStyle = TextStyle(
         fontSize: 18,
-        color: AllColors.white50,
+        color: AllColors.hintTextGrey,
         fontFamily: 'Sen_Regular',
         fontWeight: FontWeight.w400,
     );

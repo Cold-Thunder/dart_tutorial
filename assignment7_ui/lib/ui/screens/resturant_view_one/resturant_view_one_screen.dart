@@ -66,6 +66,7 @@ class _RestaurantViewOneScreenState extends State<RestaurantViewOneScreen> {
                   padding: const EdgeInsets.only(right: 15.0),
                   child: Hero(
                       tag: widget.model.name,
+                      transitionOnUserGestures: true,
                       child: GreyCard(height: 150, width: width, borderRad: 32,image: widget.model.image),
                   ),
                 ),

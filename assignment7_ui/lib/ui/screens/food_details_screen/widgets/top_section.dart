@@ -21,6 +21,7 @@ class _TopSectionState extends State<TopSection> {
         children:[
           Hero(
               tag: widget.title,
+              transitionOnUserGestures: true,
               child: GreyCard(height: 184, width: width, borderRad: 32, image: widget.image)),
           Positioned(
             right: 20,

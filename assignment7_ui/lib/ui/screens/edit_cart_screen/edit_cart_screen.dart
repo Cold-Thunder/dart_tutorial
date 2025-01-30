@@ -1,6 +1,5 @@
 import 'package:assignment7_ui/config/models/cart_item_model.dart';
 import 'package:assignment7_ui/config/utiles/all_colors.dart';
-import 'package:assignment7_ui/config/utiles/all_images.dart';
 import 'package:assignment7_ui/config/utiles/styles/text_styles/text_styles.dart';
 import 'package:assignment7_ui/config/utiles/all_texts.dart';
 import 'package:assignment7_ui/ui/screens/edit_cart_screen/widgets/edit_cart_bottom_section.dart';
@@ -49,11 +48,9 @@ class _EditCartScreenState extends State<EditCartScreen> {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: AllColors.cartBlack,
       appBar: AppBar(
-        backgroundColor: AllColors.cartBlack,
-        title: AppBarTitleWidget(title: AllTexts.cart, color: AllColors.appbarWhite),
-        leading: BackIcon(color: AllColors.cartCardBlack, iconPng: AllImages.backWhiteIcon,),
+        title: AppBarTitleWidget(title: AllTexts.cart,),
+        leading: BackIcon(color: AllColors.backIconGrey,),
         actions: [
           InkWell(
             splashColor: AllColors.transparent,
@@ -98,7 +95,7 @@ class _EditCartScreenState extends State<EditCartScreen> {
           ),
           DraggableScrollableSheet(
             initialChildSize: 50/height,
-            maxChildSize: 350/height,
+            maxChildSize: 280/height,
             minChildSize: 50/height,
             builder: (context, controller){
               return SingleChildScrollView(
@@ -107,7 +104,7 @@ class _EditCartScreenState extends State<EditCartScreen> {
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).viewInsets.bottom
                     ),
-                    height: 310,
+                    height: 250,
                     width: width,
                     decoration: BoxDecoration(
                         color: AllColors.appbarWhite,

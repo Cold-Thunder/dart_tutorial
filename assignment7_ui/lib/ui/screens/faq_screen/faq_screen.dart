@@ -23,12 +23,9 @@ class FaqScreen extends StatelessWidget {
               padding: const EdgeInsets.all(15),
                   child: Column(
                     children: [
-                      ListView.separated(
+                      ListView.builder(
                         shrinkWrap: true,
                         physics: NeverScrollableScrollPhysics(),
-                        separatorBuilder: (context, index){
-                          return SizedBox(height: 10);
-                        },
                         itemCount: faqLists.length,
                         itemBuilder: (context, index){
                           return FaqTile(model: faqLists[index],);

@@ -44,6 +44,7 @@ class PopularItemsWidget extends StatelessWidget {
           // top grey box
           Hero(
             tag: model.title,
+            transitionOnUserGestures: true,
             child: GreyCard(
               height: 75,
               width: 114,

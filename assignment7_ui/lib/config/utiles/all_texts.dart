@@ -657,46 +657,26 @@ class AllTexts{
 
   static List<CartItemModel> cartItem = [
     CartItemModel(
+        image: AllImages.pizzaOne,
         title: AllTexts.pizzaCalzone,
         price: AllTexts.price,
         size: AllTexts.size,
-        count: 2),
+        count: 2
+    ),
     CartItemModel(
-        title: AllTexts.pizzaCalzone,
-        price: AllTexts.price,
-        size: AllTexts.size,
-        count: 1),
-    CartItemModel(
-        title: AllTexts.pizzaCalzone,
-        price: AllTexts.price,
-        size: AllTexts.size,
-        count: 1),
-    CartItemModel(
+        image: AllImages.pizzaTwo,
         title: AllTexts.pizzaCalzone,
         price: AllTexts.price,
         size: AllTexts.size,
         count: 1),
     CartItemModel(
+        image: AllImages.pizzaThree,
         title: AllTexts.pizzaCalzone,
         price: AllTexts.price,
         size: AllTexts.size,
         count: 1),
     CartItemModel(
-        title: AllTexts.pizzaCalzone,
-        price: AllTexts.price,
-        size: AllTexts.size,
-        count: 1),
-    CartItemModel(
-        title: AllTexts.pizzaCalzone,
-        price: AllTexts.price,
-        size: AllTexts.size,
-        count: 1),
-    CartItemModel(
-        title: AllTexts.pizzaCalzone,
-        price: AllTexts.price,
-        size: AllTexts.size,
-        count: 1),
-    CartItemModel(
+        image: AllImages.pizzaFour,
         title: AllTexts.pizzaCalzone,
         price: AllTexts.price,
         size: AllTexts.size,

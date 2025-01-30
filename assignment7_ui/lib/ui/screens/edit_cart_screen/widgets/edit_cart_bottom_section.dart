@@ -41,6 +41,7 @@ class _EditCartBottomSectionState extends State<EditCartBottomSection> {
             child: GreyCard(height: 5, width: 55),
           ),
           const SizedBox(height: 10),
+          // top section and edit button
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -67,14 +68,14 @@ class _EditCartBottomSectionState extends State<EditCartBottomSection> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: AllColors.inputFieldWhite),
-            child: Text(newAddress, style: TextStyles.hintTextStyle),
+            child: Text(newAddress, style: TextStyles.hintTextStyle, maxLines: 1, overflow: TextOverflow.ellipsis),
           ),
           Expanded(
             child: Row(spacing: 10, children: [
-              Text("${AllTexts.total}:", style: TextStyles.hintTextStyle),
+              Text("${AllTexts.total}:", style: TextStyles.appBarTitleStyle),
               Text(
                 "\$${widget.totalPrice}",
-                style: TextStyles.appBarTitleStyle.copyWith(fontSize: 30),
+                style: TextStyles.appBarTitleStyle.copyWith(fontSize: 30, color: AllColors.buttonOrange),
               ),
             ]),
           ),
