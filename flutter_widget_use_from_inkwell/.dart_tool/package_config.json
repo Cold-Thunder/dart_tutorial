@@ -134,6 +134,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "scrollable_positioned_list",
+      "rootUri": "file:///home/ColdThunder/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///home/ColdThunder/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -212,7 +218,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-02-02T12:54:22.161063Z",
+  "generated": "2025-02-02T17:34:56.195285Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///home/ColdThunder/flutter",
