@@ -22,6 +22,7 @@ import 'package:widgets_use/ui/widgets_use/inkwell_use.dart';
 import 'package:widgets_use/ui/widgets_use/layoutbuilder_widget_use/layoutbuilder_widget_uses.dart';
 import 'package:widgets_use/ui/widgets_use/list_wheel_scroll_view/list_wheel_scroll_view.dart';
 import 'package:widgets_use/ui/widgets_use/progress_bar_widget.dart';
+import 'package:widgets_use/ui/widgets_use/scroll_controller_use/practicing_scroll_cotroller.dart';
 import 'package:widgets_use/ui/widgets_use/slider/slider_use.dart';
 import 'package:widgets_use/ui/widgets_use/stack_use/stack_widget_use.dart';
 import 'package:widgets_use/ui/widgets_use/tool_tip_use.dart';
@@ -106,7 +107,8 @@ class HomePage extends StatelessWidget {
               ElevatedButtonUse(title: "Image Slider", screen:ImageSliderUse()),
               ElevatedButtonUse(title: "Animation", screen: AnimationUses()),
               ElevatedButtonUse(title: "Clip Path Use", screen: ClipPathUse()),
-              ElevatedButtonUse(title: "Wrap Widget Use", screen: WrapWidgetUses())
+              ElevatedButtonUse(title: "Wrap Widget Use", screen: WrapWidgetUses()),
+              ElevatedButtonUse(title: "Scroll Controller", screen: PracticingScrollCotroller()),
             ],
           ),
         ),
