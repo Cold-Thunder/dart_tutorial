@@ -48,6 +48,10 @@ class _HomeScreenState extends State<HomeScreen> {
     // Navigator.pushNamed(context, RoutesHelper.bestDealScreen,);
   }
 
+  productRemoveButtonFunc(ProductModel model){
+    // Navigator.pushNamed(context, RoutesHelper.bestDealScreen,);
+  }
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -126,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemCount: productLists.length,
                   shrinkWrap: true,
                   itemBuilder: (context, index){
-                    return ProductCard(model: productLists[index], addFunc: productAddButtonFunc,);
+                    return ProductCard(model: productLists[index], addFunc: productAddButtonFunc, removeFunc: productRemoveButtonFunc,);
                   }
                 )
               ),

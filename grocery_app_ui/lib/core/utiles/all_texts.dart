@@ -12,6 +12,27 @@ class AllTexts{
     static String recentSearch = 'Recent Search';
     static String trending = 'Trending Now';
 
+    static String deliveryFree = 'Delivery Free';
+    static String free = 'Free';
+
+    static String deliveryTo = 'Delivery To';
+
+    static String change = 'Change';
+    static String payUsing = 'Pay Using';
+
+    static String placeOrder = 'Place Order';
+
+    static String paymentType = 'Visa 6589';
+
+    static String groundTotal = 'Ground Total';
+
+    static String checkout = 'Checkout';
+
+    static String itemTotal = 'Item Total';
+    static String discount = 'Discount';
+
+    static String applyCoupon = 'APPLY COUPON';
+
     static String sortBy = 'Sort By';
     static String noItemFound= 'No Item Found';
 
@@ -19,6 +40,7 @@ class AllTexts{
     static String popularity = 'Popularity';
     static String lowToHigh = 'Price: Low to High';
 
+    static String beforeYouCheck  = 'Before you checkout';
 
     static String showingResult = 'Showing Result for ';
 

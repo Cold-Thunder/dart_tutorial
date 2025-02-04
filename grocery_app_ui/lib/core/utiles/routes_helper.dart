@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:grocery_app_ui/features/cart_screen/cart_screen.dart';
 
 import '../../features/best_deal_screen/best_deal_screen.dart';
 import '../../features/home_screen/home_screen.dart';
@@ -16,6 +17,7 @@ class RoutesHelper{
   static String homeScreen = '/homeScreen';
   static String bestDealScreen = '/bestDealScreen';
   static String searchScreen = '/searchScreen';
+  static String cartScreen = '/cartScreen';
 
   static Map<String, WidgetBuilder> allRoutes(){
     return {
@@ -25,7 +27,8 @@ class RoutesHelper{
       RoutesHelper.signupPage: (context)=>SignupScreen(),
       RoutesHelper.homeScreen: (context)=>HomeScreen(),
       RoutesHelper.bestDealScreen: (context)=>BestDealScreen(),
-      RoutesHelper.searchScreen: (context)=>SearchScreen()
+      RoutesHelper.searchScreen: (context)=>SearchScreen(),
+      RoutesHelper.cartScreen: (context)=>CartScreen()
     };
   }
 }

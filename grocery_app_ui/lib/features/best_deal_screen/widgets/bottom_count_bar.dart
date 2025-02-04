@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:grocery_app_ui/core/utiles/routes_helper.dart';
 import '../../../core/models/product_model.dart';
 import '../../../core/utiles/all_colors.dart';
 import '../../../core/utiles/all_images.dart';
@@ -66,7 +67,9 @@ class BottomCountBar extends StatelessWidget {
           InkWell(
             splashColor: AllColors.transparent,
             highlightColor: AllColors.transparent,
-            onTap: (){},
+            onTap: (){
+              Navigator.pushNamed(context, RoutesHelper.cartScreen);
+            },
             child: Row(
               children: [
                 Text(

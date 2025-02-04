@@ -9,6 +9,13 @@ class AllTextStyles{
       fontFamily: 'Poppins_Regular',
     );
 
+    static TextStyle increDecreStyle = TextStyle(
+      fontSize: 25,
+      color: AllColors.mainGreen,
+        fontFamily: 'Poppins_Bold',
+        fontWeight: FontWeight.bold
+    );
+
     static TextStyle onboardHeadingStyle = TextStyle(
       fontSize: 24,
       color: AllColors.fontBlack,
@@ -62,6 +69,13 @@ class AllTextStyles{
       decorationThickness: 2
     );
 
+    static TextStyle cartSizeTextStyle = TextStyle(
+        fontSize: 16,
+        color: AllColors.amountGrey,
+        fontFamily: 'Poppins_Regular',
+
+    );
+
     static TextStyle dropDownMenuStyle = TextStyle(
       fontSize: 12,
       color: AllColors.amountGrey,
@@ -69,7 +83,7 @@ class AllTextStyles{
     );
 
     static TextStyle searchHintText = TextStyle(
-        fontSize: 18,
+        fontSize: 16,
       color: AllColors.searchHintGrey,
       fontFamily: 'Poppins_Regular'
         );

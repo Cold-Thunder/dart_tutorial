@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
           titleTextStyle: AllTextStyles.onboardHeadingStyle.copyWith(
             fontSize: 14
           ),
+          centerTitle: true,
           scrolledUnderElevation: 0.0,
         )
       ),
