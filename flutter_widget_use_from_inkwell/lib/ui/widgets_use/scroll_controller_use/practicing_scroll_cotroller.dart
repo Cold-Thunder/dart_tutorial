@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:widgets_use/ui/widgets_use/elevated_button_use.dart';
 import 'package:widgets_use/ui/widgets_use/scroll_controller_use/scroll_animateto_use.dart';
 import 'package:widgets_use/ui/widgets_use/scroll_controller_use/scroll_controller_use.dart';
+import 'package:widgets_use/ui/widgets_use/scroll_controller_use/scroll_position_tracking.dart';
 import 'package:widgets_use/ui/widgets_use/scroll_controller_use/scroll_practice_two.dart';
 import 'package:widgets_use/ui/widgets_use/scroll_controller_use/use_scrollable_positioned_list.dart';
+import 'package:widgets_use/ui/widgets_use/scroll_controller_use/visibility_package_use.dart';
 
 class PracticingScrollCotroller extends StatelessWidget {
   const PracticingScrollCotroller({super.key});
@@ -24,6 +26,8 @@ class PracticingScrollCotroller extends StatelessWidget {
               ElevatedButtonUse(title: 'Second Use of scroll controller', screen: ScrollPracticeTwo()),
               ElevatedButtonUse(title: 'Scroll AnimateTo use', screen: ScrollAnimatetoUse()),
               ElevatedButtonUse(title: 'Scrollable Positioned List use', screen: UseScrollablePositionedList()),
+              ElevatedButtonUse(title: 'Position Tracking', screen: ScrollPositionTracking()),
+              ElevatedButtonUse(title: 'Visibility Package Uses', screen: VisibilityPackageUse()),
             ],
           )
         ),

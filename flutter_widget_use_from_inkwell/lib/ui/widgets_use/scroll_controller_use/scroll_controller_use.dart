@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:widgets_use/ui/widgets_use/scroll_controller_use/widgets/tabbar_buttons.dart';
 
 class ScrollControllerUse extends StatefulWidget {
@@ -27,7 +26,7 @@ class _ScrollControllerUse extends State<ScrollControllerUse> {
 
   late GlobalKey clickedKey = itemGlobalKeys[0];
 
-  itemFinderFunc(GlobalKey key) {
+  itemFinderFunc(GlobalKey key, int ind) {
     if (key.currentContext != null) {
       Scrollable.ensureVisible(key.currentContext!,
           alignment: 0.0, duration: Duration(seconds: 1), curve: Curves.easeIn);
@@ -81,6 +80,7 @@ class _ScrollControllerUse extends State<ScrollControllerUse> {
                   return TabbarButtons(
                       clickedKey: clickedKey,
                       model: items[index],
+                      index: index,
                       func: itemFinderFunc);
                 }),
           ),
