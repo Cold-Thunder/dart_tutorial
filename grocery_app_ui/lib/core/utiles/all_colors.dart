@@ -26,4 +26,6 @@ class AllColors{
     static Color closerGrey = Color(0xFFE8E9E8);
 
     static Color checkInActiveGrey = Color(0xFFEDEEED);
+
+    static Color barGrey = Color(0xFFE8E9E8);
 }

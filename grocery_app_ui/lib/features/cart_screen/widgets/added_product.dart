@@ -4,6 +4,7 @@ import 'package:grocery_app_ui/core/models/product_model.dart';
 import 'package:grocery_app_ui/core/utiles/all_colors.dart';
 import 'package:grocery_app_ui/core/utiles/styles/all_text_styles.dart';
 import 'package:grocery_app_ui/features/cart_screen/widgets/incre_decre_button.dart';
+import 'package:grocery_app_ui/features/cart_screen/widgets/show_remove_bottom_sheet.dart';
 
 class AddedProduct extends StatefulWidget {
   final ProductModel model;
@@ -24,10 +25,19 @@ class _AddedProductState extends State<AddedProduct> {
   }
 
   removeFunc(){
-    if(count > 0){
+    if(count > 1){
       setState((){
         count--;
       });
+    }else if(count == 1){
+      showModalBottomSheet(
+          context: context,
+          barrierColor: AllColors.transparent,
+          barrierLabel: 'remove item bottom sheet',
+          builder: (context){
+            return ShowRemoveBottomSheet();
+          }
+      );
     }
   }
 

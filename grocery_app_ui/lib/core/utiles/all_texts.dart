@@ -12,6 +12,10 @@ class AllTexts{
     static String recentSearch = 'Recent Search';
     static String trending = 'Trending Now';
 
+    static String removeItem = 'Remove Item';
+
+    static String remove = 'Remove';
+
     static String deliveryFree = 'Delivery Free';
     static String free = 'Free';
 
