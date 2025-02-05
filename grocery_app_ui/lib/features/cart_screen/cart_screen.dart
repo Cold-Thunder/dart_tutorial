@@ -76,21 +76,24 @@ class CartScreen extends StatelessWidget {
                         style: AllTextStyles.socialLogBtnStyle),
                     Spacer(),
                     InkWell(
-                        onTap: () {},
-                        child: Transform.rotate(
-                          angle: -1.5708,
-                          child: SizedBox(
-                              height: 30,
-                              width: 20,
-                              child: SvgPicture.asset(AllImages.arrowDownSvg,
-                                  height: 30, width: 20)),
-                        ))
+                      onTap: () {},
+                      child: Transform.rotate(
+                        angle: -1.5708,
+                        child: SizedBox(
+                          height: 30,
+                          width: 20,
+                          child: SvgPicture.asset(AllImages.arrowDownSvg,
+                              height: 30, width: 20),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
               Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                  child: Divider(height: 1, color: AllColors.closerGrey)),
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                child: Divider(height: 1, color: AllColors.closerGrey),
+              ),
               // price section
               Container(
                 padding: const EdgeInsets.all(15),

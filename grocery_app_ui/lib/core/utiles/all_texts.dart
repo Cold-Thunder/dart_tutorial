@@ -13,6 +13,7 @@ class AllTexts{
     static String trending = 'Trending Now';
 
     static String removeItem = 'Remove Item';
+    static String selectAnAddress = 'Select an Address';
 
     static String remove = 'Remove';
 

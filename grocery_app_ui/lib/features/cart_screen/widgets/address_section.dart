@@ -4,9 +4,19 @@ import 'package:grocery_app_ui/core/utiles/all_colors.dart';
 import 'package:grocery_app_ui/core/utiles/all_images.dart';
 import 'package:grocery_app_ui/core/utiles/all_texts.dart';
 import 'package:grocery_app_ui/core/utiles/styles/all_text_styles.dart';
+import 'package:grocery_app_ui/features/cart_screen/widgets/address_change_bottom_sheet.dart';
 
 class AddressSection extends StatelessWidget {
   const AddressSection({super.key});
+
+  addressChangerShow(context){
+    showBottomSheet(
+        context: context,
+        builder: (context){
+          return AddressChangeBottomSheet();
+        }
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +58,9 @@ class AddressSection extends StatelessWidget {
                         ),
                       ),
                       InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            addressChangerShow(context);
+                          },
                           child: Text(AllTexts.change,
                               style: AllTextStyles.skipTextStyle))
                     ]),
