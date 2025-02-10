@@ -98,7 +98,7 @@ class _ScrollPositionTrackingState extends State<ScrollPositionTracking> {
                 height: 100,
                 width: size.width,
                 decoration: BoxDecoration(
-                    color: Colors.red, borderRadius: BorderRadius.circular(15)),
+                    color: Colors.red, borderRadius: BorderRadius.circular(15),),
                 child: Text(
                   '${itemIndex + 1}',
                   style: TextStyle(fontSize: 35, color: Colors.white),
