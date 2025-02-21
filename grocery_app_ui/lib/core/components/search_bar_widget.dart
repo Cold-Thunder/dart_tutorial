@@ -10,7 +10,8 @@ class SearchBarWidget extends StatelessWidget {
   final TextEditingController controller;
   final Function? onTapFunction;
   final Function? searchIconFunc;
-  const SearchBarWidget({this.barWidth, required this.controller, this.onTapFunction, this.searchIconFunc, super.key});
+  final Function? onChangeMethod;
+  const SearchBarWidget({this.onChangeMethod, this.barWidth, required this.controller, this.onTapFunction, this.searchIconFunc, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +26,11 @@ class SearchBarWidget extends StatelessWidget {
             onTapFunction!(context);
           }
         },
+          onChanged:(value){
+             if(onChangeMethod != null){
+               onChangeMethod!(value);
+             }
+          },
           style: AllTextStyles.searchHintText.copyWith(
             color: AllColors.fontBlack
           ),

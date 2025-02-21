@@ -115,6 +115,7 @@ class AllTexts{
     static String surfSize = '500 ml';
     static String dalWeight = '1 Kg';
 
+    static String addNewAddress = 'Add New Address';
 
 
     static String homeAddress = '6391 Elgin St. Celina, Delaware 10299';

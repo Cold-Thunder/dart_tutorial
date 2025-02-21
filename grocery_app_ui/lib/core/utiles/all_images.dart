@@ -52,5 +52,7 @@ class AllImages{
     static String rightArrow = 'assets/icons/right_arrow.svg';
     static String tickGreen = 'assets/icons/tick.svg';
     static String tickGrey = 'assets/icons/tick_grey.svg';
+    static String closeIcon = 'assets/icons/close_icon.svg';
+    static String addIcon = 'assets/icons/add_icon.svg';
 
 }

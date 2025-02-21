@@ -64,6 +64,19 @@ class _SearchScreenState extends State<SearchScreen> {
         });
   }
 
+  //on changing method
+  onChangingMethod(value){
+    if(value.length != 0){
+      setState((){
+        showTrending = true;
+      });
+    }else{
+      setState((){
+        showTrending = false;
+      });
+    }
+  }
+
   @override
   void dispose() {
     _controller.dispose();
