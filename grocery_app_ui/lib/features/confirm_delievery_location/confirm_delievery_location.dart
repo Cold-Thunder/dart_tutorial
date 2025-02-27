@@ -38,7 +38,7 @@ class ConfirmDelieveryLocation extends StatelessWidget {
                   bgColor: AllColors.white, controller: _textEditingController),
             ),
             Positioned(
-              bottom: 245,
+              bottom: 210,
               right: 10,
               child: InkWell(
                 onTap: (){
@@ -61,7 +61,7 @@ class ConfirmDelieveryLocation extends StatelessWidget {
               bottom: 0,
               child: Container(
                 padding: const EdgeInsets.symmetric(vertical: 15),
-                height: 239,
+                height: 200,
                 width: size.width,
                 decoration: BoxDecoration(
                   color: AllColors.white,
