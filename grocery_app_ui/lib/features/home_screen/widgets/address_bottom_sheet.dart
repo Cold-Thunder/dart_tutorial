@@ -4,6 +4,7 @@ import 'package:grocery_app_ui/core/components/elevated_button_design.dart';
 import 'package:grocery_app_ui/core/utiles/all_colors.dart';
 import 'package:grocery_app_ui/core/utiles/all_images.dart';
 import 'package:grocery_app_ui/core/utiles/all_texts.dart';
+import 'package:grocery_app_ui/core/utiles/routes_helper.dart';
 import 'package:grocery_app_ui/core/utiles/styles/all_text_styles.dart';
 import 'package:grocery_app_ui/features/home_screen/widgets/address_select_button.dart';
 
@@ -40,7 +41,7 @@ class _AddressBottomSheetState extends State<AddressBottomSheet> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       width: width,
-      height: 440,
+      height: 420,
       decoration: BoxDecoration(
         color: AllColors.white,
         borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
@@ -102,6 +103,9 @@ class _AddressBottomSheetState extends State<AddressBottomSheet> {
           ElevatedButtonDesign(
               title: AllTexts.addNewAddress,
             iconSvg: AllImages.addIcon,
+            func: (){
+                Navigator.pushNamed(context, RoutesHelper.confirmDeliveryLocation);
+            },
           ),
           const SizedBox(
             height: 0

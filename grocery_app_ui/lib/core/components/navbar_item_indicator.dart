@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/utiles/all_colors.dart';
-import '../../../core/utiles/methods/navbar_item_indicator_clipper.dart';
+import '../utiles/all_colors.dart';
+import '../utiles/methods/navbar_item_indicator_clipper.dart';
 
 class NavbarItemIndicator extends StatelessWidget {
   const NavbarItemIndicator({super.key});

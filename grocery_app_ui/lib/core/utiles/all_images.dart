@@ -20,6 +20,7 @@ class AllImages{
     static String oilPack = 'assets/images/oil_pack.png';
     static String coffeePot = 'assets/images/coffee_bottle.png';
     static String teaPack = 'assets/images/tea_pack.png';
+    static String mapImage = 'assets/images/map.png';
 
     static String filterIconPng = 'assets/images/filter_icon_png.png';
 
@@ -54,5 +55,6 @@ class AllImages{
     static String tickGrey = 'assets/icons/tick_grey.svg';
     static String closeIcon = 'assets/icons/close_icon.svg';
     static String addIcon = 'assets/icons/add_icon.svg';
+    static String locationPickIcon = 'assets/icons/location_pick.svg';
 
 }

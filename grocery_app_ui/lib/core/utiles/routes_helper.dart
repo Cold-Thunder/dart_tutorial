@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:grocery_app_ui/features/cart_screen/cart_screen.dart';
+import 'package:grocery_app_ui/features/confirm_delievery_location/confirm_delievery_location.dart';
 
 import '../../features/best_deal_screen/best_deal_screen.dart';
 import '../../features/home_screen/home_screen.dart';
@@ -18,6 +19,7 @@ class RoutesHelper{
   static String bestDealScreen = '/bestDealScreen';
   static String searchScreen = '/searchScreen';
   static String cartScreen = '/cartScreen';
+  static String confirmDeliveryLocation = '/confirm_delivery_location';
 
   static Map<String, WidgetBuilder> allRoutes(){
     return {
@@ -28,7 +30,8 @@ class RoutesHelper{
       RoutesHelper.homeScreen: (context)=>HomeScreen(),
       RoutesHelper.bestDealScreen: (context)=>BestDealScreen(),
       RoutesHelper.searchScreen: (context)=>SearchScreen(),
-      RoutesHelper.cartScreen: (context)=>CartScreen()
+      RoutesHelper.cartScreen: (context)=>CartScreen(),
+      RoutesHelper.confirmDeliveryLocation: (context)=>ConfirmDelieveryLocation(),
     };
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../core/models/bottom_nev_item_model.dart';
-import '../../../core/utiles/all_colors.dart';
-import '../../../core/utiles/all_images.dart';
+import '../models/bottom_nev_item_model.dart';
+import '../utiles/all_colors.dart';
+import '../utiles/all_images.dart';
 import 'bottom_navigation_item.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {

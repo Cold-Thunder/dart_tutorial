@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../core/models/bottom_nev_item_model.dart';
+import '../models/bottom_nev_item_model.dart';
 import 'navbar_item_indicator.dart';
 
 class BottomNavigationItem extends StatelessWidget {

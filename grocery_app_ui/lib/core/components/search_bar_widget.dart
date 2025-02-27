@@ -8,10 +8,17 @@ import '../../../core/utiles/styles/all_text_styles.dart';
 class SearchBarWidget extends StatelessWidget {
   final double? barWidth;
   final TextEditingController controller;
+  final Color? bgColor;
   final Function? onTapFunction;
   final Function? searchIconFunc;
   final Function? onChangeMethod;
-  const SearchBarWidget({this.onChangeMethod, this.barWidth, required this.controller, this.onTapFunction, this.searchIconFunc, super.key});
+  const SearchBarWidget({
+    this.bgColor,
+    this.onChangeMethod,
+    this.barWidth,
+    required this.controller,
+    this.onTapFunction,
+    this.searchIconFunc, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +46,7 @@ class SearchBarWidget extends StatelessWidget {
           hintText: AllTexts.search,
           hintStyle: AllTextStyles.searchHintText,
           filled: true,
-          fillColor: AllColors.productBackGrey,
+          fillColor: bgColor ?? AllColors.productBackGrey,
           constraints: BoxConstraints(
             maxHeight: 50,
                 maxWidth: barWidth ?? width

@@ -15,6 +15,8 @@ class AllTexts{
     static String removeItem = 'Remove Item';
     static String selectAnAddress = 'Select an Address';
 
+    static String couponsTitle = 'Coupons';
+
     static String remove = 'Remove';
 
     static String deliveryFree = 'Delivery Free';
@@ -24,6 +26,8 @@ class AllTexts{
 
     static String change = 'Change';
     static String payUsing = 'Pay Using';
+
+    static String confirmAddress = 'Confirm Address';
 
     static String placeOrder = 'Place Order';
 
@@ -37,6 +41,9 @@ class AllTexts{
     static String discount = 'Discount';
 
     static String applyCoupon = 'APPLY COUPON';
+
+    static String confirmLocation = 'Confirm Delivery Location';
+    static String selectLocation = 'Select Location';
 
     static String sortBy = 'Sort By';
     static String noItemFound= 'No Item Found';

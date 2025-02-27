@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grocery_app_ui/features/home_screen/widgets/banner_ad.dart';
-import 'package:grocery_app_ui/features/home_screen/widgets/custom_bottom_navigation_bar.dart';
+import 'package:grocery_app_ui/core/components/custom_bottom_navigation_bar.dart';
 import 'package:grocery_app_ui/features/home_screen/widgets/heading_section.dart';
 import 'package:grocery_app_ui/features/home_screen/widgets/home_dropdown_button.dart';
 import 'package:grocery_app_ui/features/home_screen/widgets/search_section.dart';
@@ -42,6 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       clickedInd = index;
     });
+    print(index);
   }
 
   productAddButtonFunc(ProductModel model){
